@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Driver.Sonet.LOCALBUS v. 1.0 >
+<Configuration>
+    <Device CyclePeriod="50000" ConfigUpdatePeriod="3000000" OperabilityDelay="10000000" CheckStatus="FALSE">
+        <Slot Address="1" ModuleType="68" />
+    </Device>
+    <Crossconnect>
+        <Connection ItemName="GSP_SEV_KSSEV_E_USO1_U1_KTP.Value" Device="" Slot="1" Channel="1" UUID="C09AD27446D18CB17BA29999A942C0F5.E635C3B9453F276DC41A76893CEB09BE" />
+        <Connection ItemName="GSP_SEV_KSSEV_E_USO1_U1_KTP.in_status" Device="" Slot="1" Channel="1.status" UUID="C09AD27446D18CB17BA29999A942C0F5.8C9F2EA445D710C240282F8A9A4EBE20" />
+    </Crossconnect>
+</Configuration>
