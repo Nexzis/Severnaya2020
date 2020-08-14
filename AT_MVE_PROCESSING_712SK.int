@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="PROCESSING_712SK" Kind="APPLICATION.LUA" Args="" Comment="Обработка сигналов после модбас" UUID="DB68F045467F87BB67329E9005641E99">
+    <InterfaceList>
+        <Signal Name="VOS_SK712_CONTROL_PUMPS" UUID="AD45C70A43291E942A53D5A6DBE4E798" Type="712BBA88476F4E326F61608116367F08" Global="TRUE" />
+        <Signal Name="RAW_1SK712_FRQ_RDYK" UUID="8296C5C8476261E777D0D7AE90A5C118" Type="WORD" Global="TRUE" Comment="Готовность насосов (битовый регистр) бит [0] насос No1 установлен с панели управл . в автом ат .  режим бит [1] насос No2  установлен с панели  управл. в автом ат. режим ... бит [5] насос No6 установлен с панели  управл. в автом ат.  режим,FRQ ** Частота в ручном режиме бит [8 - 15] частота в Герцах" />
+        <Signal Name="RAW_1SK712_RUN_PERR" UUID="1E226DE946D3461EE56D0AB440E2C20A" Type="WORD" Global="TRUE" Comment="Обобщенная неисправность насосов (битовый регистр): бит [0] обобщенная  неисправность насоса No1 бит [1] обобщенная неисправность насоса No2 .... бит [5] обобщенная неисправность насоса No6RUN Работа насосов (битовый регистр): бит [8] насос No1 работает бит [9] насос No2 работает .... бит [13] насос No6 работает" />
+        <Signal Name="RAW_1SK712_RDY_CONN" UUID="48780ACE46BE40414E997987ED239595" Type="WORD" Global="TRUE" Comment="Контролер насоса отвечает на запросы (битовый регистр): бит [0] контроллер насоса No1 отвечает на запросы бит [1] контроллер насоса No2 отвечает на запросы .... бит [5] контроллер насоса No6 отвечает на запросы; RDY Готовность контроллера насоса (битовый  регистр) бит [8] контроллер насоса No1 готов к работе в  автомат . режиме бит [9] контроллер насоса No2 готов к работе  в  автомат . режиме .... бит [13] контроллер насоса No6 готов к работе  в  автомат . режиме" />
+        <Signal Name="RAW_1SK712_STAT_INPS" UUID="9D2825A2469323E65B8798AD6E6096E5" Type="WORD" Global="TRUE" Comment="Состояние  дискретных входов системы (битовый регистр): бит [0] вход  IN 0 бит [1] вход  IN 1 бит [2] вход  IN 2 бит [3] вход  IN 3 бит [4] вход  IN 4 бит [5] вход  IN 5; STAT Слово состояния системы (битовый регистр) бит [11] работа .... бит [13] обобщенная авария бит [14] готовность к автоматиче ской работе бит [15] система в ручном режиме" />
+        <Signal Name="RAW_1SK712_PRESS" UUID="70DA028D477716B9BBB5F1803F4FA63C" Type="WORD" Global="TRUE" Comment="Давление / уровень(1 ед. = 0.01 бар)" />
+        <Signal Name="RAW_1SK712_ER0X" UUID="9A1622B3472A008E81C67BB9EC636C5D" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок системы (битовый регистр) бит [0] ошибка  E .00 бит [1] ошибка  E .01 .... бит [7] ошибка  E .07" />
+        <Signal Name="RAW_1SK712_ER1X" UUID="71F9D93E482128DEA0D2A1A5DBB245CB" Type="WORD" Global="TRUE" Comment="Err .1 x Слово состоя ния ошибок насоса No1 (битовый регистр) бит [0] ошибка  E .10 бит [1] ошибка  E .11 .... бит [7] ошибка  E .17" />
+        <Signal Name="RAW_1SK712_ER2X" UUID="014697E34BBD6EA29541D59255FA8E11" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок насоса No2(битовый регистр)" />
+        <Signal Name="RAW_1SK712_ER3X" UUID="BD71B68645A04334724CB99D275C0888" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок насоса No3(битовый регистр)" />
+        <Signal Name="RAW_1SK712_ER4X" UUID="7657220D4439F44FD50C6B88C23875A9" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок насоса No4(битовый регистр)" />
+        <Signal Name="RAW_1SK712_ER5X" UUID="3473236A44CB51556B7C038C865E71D3" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок насоса No5(битовый регистр)" />
+        <Signal Name="RAW_1SK712_ER6X" UUID="26A64AB6408867CF812E62A966C97697" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок насоса No6(битовый регистр)" />
+        <Signal Name="RAW_1SK712_ER7X" UUID="6088B8214977C1470F7DA69094BE869A" Type="WORD" Global="TRUE" Comment="Слово состояния ошибок поплавков(битовый регистр)" />
+        <Signal Name="RAW_1SK712_P1_STAT" UUID="F7EEDDC8472EFBA81FFD57AE67E33BE1" Type="WORD" Global="TRUE" Comment="Слово состояния насоса No1 .... бит [9] работа насоса No1 в ручном режиме, бит [10] работа насоса No1 в режиме регулирования частоты, бит [11] работа насоса No1, бит [12] насос No1 находится в режиме автомат ич. Управления, бит [13] обобщенная ошибка насоса No 1 ( E .10 - E .17) ,бит [14] контроллер насоса No1 готов к автоматич . Управлению, бит [15] контроллер  насоса No1 запитан от сети и отвечает на  запросы" />
+        <Signal Name="RAW_1SK712_P1_FREQ" UUID="D8F62BC049B319DDCF406E97CA3E426D" Type="WORD" Global="TRUE" Comment="Частота насоса No1(1 ед. = 1/256 Гц)" />
+        <Signal Name="RAW_1SK712_P1_J1" UUID="AF0EF5CF4AB16DBC3332EABBDED8537D" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 1 насоса No1 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P1_J2" UUID="FA569B4646DD07D2051CC597832B09E2" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 2 насоса No1 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P1_J3" UUID="A84BCC934A1A3DD7753992AE24E694F2" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 3 насоса No1 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P1_JN" UUID="68B2403C4DD4F52FDD15D7ABC734230B" Type="WORD" Global="TRUE" Comment="Макс. по трем фазам ток насоса No1 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P1_Uab" UUID="5D0AA0C74FC05F9A0C22F096B00250FA" Type="WORD" Global="TRUE" Comment="Напряжение между  L 1 - L 2 насоса No1 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P1_Ubc" UUID="8C3BC1FB4A1A482B8928DE8837A69CC9" Type="WORD" Global="TRUE" Comment="Напряжение между  L 2 - L 3 насоса No1 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P1_Uac" UUID="818BA7314520BBB88294DAB361A39F4E" Type="WORD" Global="TRUE" Comment="Напряжение между  L 1 - L 3 насоса No1 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P1_Ucn" UUID="B84A307D4574CFBBB4B7718E08760C62" Type="WORD" Global="TRUE" Comment="Напряжение между  L 3 - L N насоса No1 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P1_DI" UUID="876B07EB4494EF7D622853ACAE9775DD" Type="WORD" Global="TRUE" Comment="Состояние входа датчика протечки насоса No1 [0] = К.З. [~100] =  проводимость не зафиксирована" />
+        <Signal Name="RAW_1SK712_P1_CNT" UUID="CD0FA233403C21A9CC06B6BA1DFBACEB" Type="WORD" Global="TRUE" Comment="Счетчик пусков насоса No1(1 ед. = 10 раз)" />
+        <Signal Name="RAW_1SK712_P1_HRS" UUID="34050FA3445C2AB489433D9F9BD64586" Type="WORD" Global="TRUE" Comment="Счетчик моточасов насоса No1(1 ед. = 10 часов)" />
+        <Signal Name="RAW_1SK712_P2_STAT" UUID="61C72DD94DE3E319A881F19675692D74" Type="WORD" Global="TRUE" Comment="Слово состояния насоса No2 .... бит [9] работа насоса No2 в ручном режиме, бит [10] работа насоса No2 в режиме регулирования частоты, бит [11] работа насоса No2, бит [12] насос No2 находится в режиме автомат ич. Управления, бит [13] обобщенная ошибка насоса No 1 ( E .10 - E .17) ,бит [14] контроллер насоса No2 готов к автоматич . Управлению, бит [15] контроллер  насоса No2 запитан от сети и отвечает на  запросы" />
+        <Signal Name="RAW_1SK712_P2_FREQ" UUID="89B0C0214D7951BF42E2CB8FE40560F1" Type="WORD" Global="TRUE" Comment="Частота насоса No2(1 ед. = 1/256 Гц)" />
+        <Signal Name="RAW_1SK712_P2_J1" UUID="929E6CEF48DF5047FAC963A34F113CB4" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 1 насоса No2 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P2_J2" UUID="0FDE6E7D4528897FEAA9D7B7F98F3CD0" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 2 насоса No2 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P2_J3" UUID="1D8B8E324E3FBC5C3C8D8EB56B89C8A1" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 3 насоса No2 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P2_JN" UUID="2F47ED524211A783B1F3B09F58720C6D" Type="WORD" Global="TRUE" Comment="Макс. по трем фазам ток насоса No2 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P2_Uab" UUID="FF850A8E4CD587AAC83D0892F373369E" Type="WORD" Global="TRUE" Comment="Напряжение между  L 1 - L 2 насоса No2 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P2_Ubc" UUID="DAC2BD1041041237927CE3BD4209FCD9" Type="WORD" Global="TRUE" Comment="Напряжение между  L 2 - L 3 насоса No2 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P2_Uac" UUID="0AB153774317AF61247EB591616ACBA4" Type="WORD" Global="TRUE" Comment="Напряжение между  L 1 - L 3 насоса No2 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P2_Ucn" UUID="F764281E4A6F37C410A62BB9C6864527" Type="WORD" Global="TRUE" Comment="Напряжение между  L 3 - L N насоса No2 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P2_DI" UUID="F4E7A2304C26C8B255A3DB8D6E43785F" Type="WORD" Global="TRUE" Comment="Состояние входа датчика протечки насоса No2 [0] = К.З. [~100] =  проводимость не зафиксирована" />
+        <Signal Name="RAW_1SK712_P2_CNT" UUID="937C675C48D201926A4C2695478229C4" Type="WORD" Global="TRUE" Comment="Счетчик пусков насоса No2(1 ед. = 10 раз)" />
+        <Signal Name="RAW_1SK712_P2_HRS" UUID="69B0093E4CBDDDABC5A37D98DAF8FBE3" Type="WORD" Global="TRUE" Comment="Счетчик моточасов насоса No2(1 ед. = 10 часов)" />
+        <Signal Name="RAW_1SK712_P3_STAT" UUID="E04D9CE345E3C47F3A13C48626960DA5" Type="WORD" Global="TRUE" Comment="Слово состояния насоса No3 .... бит [9] работа насоса No3 в ручном режиме, бит [10] работа насоса No3 в режиме регулирования частоты, бит [11] работа насоса No3, бит [12] насос No3 находится в режиме автомат ич. Управления, бит [13] обобщенная ошибка насоса No 1 ( E .10 - E .17) ,бит [14] контроллер насоса No3 готов к автоматич . Управлению, бит [15] контроллер  насоса No3 запитан от сети и отвечает на  запросы" />
+        <Signal Name="RAW_1SK712_P3_FREQ" UUID="CBEE7E04490B89418CF6198E0BEBEB8B" Type="WORD" Global="TRUE" Comment="Частота насоса No3(1 ед. = 1/256 Гц)" />
+        <Signal Name="RAW_1SK712_P3_J1" UUID="3DF8F4DC45C7A98C83DB25AAFECE5EBF" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 1 насоса No3 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P3_J2" UUID="DC0EEEC74AA165500DB6FC9FDB7E799B" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 2 насоса No3 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P3_J3" UUID="31E562FA46DE19F0A1937EB9ABB0531B" Type="WORD" Global="TRUE" Comment="Ток в фазе  L 3 насоса No3 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P3_JN" UUID="29BE9F534D28C7EB5709DCB6F3C39280" Type="WORD" Global="TRUE" Comment="Макс. по трем фазам ток насоса No3 (1ед. = 0 , 1 ампер)" />
+        <Signal Name="RAW_1SK712_P3_Uab" UUID="6D0CA136476A893859FBCBB0C37000BC" Type="WORD" Global="TRUE" Comment="Напряжение между  L 1 - L 2 насоса No3 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P3_Ubc" UUID="885973FC410B9C7530CA16A4CB9EEFDB" Type="WORD" Global="TRUE" Comment="Напряжение между  L 2 - L 3 насоса No3 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P3_Uac" UUID="623FBAC44391029FCB06B4A3D63380AA" Type="WORD" Global="TRUE" Comment="Напряжение между  L 1 - L 3 насоса No3 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P3_Ucn" UUID="9F92166B420A69E139A6A78201C5C669" Type="WORD" Global="TRUE" Comment="Напряжение между  L 3 - L N насоса No3 (1ед. = 0 , 1 вольт)" />
+        <Signal Name="RAW_1SK712_P3_DI" UUID="4C674C8545FD56BB421444BC9924A201" Type="WORD" Global="TRUE" Comment="Состояние входа датчика протечки насоса No3 [0] = К.З. [~100] =  проводимость не зафиксирована" />
+        <Signal Name="RAW_1SK712_P3_CNT" UUID="74FE934043752FA852A8E08C5167B60C" Type="WORD" Global="TRUE" Comment="Счетчик пусков насоса No3(1 ед. = 10 раз)" />
+        <Signal Name="RAW_1SK712_P3_HRS" UUID="10088BC74D042AD622F4F3B2195DD5D0" Type="WORD" Global="TRUE" Comment="Счетчик моточасов насоса No3(1 ед. = 10 часов)" />
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="B604D1A849DB8D37FAE43BA7D8A1D9E8" Type="STRING" Usage="output" />
+        <Signal Name="@WINDOW" UUID="974D25E94081ED721A34C0B2668773AE" Type="TWINDOW" ArraySize="32" InitialValue="[(VISIBLE:=TRUE, WIDTH:=640, HEIGHT:=480)]" />
+        <Signal Name="@NODE_ROLE" UUID="AF3673874BEB31C67BF0BBA4209C845D" Type="INT" />
+        <Signal Name="@NODE_ERROR" UUID="1ED9E9CE4C9C76A5D8D570808740AAF2" Type="BOOL" />
+        <Signal Name="@NODE_PEER_ERROR" UUID="DD7C35EB419805A35E9AB2BDEA300170" Type="BOOL" />
+        <Signal Name="@FAILOVER_PRESENCE" UUID="AEF213024DEE71464BF30FAB57907CBB" Type="BOOL" />
+        <Signal Name="@FAILOVER_ERROR" UUID="A48A01FF4E10E6B41BBA15A6CDBB4FBE" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVE" UUID="B75FD76242CDF0D062EAFF9BA6690051" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVED" UUID="B6CC63C94798BACB7F2B6A89F8E1B9BD" Type="BOOL" />
+    </InterfaceList>
+</SubAppType>

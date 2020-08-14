@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="DIAGN_Eaton_2" Kind="DRIVER.SNMP" Args="" Comment="" UUID="8A09144C49B6743DBBC325A3AA925D82">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="686F9F3C43C208A5B5E98EA2BCD6A47B" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="D7E133794BEB6F33267BDB97035BDC2E" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="14D248B74F33C7BCCDE826B93CE3E01C" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="253CA4FB42FCF0875828449358704A5D" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="A34A2004447F0631C705F38043504B5B" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="1724EF694528FEBA221D559C7562D41B" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="9F7477914EF9456C3C37E3AB342A38B5" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="735A6CA048ACD5946710F98F057496CA" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="5407212D4B6A8C831668528BA60C5A42" Type="BOOL" />
+        <Signal Name="HMI_DIAGN_UPS2_Signals" UUID="6059C7FB487D303C06361E8696443812" Type="75C27D854C54C20CA1D297B0A23EC6CA" InitialValue="(1FECE7774575E7F61036ECBF77B7BD7A:=1)" Global="TRUE" Comment="Источник бесперебойного питания №2. Массив сигналов диагностики" />
+    </InterfaceList>
+</SubAppType>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="DIAGN_Huawei_2" Kind="DRIVER.SNMP" Args="" Comment="Коммутатор в аквариуме" UUID="89A124C145EBEC9B0E9E0985F4B6B918">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="6E485CF34D6A2C520A604DA0B758587E" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="9A4C037745A785664C50028820E76EC3" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="605BD7384D589129322D72AC8A157BE8" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="64FFA60F4CE3C6719BE39780F936F5F5" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="3B9714EC4BD50B96E7C16286448195CF" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="3BC4E2C547C595329845BCA2105DF8B0" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="5590E3FC42B8FE3985F590A86E900EDC" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="B908324E418BD7A4B6C9EE8D6A4A0069" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="4D6E3A9F4C29E6D3ACBFE6B129346663" Type="BOOL" />
+        <Signal Name="HMI_DIAGN_SWITCH2_PORT_STATE" UUID="3FCD6B5D41E1D97BC0E7FA89AB19C3DE" Type="UINT" ArraySize="24" Global="TRUE" Comment="Коммутатор Huawei s5720.Состояние портов. Отключен/Заблокирован/Прослушивание/Обучение/Трансляция/Сломан" />
+    </InterfaceList>
+</SubAppType>

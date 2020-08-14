@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="PROCESSING_ELIM" Kind="APPLICATION.LUA" Args="" Comment="" UUID="C62D24E543D3714D2B7F719FA9CBA1DB">
+    <InterfaceList>
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@FAILOVER_ERROR" UUID="A48A01FF4E10E6B41BBA15A6CDBB4FBE" Type="BOOL" />
+        <Signal Name="@FAILOVER_PRESENCE" UUID="AEF213024DEE71464BF30FAB57907CBB" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVE" UUID="B75FD76242CDF0D062EAFF9BA6690051" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVED" UUID="B6CC63C94798BACB7F2B6A89F8E1B9BD" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="B604D1A849DB8D37FAE43BA7D8A1D9E8" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@NODE_ERROR" UUID="1ED9E9CE4C9C76A5D8D570808740AAF2" Type="BOOL" />
+        <Signal Name="@NODE_PEER_ERROR" UUID="DD7C35EB419805A35E9AB2BDEA300170" Type="BOOL" />
+        <Signal Name="@NODE_ROLE" UUID="AF3673874BEB31C67BF0BBA4209C845D" Type="INT" />
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@WINDOW" UUID="974D25E94081ED721A34C0B2668773AE" Type="TWINDOW" ArraySize="32" InitialValue="[(VISIBLE:=TRUE, WIDTH:=640, HEIGHT:=480)]" />
+        <Signal Name="RAW_ELIM1_ADDR" UUID="3401648F4C128A0A4026B8B113CBAC5D" Type="INT" Global="TRUE" Comment="Адрес устройства в модбас сети 0..255" />
+        <Signal Name="RAW_ELIM1_ADD_I" UUID="C0B6EE774BDD1A6428793C91D386A8BA" Type="REAL" Global="TRUE" Comment="Аддитивная поправка канала измерения тока(умол.0.0)" />
+        <Signal Name="RAW_ELIM1_ADD_U" UUID="5CB708E143BFE8CA4290BF90A5173EEE" Type="REAL" Global="TRUE" Comment="Аддитивная поправка канала измерения напряжения(умол.0.0)" />
+        <Signal Name="RAW_ELIM1_EVENT" UUID="EC77D8F0458DDD1A7CCB21953B775EE4" Type="WORD" Global="TRUE" Comment="Внешние входы  LS0 режим ограничения по напряж,LS1 режим ограничения по току, LS2 Ждущий режим, LS5 перегрев, LS6 перегруз по U, LS7 перегруз по I" />
+        <Signal Name="RAW_ELIM1_HH_I" UUID="CD83D13C4B0E50FD083ED2BB1204B7A8" Type="INT" Global="TRUE" Comment="Верхний предел тока для настраиваемого типа 0..9999А" />
+        <Signal Name="RAW_ELIM1_HH_U" UUID="DD90427C4259034BB29773B9032329F3" Type="INT" Global="TRUE" Comment="Верхний предел напряжения для настраиваемого типа 0..9999В" />
+        <Signal Name="RAW_ELIM1_I" UUID="7D7EB98F4FD9E8DD930DBABE8CD39253" Type="INT" Global="TRUE" Comment="Измеренный ток 0..65535" />
+        <Signal Name="RAW_ELIM1_MLT_I" UUID="5C2FF0A245975BF2C0FE5987B0A3BE1A" Type="REAL" Global="TRUE" Comment="Мультипликативная поправка канала измерения тока(умол.1.0)" />
+        <Signal Name="RAW_ELIM1_MLT_U" UUID="331FA7874CA148958E563899E7D8DD8C" Type="REAL" Global="TRUE" Comment="Мультипликативная поправка канала измерения напряжения(умол.1.0)" />
+        <Signal Name="RAW_ELIM1_PORT_SP" UUID="E0AACF9945856B8DF9678888CEDE6DC7" Type="INT" Global="TRUE" Comment="Скорость обмена по модбас 1-5 : 1-9600, 2-19200, 3-38400, 4-57600, 5-115200" />
+        <Signal Name="RAW_ELIM1_SHIM_I" UUID="C563A2C84607F16D85C004BD12B9855F" Type="INT" Global="TRUE" Comment="Значение генератора ШИМ тока, 0...0х03FF" />
+        <Signal Name="RAW_ELIM1_SHIM_U" UUID="F494F746443BEFB36F017C8BC2464D56" Type="INT" Global="TRUE" Comment="Значение генератора ШИМ напряжения, 0...0х03FF(выход 0-5В)" />
+        <Signal Name="RAW_ELIM1_STB_WORK" UUID="E0EF08394FF1EFC933E04CB31FDEE32E" Type="INT" Global="TRUE" Comment="Ждущий режим 0-рабочий,1-ждущий" />
+        <Signal Name="RAW_ELIM1_U" UUID="8C000DA8473F16D3E296C484C9F58A70" Type="INT" Global="TRUE" Comment="Измеренное напряжение 0..65535" />
+        <Signal Name="RAW_ELIM1_UST_U_I" UUID="583C2D354F2ECD8D65DB059222C3BB5A" Type="INT" Global="TRUE" Comment="Уставки по току и напряжению 0-11 : 0-U27,5 I30,0;1-U55,0 I15,0;2-U60,0 I30,0;3-U30,0 I90,0;4-U110 I7,5;6-U220 I3,8;7-U330 I2,5;8-U440 I1,9;9-U550 I1,5;10-U660 I1,2;11-Свои" />
+        <Signal Name="RAW_ELIM1_WR_ADDR" UUID="A42A6486460D56E37A9BE8AB346750D8" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1 Адрес устройства в модбас сети 0..255" />
+        <Signal Name="RAW_ELIM1_WR_ADD_I" UUID="13EA7AD4404B406827E084A023AAAF1B" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 1Аддитивная поправка канала измерения тока(умол.0.0)" />
+        <Signal Name="RAW_ELIM1_WR_ADD_U" UUID="EA43588A43A9865114609F9A93DED9FF" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 1 Аддитивная поправка канала измерения напряжения(умол.0.0)" />
+        <Signal Name="RAW_ELIM1_WR_HH_I" UUID="B792AC5C47FE4A12843F8B9997B51D1D" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1Верхний предел тока для настраиваемого типа 0..9999А" />
+        <Signal Name="RAW_ELIM1_WR_HH_U" UUID="42E9B12643A11008A29106B02EFA3353" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1Верхний предел напряжения для настраиваемого типа 0..9999В" />
+        <Signal Name="RAW_ELIM1_WR_MLT_I" UUID="6B32AC5C439842A7AC74308C537C8B23" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 1Мультипликативная поправка канала измерения тока(умол.1.0)" />
+        <Signal Name="RAW_ELIM1_WR_MLT_U" UUID="8380FD0C48B4BB6D509EF3A4F700C336" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 1 Мультипликативная поправка канала измерения напряжения(умол.1.0)" />
+        <Signal Name="RAW_ELIM1_WR_PORT_SP" UUID="8F0020D643304152617884B02715EDB1" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1 Скорость обмена по модбас 1-5 : 1-9600, 2-19200, 3-38400, 4-57600, 5-115200" />
+        <Signal Name="RAW_ELIM1_WR_SHIM_I" UUID="2C6A0890484F79BFC7B7A7A879C5EF13" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1 Значение генератора ШИМ тока, 0...0х03FF" />
+        <Signal Name="RAW_ELIM1_WR_SHIM_U" UUID="FCDD78E64052DEF2D52BEC9A54EA3688" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1 Значение генератора ШИМ напряжения, 0...0х03FF(выход 0-5В)" />
+        <Signal Name="RAW_ELIM1_WR_STB_WORK" UUID="9EF84A5C4C88E335D76194864A83434B" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1Ждущий режим 0-рабочий,1-ждущий" />
+        <Signal Name="RAW_ELIM1_WR_UST_U_I" UUID="441FABDE481F40B95FE5EBA94CC3AB51" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 1 Уставки по току и напряжению 0-11 : 0-U27,5 I30,0;1-U55,0 I15,0;2-U60,0 I30,0;3-U30,0 I90,0;4-U110 I7,5;6-U220 I3,8;7-U330 I2,5;8-U440 I1,9;9-U550 I1,5;10-U660 I1,2;11-Свои" />
+        <Signal Name="RAW_ELIM2_ADDR" UUID="E136B9B1499805DD4BD478B814035E3A" Type="INT" Global="TRUE" Comment="Адрес устройства в модбас сети 0..255" />
+        <Signal Name="RAW_ELIM2_ADD_I" UUID="31E829CA47BDD14DEEF27FBA7D638104" Type="REAL" Global="TRUE" Comment="Аддитивная поправка канала измерения тока(умол.0.0)" />
+        <Signal Name="RAW_ELIM2_ADD_U" UUID="D17E73C649E5341E7EA2768FEA937BBF" Type="REAL" Global="TRUE" Comment="Аддитивная поправка канала измерения напряжения(умол.0.0)" />
+        <Signal Name="RAW_ELIM2_EVENT" UUID="E442CD2E47B0E56F844253878CAE505D" Type="WORD" Global="TRUE" Comment="Внешние входы  LS0 режим ограничения по напряж,LS1 режим ограничения по току, LS2 Ждущий режим, LS5 перегрев, LS6 перегруз по U, LS7 перегруз по I" />
+        <Signal Name="RAW_ELIM2_HH_I" UUID="5A71937A433028CC4297BBA00AA0DBED" Type="INT" Global="TRUE" Comment="Верхний предел тока для настраиваемого типа 0..9999А" />
+        <Signal Name="RAW_ELIM2_HH_U" UUID="0705A98C4D30AF5D2A0749A502FC5086" Type="INT" Global="TRUE" Comment="Верхний предел напряжения для настраиваемого типа 0..9999В" />
+        <Signal Name="RAW_ELIM2_I" UUID="B38BE40F49BEE431C03C6A927CEDCBAA" Type="INT" Global="TRUE" Comment="Измеренный ток 0..65535" />
+        <Signal Name="RAW_ELIM2_MLT_I" UUID="D726E0744B438F362B1FF5A51C05B0A8" Type="REAL" Global="TRUE" Comment="Мультипликативная поправка канала измерения тока(умол.1.0)" />
+        <Signal Name="RAW_ELIM2_MLT_U" UUID="60B01BEE4B69EA1FDEB51B8FE171E2D3" Type="REAL" Global="TRUE" Comment="Мультипликативная поправка канала измерения напряжения(умол.1.0)" />
+        <Signal Name="RAW_ELIM2_PORT_SP" UUID="FFA7725E45147CD0B2E22690EBC92B49" Type="INT" Global="TRUE" Comment="Скорость обмена по модбас 1-5 : 1-9600, 2-19200, 3-38400, 4-57600, 5-115200" />
+        <Signal Name="RAW_ELIM2_SHIM_I" UUID="9A69852B417EF9ABA22DE5808292C53D" Type="INT" Global="TRUE" Comment="Значение генератора ШИМ тока, 0...0х03FF" />
+        <Signal Name="RAW_ELIM2_SHIM_U" UUID="E755418E4CB1DE94F2499E9AC5E2D973" Type="INT" Global="TRUE" Comment="Значение генератора ШИМ напряжения, 0...0х03FF(выход 0-5В)" />
+        <Signal Name="RAW_ELIM2_STB_WORK" UUID="FC72A6614DFB8AE6F66866831656E622" Type="INT" Global="TRUE" Comment="Ждущий режим 0-рабочий,1-ждущий" />
+        <Signal Name="RAW_ELIM2_U" UUID="24FF46454B93994E47350695FB04C804" Type="INT" Global="TRUE" Comment="Измеренное напряжение 0..65535" />
+        <Signal Name="RAW_ELIM2_UST_U_I" UUID="5BDA2FBF4C3F3906892D1FB841573EE1" Type="INT" Global="TRUE" Comment="Уставки по току и напряжению 0-11 : 0-U27,5 I30,0;1-U55,0 I15,0;2-U60,0 I30,0;3-U30,0 I90,0;4-U110 I7,5;6-U220 I3,8;7-U330 I2,5;8-U440 I1,9;9-U550 I1,5;10-U660 I1,2;11-Свои" />
+        <Signal Name="RAW_ELIM2_WR_ADDR" UUID="89CA2AD54A75752AACD3AB8AFB8353FD" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Адрес устройства в модбас сети 0..255" />
+        <Signal Name="RAW_ELIM2_WR_ADD_I" UUID="2A2EF9D44B70C5065603BBA1FA1A1CA2" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 2 Аддитивная поправка канала измерения тока(умол.0.0)" />
+        <Signal Name="RAW_ELIM2_WR_ADD_U" UUID="A473C4364499D7515ACFD5A566531CC7" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 2 Аддитивная поправка канала измерения напряжения(умол.0.0)" />
+        <Signal Name="RAW_ELIM2_WR_HH_I" UUID="113D208342246E075282F9BED0E74E71" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Верхний предел тока для настраиваемого типа 0..9999А" />
+        <Signal Name="RAW_ELIM2_WR_HH_U" UUID="B766D3B94F2F60FEE373DBA7B8A846DD" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Верхний предел напряжения для настраиваемого типа 0..9999В" />
+        <Signal Name="RAW_ELIM2_WR_MLT_I" UUID="8078C66846C626C6653A4BA9126F46DE" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 2 Мультипликативная поправка канала измерения тока(умол.1.0)" />
+        <Signal Name="RAW_ELIM2_WR_MLT_U" UUID="5441431746B0F550DFCB38A13027A9DC" Type="REAL" Global="TRUE" Comment="ЭЛИМ Устройство 2 Мультипликативная поправка канала измерения напряжения(умол.1.0)" />
+        <Signal Name="UPS_ELIM1" UUID="B4CA4E2E49C91299EA6FAAB19DD04A61" Type="C42ED2594ABCAC96BF5EF4A18375CC4D" Global="TRUE" />
+        <Signal Name="UPS_ELIM2" UUID="8B180607490B61FAE224C4B58318FFBD" Type="C42ED2594ABCAC96BF5EF4A18375CC4D" Global="TRUE" />
+        <Signal Name="RAW_ELIM2_WR_PORT_SP" UUID="D0F7DEE2428267E77B35D1A73755EF22" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Скорость обмена по модбас 1-5 : 1-9600, 2-19200, 3-38400, 4-57600, 5-115200" />
+        <Signal Name="RAW_ELIM2_WR_SHIM_I" UUID="49B3575541CEF6A9836E0FBFD71933BA" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Значение генератора ШИМ тока, 0...0х03FF" />
+        <Signal Name="RAW_ELIM2_WR_SHIM_U" UUID="18A52E794ACD35E3B7B8628E7830152B" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Значение генератора ШИМ напряжения, 0...0х03FF(выход 0-5В)" />
+        <Signal Name="RAW_ELIM2_WR_STB_WORK" UUID="231A017549CB171BCD9FD388B53AD5B4" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2Ждущий режим 0-рабочий,1-ждущий" />
+        <Signal Name="RAW_ELIM2_WR_UST_U_I" UUID="1F4E7B9245BDAFB1425C0DB5716C715C" Type="INT" Global="TRUE" Comment="ЭЛИМ Устройство 2 Уставки по току и напряжению 0-11 : 0-U27,5 I30,0;1-U55,0 I15,0;2-U60,0 I30,0;3-U30,0 I90,0;4-U110 I7,5;6-U220 I3,8;7-U330 I2,5;8-U440 I1,9;9-U550 I1,5;10-U660 I1,2;11-Свои" />
+    </InterfaceList>
+</SubAppType>

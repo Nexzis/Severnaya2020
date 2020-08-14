@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Nodes>
+        <Node Device="192.168.1.42" Version="0" Community="Eaton@Asue2" Auth="0" User="" Password="" PassPhrase="" />
+    </Nodes>
+	<Common ReserveInactive="1" />
+    <Crossconnect>
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_BATTERY_LEVEL" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.5.2.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_ON_BATTERY" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.7.3.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_ON_BYPASS" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.7.4.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_UTILITY_OFF" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.7.7.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_INVERTER_OFF" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.7.9.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_OVERLOAD" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.7.10.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_OVERTEMP" Device="192.168.1.42" Channel="1.3.6.1.4.1.705.1.7.11.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_LOAD" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.4.1.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_BATTERY_TEMP" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.6.1.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_BATTERY_TIME_REMAINING" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.2.1.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_BATTERY_VOLTAGE" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.2.2.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_INPUT_VOLTAGE" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.3.4.1.2.1" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_INPUT_FREAQUENCY" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.3.1.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_BYPASS_FREAQUENCY" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.5.1.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_BYPASS_VOLTAGE" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.5.3.1.2.1" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_VOLTAGE" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.4.4.1.2.1" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_FREAQENCY" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.4.2.0" UUID="" />
+        <Connection ItemName="GSP_SEV_KSSEV_IBP2_DIAGN_OUTPUT_CONFIG_VOLTAGE" Device="192.168.1.42" Channel="1.3.6.1.4.1.534.1.10.1.0" UUID="" />
+    </Crossconnect>
+</Configuration>
