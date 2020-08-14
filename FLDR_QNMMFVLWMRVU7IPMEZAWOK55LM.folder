@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="ЭЛИМ">
+    <Items>
+        <Item Name="AT_MVE_DRIVER_MODBUS_ELIM.int" />
+        <Item Name="AT_MVE_ELIM1_EVENTS.int" />
+        <Item Name="AT_MVE_ELIM2_EVENTS.int" />
+        <Item Name="AT_MVE_ELIM_COLLECT_LUA.int" />
+        <Item Name="AT_MVE_PROCESSING_ELIM.int" />
+        <Item Name="AT_MVE_SETTINGS_ELIM.int" />
+    </Items>
+</Folder>

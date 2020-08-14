@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Опрос">
+    <Items>
+        <Item Name="AT_RT_USOKTP2_A1_COLLECT.int" />
+        <Item Name="AT_RT_USOKTP2_A2_COLLECT.int" />
+        <Item Name="AT_YTOCWGK7AMWURCSB2WZ2TBAHYA.int" />
+    </Items>
+</Folder>

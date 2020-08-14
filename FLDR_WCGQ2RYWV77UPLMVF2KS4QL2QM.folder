@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="DANFOS_A2">
+    <Items>
+        <Item Name="AT_C4WEOXE3TH6ETLLUMEZLTUYFKY.int" />
+        <Item Name="AT_MVE_COLLECT_DANFOSS202.int" />
+        <Item Name="AT_MVE_COMMAND_DANFOSS.int" />
+        <Item Name="AT_ON4HJBTNQAJUTBRGVDMGFCQLLE.int" />
+    </Items>
+</Folder>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Тестовый ПЛК">
+    <Items>
+        <Item Name="Node_O2TBGJBCY6BU3EOGLH33IEZOF4.nod" />
+        <Item Name="Node_S3WPC3WTDJIUBKU6PWKFMJ4TRI.nod" />
+    </Items>
+</Folder>

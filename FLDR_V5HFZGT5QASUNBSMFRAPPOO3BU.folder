@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="ИБП">
+    <Items>
+        <Item Name="AT_NR_DIAGN_EATON_1_CHECK_CONNECTION.int" />
+        <Item Name="AT_NR_DIAGN_EATON_1_EVENT.int" />
+        <Item Name="AT_NR_DIAGN_EATON_1_SNMP.int" />
+        <Item Name="AT_NR_DIAGN_EATON_2_CHECK_CONNECTION.int" />
+        <Item Name="AT_NR_DIAGN_EATON_2_EVENT.int" />
+        <Item Name="AT_NR_DIAGN_EATON_2_SNMP.int" />
+        <Item Name="AT_NR_DIAGN_EATON_HIDDEN_PING.int" />
+    </Items>
+</Folder>

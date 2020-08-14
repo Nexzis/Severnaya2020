@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="АРМ">
+    <Items>
+        <Item Name="AT_GD2E5RZZEUQUJBX5LW2N5JFIF4.int" />
+        <Item Name="AT_HMI.int" />
+        <Item Name="AT_HMI_Animation.int" />
+        <Item Name="AT_HMI_Init.int" />
+        <Item Name="AT_I6IQQ5M7KNCUJP5BE3OYGNYS2I.int" />
+        <Item Name="AT_KGR4LWO4GUPUTNJV3PHNG7L5MU.int" />
+        <Item Name="AT_MVE_HMI_ADAPTER.int" />
+        <Item Name="AT_NR_HIDDEN_PING.int" />
+        <Item Name="AT_NR_LINESANIMATION.int" />
+        <Item Name="AT_QDH3B3UBZAREXKFACDFK6SFIFI.int" />
+        <Item Name="AT_REPORT_ZRU_ARM1.int" />
+        <Item Name="AT_REPORT_ZRU_ARM2.int" />
+        <Item Name="AT_RFM6BSBQLTKELLTRIIK3JD2PWM.int" />
+        <Item Name="AT_XLJJKK4E5AYE3IZ2BLAX52GALU.int" />
+        <Item Name="HMI.int" />
+        <Item Name="HMI_Animation.int" />
+        <Item Name="HMI_Init.int" />
+        <Item Name="HMI_adapter.int" />
+    </Items>
+</Folder>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="РЕЗЕРВИРОВАНИЕ">
+    <Items>
+        <Item Name="AT_2UI6TF6WJQAUROSARDPET7DHHE.int" />
+        <Item Name="AT_3KQSM5OYT7DU7KIK64XMB2CSEY.int" />
+        <Item Name="AT_CUD4RPYZAL5UFLQ2ZOY5RSLDT4.int" />
+        <Item Name="AT_GS2HIHXWBLLEXPYEUW4TS7SW6A.int" />
+        <Item Name="AT_IWNLUIBSQAVETDYPJA4EIWMZPM.int" />
+        <Item Name="AT_MVE_ARBITR.int" />
+        <Item Name="AT_MVE_RESERV_SERVER1.int" />
+        <Item Name="AT_MVE_RESERV_SERVER2.int" />
+        <Item Name="AT_SNWPXFYUGVMUBHYE7WYTZGZNBE.int" />
+        <Item Name="AT_UPDY6K4YF6EUBHQUKMBHJXLMRE.int" />
+        <Item Name="AT_ZZWY2BYQEDIUXNXDDIAH7VAFBU.int" />
+    </Items>
+</Folder>

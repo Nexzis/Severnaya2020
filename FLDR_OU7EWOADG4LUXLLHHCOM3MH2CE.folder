@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="УСО КТП1">
+    <Items>
+        <Item Name="AT_5B4JCRU4JZFUPBAX2Q5A7BEFMA.int" />
+        <Item Name="AT_7JR3KCHOVPLUNLIDXOVS7KRWQA.int" />
+        <Item Name="AT_7SJMZGOF3ZMENFOQSMMJLQGW7A.int" />
+        <Item Name="AT_AAO4QZKIDTDUFIC7YRR4477VE4.int" />
+        <Item Name="AT_E6PHZR3VYDBUPIL4FWVFTMRKEM.int" />
+        <Item Name="AT_GCCMYVJI3UVEHFSYWOLEUCGGZU.int" />
+        <Item Name="AT_OP5QEWE2LOFELEIRIW5LW2HPOQ.int" />
+        <Item Name="AT_OP6GUOJQSKDEHDEBMLDGKKGSMI.int" />
+        <Item Name="AT_PPYS5NJR6QNEJDHOEXFB36STWI.int" />
+        <Item Name="AT_QK4W4I6D2NTEHE7MUU6CA54PCI.int" />
+        <Item Name="AT_RE4QWTGAO36ELPOUJS3AIVA6KA.int" />
+        <Item Name="AT_RT_SeversCtrl.int" />
+        <Item Name="AT_SQEPVCXC7VYEPEG7XJZBQZQRX4.int" />
+        <Item Name="AT_TX5VU5MV4LREFNB7H4URG3JZ7M.int" />
+        <Item Name="AT_XTIYRHOLKXZEFFABHMVPO2L4LQ.int" />
+        <Item Name="AT_YCCIB62SDHYUZFQCFL6VHSFLVA.int" />
+        <Item Name="FLDR_5AWPXNAWD3TEDMXJWWLVWRIYAY.folder" />
+        <Item Name="FLDR_B5HPUYQF2IEEZA7FX7RV5LMDK4.folder" />
+        <Item Name="FLDR_DYIJPN27P7MEHKCTVACX43PBFQ.folder" />
+        <Item Name="FLDR_HNCWM2SCGSWEBKBCYGJETLEGAM.folder" />
+        <Item Name="FLDR_NPLGNHEVW55EDPPWZXSKCSAM7Y.folder" />
+        <Item Name="FLDR_OJD5TI4U33GE5BIT5SNJNVVFUU.folder" />
+        <Item Name="FLDR_WQIUWG7JFCWEFGXKGWRIIFUEZI.folder" />
+        <Item Name="FLDR_X6YLY4NMTBWUZCUYEG52FAVKVU.folder" />
+    </Items>
+</Folder>

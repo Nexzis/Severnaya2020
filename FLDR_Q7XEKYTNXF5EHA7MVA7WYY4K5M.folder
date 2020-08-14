@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="серверы">
+    <Items>
+        <Item Name="Node_3C5SQBXIRHAEJGWGHO2SHR42F4.nod" />
+        <Item Name="Node_BHXDESEWVPJENGXL345J52PT3I.nod" />
+        <Item Name="Node_XEKDYF36B6HUJIJVR4K6MWHXJU.nod" />
+    </Items>
+</Folder>

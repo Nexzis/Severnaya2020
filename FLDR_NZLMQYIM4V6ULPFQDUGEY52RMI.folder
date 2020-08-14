@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="УСО Э">
+    <Items>
+        <Item Name="AT_MVE_SOTEC.int" />
+        <Item Name="AT_RT_USOE_A1_APPCTRL.int" />
+        <Item Name="AT_RT_USOE_A1_DR.int" />
+        <Item Name="AT_RT_USOE_A1_TestMeandr.int" />
+        <Item Name="AT_TXZLFD74AP2URMMSQJWKCFDL3A.int" />
+        <Item Name="FLDR_GJIDWE2MAOOE3H2NCBEDV7KAMU.folder" />
+        <Item Name="FLDR_PNNC4YIVGXHULAH6VGIZJIOQGM.folder" />
+        <Item Name="FLDR_X5VTCJQJYI5EXMMKOA4TXGZTXI.folder" />
+    </Items>
+</Folder>

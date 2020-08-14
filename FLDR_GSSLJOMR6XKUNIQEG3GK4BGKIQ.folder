@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="ELTEX">
+    <Items>
+        <Item Name="AT_2A64JGNUTFGUFBFQJH7DDNOMMI.int" />
+        <Item Name="AT_6UMFHDRML5OEDAMDOTQFV6DLJ4.int" />
+        <Item Name="AT_CEQOEO7OGY4UXECTC4EEA7AXCU.int" />
+        <Item Name="AT_FWIOERDAWRUE3GBYK4DMDGPDWI.int" />
+        <Item Name="AT_GVBSUKG33FRU5BW6JYIS5Z72XY.int" />
+        <Item Name="AT_NAQ4WNKHY2MERGMEM4FDCDRXVA.int" />
+        <Item Name="AT_NR_DIAGN_RING.int" />
+        <Item Name="AT_NR_ELTEX_MESSAGE.int" />
+        <Item Name="AT_NR_ELTEX_PING.int" />
+        <Item Name="AT_NR_ELTEX_PORT_STATE_1.int" />
+        <Item Name="AT_NR_ELTEX_PORT_STATE_2.int" />
+        <Item Name="AT_NR_ELTEX_PORT_STATE_3.int" />
+        <Item Name="AT_NR_ELTEX_PORT_STATE_4.int" />
+        <Item Name="AT_NR_ELTEX_PORT_STATE_ALL.int" />
+        <Item Name="AT_NR_ELTEX_STATUS_MESSAGE.int" />
+        <Item Name="AT_NR_ELTEX_com1_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com2_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com3_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com4_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com5_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com6_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com7_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com8_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com9_PORT_STATE.int" />
+        <Item Name="AT_NR_ELTEX_com_MESSAGE.int" />
+        <Item Name="AT_RGKKMSURDDAU7KXHQ5ZUM2QPGA.int" />
+        <Item Name="AT_TF4YLE7A7PSEXDFQEC4CWZERXQ.int" />
+        <Item Name="AT_WIXO3WQLSYLUNKFNFPMEUTV3OY.int" />
+        <Item Name="AT_ZPLLSVNTXTNENDQW552JFJA6A4.int" />
+    </Items>
+</Folder>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Сбор">
+    <Items>
+        <Item Name="AT_5ZDMCS7T2HREJLS3KXXSSFJHGM.int" />
+        <Item Name="AT_MVE_VM_Driver_SPABUS_R1.int" />
+        <Item Name="AT_MVE_VM_Driver_SPABUS_R2.int" />
+        <Item Name="AT_MVE_VM_SPA_BUS_Collect.int" />
+    </Items>
+</Folder>

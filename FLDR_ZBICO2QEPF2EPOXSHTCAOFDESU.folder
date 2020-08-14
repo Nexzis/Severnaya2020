@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="VZET311">
+    <Items>
+        <Item Name="AT_3YDWUGQEJA5E5MVUQ267RFL6KU.int" />
+        <Item Name="AT_4NKPIW4DU54EHIUY4FOV25PDKE.int" />
+        <Item Name="AT_E3T7OCPK2XEUDJ66XNML6H4DP4.int" />
+        <Item Name="AT_MVE_COLLECT_VZLET.int" />
+        <Item Name="AT_MVE_DYNAMIC_TABLE.int" />
+        <Item Name="AT_MVE_FIND_INTO_ARCHIVE.int" />
+        <Item Name="AT_MVE_PERIOD_VZLET_DRIVER.int" />
+        <Item Name="AT_N3KZGOGARMUEPPGZOBGKZJ7ZZ4.int" />
+        <Item Name="AT_OEWAA3NOIJBULD2JESY4WZ5KPE.int" />
+        <Item Name="AT_OGEXNKGD5TAUJCR54S6KTKBB5A.int" />
+        <Item Name="AT_QMCUG7CGAMRUNIC4SIB3OOZDPM.int" />
+        <Item Name="AT_RQBY3GLC5IMUNHI7WH2KPIKC3U.int" />
+        <Item Name="AT_ZYQWBITANP5EHJUANXHMCS3KSY.int" />
+    </Items>
+</Folder>

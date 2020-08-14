@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Серверные">
+    <Items>
+        <Item Name="AT_2ALXZH5ZBEFEXIXUL6KUC2JS6Q.int" />
+        <Item Name="AT_BVVLGSSSGAYENCZLX7XU6IVCPE.int" />
+        <Item Name="AT_IS5W5U6JASXUTJCSZBSA36OOAQ.int" />
+        <Item Name="AT_JBVNXQVLRC5UTIHMDIYX5XEHSA.int" />
+        <Item Name="AT_JOHCLUIVBG4EDDGLMNYD3ETXXY.int" />
+        <Item Name="AT_RT_SERVER_TCONTROLAPP.int" />
+        <Item Name="ArchiveEHandler.int" />
+        <Item Name="ArchiveTHandler.int" />
+        <Item Name="FLDR_72TBENQ6EOMUDKKRWBMRKTDE4Y.folder" />
+		<Item Name="AT_NR_LUA_PING.int" />
+		<Item Name="AT_TARM_2SRV_CON.int" />
+		<Item Name="AT_P2DZ7C27M5EUHJTFDKS6YIEWYM.int" />
+		<Item Name="AT_BBEXVAW54JLE3KJ2DB7I4PMNBY.int" />
+    </Items>
+</Folder>

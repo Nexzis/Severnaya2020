@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="УСО КТП2">
+    <Items>
+        <Item Path="Node_QB5I2WXRLPCU5NX7SWGH2WFQSI.nod" />
+        <Item Path="Node_UY37DVVWN5JUNA7MFWPVQRTQQA.nod" />
+    </Items>
+</Folder>

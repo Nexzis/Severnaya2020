@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="HMI">
+    <Items>
+        <Item Name="Type_3YSXOCXKKXAE3GYX7ATPCEUO6E.type" />
+        <Item Name="Type_772M67AII23E3NHO5QS2DNEEWI.type" />
+        <Item Name="Type_M7LCKI2UQ63UJA47ITQ42UY3NQ.type" />
+        <Item Name="Type_OMLSB3J6YW7EFA65WB5ONI3IMQ.type" />
+        <Item Name="Type_QFDRIX2SVJ7UFKPMSFQSYXABTY.type" />
+        <Item Name="Type_SWFW6JZSNAZUPKESOQKEO76FAE.type" />
+        <Item Name="Type_X5R6VUWW7H2ULCC4I3LRIKN34I.type" />
+    </Items>
+</Folder>

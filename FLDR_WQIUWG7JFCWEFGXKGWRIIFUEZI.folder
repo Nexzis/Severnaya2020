@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Диагностика">
+    <Items>
+        <Item Name="AT_AWIFYXZGIXOURIGRQHSJUK3GYQ.int" />
+        <Item Name="AT_HD5TOLMHB6ZUZPOAXYYPOKYTHE.int" />
+        <Item Name="AT_RT_USOKTP1_A1_STATUS.int" />
+        <Item Name="AT_RT_USOKTP1_A2_STATUS.int" />
+    </Items>
+</Folder>

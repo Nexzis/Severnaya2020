@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Коммутаторы">
+    <Items>
+        <Item Name="AT_CCA67RWOVBUUXNO7EICBGV2DBQ.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_1_EVENT.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_1_SNMP.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_2_EVENT.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_2_SNMP.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_3_EVENT.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_3_SNMP.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_4_EVENT.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_4_SNMP.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_CHECK_CONNECTION.int" />
+        <Item Name="AT_NR_DIAGN_HUAWEI_HIDDEN_PING.int" />
+    </Items>
+</Folder>

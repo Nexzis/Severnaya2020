@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Обработка">
+    <Items>
+        <Item Name="AT_RT_USOE_A1_PROCESS.int" />
+    </Items>
+</Folder>

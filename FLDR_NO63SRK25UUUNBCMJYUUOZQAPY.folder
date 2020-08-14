@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Signal Processed">
+    <Items>
+        <Item Name="Type_24DJBD3HJZTUFOCTXU6C4O772M.type" />
+        <Item Name="Type_BKFN4QPFKMZUDH6Y3LUKVOM6YE.type" />
+        <Item Name="Type_DLR4MHITFHJELNI67LRYRZ3CIA.type" />
+    </Items>
+</Folder>
