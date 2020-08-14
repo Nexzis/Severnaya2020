@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="USOE_A1" Comment="УСО Э ПЛК А1" Disabled="FALSE" Address="192.168.1.100" StartPort="10000" TimeSourcePriority="6" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="20" LocalTimeout="2000" LocalPingInterval="300" LocalRetryTimeout="100" LocalAggregationInterval="10" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="TRUE" StartState="Default" UUID="05F9585849E782553B51299E5BCE3011">
+    <InterfaceList>
+        <SubApp Name="USOE" Type="0B38873D48FE0126333A998398024C81" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="E4E95EFB4C249D5988115481A794F91D" />
+        <SubApp Name="COL_USOE" Type="56FC0FF74B8833675B2C99A5F3336D86" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="661AF23549BC6047401CBEB0060AB663" />
+    </InterfaceList>
+</Node>

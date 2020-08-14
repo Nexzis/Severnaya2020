@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="COM" Kind="Struct" Comment="коммуникационные параметры" UUID="43BA12E842C070D27EFE459AE0AD5E93">
+    <Fields>
+        <Field Name="PortName" Type="STRING" UUID="923C7E494A2288A5A26B38BDDA3DB317" Comment="Имя порта" />
+        <Field Name="BaudRate" Type="INT" UUID="8EBEDB2149759247ED917389FF49346E" Comment="Скорость обмена" />
+        <Field Name="DataBits" Type="INT" UUID="6A1F353E4B835AE3EDFE8395D9EC20C7" Comment="Количество бит данных" />
+        <Field Name="StopBits" Type="INT" UUID="1F24296F41EC54480C44B681B6EB3D6F" Comment="Количество стоп-бит" />
+        <Field Name="Parity" Type="STRING" UUID="63794DE543075409236190A1615C694E" Comment="Паритет" />
+    </Fields>
+</Type>

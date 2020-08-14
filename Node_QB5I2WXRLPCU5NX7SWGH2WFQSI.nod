@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="USOKTP2_A1" Comment="УСО КТП2 ПЛК А1" Disabled="FALSE" Address="192.168.1.30" StartPort="10000" TimeSourcePriority="15" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="20" LocalTimeout="1000" LocalPingInterval="300" LocalRetryTimeout="100" LocalAggregationInterval="10" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="TRUE" StartState="Default" UUID="5FE7FE8640D654552B7FD3A5A030CDC0">
+    <InterfaceList>
+        <SubApp Name="USOKTP2_A1_Data_Collect" Type="A093B914483B28105E9F11BCA838E2B2" Disabled="FALSE" Args="" ExecTimeout="15000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="FFF6464941A6E55D4287B4947268DBD1" />
+        <SubApp Name="ALG" Type="679FFA9F457D59AED774BD813137F13E" Disabled="FALSE" Args="" ExecTimeout="1000000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="492252384389A79E8568619A695FDB15" />
+    </InterfaceList>
+</Node>

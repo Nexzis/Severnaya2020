@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_Voltage" Kind="Struct" UUID="1D89C1A34B77771F2199B4B79F619F96">
+    <Fields>
+        <Field Name="top" Type="BOOL" UUID="82BF70D34E9F4BF02ECDEDA4A641A353" />
+        <Field Name="bot" Type="BOOL" UUID="17F765B346BD6E364E0D258FAF9A413E" />
+        <Field Name="out" Type="BOOL" UUID="4931EA3A447CAF84D798859B56CB7F05" />
+    </Fields>
+</Type>

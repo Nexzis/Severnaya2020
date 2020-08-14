@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_Q" Kind="Struct" UUID="CC53780F4D60AEA8C06379B9981B1EF5">
+    <Fields>
+        <Field Name="avoff" Type="BOOL" UUID="60BE27D14CF5C4AB825A26991F2767AD" Comment="Аварийное отключение выключателя" />
+        <Field Name="on" Type="BOOL" UUID="4989241B49A89841DD92C497547E5E44" Comment="Выключатель включен" />
+        <Field Name="off" Type="BOOL" UUID="2F266AEA494DE74286D4F99FF7C0D6E7" Comment="Выключатель отключен" />
+        <Field Name="valid" Type="BOOL" UUID="6D4B56CD43E8A25A5CCCCF9D134CDEB9" Comment="Достоверность состояния выключателя" />
+    </Fields>
+</Type>

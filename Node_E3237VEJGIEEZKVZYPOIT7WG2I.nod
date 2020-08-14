@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="ARM_2" Comment="АРМ сменного инженера (АРМ Э №2)" Disabled="FALSE" Address="192.168.1.6,10.9.67.99" StartPort="10000" TimeSourcePriority="3" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="10" LocalTimeout="2000" LocalPingInterval="300" LocalRetryTimeout="20" LocalAggregationInterval="3" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="FALSE" StartState="Default" ControlApplication="9E3E33184F130A51740757BB579E6344" UUID="82448F0A410E5DD863B263A606ADC11D">
+    <InterfaceList>
+        <SubApp Name="KTP1" Type="897B45864920A62BBD3590A8BDBC5333" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="6A3BD5B8443F7E846D9047B0DDCAF1DF" />
+        <SubApp Name="EVE" Type="19DBDF5C4F8326A4F7CC498003C066D4" Disabled="TRUE" Args="" ExecTimeout="1000000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="E4725B65477115AB98599BA81809F19C" />
+        <SubApp Name="REPORT_ZRU_ARM2" Type="7F6D966A462A800A801109BA137E289B" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="49EF26DE410577ADB79662B12C9DAE1A" />
+        <SubApp Name="HMI_Init" Type="1B8184204FBB40F5C3CD89A6321DA10D" Disabled="FALSE" Args="" ExecTimeout="30000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="F6B95AFC480BBFEF196DEDB09355F640" />
+        <SubApp Name="HMI_Animation" Type="B2ED73D94B7F166E9757358BFDAFD3F4" Disabled="FALSE" Args="" ExecTimeout="35000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="05C846EA45CC86D32CC94BBA207997F0" />
+        <SubApp Name="HMI_adapter" Type="4077F2E94CF0FCE0D4F4C99F50200BE0" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="6CB7D4494E1CEFA6C98411B7AE42AF5A" />
+        <SubApp Name="DISEL_PROC" Type="9859CB8542637DE0EE873D8686AF5D52" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="EF9AD3E147D816B538EECC9AC73E7CD6" />
+        <SubApp Name="SPT943_ARCHIVE_CLIENT_2" Type="8B00849E463DBB79661D57B7075C211D" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="319CD29F43859F8095526A85054DA7E1" />
+        <SubApp Name="SPT943_SYNC_DB_CLIENT_2" Type="A69FB636468E3219F912F0B642767BC8" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="992DA4DC4488C267BCB6D2980B28C5CA" />
+        <SubApp Name="SPT943_SYNC_DB_TIMER" Type="C5EE979E455634F48BAD41BE543A286C" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="BBE78F044817D523A4E344824EDAD563" />
+        <SubApp Name="Diagn_Lines" Type="547D173F49D227EE56352D96A10C0390" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="2966EB0A4609ABC1AC5F7A99DF7A5CE9" />
+        <SubApp Name="HMI" Type="01E79B314099080F773B1DAF8A9FCB3C" Disabled="FALSE" Args="" ExecTimeout="1000000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="DF8969DF45557A21423E6EA2A75F62B3" />
+        <SubApp Name="VZLET_ARCHIVE" Type="F630476D48B3C75C52AADE9F690FFEEE" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="400B4E47490B9F2257FD36BA6A041F6C" />
+        <SubApp Name="SYNC" Type="A965F6254960AAF257072189AA606A54" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="C57125C34D45DDDDC08A74BE232FD8B4" />
+        <SubApp Name="SYNH_FILES" Type="30E4F0304EED0B0F836F659A9818B1ED" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="ED3FA59241B08DEBA984EF9803E6BD74" />
+        <SubApp Name="Dyn_table_ARM2" Type="6E00DD0141ED0E2149A3FC883E2EB56A" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="6FA3BA774933FEDE4FA840A4C088384A" />
+    </InterfaceList>
+</Node>

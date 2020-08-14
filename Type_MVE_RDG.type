@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="RDG" Kind="Struct" Comment="резервный дизель-генератор" UUID="44701B1441D7F2851A9AF49168E1070F">
+    <Fields>
+        <Field Name="GENERATOR_VOLTAGE_L1_2" Type="REAL" UUID="33FCDB1A4B079A7AEE4E83ADC1716F92" Comment="Напряжение генератора между фазами 1 и 2, В" />
+        <Field Name="GENERATOR_VOLTAGE_L2_3" Type="REAL" UUID="4EC16C1A465A592E8A43319562F83E97" Comment="Напряжение генератора между фазами 2 и 3, В" />
+        <Field Name="GENERATOR_VOLTAGE_L3_1" Type="REAL" UUID="AC482C424C15CC2E0449E98BACA95B41" Comment="Напряжение генератора между фазами 3 и 1, В" />
+        <Field Name="GENERATOR_VOLTAGE_L1_N" Type="REAL" UUID="311A85A34F1CB6BF196DF883EAC5D2DE" Comment="Напряжение генератора между фазами 1 и землёй, В" />
+        <Field Name="GENERATOR_VOLTAGE_L2_N" Type="REAL" UUID="17F2188644BA6B48491F99803E0C463F" Comment="Напряжение генератора между фазами 2 и землёй, В" />
+        <Field Name="GENERATOR_VOLTAGE_L3_N" Type="REAL" UUID="7BB58DA1448033A9E499858F96655AD5" Comment="Напряжение генератора между фазами 3 и землёй, В" />
+        <Field Name="GENERATOR_FREQ" Type="REAL" UUID="F33352D44448DBBE65C75AA891D75702" Comment="Частота генератора, Гц" />
+        <Field Name="GENERATOR_CURRENT_1" Type="REAL" UUID="3D6A1F3141694D1B66484E988D13B167" Comment="Ток по фазе 1 генератора, А" />
+        <Field Name="GENERATOR_CURRENT_2" Type="REAL" UUID="397894604116EF94998ACBBA14DC0B4E" Comment="Ток по фазе 2 генератора, А" />
+        <Field Name="GENERATOR_CURRENT_3" Type="REAL" UUID="2549FF904C27C837628D87877A0C15FA" Comment="Ток по фазе 3 генератора, А" />
+        <Field Name="GENERATOR_ACTIVE_POWER" Type="REAL" UUID="78E19A1646CE3BADAC2341B5AD3D69A4" Comment="Активная мощность генератора, кВт" />
+        <Field Name="GENERATOR_REACTIVE_POWER" Type="REAL" UUID="EC57279A4775A771BF8AE5B2FE0E9771" Comment="Реактивная мощность генератора, Квар" />
+        <Field Name="MAINS_VOLTAGE_L1_2" Type="REAL" UUID="737190FF4078F37CF1CDFD9A613724D7" Comment="Напряжение сети между фазой 1 и 2, В" />
+        <Field Name="MAINS_VOLTAGE_L2_3" Type="REAL" UUID="B296CE254AE60DB31BDC2381C04104E5" Comment="Напряжение сети между фазой 2 и 3, В" />
+        <Field Name="MAINS_VOLTAGE_L3_1" Type="REAL" UUID="A99E8FB04FC1DD1B486C2A8C61B0E122" Comment="Напряжение сети между фазой 3 и 1, В" />
+        <Field Name="MAINS_VOLTAGE_L1_N" Type="REAL" UUID="F86F6F7C4C5CAFBDA0E40DB0A7BB5B76" Comment="Напряжение сети между фазой 1 и нейтралью, В" />
+        <Field Name="MAINS_VOLTAGE_L2_N" Type="REAL" UUID="80D612F44F1FCDE2FB880294C6307370" Comment="Напряжение сети между фазой 2 и нейтралью, В" />
+        <Field Name="MAINS_VOLTAGE_L3_N" Type="REAL" UUID="D9032A204A786FCA5106EA95B7C31B54" Comment="Напряжение сети между фазой 3 и нейтралью, В" />
+        <Field Name="MAINS_FREQ" Type="REAL" UUID="CE368CD743AD7DCBDCA398B407919ED5" Comment="Частота сети, Гц" />
+        <Field Name="STATUS_WORD_50" Type="WORD" UUID="3A2E2C6A4161BE3A1D4D5C9336A6DA3E" Comment="Не для ромы" />
+        <Field Name="STATUS_WORD_1018" Type="WORD" UUID="3A2E2C6A4161BE9A1D4D5C9336A6DA3E" Comment="Не для ромы" />
+        <Field Name="STATUS_WORD_1019" Type="WORD" UUID="3A4E2C6A4161BE9A1D4D5C9336A6DA3E" Comment="Не для ромы" />
+        <Field Name="STATUS_WORD_1016" Type="WORD" UUID="3A4E2C7A4161BE9A1D4D5C9336A6DA3E" Comment="Не для ромы" />
+        <Field Name="MAINS_FAILURE" Type="BOOL" UUID="8544C94647DEFF599E1BB5869CBCC849" Comment="Общая ошибка" />
+        <Field Name="MB_POS_ON" Type="BOOL" UUID="FE68287E4A0B05F36428DD89E4ADE746" Comment="Выключатель собственных нужд включен" />
+        <Field Name="GB_POS_ON" Type="BOOL" UUID="C0F5DEAE47C733A6854DB58799F942EF" Comment="Выключатель генератора нужд включен" />
+        <Field Name="ENGINE_RUNNING" Type="BOOL" UUID="49A7F2D24E3F7E43141690A1921ACD37" Comment="Двигатель в работе" />
+        <Field Name="OFF" Type="BOOL" UUID="F3F3217746953A4D7D90659EE4D8F93D" Comment="Автоматика отключена" />
+        <Field Name="MANUAL" Type="BOOL" UUID="37DDD9BB46B78C61343979A83393DB5D" Comment="Ручной режим" />
+        <Field Name="AUTO" Type="BOOL" UUID="5AF864B44DCA1848B7DFD4905E56B544" Comment="Автоматический режим" />
+        <Field Name="TEST" Type="BOOL" UUID="B4ADA88E4B6E545ED60C218C013110E0" Comment="Режим ТЕСТ" />
+        <Field Name="RELAY_21_READY" Type="BOOL" UUID="3D8B571F4C28AFCFF00EF88785827D9E" Comment="Готовность ДГ" />
+        <Field Name="RELAY_22_ALARM" Type="BOOL" UUID="D2DF240F45A0198591BD309FABF76AD6" Comment="Авария ДГ" />
+        <Field Name="RELAY_23_ALARM_STOP" Type="BOOL" UUID="7BEB51CF4DA1BC66E35FC58D46C34CD5" Comment="Аварийный останов ДГ" />
+        <Field Name="RELAY_24_NORM_STOP" Type="BOOL" UUID="0715CB624AD1DB3A500D26B3A42D2F8E" Comment="Рабочий останов ДГ" />
+        <Field Name="RELAY_26_START" Type="BOOL" UUID="DFA4167149C599054B203D8C64B852FF" Comment="Старт ДГ" />
+        <Field Name="OVERLOAD" Type="BOOL" UUID="DFA4157149C599054B203D8C64B852FF" Comment="Перегрузка" />
+        <Field Name="STATUS_DEVICE" Type="INT" UUID="60E4E55A44D45FBBEC06ABBC777954B5" Comment="Статус устройства" />
+    </Fields>
+</Type>

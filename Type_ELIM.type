@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="ELIM" Kind="Struct" UUID="C42ED2594ABCAC96BF5EF4A18375CC4D">
+  <Fields>
+    <Field Name="U" UUID="B8060AB24D6BA52AC877BF8F003830F5" Type="REAL" Comment="Измеренное напряжение 0..65535" />
+    <Field Name="I" UUID="2B75527E42F8E97C41B342920835655A" Type="REAL" Comment="Измеренный ток 0..65535" />
+    <Field Name="OGR_I" UUID="AB907D7140124C9FD8F2F6A9172B5362" Type="BOOL" Comment="Режим ограничения по току" />
+    <Field Name="OGR_U" UUID="F8E501784373D78AE8104BB075346959" Type="BOOL" Comment="Режим ограничения по напряж" />
+    <Field Name="STANBY" UUID="03FE3E2B4C14C237EE931FABCDCB0131" Type="BOOL" Comment="Ждущий режим" />
+    <Field Name="OVERHEAT" UUID="7E0E5AD0477B1AC8BC285A9FB18C6EE0" Type="BOOL" Comment="перегрев" />
+    <Field Name="OVERLOAD_I" UUID="CBB7919D4C17DB4A8AFD3B80EFE85F33" Type="BOOL" Comment="перегруз по U" />
+    <Field Name="OVERLOAD_U" UUID="8E9ECD7040459A14DF2C49B18850F02A" Type="BOOL" Comment="перегруз по I" />  
+    <Field Name="ADDR" UUID="5BB3E192443745E751418EBB8CCFF0F8" Type="INT" Comment="Адрес устройства в модбас сети 0..255" />
+    <Field Name="PORT_SP" UUID="D9607D8E4F9D69D08F9144B8B27AC81E" Type="INT" Comment="Скорость обмена по модбас 1-5 : 1-9600, 2-19200, 3-38400, 4-57600, 5-115200" />
+    <Field Name="UST_U_I" UUID="8060A9614377BD03475ECA917D1F0499" Type="INT" Comment="Уставки по току и напряжению 0-11 : 0-U27,5 I30,0;1-U55,0 I15,0;2-U60,0 I30,0;3-U30,0 I90,0;4-U110 I7,5;6-U220 I3,8;7-U330 I2,5;8-U440 I1,9;9-U550 I1,5;10-U660 I1,2;11-Свои" />
+    <Field Name="SHIM_U" UUID="0CD53E684FC8C075B5A05792C96221F5" Type="INT" Comment="Значение генератора ШИМ напряжения, 0...0х03FF(выход 0-5В)" />
+    <Field Name="SHIM_I" UUID="9842CD9243B8E6C444E05E9DBABC0BD1" Type="INT" Comment="Значение генератора ШИМ тока, 0...0х03FF" />
+    <Field Name="ADD_U" UUID="CC5476974199D335FEF85B81E5EB6392" Type="REAL" Comment="Аддитивная поправка канала измерения напряжения(умол.0.0)" />
+    <Field Name="MLT_U" UUID="63A96D3A4EF58C59F124B486DA970048" Type="REAL" Comment="Мультипликативная поправка канала измерения напряжения(умол.1.0)" />
+    <Field Name="ADD_I" UUID="17FF4C8C4E6F399653A0FB95B5272661" Type="REAL" Comment="Аддитивная поправка канала измерения тока(умол.0.0)" />
+    <Field Name="MLT_I" UUID="15A76A2A45499DCFED6FD99B8ACE164E" Type="REAL" Comment="Мультипликативная поправка канала измерения тока(умол.1.0)" />
+    <Field Name="STB_WORK" UUID="094637D644313945572A55BAF45D27DC" Type="BOOL" Comment="Ждущий режим 0-рабочий,1-ждущий" />
+    <Field Name="HH_U" UUID="CFA229204F8A915A76882697D70A1969" Type="INT" Comment="Верхний предел напряжения для настраиваемого типа 0..9999В" />
+    <Field Name="HH_I" UUID="8431F38B4DED8DE52AD11AB348FD390C" Type="INT" Comment="Верхний предел тока для настраиваемого типа 0..9999А" />
+    <Field Name="WR_ADDR" UUID="7423E45046F57E5E8D9B3AB128D08685" Type="INT" Comment="ЭЛИМ  Адрес устройства в модбас сети 0..255" />
+    <Field Name="WR_PORT_SP" UUID="187D9F3B4165EC2757AC42A9AEB4DE40" Type="INT" Comment="Скорость обмена по модбас 1-5 : 1-9600, 2-19200, 3-38400, 4-57600, 5-115200" />
+    <Field Name="WR_3_UST_U_I" UUID="BF2C76524C3AF43387F3169DCB43B086" Type="INT" Comment="Уставки по току и напряжению 0-11 : 0-U27,5 I30,0;1-U55,0 I15,0;2-U60,0 I30,0;3-U30,0 I90,0;4-U110 I7,5;6-U220 I3,8;7-U330 I2,5;8-U440 I1,9;9-U550 I1,5;10-U660 I1,2;11-Свои" />
+    <Field Name="WR_4_SHIM_U" UUID="7482EC7C4053F1209D050886B98DB439" Type="INT" Comment="Значение генератора ШИМ напряжения, 0...0х03FF(выход 0-5В)" />
+    <Field Name="WR_5_SHIM_I" UUID="31675295436EFB3A8D9D99BA702A48BE" Type="INT" Comment="Значение генератора ШИМ тока, 0...0х03FF" />
+    <Field Name="WR_6_ADD_U" UUID="0B936F674844C9C85A454681B30DB4D3" Type="REAL" Comment="Аддитивная поправка канала измерения напряжения(умол.0.0)" />
+    <Field Name="WR_8_MLT_U" UUID="B646D10E491E03015C93F098E8BF31D8" Type="REAL" Comment="Мультипликативная поправка канала измерения напряжения(умол.1.0)" />
+    <Field Name="WR_10_ADD_I" UUID="A9BCFD394C3E045190111BA677670F78" Type="REAL" Comment="Аддитивная поправка канала измерения тока(умол.0.0)" />
+    <Field Name="WR_12_MLT_I" UUID="6E4C49DB44CC152E754B7D8022670EF6" Type="REAL" Comment="Мультипликативная поправка канала измерения тока(умол.1.0)" />
+    <Field Name="WR_14_STB_WORK" UUID="9B872B4D4137AB8D30A4A09B14A5217C" Type="BOOL" Comment="Ждущий режим 0-рабочий,1-ждущий"/>
+    <Field Name="WR_15_HH_U" UUID="A9CDDC7B458D29233486C59E2C7D037E" Type="INT" Comment="ЭЛИМ Верхний предел напряжения для настраиваемого типа 0..9999В"/>
+    <Field Name="WR_16_HH_I" UUID="A736EDC548EBFA6662F63E9F092F2C97" Type="INT" Comment="ЭЛИМ Верхний предел тока для настраиваемого типа 0..9999А" />/>
+  </Fields>
+</Type>

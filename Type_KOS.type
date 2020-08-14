@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="KOS" Kind="Struct" UUID="3F1F1FBB4F561912B3384AA445A31243">
+    <Fields>
+        <Field Name="RAW_USTANOVKA_OBEZ_ST" Type="INT" UUID="5B05D26F4C84786314058997A046BFE6" Comment="Установка обеззараживания 0 - выкл, 1 - вкл, 2 - выкл/тр, 3 - вкл/тр, 4 - авария" />
+        <Field Name="RAW_RASH_CHAS" Type="DWORD" UUID="92D2BB114FC8D9B268C890BF2881F431" Comment="Прошедший расход  за час (умножить на 0,1м3/ч)" />
+        <Field Name="RAW_RASH_SUTK" Type="DWORD" UUID="F7C5F9F1488BFA2591E636A62A379F4A" Comment="Прошедший расход  за сутки (умножить на 0,1м3/ч)" />
+        <Field Name="RAW_RASH_MESC" Type="DWORD" UUID="102E759F4D464A34CD101D8A296461C5" Comment="Прошедший расход  за месяц (умножить на 0,1м3/ч)" />
+        <Field Name="RAW_RASH_OBCH" Type="DWORD" UUID="FD55B7324995142B63FF7FB9E8B48095" Comment="Общий расход" />
+        <Field Name="RAW_RASH_TEKU" Type="INT" UUID="D0C82EEB439960315C9EA590AA719F56" Comment="Прошедший расход  текущий (умножить на 0,1м3/ч)" />
+        <Field Name="RAW_RASH_MAXC" Type="INT" UUID="687E89C84D7B0A21448697AB609ABD1C" Comment="Прошедший расход  максимальный за час (умножить на 0,1м3/ч)" />
+        <Field Name="RAW_TEMPERATURA" Type="INT" UUID="A46E1DCA482AEFE0AEF974BEFEC9459D" Comment="Температура" />
+        <Field Name="RAW_NASOS_KOAGUL_ST" Type="INT" UUID="8788864D4D58505F4A953AA2FDC905C4" Comment="Насос коагулянта 0 - выкл, 1 - вкл/авто, 2 - вкл/руч, 3 - авария" />
+        <Field Name="RAW_KOMPRESSOR_ST" Type="INT" UUID="35E5E1B549CA23235D39F3B699DC5D85" Comment="Компрессор 0 - выкл, 1 - выкл/тр, 2 - выкл/ав, 3 - выкл, 4 - вкл/тр" />
+        <Field Name="RAW_NASOS_DOZ_FLOK_ST" Type="INT" UUID="300129F04528A2ABF9748D8B516A05B2" Comment="Насос-дозатор флокулянта 0 - выкл, 1 - вкл/авт, 2 - вкл/руч, 3 - авария" />
+        <Field Name="RAW_NASOS_VTOR_OSAD_ST" Type="INT" UUID="812D0A694EEB8AA9C7701985B27F9004" Comment="Насос вторичного осадка 0 - выкл, 1 - вкл/авт, 2 - вкл/руч, 3 - авария" />
+        <Field Name="RAW_TEMPER_VKL_KLAPANA" Type="INT" UUID="AC7F9D2C4BB0BB2C222AA59DF672BA14" Comment="Температура включения клапана" />
+        <Field Name="RAW_NASOS_FLOK_ST" Type="INT" UUID="A9B3140244B5D4794C397D83E2B7B6E1" Comment="Насос флокулянта 0 - вкл, 1 - авария, 2 - выкл" />
+        <Field Name="RAW_VISOK_UROV_OSADKA" Type="BOOL" UUID="083C527E4FC962D11653C5901637F2B5" Comment="Высокий уровень осадка ложь - нет, правда - есть" />
+        <Field Name="RAW_PODACHA_STOKA" Type="BOOL" UUID="8FAAC8324A9D58D94ABA30831A40CE12" Comment="Подача стока ложь - нет, правда - есть" />
+        <Field Name="RAW_UROV_FLOK" Type="BOOL" UUID="B42DDE504A73A4A5633ABBA0C85EAA20" Comment="Уровень флокулянта ложь - норма, правда - низкий" />
+        <Field Name="RAW_ELECTROPITANIE" Type="BOOL" UUID="69A1F634487C77AE1E26EF96BA978850" Comment="Электропитание ложь - норма, правда - авария" />
+        <Field Name="RAW_MESH_FLOK" Type="BOOL" UUID="B6D6D3F04DA761011A08E9A5FE7F170A" Comment="Мешалка флокулянта ложь - норма, правда - авария" />
+        <Field Name="RAW_VREM_RABOT" Type="INT" UUID="5E45AD3E46E6AFCF924D46BE61D6E206" Comment="Таймер который задаёт время работы установки" />
+        <Field Name="RAW_VREM_PAUSI" Type="INT" UUID="A4A107F5409E0E596CEB338FEC729C54" Comment="Таймер который задаёт время паузы" />
+        <Field Name="UST_OBEZ_VIKL" Type="BOOL" UUID="225B0C2545D5913670ED65A6B4F3E360" Comment="Установка обеззараживания выкл" />
+        <Field Name="UST_OBEZ_VKL" Type="BOOL" UUID="8571C10545A8C938FEE42C858E1F4887" Comment="Установка обеззараживания вкл" />
+        <Field Name="UST_OBEZ_VIKL_TR" Type="BOOL" UUID="23D08F0D474A7745AF7237A34C24FBCB" Comment="Установка обеззараживания выкл/тр" />
+        <Field Name="UST_OBEZ_VKL_TR" Type="BOOL" UUID="516FC49B42019E5A4F23A9B37B385846" Comment="Установка обеззараживания вкл/тр" />
+        <Field Name="UST_OBEZ_AVAR" Type="BOOL" UUID="DD1997C040A28FE99C6A05BF4B1080F9" Comment="Установка обеззараживания выкл" />
+        <Field Name="NASOS_KOAGUL_VKL_AVTO" Type="BOOL" UUID="9DBB0BB149FBDDF235B6C5A5CA942ABD" Comment="Насос коагулянта вкл/авто" />
+        <Field Name="NASOS_KOAGUL_VKL_RUCH" Type="BOOL" UUID="CFDA8925439E90C4417CF8A0C28D7AB1" Comment="Насос коагулянта вкл/руч" />
+        <Field Name="NASOS_KOAGUL_VIKL" Type="BOOL" UUID="8C2ED60B4CC69F3FF24AE49EBAB45779" Comment="Насос коагулянта выключен" />
+        <Field Name="NASOS_KOAGUL_AVAR" Type="BOOL" UUID="DF06777343E67E98029BFF91EB9EC562" Comment="Насос коагулянта авария" />
+        <Field Name="KOMPRESSOR_VIKL" Type="BOOL" UUID="E94725554FE7C5A3E9714B9990B41DE1" Comment="Компрессор выкл" />
+        <Field Name="KOMPRESSOR_VIKL_TR" Type="BOOL" UUID="D016194241C69D76AE0436892035BFF3" Comment="Компрессор выкл/тр" />
+        <Field Name="KOMPRESSOR_VIKL_AV" Type="BOOL" UUID="934F1D6546238B2FC41EE58B89F18B0F" Comment="Компрессор выкл/ав" />
+        <Field Name="KOMPRESSOR_VKL" Type="BOOL" UUID="27A6EC2B4AE6723C473C75B989FB8253" Comment="Компрессор вкл" />
+        <Field Name="KOMPRESSOR_VKL_TR" Type="BOOL" UUID="253461F44FBA29CFAEFBC491D2969043" Comment="Компрессор вкл/тр" />
+        <Field Name="NASOS_DOZ_FLOK_VIKL" Type="BOOL" UUID="391A926C478F60BF676EBFB1D5B4C4E6" Comment="Насос-дозатор флокулянта выкл" />
+        <Field Name="NASOS_DOZ_FLOK_VKL_AVTO" Type="BOOL" UUID="B82BF55B4C97A9B65F4A52A7A1D348AE" Comment="Насос-дозатор флокулянта вкл/авт" />
+        <Field Name="NASOS_DOZ_FLOK_VKL_RUCH" Type="BOOL" UUID="D38CDCE24A79C628BEB95A9AEBCBE329" Comment="Насос-дозатор флокулянта вкл/руч" />
+        <Field Name="NASOS_DOZ_FLOK_AVAR" Type="BOOL" UUID="23050DDF4FF1AB8B132B6AAA0E18A645" Comment="Насос-дозатор флокулянта авария" />
+        <Field Name="NASOS_VTOR_OSAD_VIKL" Type="BOOL" UUID="88E9C5C34CC06DE252F5508228F4244A" Comment="Насос вторичного осадка выкл" />
+        <Field Name="NASOS_VTOR_OSAD_VKL_AVTO" Type="BOOL" UUID="8AD603C0444519AD9245A9B5AC5853F5" Comment="Насос вторичного осадка вкл/авт" />
+        <Field Name="NASOS_VTOR_OSAD_VKL_RUCH" Type="BOOL" UUID="E6D6D9B24A00EB3F704027A784E5D449" Comment="Насос вторичного осадка вкл/руч" />
+        <Field Name="NASOS_VTOR_OSAD_AVAR" Type="BOOL" UUID="3617A0274BD956C2508A82BEAB3C2379" Comment="Насос вторичного осадка авария" />
+        <Field Name="NASOS_FLOK_VKL" Type="BOOL" UUID="7C5E738C4CD2D60CD9078A8E3BA7A41C" Comment="Насос флокулянта включен" />
+        <Field Name="NASOS_FLOK_VIKL" Type="BOOL" UUID="03754D084C759CFBE9AC1FAC755CAFA2" Comment="Насос флокулянта выключен " />
+        <Field Name="NASOS_FLOK_AVAR" Type="BOOL" UUID="8500C509422F4C05EE917D84F5C08EE5" Comment="Насос флокулянта авария" />
+        <Field Name="TEMPER_VKL_KLAPANA" Type="REAL" UUID="DC23E6614533268C0B3A33AC1E64CF34" Comment="Температура открытия клапана" />
+        <Field Name="TEMPERATURA" Type="REAL" UUID="49C4898246D76C544111C6868C48B3C6" Comment="Температура" />
+        <Field Name="RASH_CHAS" Type="REAL" UUID="A2556B854D33057448412A8EB19539B3" Comment="Расходы" />
+        <Field Name="RASH_SUTK" Type="REAL" UUID="BE1045654C55C98C00409D83810BD5CF" Comment="Расходы" />
+        <Field Name="RASH_MESC" Type="REAL" UUID="7DC9399A439E6B5B9B3B54B90461842F" Comment="Расходы" />
+        <Field Name="RASH_TEKU" Type="REAL" UUID="6BF22C9B49D9F7FFEB7D69BFA09EBAC0" Comment="Расходы" />
+        <Field Name="RASH_MAXC" Type="REAL" UUID="8EE5312A4AC8984B0C3EF7930B575C92" Comment="Расходы" />
+        <Field Name="RASH_OBCH" Type="REAL" UUID="ACE738584BD8E4BE639EC9A38607C8CB" Comment="Общий расход" />
+    </Fields>
+</Type>

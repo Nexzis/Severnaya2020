@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="ARM_1" Comment="АРМ ведущего инженера ЭВС (АРМ Э №1) " Disabled="FALSE" Address="192.168.1.5,10.9.67.98" StartPort="10000" TimeSourcePriority="4" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="10" LocalTimeout="2000" LocalPingInterval="300" LocalRetryTimeout="50" LocalAggregationInterval="2" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="FALSE" StartState="Default" ControlApplication="2C44833B4BD218E0275DF1A60FCEA873" UUID="557AC3AF4B1A055B06FBC18140BA129D">
+    <InterfaceList>
+        <SubApp Name="REPORT_ZRU_ARM1" Type="8F6D966A462A800A801109BA137E289B" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="3CF2735A452E10066297BCB25E9E5D8F" />
+        <SubApp Name="HMI_Init" Type="1B8184204FBB40F5C3CD89A6321DA10D" Disabled="FALSE" Args="" ExecTimeout="30000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="9855FD9743D927A9597F37B5CA2B4405" />
+        <SubApp Name="HMI_Animation" Type="B2ED73D94B7F166E9757358BFDAFD3F4" Disabled="FALSE" Args="" ExecTimeout="35000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="62A51B764A551A4C224468B0110F34A0" />
+        <SubApp Name="HMI" Type="01E79B314099080F773B1DAF8A9FCB3C" Disabled="FALSE" Args="" ExecTimeout="200000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="ED1E35E148C4ED3EB6FAB99AAB4310AA" />
+        <SubApp Name="SPT943_ARCHIVE_CLIENT_1" Type="AE542C3643AAC768CFD15EAC1A399598" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="C66EAB4A45A86DA8A5B191814408B385" />
+        <SubApp Name="SPT943_SYNC_DB_CLIENT_1" Type="A49F20D24FC6002A4F4C748B081627D0" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="B238FAF74D6B739CCAF0A7873AACBB98" />
+        <SubApp Name="SPT943_SYNC_DB_TIMER" Type="C5EE979E455634F48BAD41BE543A286C" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="BBE78F044817D523A4E344824EDAD563" />
+        <SubApp Name="Diagn_Lines" Type="547D173F49D227EE56352D96A10C0390" Disabled="FALSE" Args="" ExecTimeout="50000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="6F0784D944258F229C729EA94BE0C040" />
+        <SubApp Name="SYNH_FILES" Type="60EF7F1E4F4D3DFEF8B20C89286FADBE" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="39BF66B54AE00D847836FD9A455A66CB" />
+        <SubApp Name="Dyn_table_ARM1" Type="009096DD4BC9432A9AC83D9EDEE7357F" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="C6937D954D0B04CFE5EBF687645C2A89" />
+    </InterfaceList>
+</Node>

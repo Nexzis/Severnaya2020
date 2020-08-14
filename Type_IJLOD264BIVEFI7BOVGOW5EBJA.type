@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="NARABOTKA" Kind="Struct" UUID="DAC29C76450A40ADF36DE4AC7C25C4E7">
+    <Fields>
+        <Field Name="HOURS" Type="REAL" UUID="1A1BFE384A29F0DB33116F8EA820037D" Comment="Наработка установки 1" />
+        <Field Name="ALG_ON" Type="BOOL" UUID="B9DCD38F45A769CD8BE7AF820F2DFC35" Comment="Включение/отключение алгоритма" />
+        <Field Name="ALG_ON_OLD" Type="BOOL" UUID="94E075554373F2CAF2ADE383FF4A6F02" />
+    </Fields>
+</Type>

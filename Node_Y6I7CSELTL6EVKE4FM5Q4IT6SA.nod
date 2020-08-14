@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="USOK_A1" Comment="УСО К ПЛК А1 192.168.1.70,192.169.1.70" Disabled="FALSE" Address="192.168.1.70" StartPort="10000" TimeSourcePriority="8" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="20" LocalTimeout="1000" LocalPingInterval="300" LocalRetryTimeout="100" LocalAggregationInterval="10" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="TRUE" StartState="Default" UUID="DBAC35F5429A67B4EC2A9BA62E4C70FF">
+    <InterfaceList>
+        <SubApp Name="USOK_A1_Data_Collect" Type="E0A9F3C94BB5B99C13B61DBEA8EB1C49" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="645991024DB73760B8B459B73F2C9473" />
+        <SubApp Name="USOK" Type="B89F4DC7466FF42B9E2DC0B638F7609D" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="5435B11C45F5DB70427FF28733C6312A" />
+    </InterfaceList>
+</Node>

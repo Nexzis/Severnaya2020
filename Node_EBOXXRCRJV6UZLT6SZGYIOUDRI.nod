@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="ARM_Adm_NR" Comment="АРМ администратора" Disabled="TRUE" Address="192.168.1.8" TimeSourcePriority="100" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="10" LocalTimeout="2000" LocalPingInterval="300" LocalRetryTimeout="20" LocalAggregationInterval="3" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="FALSE" StartState="Default" UUID="63A85DAE450075DB51BAA0999EC02F33">
+    <InterfaceList>
+        <SubApp Name="App" Type="7806A2644F100DCCEE57EF86FDFA02E8" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="CF96205443314E7678E6AF819071FFF6" />
+        <SubApp Name="ServerArbitre" Type="26EDE8D441B285D6083ED5A791DA14B0" Disabled="TRUE" Args="" ExecTimeout="80000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="6B7FA17E4DD4FA4EE3673AAA7E30ECE2" />
+        <SubApp Name="Nodes_Conn" Type="049F3280457BD073FACA3A8D861B0375" Disabled="TRUE" Args="" ExecTimeout="12000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="9D89523448C1CA2991BBE0A55DB56EB6" />
+        <SubApp Name="USO_PLC_Valid" Type="C0D770624593A039A90CB790D87828A8" Disabled="TRUE" Args="" ExecTimeout="15000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="1ABE8CE8414D93B0F3EA3F8A35A2E74A" />
+        <SubApp Name="ELog" Type="19DBDF5C4F8326A4F7CC498003C066D4" Disabled="TRUE" Args="" ExecTimeout="20000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="717A4855447968520B6FDA8C37F026C7" />
+        <SubApp Name="HMI_Init" Type="1B8184204FBB40F5C3CD89A6321DA10D" Disabled="FALSE" Args="" ExecTimeout="30000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="F6B95AFC480BBFEF196DEDB09355F640" />
+        <SubApp Name="HMI_Animation" Type="B2ED73D94B7F166E9757358BFDAFD3F4" Disabled="FALSE" Args="" ExecTimeout="35000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="05C846EA45CC86D32CC94BBA207997F0" />
+        <SubApp Name="HMI_adapter" Type="4077F2E94CF0FCE0D4F4C99F50200BE0" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="2B11EA23499E29700E80598487802E25" />
+        <SubApp Name="ARCHIVE" Type="2C34719B4FCC73050FF03D81E9C8A6AC" Disabled="TRUE" Args="" ExecTimeout="40000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="B164FC3D40B05A8982F599AF10F6168B" />
+        <SubApp Name="HMI" Type="01E79B314099080F773B1DAF8A9FCB3C" Disabled="FALSE" Args="" ExecTimeout="150000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="DF8969DF45557A21423E6EA2A75F62B3" />
+        <SubApp Name="PROC_ELIM" Type="C62D24E543D3714D2B7F719FA9CBA1DB" Disabled="TRUE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="861B548240DD2470E58B268146DEAC53" />
+    </InterfaceList>
+</Node>

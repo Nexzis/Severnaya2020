@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_TSN" Kind="Struct" UUID="64EA59E24AA2780591BA8AB1CACEC084">
+    <Fields>
+        <Field Name="truck" Type="4657B5174C16841F13DA08964DD26BF9" UUID="E2D89E324DC84A3A772A0C88FC6EA83F" />
+        <Field Name="voltage" Type="BOOL" UUID="1B895B6C41FD729642ED4D85AD0576CE" />
+    </Fields>
+</Type>

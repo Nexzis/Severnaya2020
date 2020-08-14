@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="Ty_AnInput" Kind="Struct" Comment="Переменные состояния аналогового канала" UUID="F7A4975D4B70B458CE78278D99BC23B2">
+    <Fields>
+        <Field Name="in" Type="REAL" UUID="C01296574DB5909E8FF23CA2070BCAC5" Comment="Текущее значение фильтруемой величины" />
+        <Field Name="out" Type="REAL" UUID="DC628B0B472D2DA815885B9BB9011E3A" Comment="Отфильтрованное значение" />
+        <Field Name="ti" Type="REAL" UUID="2BB78B974E1D71C790A03ABDDF6E3D95" Comment="Таймер задержки на восстановление канала после обрыва" />
+        <Field Name="inBrk" Type="BOOL" UUID="B29492724607E98B2CA560A1DA936F0C" Comment="Признак недостоверности сигнала (входной)" />
+        <Field Name="outBrk" Type="BOOL" UUID="89F818BF4E140DC69A84648A3FAC13F7" Comment="Признак недостоверности сигнала (выходной)" />
+        <Field Name="wasOk" Type="BOOL" UUID="6C591D4644E5FEE195B79698E4D00596" Comment="Признак достоверности сигнала (внутренний)" />
+        <Field Name="init" Type="BOOL" UUID="F2E88FDE483136F12770DEBD2CB68382" Comment="Признак инициализации (TRUE, если обработано хотя бы одно значение)" />
+    </Fields>
+</Type>

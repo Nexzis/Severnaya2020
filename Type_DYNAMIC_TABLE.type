@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="DYNAMIC_TABLE" Kind="Struct" UUID="30999881480F1B6A0B6EEF871BFE0179">
+    <Fields>
+        <Field Name="HEIGHT" Type="LREAL" UUID="FC032CED4D9614D2EC22208A6C82283C" Comment="Высота таблицы" />
+        <Field Name="WIDTH" Type="LREAL" UUID="CF36429A451079E8B5435B8D5E6F245C" Comment="Ширина таблицы" />
+        <Field Name="CELL_VALUE" Type="STRING" UUID="E187B24F4686329FC03F9AA8FDCE1811" Comment="Значение выбранной ячейки которое нужно записать в неё" />
+        <Field Name="ROW_INT" Type="INT" UUID="30696E6644ECB010BBA848B9935FE46B" Comment="Номер строки" />
+        <Field Name="COL_INT" Type="INT" UUID="CE6E8D534E60E5D29208448B2BDB6BC4" Comment="Номер колонки" />
+        <Field Name="ROW_COUNT" Type="INT" UUID="3FDEDE354F9D1EE9210AA38E6E1952AA" Comment="Количество строк в таблице" />
+        <Field Name="SET_DATA" Type="BOOL" UUID="0A9784F644D8C81E895DD4853C4CC3CC" Comment="Подтвердить запись данных в ячейку" />
+        <Field Name="ADD_ROW" Type="BOOL" UUID="77801A4C4912F62CA0CD51A79BEC5241" Comment="Добавить строку в таблицу" />
+        <Field Name="REMOVE_ROW" Type="BOOL" UUID="6B9CD2C84908472343FDBA8B9C2B1BA3" Comment="Удалить строку из таблицы" />
+        <Field Name="ROW_REMOVED" Type="BOOL" UUID="624AE1A64ECB3F9D7E3309BC0F82A9E9" Comment="Строка удалена" />
+        <Field Name="ROW_ADDED" Type="BOOL" UUID="7905F5854FA4A3D69E6B03B1403370A3" Comment="Строка добавлена" />
+        <Field Name="SET_DONE" Type="BOOL" UUID="FD3F660F4B5E9D56FF0332BAE391EAEC" Comment="Запись в ячейку успешна" />
+        <Field Name="ERROR" Type="BOOL" UUID="F98D312E40BA2416DAF73AB6CF363F8D" Comment="Ошибка последней операции над таблицей" />
+        <Field Name="RESET_SET" Type="BOOL" UUID="0140F2C34920D6A89C4532A8809DD64B" Comment="Сбросить успешную запись" />
+        <Field Name="RESET_ROW_REMOVED" Type="BOOL" UUID="5DBB8C344F2F31678F81FD8D580E6E91" Comment="Сбросить успешное удаление" />
+        <Field Name="RESET_ERROR" Type="BOOL" UUID="1005EBE7498FE3B68AFB5F91DBD97D01" Comment="Сбросить последнюю ошибку" />
+        <Field Name="RESET_ROW_ADD" Type="BOOL" UUID="18D784C843DC47115B51CBB894DE337C" Comment="Сбросить успешное добавление строки" />
+        <Field Name="HMI_CHANGE_SIZE" Type="BOOL" UUID="F079884040470829870E039EC0ADCBF9" Comment="Изменить размер окна" />
+        <Field Name="HMI_COUNT_ROW" Type="INT" UUID="5D1533214F290FBB3E6C45A2A74D201E" Comment="Сколько нужно строк " />
+        <Field Name="START_DATE" Type="DT" UUID="E4F69BD44F8C75AA2473629FE0B808BE" Comment="Начальная дата с которой ведётся поиск" />
+        <Field Name="STOP_DATE" Type="DT" UUID="A58289214FD51EC715A7AD935CB0DFC7" Comment="Конечная дата поиска" />
+        <Field Name="SIGN_OF_HOUR" Type="BOOL" UUID="1AEDC0C94873696C866360B9A7596CC9" Comment="Признак часа" />
+        <Field Name="SIGN_OF_DAY" Type="BOOL" UUID="3897024C41CEDE90429C04817DB92BDA" Comment="Признак дня" />
+        <Field Name="SIGN_OF_MONTH" Type="BOOL" UUID="CE47B6BF45A6FF4B07424A92CD983F87" Comment="Признак месяца" />
+        <Field Name="SIGN_OF_KVARTAL" Type="BOOL" UUID="7B213EEB440D3B779965F6962B4CD4CA" Comment="Признак квартала" />
+        <Field Name="SIGN_OF_YEAR" Type="BOOL" UUID="B10C1FA64B3761DE02B521964EE47211" Comment="Признак года" />
+        <Field Name="REQUEST_TO_ARCHIVE" Type="BOOL" UUID="E6DDD3B444888C17C0F24DAE3BE4417E" Comment="Запрос к архиву, кнопка" />
+        <Field Name="GET_CONTENT" Type="BOOL" UUID="B6AB1E0A401D83945058838EFEBFD3F3" Comment="Получить все значения таблицы" />
+        <Field Name="CONTENT_READY" Type="BOOL" UUID="1A7D3D524A693CE174DED6BC6D80A4A8" Comment="Значения получены" />
+        <Field Name="RESET_CONTENT_READY" Type="BOOL" UUID="D12987DD47E719F9D7D0CB92004BDE0F" Comment="Сброс готовности получения данных" />
+        <Field Name="CONTENT" Type="STRING" UUID="4B5710AD4CCB18C66948D2932CF5FD8D" Comment="Данные таблицы, для записи в файл" />
+        <Field Name="ERROR_TEXT" Type="STRING" UUID="9635651141DDC28FBF4DBA88C269C9F3" Comment="Ошибка при редактировании таблицы" />
+        <Field Name="PROCESSING" Type="STRING" UUID="8E1928E24BA40FBBDE3344A3BB58387C" Comment="Ход выполнения обработки запроса." />
+        <Field Name="TABLE_TEXT_ERROR" Type="STRING" UUID="0B2B769D4E2D99C6C25DB98A4BF4A6E4" Comment="Ошибка из блока Ttable" />
+        <Field Name="PRINT" Type="BOOL" UUID="2E2E80FE425449A1BA0E00B22A15A371" Comment="Печать" />
+        <Field Name="FIND_INTO_ARCHIVE" Type="BOOL" UUID="66A750744F9E4E1C3976F0AE3FFE23AC" />
+        <Field Name="CHANGE_YEAR" Type="STRING" UUID="5695DF8D4192AEB51792309B60A883D5" Comment="Выбраный год" />
+    </Fields>
+</Type>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_UPS" Kind="Struct" UUID="75C27D854C54C20CA1D297B0A23EC6CA">
+    <Fields>
+        <Field Name="Battery_Level" Type="UINT" UUID="E35E915E4464773185E7E8893E9E07A6" Comment="Уровень батареи" />
+        <Field Name="Battery_time_remaining" Type="UINT" UUID="BBFB5529427B7C981358E298297D41EF" Comment="Оставшееся время работы батареи" />
+        <Field Name="Battery_Voltage" Type="UINT" UUID="1937D9284C0A03CB714F6892B2AF4CAE" Comment="Напряжение батареи" />
+        <Field Name="Battery_Temp" Type="UINT" UUID="EBD265A24DF6C0B1EEC6A6900D93A18D" Comment="Температура батареи" />
+        <Field Name="Bypass_Freaquency" Type="UINT" UUID="B00E13A04FB819649C571FB7F8AB475F" Comment="Частота байпаса" />
+        <Field Name="Bypass_Voltage" Type="UINT" UUID="85E79364494AFE15EAA4DE984B2C96D9" Comment="Напряжение байпаса" />
+        <Field Name="Input_Freaquency" Type="UINT" UUID="438CE91F4C829A5260B22BAFBE7929C6" Comment="Частота на входе" />
+        <Field Name="Input_Voltage" Type="UINT" UUID="0B3989E242264E7587D6F3A1EB97C450" Comment="Напряжение на входе" />
+        <Field Name="Output_Freaquency" Type="UINT" UUID="9CDFA690429B2660397116B76F4E8FF8" Comment="Частота на выходе" />
+        <Field Name="Output_Voltage" Type="UINT" UUID="1FECE7774575E7F61036ECBF77B7BD7A" Comment="Напряжение на выходе" />
+        <Field Name="Output_Load" Type="UINT" UUID="61F2DCFF43EDF8554F5153A63A4DDF1C" Comment="Выходная нагрузка" />
+        <Field Name="Output_onBattery" Type="UINT" UUID="354A15CE4170A761D33CF79DBD421017" Comment="Выход на батарее" />
+        <Field Name="Output_onBypass" Type="UINT" UUID="07FFBB5B451C3F5EDEDC4FA2B7BA969B" Comment="Выход на байпасе" />
+        <Field Name="Output_Overload" Type="UINT" UUID="E46B952A492BC8C35FB852A2CF8AAA63" Comment="Перегрузка" />
+        <Field Name="Output_Overtemp" Type="UINT" UUID="E8C98344491C7BB7D19B73A6F3F0B3C6" Comment="Перегрев" />
+        <Field Name="Utility_Off" Type="UINT" UUID="2EDC786F4067C9DC8D678681B31D7EE3" Comment="Питания нет" />
+        <Field Name="Output_Config_Voltage" Type="UINT" UUID="D79F7D764C3DD5F1AB33189CFEF2B0A2" Comment="Заданное напряжение на выходе" />
+        <Field Name="Inverter_off" Type="UINT" UUID="FC548B434888D50BEACD3CBBC9A2C266" Comment="Инвертер выключен" />
+    </Fields>
+</Type>

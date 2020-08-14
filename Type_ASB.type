@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="ASB" Kind="Struct" UUID="EA2D4B0A48DEC74A861550B11EA8D3F9">
+    <Fields>
+        <Field Name="HalfHourButtonPressed" Type="BOOL" UUID="CC4D0C90401E6C30E3AC248FC1D741E2" Comment="Нажата кнопка  &quot;Получасовой архив&quot;" />
+        <Field Name="HourButtonPressed" Type="BOOL" UUID="BAF3529F4A5489490A0B0EA6772EE39F" Comment="Нажата кнопка &quot;Часовой архив&quot;" />
+        <Field Name="DateButtonPressed" Type="BOOL" UUID="60218FFB4512EB52FFCF8F9ECEA44E79" Comment="Нажата кнопка &quot;Суточный архив&quot;" />
+        <Field Name="MonthButtonPressed" Type="BOOL" UUID="18503CD6437A3D61AC4130904402694C" Comment="Нажата кнопка &quot;Месячный архив&quot;" />
+        <Field Name="QuarterButtonPressed" Type="BOOL" UUID="9FD90F6C4C70F9F413EC9FA258968DC1" Comment="Нажата кнопка &quot;Квартальный архив&quot;" />
+        <Field Name="YearButtonPressed" Type="BOOL" UUID="0BB0074C45BB8EC4211AFA9CEBEFF8B0" Comment="Нажата кнопка &quot;Годовой архив&quot;" />
+        <Field Name="HalfHourButtonFontBold" Type="BOOL" UUID="1CE65B8C445F49BDDD60ECAA921DEB21" Comment="Жирность шрифта кнопки &quot;Получасовой архив&quot;" />
+        <Field Name="HourButtonFontBold" Type="BOOL" UUID="965DCD8549CFBEEE7B77F8A18F265025" Comment="Жирность шрифта кнопки &quot;Часовой архив&quot;" />
+        <Field Name="DateButtonFontBold" Type="BOOL" UUID="D8F0AC2D4EF76F07649A4E93AE59789C" Comment="Жирность шрифта кнопки &quot;Суточный архив&quot;" />
+        <Field Name="MonthButtonFontBold" Type="BOOL" UUID="18F9C76049EA7E7C22105C865348A370" Comment="Жирность шрифта кнопки &quot;Месячный архив&quot;" />
+        <Field Name="QuarterButtonFontBold" Type="BOOL" UUID="AACED83B4290D4C5C17ECA9990925EBE" Comment="Жирность шрифта кнопки &quot;Квартальный архив&quot;" />
+        <Field Name="YearButtonFontBold" Type="BOOL" UUID="A5012D424D0A9A40A66E128E7525C51A" Comment="Жирность шрифта кнопки &quot;Годовой архив&quot;" />
+        <Field Name="HalfHourButtonVisible" Type="BOOL" UUID="D6FC01CB4EDEE319AE0450BDE74E2D8B" Comment="Видимость кнопки &quot;Получасовой архив&quot;" />
+        <Field Name="HourButtonVisible" Type="BOOL" UUID="8A6C12C741F5FDE457AC038BF81F465A" Comment="Видимость кнопки &quot;Часовой архив&quot;" />
+        <Field Name="DateButtonVisible" Type="BOOL" UUID="CBBE25EB4DF70E910BAE15B7C8A2377A" Comment="Видимость кнопки &quot;Суточный архив&quot;" />
+        <Field Name="MonthButtonVisible" Type="BOOL" UUID="B39CB3A3474472B74D48B2A8D85D450C" Comment="Видимость кнопки &quot;Месячный архив&quot;" />
+        <Field Name="QuarterButtonVisible" Type="BOOL" UUID="D9F572654442C0606E237AA784EE924F" Comment="Видимость кнопки &quot;Квартальный архив&quot;" />
+        <Field Name="YearButtonVisible" Type="BOOL" UUID="4AFA5552443C1F4BAF89C285E76E70F5" Comment="Видимость кнопки &quot;Годовой архив&quot;" />
+    </Fields>
+</Type>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="ELTEX_com" Kind="Struct" Comment="MES3508P" UUID="EC54BD1E4DAB09086EE22781F57DB522">
+    <Fields>
+        <Field Name="Device_Status" Type="BOOL" UUID="8F7E2E434E5AC0D826319F95D78867DA" Comment="Статус устройства" />
+        <Field Name="Port1_State" Type="INT" UUID="67F32DE748976A10C1554EBB0743179C" Comment="Статус порта 1" />
+        <Field Name="Port2_State" Type="INT" UUID="7C5C632C4FE1EED4A4A9BE9BECC51C7E" Comment="Статус порта 2" />
+        <Field Name="Port3_State" Type="INT" UUID="D245B3C34D1B2C2238574992D513E807" Comment="Статус порта 3" />
+        <Field Name="Port4_State" Type="INT" UUID="C0F63AF4490E7C3F670750BC51C6C86C" Comment="Статус порта 4" />
+        <Field Name="Port5_State" Type="INT" UUID="C95F478C48F26938548872B4CBD2E693" Comment="Статус порта 5" />
+        <Field Name="Port6_State" Type="INT" UUID="F93276DB4F514748B4E127967EC1AED7" Comment="Статус порта 6" />
+        <Field Name="Port7_State" Type="INT" UUID="B9D91082483C0D5527E22AA0343E7A39" Comment="Статус порта 7" />
+        <Field Name="Port8_State" Type="INT" UUID="DCAAF10E4E0B1CB20E3872AE2AB856C1" Comment="Статус порта 8" />
+        <Field Name="Port9_State" Type="INT" UUID="20A6DC154FF27269FB9870BCC0EF182C" Comment="Статус порта 9" />
+        <Field Name="Port10_State" Type="INT" UUID="E2939C5B4F363C6D481A8CBDC38304D1" Comment="Статус порта 10" />
+    </Fields>
+</Type>

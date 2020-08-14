@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="SAUVOS_A1" Comment="САУ ВОС ПЛК А1" Disabled="FALSE" Address="192.168.1.50" StartPort="10000" TimeSourcePriority="9" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="20" LocalTimeout="1000" LocalPingInterval="300" LocalRetryTimeout="100" LocalAggregationInterval="10" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="TRUE" StartState="Default" UUID="0AC2E2D747548A26CBAC52AFF45F18FE">
+    <InterfaceList>
+        <SubApp Name="SAUVOS_A1_Data_Collect" Type="E9E7CDD1412E56A9BE07CDA55E864B98" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="E7A0F74D44FE824AC7E9619EC523872D" />
+        <SubApp Name="ALG_SAUVOS" Type="571120A24348A72E32356EB1291F655D" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="C7F90CAE47A4C85BA24B148B294270AB" />
+    </InterfaceList>
+</Node>

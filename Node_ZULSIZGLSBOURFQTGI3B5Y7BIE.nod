@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="USOGSU_A1" Comment="УСО ГЩУ (40)" Disabled="FALSE" Address="192.168.1.40" StartPort="10000" TimeSourcePriority="7" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="20" LocalTimeout="1000" LocalPingInterval="300" LocalRetryTimeout="100" LocalAggregationInterval="10" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="TRUE" StartState="Default" UUID="0A447CFF48CFEF85838191B6612C1C82">
+    <InterfaceList>
+        <SubApp Name="USOGSU_A1_Data_Collect" Type="9C36132F4938B98620C7BE8898B02B3E" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="8CE8CBEE4A90A5D993BB59B1758228EA" />
+        <SubApp Name="ALG_USOGSU" Type="CA2B1D1C4580D3B25779F986D8B44E74" Disabled="FALSE" Args="" ExecTimeout="14000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="5136B151437ADA80987B0C80D07ED6FC" />
+    </InterfaceList>
+</Node>

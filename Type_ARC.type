@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="ARC" Kind="Struct" UUID="249AA9A5407252211EB0F3AB3F0BE994">
+    <Fields>
+        <Field Name="HourArchiveSelected" Type="BOOL" UUID="AC6CA68E4EF0B2B8D7ABED929C1B07FA" Comment="Нажата кнопка &quot;ЧАСОВОЙ АРХИВ&quot;" />
+        <Field Name="DateArchiveSelected" Type="BOOL" UUID="2CFECC8D4B745FF6CBEDD78D02F5034B" Comment="Нажата кнопка &quot;СУТОЧНЫЙ АРХИВ&quot;" />
+        <Field Name="MonthArchiveSelected" Type="BOOL" UUID="9FC8A85B4D2F57664A48BC8D5B917A5C" Comment="Нажата кнопка &quot;МЕСЯЧНЫЙ АРХИВ&quot;" />
+        <Field Name="StartRequestEnabled" Type="BOOL" UUID="762E18EB4396AD6EC406DB8C0F2612F2" Comment="Опрос прибора РАЗРЕШЁН" />
+        <Field Name="StartRequest" Type="BOOL" UUID="9C07F6AB4B3B7A8E07DBD19971720EA5" Comment="Нажата кнопка &quot;СЧИТАТЬ АРХИВ&quot;" />
+        <Field Name="CancelRequest" Type="BOOL" UUID="049DBF9D44B36213DCBA87AEFE70ABB5" Comment="Нажата кнопка &quot;ОТМЕНИТЬ ЧТЕНИЕ АРХИВА&quot;" />
+        <Field Name="SPT943DriverMessage" Type="STRING" UUID="25E9869A4B16D6CB51EB77A578934A24" Comment="Сообщения драйвера" />
+        <Field Name="StartDate" Type="DATE" UUID="4F5DF2624996B697AA99CD9EC3778EB0" Comment="Дата с которой начать опрос" />
+        <Field Name="EndDate" Type="DATE" UUID="D6E6EF1F46A63B296C8106A95758C529" Comment="Дата с которой закончить опрос" />
+    </Fields>
+</Type>

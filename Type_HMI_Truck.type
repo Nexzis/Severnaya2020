@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_Truck" Kind="Struct" UUID="4657B5174C16841F13DA08964DD26BF9">
+    <Fields>
+        <Field Name="exist" Type="BOOL" UUID="56188B3443CEF92BB10E95B6866F5C4A" Comment="наличие тележки у выключателя" />
+        <Field Name="in" Type="BOOL" UUID="4AAB1DCE422D4B76D4D131B50D133C4B" Comment="тележка вкачена" />
+        <Field Name="out" Type="BOOL" UUID="7C405EA64E21DE0E0037E38C2F3E5A08" Comment="тележка выкачена" />
+        <Field Name="valid" Type="BOOL" UUID="38D811E94A12DA6A6A6F2896C3ABD6EA" Comment="тележка доступна" />
+    </Fields>
+</Type>

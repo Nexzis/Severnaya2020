@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="ELTEX" Kind="Struct" Comment="MES2324P" UUID="2666DCD749A22EDB809F8B8F861D31B4">
+    <Fields>
+        <Field Name="Device_Status" Type="BOOL" UUID="8F7E2E434E5AC0D826319F95D78867DA" Comment="Статус устройства" />
+        <Field Name="Port1_State" Type="INT" UUID="67F32DE748976A10C1554EBB0743179C" Comment="Статус порта 1" />
+        <Field Name="Port2_State" Type="INT" UUID="7C5C632C4FE1EED4A4A9BE9BECC51C7E" Comment="Статус порта 2" />
+        <Field Name="Port3_State" Type="INT" UUID="D245B3C34D1B2C2238574992D513E807" Comment="Статус порта 3" />
+        <Field Name="Port4_State" Type="INT" UUID="C0F63AF4490E7C3F670750BC51C6C86C" Comment="Статус порта 4" />
+        <Field Name="Port5_State" Type="INT" UUID="C95F478C48F26938548872B4CBD2E693" Comment="Статус порта 5" />
+        <Field Name="Port6_State" Type="INT" UUID="F93276DB4F514748B4E127967EC1AED7" Comment="Статус порта 6" />
+        <Field Name="Port7_State" Type="INT" UUID="B9D91082483C0D5527E22AA0343E7A39" Comment="Статус порта 7" />
+        <Field Name="Port8_State" Type="INT" UUID="DCAAF10E4E0B1CB20E3872AE2AB856C1" Comment="Статус порта 8" />
+        <Field Name="Port9_State" Type="INT" UUID="20A6DC154FF27269FB9870BCC0EF182C" Comment="Статус порта 9" />
+        <Field Name="Port10_State" Type="INT" UUID="E2939C5B4F363C6D481A8CBDC38304D1" Comment="Статус порта 10" />
+        <Field Name="Port11_State" Type="INT" UUID="ACC44AC245EAAA81B4C9B4B4B29B2F6E" Comment="Статус порта 11" />
+        <Field Name="Port12_State" Type="INT" UUID="EED0F6C14D7135DAE2A5C0806F2F10B3" Comment="Статус порта 12" />
+        <Field Name="Port13_State" Type="INT" UUID="4923D54448ED62B9843EF488B057E7DF" Comment="Статус порта 13" />
+        <Field Name="Port14_State" Type="INT" UUID="076EADA241398ACD59FF20A7CCC05157" Comment="Статус порта 14" />
+        <Field Name="Port15_State" Type="INT" UUID="A99472E4446F198F0EB6EFAFB359ED46" Comment="Статус порта 15" />
+        <Field Name="Port16_State" Type="INT" UUID="22C6F3454A09E096AE673CA8D6330469" Comment="Статус порта 16" />
+        <Field Name="Port17_State" Type="INT" UUID="C709818541E2EA5631EA5F9F3002CD4A" Comment="Статус порта 17" />
+        <Field Name="Port18_State" Type="INT" UUID="F2173D514FDBB74BCBF1E5ABDE067E68" Comment="Статус порта 18" />
+        <Field Name="Port19_State" Type="INT" UUID="8ADB9CB5475143DD9229B0BAABD1ECF4" Comment="Статус порта 19" />
+        <Field Name="Port20_State" Type="INT" UUID="898EE95544A268570AE3A98AA26ED943" Comment="Статус порта 20" />
+        <Field Name="Port21_State" Type="INT" UUID="27D644634F6C30F1B4A062976FFDE6B3" Comment="Статус порта 21" />
+        <Field Name="Port22_State" Type="INT" UUID="FEF9C96144EFC99AD7E9128E1D2C1210" Comment="Статус порта 22" />
+        <Field Name="Port23_State" Type="INT" UUID="53FCFE19463577DE515F6390B6A95DAA" Comment="Статус порта 23" />
+        <Field Name="Port24_State" Type="INT" UUID="CF7E376E48DCC57007E7F182D0F00E9B" Comment="Статус порта 24" />
+        <Field Name="PortXG1_State" Type="INT" UUID="9AB209094FEC235F3964F7B736B336C5" Comment="Статус порта XG1" />
+        <Field Name="PortXG2_State" Type="INT" UUID="DB445BAD4C594FDB4EACC595E1697564" Comment="Статус порта XG2" />
+        <Field Name="PortXG3_State" Type="INT" UUID="5E466EDE4F25C40434B6C4B83639D860" Comment="Статус порта XG3" />
+        <Field Name="PortXG4_State" Type="INT" UUID="D2D6D69F4AC0D0201AD49A8C40251244" Comment="Статус порта XG4" />
+        <Field Name="Console_State" Type="INT" UUID="3382B3A94322268A394C8BBE3A407B26" Comment="Статус порта консольного" />
+    </Fields>
+</Type>

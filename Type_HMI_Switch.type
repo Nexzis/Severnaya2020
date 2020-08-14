@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_Switch" Kind="Struct" UUID="691A770F494C260DCCC9309F9A825324">
+    <Fields>
+        <Field Name="du" Type="BOOL" UUID="A07505234050EA97AF744A91B0614170" Comment="Дистанционное управление" />
+        <Field Name="qf" Type="STRING" UUID="59695AB146E3DFE2795F33BF5064E5AF" Comment="Диспетчерское наименование" />
+        <Field Name="abbr" Type="STRING" UUID="D31179234471E7CF5DFC16924517BBEC" Comment="Сокращенное название" />
+        <Field Name="q" Type="CC53780F4D60AEA8C06379B9981B1EF5" UUID="3729DB2543197EB6939021A8BDD21434" Comment="Параметры выключателя" />
+        <Field Name="truck" Type="4657B5174C16841F13DA08964DD26BF9" UUID="3ADB3D314577F2A9B2765389CABC7ADB" Comment="Параметры тележки" />
+        <Field Name="voltage" Type="1D89C1A34B77771F2199B4B79F619F96" UUID="5068C00940A8159698BAD89B5FDED926" Comment="Наличие напряжения у выключателя" />
+    </Fields>
+</Type>

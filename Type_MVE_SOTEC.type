@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="SOTEC" Kind="Struct" Comment="Сотек" UUID="01D249DF43D222B8285B50A5585942F4">
+    <Fields>
+        <Field Name="U_12" Type="REAL" UUID="092939E14B402B6867F049981A0FB89D" Comment="Напряжение между фазами 1 и 2 вольт"/>
+        <Field Name="U_23" Type="REAL" UUID="65DE70BC4EBEBEF4373A2F8BD2300294" Comment="Напряжение между фазами 2 и 3 вольт"/>
+        <Field Name="U_31" Type="REAL" UUID="C4341DBB4ABBE2E537882B90D4EF5600" Comment="Напряжение между фазами 1 и 3 вольт"/>
+        <Field Name="I_1" Type="REAL" UUID="959756A647D8CA0F580A6C96AEF46578" Comment="Ток фазы 1 А/100"/>
+        <Field Name="I_2" Type="REAL" UUID="2480AE394AF9C0B311FF26B08F40326D" Comment="Ток фазы 2 А/100"/>
+        <Field Name="I_3" Type="REAL" UUID="BDD0BD794DFEB4645E3A9FB740D3BEC2" Comment="Ток фазы 3 А/100"/>
+        <Field Name="SOTEC_ST_UP" Type="8DA7BED14AD8607ECAC951825659834C" UUID="BD19395F49546E12D1F7CBBBB8B287FA" Comment="Статус Сотека"/>
+    </Fields>
+</Type>

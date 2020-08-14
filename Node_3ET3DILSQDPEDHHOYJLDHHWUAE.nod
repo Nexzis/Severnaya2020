@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="USOP_A1" Comment="УСО П ПЛК А1 192.168.1.52" Disabled="FALSE" Address="192.168.1.60" StartPort="10000" TimeSourcePriority="10" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="100" AggregationInterval="20" LocalTimeout="1000" LocalPingInterval="300" LocalRetryTimeout="100" LocalAggregationInterval="10" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="TRUE" StartState="Default" UUID="6BF1ED4F4DF72D363F4C60B9627BA223">
+    <InterfaceList>
+        <SubApp Name="USOP_A1_Data_Collect" Type="11CD75044CFB07E30BE3C4BDD572424B" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="5C1B27754F8A892CD3113EB4779B9F2D" />
+        <SubApp Name="ALG_USOP" Type="4683BBD44F14E266BEA22D8E499BE1E1" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="E158EB9E4D0477B5FCF27DA12010BD7B" />
+        <SubApp Name="NARAB" Type="61ED6BF749A3AD23FA8E2E9DFC7E02FD" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="29579FD642A9E55E6B06C6914B55EEC3" />
+    </InterfaceList>
+</Node>

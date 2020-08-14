@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HOBBIT" Kind="Struct" UUID="8105559D49C82DD77D2C06A9722D1257">
+    <Fields>
+        <Field Name="CH1_CON" Type="REAL" UUID="6D9199EE4B8895E95A902CA739119B2A" Comment="Концентрация канал 1" />
+        <Field Name="CH1_ACT" Type="BOOL" UUID="157F30164B2D2723870E368D974DDF16" Comment="Канал 1 активен" />
+        <Field Name="CH1_FLT" Type="BOOL" UUID="8773E5344412F5CE65CE1A8C17B71033" Comment="Канал 1 в ошибке" />
+        <Field Name="CH1_RED" Type="BOOL" UUID="38E4C95F485C5BFC4F290293F1FC0F3E" Comment="Канал 1 данные готовы" />
+        <Field Name="CH1_NEG" Type="BOOL" UUID="229F2D9E4D15A49022710D97AA057008" Comment="Выход в отрицательную зону" />
+        <Field Name="CH1_ZN1" Type="BOOL" UUID="12C40155420CF9B65901CFB665254BB9" Comment="Нарушение по первому порогу" />
+        <Field Name="CH1_ZN2" Type="BOOL" UUID="BE0BBD4C4CB861B006ADD7B52589F315" Comment="Нарушение по второму порогу" />
+        <Field Name="CH1_ZN3" Type="BOOL" UUID="A67DAA574D54BE5F1CE44A9227AF44F6" Comment="Нарушение по третьему порогу" />
+        <Field Name="CH2_CON" Type="REAL" UUID="ABE82B0B44888A78AA3994A4271302A6" Comment="Концентрация канал 2" />
+        <Field Name="CH2_ACT" Type="BOOL" UUID="30EBCFD84674550DF27635BC3E6BBD4B" Comment="Канал 2 активен" />
+        <Field Name="CH2_FLT" Type="BOOL" UUID="67E6687C4788A1AFEC0840B2AA269F46" Comment="Канал 2 в ошибке" />
+        <Field Name="CH2_RED" Type="BOOL" UUID="74060C264444FC1FE561E2869A94B6BA" Comment="Канал 2 данные готовы" />
+        <Field Name="CH2_NEG" Type="BOOL" UUID="9750D0D04D0FC2F97B1A09B422E27509" Comment="Выход в отрицательную зону" />
+        <Field Name="CH2_ZN1" Type="BOOL" UUID="B826BF424883C40F0403278BF85C10A8" Comment="Нарушение по первому порогу" />
+        <Field Name="CH2_ZN2" Type="BOOL" UUID="3C21207249FAC8D586C9069C0CFE4D91" Comment="Нарушение по второму порогу" />
+        <Field Name="CH2_ZN3" Type="BOOL" UUID="E20CDEED432D5EB82163D3936BF16DA2" Comment="Нарушение по третьему порогу" />
+        <Field Name="CH3_CON" Type="REAL" UUID="C8C083194DE6FFAC8F44D382D2E24050" Comment="Концентрация Канал 3" />
+        <Field Name="CH3_ACT" Type="BOOL" UUID="496827DB4E5D7167896A85AC78F217F4" Comment="Канал 3 активен" />
+        <Field Name="CH3_FLT" Type="BOOL" UUID="506D4A4D462FA61E233E0A967395B906" Comment="Канал 3 в ошибке" />
+        <Field Name="CH3_RED" Type="BOOL" UUID="9E3A016E4762689283F2D495C500BBF2" Comment="Канал 3 данные готовы" />
+        <Field Name="CH3_NEG" Type="BOOL" UUID="BC638F654939CDD79DBAE6A1F22CE856" Comment="Выход в отрицательную зону" />
+        <Field Name="CH3_ZN1" Type="BOOL" UUID="F38DA07B44145D33E742D287F393F755" Comment="Нарушение по первому порогу" />
+        <Field Name="CH3_ZN2" Type="BOOL" UUID="0036CCD947285957BB3FD49919332D65" Comment="Нарушение по второму порогу" />
+        <Field Name="CH3_ZN3" Type="BOOL" UUID="49D0F0844B2DF6529EA8E09222CF775C" Comment="Нарушение по третьему порогу" />
+        <Field Name="CH4_CON" Type="REAL" UUID="02AFF6ED4E6557584613B2A41F66387A" Comment="Концентрация Канал 4" />
+        <Field Name="CH4_ACT" Type="BOOL" UUID="5BDE8FFF4351CBF9FD799983EB380AF7" Comment="Канал 4 активен" />
+        <Field Name="CH4_FLT" Type="BOOL" UUID="5FBD4FE7491437C21AE92EAA4901AAC3" Comment="Канал 4 в ошибке" />
+        <Field Name="CH4_RED" Type="BOOL" UUID="3A9F3820452A1941921A8E943243955E" Comment="Канал 4 данные готовы" />
+        <Field Name="CH4_NEG" Type="BOOL" UUID="287338874084294B639123AF4A04F852" Comment="Выход в отрицательную зону" />
+        <Field Name="CH4_ZN1" Type="BOOL" UUID="EE73C653415157415F61B296553ADE4F" Comment="Нарушение по первому порогу" />
+        <Field Name="CH4_ZN2" Type="BOOL" UUID="192F67794C9F95E437B73490334704BD" Comment="Нарушение по второму порогу" />
+        <Field Name="CH4_ZN3" Type="BOOL" UUID="DD20B8A84F0633832A45D5AF17F1163B" Comment="Нарушение по третьему порогу" />
+    </Fields>
+</Type>
