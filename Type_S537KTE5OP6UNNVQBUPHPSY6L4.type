@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TyAnPar" Kind="Struct" Comment="Аналоговый датчик" UUID="2F0731BB4D8F473AD2DDE3BDE131FAF4">
+    <Fields>
+        <Field Name="OUTPUT" Type="REAL" UUID="99B1C4D6400A71E884C7D5B174D0EABE" Comment="Значение" />
+        <Field Name="OUTPUT_FREE" Type="REAL" UUID="9BE2A5A64982920F06CCCF9841EFD5E5" Comment="Значение без учета подмен, фильтров и неисправностей" />
+        <Field Name="OUTPUT_P" Type="REAL" UUID="29108D784F681C2FC40F3BBA6AF7601A" Comment="Значение в процентах" />
+        <Field Name="Q_SUBST_ON" Type="BOOL" UUID="14973EA34A9D7DCC6ABFB7894652C988" Comment="Подмена" />
+        <Field Name="EXCEPTED" Type="BOOL" UUID="5FA3022C4627A533D7904794CB59589C" Comment="Исключен (в ремонте)" />
+        <Field Name="FAULT" Type="BOOL" UUID="32AB5A2745D691994D79A9B271ECB000" Comment="Неисправность" />
+        <Field Name="ALM_CODE" Type="INT" UUID="D829AC4A44C78148867BECA3F85B1D78" Comment="Код неисправности" />
+        <Field Name="FAULT_ACK" Type="BOOL" UUID="081BC205448F32C7AE1AEBB24E531894" Comment="Неисправность квитирована" />
+        <Field Name="FAULT_CUR" Type="BOOL" UUID="9A3A769E4FCFDC56BA90EE8F4B8FAD1F" Comment="Неисправность текущая" />
+        <Field Name="VSTATUS" Type="WORD" UUID="41EDEFD9461BB37E7C9343A72253A168" ArraySize="2" Comment="Групповой дисплей" />
+        <Field Name="Q_LL" Type="BOOL" UUID="FEF625644E2596E00439E09A491A0BD3" Comment="Срабатывание НАУ" />
+        <Field Name="Q_L" Type="BOOL" UUID="B2EF99DB4E85CE661E077A9EDCDCA43F" Comment="Срабатывание НПУ" />
+        <Field Name="Q_H" Type="BOOL" UUID="016EE1D04B5CFCEEC3CF2A9E5F67F10E" Comment="Срабатывание ВПУ" />
+        <Field Name="Q_HH" Type="BOOL" UUID="09B6EAB94626DB80E28C3D88FE6196D7" Comment="Срабатывание ВАУ" />
+        <Field Name="Q_OVL" Type="BOOL" UUID="1CAF65064B97F67526E8D8946DF9869C" Comment="Зашкал вниз" />
+        <Field Name="Q_OVH" Type="BOOL" UUID="95599E774D684CE72B7316B3321A2D78" Comment="Зашкал вверх" />
+        <Field Name="Q_LO_LIM" Type="REAL" UUID="695714FF45171BEAB5CAF09BE9F41ADB" Comment="Нижний предел" />
+        <Field Name="Q_HI_LIM" Type="REAL" UUID="5CA933EF4BE2E72268DF478E928C27B3" Comment="Верхний предел" />
+        <Field Name="Q_LL_SETP" Type="REAL" UUID="B25E70CB40A105C8DFF30DA2501B75E9" Comment="Уставка НАУ" />
+        <Field Name="Q_L_SETP" Type="REAL" UUID="030706044710951C491C029B00A6EDB7" Comment="Уставка НПУ" />
+        <Field Name="Q_H_SETP" Type="REAL" UUID="5BF730C24507E0D44EBA889B63D67C43" Comment="Уставка ВПУ" />
+        <Field Name="Q_HH_SETP" Type="REAL" UUID="550E450849C96D6DF25EA0AEB9DBA1F0" Comment="Уставка ВАУ" />
+        <Field Name="ALARM_STATE" Type="WORD" UUID="C45C31FE4167E0F4483D7D9D8C5E4440" ArraySize="2" Comment="Состояние сигнализации" />
+        <Field Name="QLL_EV" Type="INT" UUID="05B18C7A490DD3D8F88160B36D7A97E8" Comment="Код события НАУ" />
+        <Field Name="QL_EV" Type="INT" UUID="F2E4AE6B446A25A973F26591F35D1955" Comment="Код события НПУ" />
+        <Field Name="QH_EV" Type="INT" UUID="7092B611457B22B85931AC8A66AD1F68" Comment="Код события ВПУ" />
+        <Field Name="QHH_EV" Type="INT" UUID="0E0F8D8D42AFA34B2294D78E59FF00A7" Comment="Код события ВАУ" />
+        <Field Name="QFAIL_EV" Type="INT" UUID="DF32FB9E4DE8D21D1016DB84CBB7173E" Comment="Код события неисправности" />
+        <Field Name="QALERT_EV" Type="INT" UUID="52503C084C4A6417A76C0796FA46C409" Comment="Код суммарного события" />
+        <Field Name="UST_STATE" Type="WORD" UUID="DA1870A5470A8CB66A5C8B969CFD5D7B" ArraySize="2" Comment="Слово ввода уставок" />
+        <Field Name="FAULT_RESET" Type="BOOL" UUID="699F44E74A9EADF5619611AD82590A8F" Comment="Сброс неисправности" />
+        <Field Name="ACKN_STATE" Type="WORD" UUID="D0B9302046ECFBEF76A3BE8F33FFEC1E" Comment="Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность " />
+        <Field Name="CMD_ACKN" Type="BOOL" UUID="41F04DA0406E37E38BB4ECA423EF882B" Comment="Квитирование событий с ВУ (с фейсплейта)" />
+        <Field Name="ID" Type="INT" UUID="7DB13D2340A1C9D7700D78908E722F6E" Comment="ID уникального датчика" />
+        <Field Name="INPUT" Type="REAL" UUID="1E2156EC47C0BF882BA488A232A5BBA4" Comment="Сырое значение" />
+        <Field Name="QUALITY" Type="BYTE" UUID="D216EFF045FDEF7BB7FFAD810A157749" Comment="Код качества" />
+        <Field Name="F_INPUT" Type="REAL" UUID="8F9E64EB4862015A4EE643B0D3CB0CDA" Comment="Числовое значение" />
+        <Field Name="INPUT_FAULT" Type="BOOL" UUID="49EB3C30417C4299AE39FEB57EC9007D" Comment="Внешний признак неисправности датчика" />
+        <Field Name="FAULT_LAG" Type="REAL" UUID="6C31D51541700C32B43EE182B2CEC2CC" Comment="Задержка определения неисправности" />
+        <Field Name="S_TYPE" Type="WORD" UUID="CF999FF04E6F3E167048FBB0BE39D377" Comment="Тип, прошивка" />
+        <Field Name="CL_SD_TEMP" Type="BOOL" UUID="E1A144824B9AFB1C2B822D83685E51D1" Comment="Climatic - 1, Standart-0 диапазон температуры" />
+        <Field Name="SQR_ON" Type="BOOL" UUID="7B43D6AD4CA6B564458293BB40F0C98A" Comment="Квадратичная шкала" />
+        <Field Name="REVERSE_ON" Type="BOOL" UUID="021F5BB442FB1D1C98A360A3A00E6F79" Comment="Обратная шкала" />
+        <Field Name="EXCEPT_EN" Type="BOOL" UUID="E5B77A724BF4984605929B908014D6F1" Comment="Возможность исключения (ремонта)" />
+        <Field Name="EXCEPT_FAULT" Type="BOOL" UUID="BCC4A454472FD9789EAB4398BE2D0E22" Comment="Исключать (выводить в ремонт) при неисправности" />
+        <Field Name="TESTING_ON" Type="BOOL" UUID="A80BC064404E93ECB5E70D84671E6DCA" Comment="Поверка" />
+        <Field Name="SUBST_ON" Type="BOOL" UUID="97928CB3433F782B9007619DF6230703" Comment="Подмена" />
+        <Field Name="SUBST_EN" Type="BOOL" UUID="F9651F7647EF5BD67740AFAC2CDF6A41" Comment="Возможность подмены" />
+        <Field Name="LL_SETP" Type="REAL" UUID="DAD7DFE34507DF432E283E8A1CC2A92C" Comment="Уставка НАУ" />
+        <Field Name="L_SETP" Type="REAL" UUID="E93D005A4586D8F7F2DAABBB52C206EA" Comment="Уставка НПУ" />
+        <Field Name="H_SETP" Type="REAL" UUID="74BA3C6C4A663B2513D0988F97CDC61E" Comment="Уставка ВПУ" />
+        <Field Name="HH_SETP" Type="REAL" UUID="5E01DC214AEF88F2F69171B05A634D05" Comment="Уставка ВАУ" />
+        <Field Name="LL_LAG" Type="REAL" UUID="B2D7C71D46FA65453415A38ED4A14CCD" Comment="Задержка НАУ" />
+        <Field Name="L_LAG" Type="REAL" UUID="201EBEAB457CD7841AA2C6A8D0A68436" Comment="Задержка НПУ" />
+        <Field Name="H_LAG" Type="REAL" UUID="286F28ED44EDB9356401AF8F704B01D2" Comment="Задержка ВПУ" />
+        <Field Name="HH_LAG" Type="REAL" UUID="D9B58B6B4146F508DA59159A84549AD8" Comment="Задержка ВАУ" />
+        <Field Name="LL_ON" Type="BOOL" UUID="057FA3304EC737C145C1429678A1CB44" Comment="Включено НАУ" />
+        <Field Name="L_ON" Type="BOOL" UUID="00049F644E481149E688D1BC295D8FCB" Comment="Включено НПУ" />
+        <Field Name="H_ON" Type="BOOL" UUID="AF0D714A4F34D12EAF2419A0EB2C9B0F" Comment="Включено ВПУ" />
+        <Field Name="HH_ON" Type="BOOL" UUID="268859384AEB6BC6EBBDBAA64276E692" Comment="Включено ВАУ" />
+        <Field Name="INV_ON" Type="BOOL" UUID="515ABF71425D36E9657401BE9EA8D94E" Comment="Разрешено определение НЗ" />
+        <Field Name="FAULT_ON" Type="BOOL" UUID="A8CE6CE94CC6942DD5C8AFB21BC670C5" Comment="Разрешено определение неисправности" />
+        <Field Name="LL_ACT" Type="BOOL" UUID="674CD5F6416D6882E49B7BAB370DA10F" Comment="Введено НАУ" />
+        <Field Name="L_ACT" Type="BOOL" UUID="5EFC56014BCC58F6089529B1A83415A7" Comment="Введено НПУ" />
+        <Field Name="H_ACT" Type="BOOL" UUID="625DC6AD4B120BCFC25F369949E334A9" Comment="Введено ВПУ" />
+        <Field Name="HH_ACT" Type="BOOL" UUID="A2B5813044AD5ECB49C30D9CAAA984C3" Comment="Введено ВАУ" />
+        <Field Name="FAULT_ACT" Type="BOOL" UUID="DE22D4394FF268FBF71C8EADC310495C" Comment="Введено определение неисправности" />
+        <Field Name="FAULT_L_RESET" Type="BOOL" UUID="589DF7454625F728DAE1E2AB13B589E9" Comment="Сброс неисправности подключаемый" />
+        <Field Name="Filtr_ON" Type="BOOL" UUID="4FD33DBA460FC05F1D6ADBA213FF4FFD" Comment="Разрешение фильтра" />
+        <Field Name="T_Filtr" Type="REAL" UUID="06C4B2F148178712B470CB9D834F5D27" Comment="Постоянная времени фильтра" />
+        <Field Name="SUBSTIT" Type="REAL" UUID="2DED40E9486D97C991879EA5D9C2A68B" Comment="Значение подмены" />
+        <Field Name="LO_LIM" Type="REAL" UUID="DB2F49AE476F7C395181BC8D880F2CFF" Comment="Нижний предел" />
+        <Field Name="HI_LIM" Type="REAL" UUID="BAB326ED4CC841DC49B45CB61F613C22" Comment="Верхний предел" />
+        <Field Name="HYST" Type="REAL" UUID="98FB1E944CDC805092A2C28EED73C6CE" Comment="Гистерезис" />
+        <Field Name="INV_SETP" Type="REAL" UUID="75390BA846FCF7FFBE77179C222E06A0" Comment="Уставка НЗ" />
+        <Field Name="COMPENSATOR" Type="REAL" UUID="64AF88F34308597F2B980884F2183B1C" Comment="Коэфф. Компенсации" />
+        <Field Name="EXCEPT_ON" Type="BOOL" UUID="8FDD92BE40C3B897241732A9D240D3F9" Comment="Исключен (Ремонт)" />
+        <Field Name="BELL_BLOCK" Type="BOOL" UUID="68BA62DF4959EF7E9F75D6BE81063E0A" Comment="Блокировка звуковой и световой сигнализации" />
+        <Field Name="RSP" Type="BOOL" UUID="A996263B4B542F20F0A899BC8770A1D5" Comment="СКАДА: 1 - RSP, 0 - WINCC" />
+        <Field Name="NAME" Type="STRING" UUID="3352842F46A5B1850AC405A982946BDB" Comment="Короткое имя датчика" />
+        <Field Name="NAME_LONG" Type="STRING" UUID="0FE1F9D94289D77738D3628E1E99E696" Comment="Длинное имя датчика" />
+        <Field Name="NAME_SHORT" Type="STRING" UUID="58C7B7094912C375FD4DF9B9B4611B6D" Comment="Имя датчика для выводы в поле текущего значения" />
+        <Field Name="UNIT" Type="STRING" UUID="EDB85FBB488741854A18B8BB1AC25878" Comment="Единица измерения" />
+        <Field Name="NAME_SHKAF" Type="STRING" UUID="35EEFFD0466EAAC4BFF734A7AE5E4D8A" Comment="Шкаф" />
+        <Field Name="ADDRESS_XT" Type="STRING" UUID="C4C5F3E34B33FF824C4D9F952FB3F7FB" Comment="Адрес канала на клеммнике" />
+        <Field Name="SOURCE" Type="STRING" UUID="786A30164195523B3E3E148FC3D217B5" Comment="Источник" />
+        <Field Name="PRECISION" Type="INT" UUID="32022573417C2F20034E80B5E55E0F30" Comment="Количество знаков после запятой" />
+        <Field Name="UST_ACKN" Type="BOOL" UUID="C49E337C41E96FD0D4F506A147055747" Comment="Уставка квитирована" />
+        <Field Name="VSTATUS_OLD" Type="WORD" UUID="2703695540FDC0CC6B0CB88A42A8091C" ArraySize="2" />
+        <Field Name="UST_STATE_OLD" Type="WORD" UUID="3235CF9647DDAF91DDBEADA4770A3DB8" ArraySize="2" />
+        <Field Name="BLOCK_ALARM" Type="BOOL" UUID="18D27F264EC28FAEE3C2F9B6CA90F921" />
+        <Field Name="QUALITY_CODE" Type="BYTE" UUID="46FE0D774BD01B7B1AFFB6B0E8D5CF45" Comment="Код качества" />
+    </Fields>
+</Type>

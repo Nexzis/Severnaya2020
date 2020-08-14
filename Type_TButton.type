@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TButton" Kind="Struct" UUID="EA4BA1274C1F31FC2499469C014BD636">
+    <Fields>
+        <Field Name="O_PRESSED" Type="BOOL" UUID="ED855D48472B053F0C327C8455AC446D" />
+    </Fields>
+</Type>

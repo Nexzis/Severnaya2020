@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="Raw_DI16" Kind="Struct" Comment="Состояние каналов входного дискретного модуля" UUID="4BB6461D4BB59042B467B1B428458B8B">
+    <Fields>
+        <Field Name="i1" Type="BOOL" UUID="EDCB9E5941C9FA8F1F402F8E9F062CD1" Comment="Канал 1" />
+        <Field Name="i1_status" Type="UINT" UUID="917A15204860CC51D12CF29F8C90C73C" Comment="Состояние канала 1" />
+        <Field Name="i2" Type="BOOL" UUID="3B3362B044BE15EF05E941B19754AD62" Comment="Канал 2" />
+        <Field Name="i2_status" Type="UINT" UUID="63C6A1A14F83D1494437B9B68D0E7FE1" Comment="Состояние канала 2" />
+        <Field Name="i3" Type="BOOL" UUID="3A27A2C043D378D51716EEACA9973702" Comment="Канал 3" />
+        <Field Name="i3_status" Type="UINT" UUID="93AF141F45061E4D30FDDB9C41485E8D" Comment="Состояние канала 3" />
+        <Field Name="i4" Type="BOOL" UUID="573998D6462F1B76641FE38D304FA259" Comment="Канал 4" />
+        <Field Name="i4_status" Type="UINT" UUID="AE9CAE2648B83EA911B306BC444B4FFE" Comment="Состояние канала 4" />
+        <Field Name="i5" Type="BOOL" UUID="46F0887C494A79763CC76DBFF3E4542F" Comment="Канал 5" />
+        <Field Name="i5_status" Type="UINT" UUID="FDE2F0BA4D1258348ACB239AB337B1DF" Comment="Состояние канала 5" />
+        <Field Name="i6" Type="BOOL" UUID="F2F0F6A347BC88B2AACA3FB2CD9479FF" Comment="Канал 6" />
+        <Field Name="i6_status" Type="UINT" UUID="EE0866B64D152243CA3DDB95257DC3BE" Comment="Состояние канала 6" />
+        <Field Name="i7" Type="BOOL" UUID="438CBC604B99D045536723B4BC044956" Comment="Канал 7" />
+        <Field Name="i7_status" Type="UINT" UUID="F3FC46B14D7830108F46749B0A05684C" Comment="Состояние канала 7" />
+        <Field Name="i8" Type="BOOL" UUID="9267AA504CECC8087C2634B2E7303828" Comment="Канал 8" />
+        <Field Name="i8_status" Type="UINT" UUID="FCC587FC43644165EDBB19B39A87FADF" Comment="Состояние канала 8" />
+        <Field Name="i9" Type="BOOL" UUID="B605EDC646DB2B1B16A88EBFC11F823F" Comment="Канал 9" />
+        <Field Name="i9_status" Type="UINT" UUID="DC3C5F994326EA361F8B948D2ED10E1A" Comment="Состояние канала 9" />
+        <Field Name="i10" Type="BOOL" UUID="A7E746A24757D9330DF04F9B67CE1A2C" Comment="Канал 10" />
+        <Field Name="i10_status" Type="UINT" UUID="CE6694FD4612BD07D9A273B26D6482C4" Comment="Состояние канала 10" />
+        <Field Name="i11" Type="BOOL" UUID="D34B8F244B1908A166C0F7A7D7BF667A" Comment="Канал 11" />
+        <Field Name="i11_status" Type="UINT" UUID="C08ED214445746E5D44C25924F93AB40" Comment="Состояние канала 11" />
+        <Field Name="i12" Type="BOOL" UUID="B465C83E4A372C6A2763BD81574AB047" Comment="Канал 12" />
+        <Field Name="i12_status" Type="UINT" UUID="476EF36644112E9B8918BB8A1F0E0EF0" Comment="Состояние канала 12" />
+        <Field Name="i13" Type="BOOL" UUID="CDF8FCA644E3E1F9F241868499340267" Comment="Канал 13" />
+        <Field Name="i13_status" Type="UINT" UUID="E8EB50AA44683E3C01C2D49EF388D964" Comment="Состояние канала 13" />
+        <Field Name="i14" Type="BOOL" UUID="DFFEEA06494EDEAD52A03BBCF6C9BBEA" Comment="Канал 14" />
+        <Field Name="i14_status" Type="UINT" UUID="4C8C9D474AF2C3F8BC8DAFA127FC5F4A" Comment="Состояние канала 14" />
+        <Field Name="i15" Type="BOOL" UUID="1B27D9B748C35790A8922E978EB39D45" Comment="Канал 15" />
+        <Field Name="i15_status" Type="UINT" UUID="6057923743A9CBC2488A97814D37F5A0" Comment="Состояние канала 15" />
+        <Field Name="i16" Type="BOOL" UUID="7B4364664C66DA3B6B9AF29E24D09880" Comment="Канал 16" />
+        <Field Name="i16_status" Type="UINT" UUID="2992E9F842E815F2DEB76D92AAFE0FB1" Comment="Состояние канала 16" />
+    </Fields>
+</Type>

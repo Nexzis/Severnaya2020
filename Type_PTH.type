@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="PTH" Kind="Struct" UUID="0817A6DE4335CF3ECCE935992584C8C7">
+    <Fields>
+        <Field Name="Path" Type="STRING" UUID="CE7AB37F48054F560C2D038E38055DDE" Comment="Путь к архивным файлам" />
+    </Fields>
+</Type>

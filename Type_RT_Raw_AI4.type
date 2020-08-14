@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="Raw_AI4" Kind="Struct" Comment="Аналоговый модуль на 4 входа 4-20мА" UUID="5EBDC20841E83733E17D2F88853302E3">
+    <Fields>
+        <Field Name="i1" Type="REAL" UUID="C6DC2DB1485DA5CE98F7F4910F2AB928" Comment="Канал 1" />
+        <Field Name="i1_status" Type="UINT" UUID="317BF8DF45AEFDE7D61E4D8E5A3D9663" Comment="Статус канала 1" />
+        <Field Name="i2" Type="REAL" UUID="DE4EE657405539E84FA596BF22707AC3" Comment="Канал 2" />
+        <Field Name="i2_status" Type="UINT" UUID="3D94350047106E9FB6AA45B3BC6A056E" Comment="Статус канала 2" />
+        <Field Name="i3" Type="REAL" UUID="F86003C3420AF0CDB9284A9701E25322" Comment="Канал 3" />
+        <Field Name="i3_status" Type="UINT" UUID="F510E4D345E6B7B9E2234D8A931E4196" Comment="Статус канала 3" />
+        <Field Name="i4" Type="REAL" UUID="A680F1614FC716449D8F31A503D292BC" Comment="Канал 4" />
+        <Field Name="i4_status" Type="UINT" UUID="5943D25145096D46ADC37C8263CEA8F2" Comment="Статус канала 4" />
+    </Fields>
+</Type>

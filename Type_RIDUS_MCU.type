@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="MCU_RIDUS" Kind="Struct" UUID="F025273A440F84C622E0FF9C1AB676B9">
+    <Fields>
+        <Field Name="RAW_Ua" Type="INT" UUID="66BDC4CC4023ADB6F75FF8925FC87199" Comment="Напряжение Ua 0.1" />
+        <Field Name="RAW_Ub" Type="INT" UUID="A183D9E94BCA04FE5996E4906899851F" Comment="Напряжение Ub 0.1" />
+        <Field Name="RAW_Uc" Type="INT" UUID="D21CB06540E10C16DFD4DB8108FD5C5C" Comment="Напряжение Uc 0.1" />
+        <Field Name="RAW_Ia" Type="INT" UUID="7305D4174EAE6F61B1C645B173422279" Comment="Ток Ia 0.001" />
+        <Field Name="RAW_Ib" Type="INT" UUID="41EFCD2F42A8BCDE5795BC917A4237BE" Comment="Ток Ib 0.001" />
+        <Field Name="RAW_Ic" Type="INT" UUID="C0C4628F42ADBFEDCF26898FC337F8FF" Comment="Ток Ic 0.001" />
+        <Field Name="RAW_U_ZVU" Type="INT" UUID="84899C1249FCD5E8A9370CA23AFCB743" Comment="Напряжение ЗВУ 0.1" />
+        <Field Name="RAW_U_AB" Type="INT" UUID="AE51248B49F9ED40FE016DA17B94BF21" Comment="Напряжение Аккумуляторной батареи 0.1" />
+        <Field Name="RAW_I_ZVU" Type="INT" UUID="EABCBE88460C7934309DD793F2436D92" Comment="Ток ЗВУ 0.001" />
+        <Field Name="RAW_STATUS_Q" Type="INT" UUID="047CCBDF493060514FF5D4AEEDD1A1C3" Comment="Сигнал статусов автоматов" />
+        <Field Name="RAW_TEMP" Type="INT" UUID="A356A2F74B96C15F4FEE579233C49392" Comment="Температура Аккумулятора 0.1" />
+        <Field Name="Ua" Type="REAL" UUID="9BDF3372421DCACEEB2773B18FC2CA51"  Comment="Напряжение Ua " />
+        <Field Name="Ub" Type="REAL" UUID="22734BB840768DE7822C1A9173F1F83B"  Comment="Напряжение Ub " />
+        <Field Name="Uc" Type="REAL" UUID="7B75621C41D587A73038C3986FB10EBC"  Comment="Напряжение Uc " />
+        <Field Name="Ia" Type="REAL" UUID="ABDFEE58415619B543B973937420C43E"  Comment="Ток Ia" />
+        <Field Name="Ib" Type="REAL" UUID="EF6A9C2A4E04831E739B3594C1D7323C"  Comment="Ток Ib" />
+        <Field Name="Ic" Type="REAL" UUID="D685E6734E85BC036568D9A44BDDC4AC"  Comment="Ток Ic" />
+        <Field Name="U_ZVU" Type="REAL" UUID="AA9A8B4549F3196C74831D9A4A505D56" Comment="Напряжение ЗВУ" />
+        <Field Name="U_AB" Type="REAL" UUID="984AD51441376EAAD96E71AA74807891" Comment="Напряжение Аккумуляторной батареи" />/>
+        <Field Name="I_ZVU" Type="REAL" UUID="8E7C1059462CA57ADA731EA919450E5A" Comment="Ток ЗВУ 0.001" />
+        <Field Name="TEMP" Type="REAL" UUID="ACA9F83943492BEE96000A9B3E600AFB" Comment="Температура Аккумулятора 0.1"/>
+        <Field Name="QR1_AVAR" Type="BOOL" UUID="500D8A3E4935400F1DAB3F89C221C5B9" Comment="Авария QR1"/>/>
+        <Field Name="QF1_OTKL" Type="BOOL" UUID="80D3CB4D4CFE5135DB0245AC317454DA" Comment="ОТКЛ QF1"/>
+        <Field Name="QF1_AVAR" Type="BOOL" UUID="082F5E704704B44CB87A55B890AC264D" Comment="Авария QF1"/>
+    </Fields>
+</Type>

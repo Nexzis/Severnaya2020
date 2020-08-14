@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="US" Kind="Struct" Comment="UserSettings" UUID="783EFE9443DCE556E61A67AFBB965F1A">
+    <Fields>
+        <Field Name="COM_SPT943" Type="43BA12E842C070D27EFE459AE0AD5E93" UUID="92124A3B48F1A980E193FD902C1202D6" />
+        <Field Name="Path_SPT943" Type="0817A6DE4335CF3ECCE935992584C8C7" UUID="62411F2E4C84DA90B57A8C969F1FF50D" ArraySize="6" />
+    </Fields>
+</Type>

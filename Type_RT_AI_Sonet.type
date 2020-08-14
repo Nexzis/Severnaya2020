@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="AI_Sonet" Kind="Struct" Comment="Входной аналоговый сигнал от контроллера Сонет" UUID="1279FFCB4568555046FF9199BC168CF5">
+    <Fields>
+        <Field Name="Value" Type="REAL" UUID="E635C3B9453F276DC41A76893CEB09BE" Comment="Текущее значение переменной" />
+        <Field Name="reliabilityFlag" Type="BOOL" UUID="E280E99A45233EDA851DD0873E6A613A" Comment="Флаг достоверности сигнала" />
+        <Field Name="OldValue" Type="REAL" UUID="83ABF6A748633C70FAB784BBAA0ADF44" Comment="Последнее достоверное значение переменной" />
+        <Field Name="Comment" Type="STRING" UUID="A241471B4FCD5AE94392A0BCF98AD9C2" Comment="Текстовое описание переменной" />
+        <Field Name="Unit" Type="STRING" UUID="20014CBB409EE59F20049DABCBD01625" Comment="Единицы измерения" />
+        <Field Name="Sym" Type="STRING" UUID="3A518D31455E1CAF6F85C0A2CD66172C" Comment="Условное обозначение" />
+        <Field Name="Source" Type="STRING" UUID="373FA26E4A0E2F155FCF37A6E566F112" Comment="Источник события (описание оборудования)" />
+        <Field Name="repaireFlag" Type="BOOL" UUID="870C931E4050CE09CB2F5EA00D5CDC2A" Comment="Флаг вывода сигнала из опроса" />
+        <Field Name="reliabilityField" Type="WORD" UUID="B9E862014C64D761DD0291B8E8E06067" Comment="Код признака недостоверности" />
+        <Field Name="HH_en" Type="BOOL" UUID="7C45B7FF413015B2E5F948B982CBC731" Comment="Активность тревоги верхнего аварийного уровня" />
+        <Field Name="HH" Type="REAL" UUID="0B5E0A1B4D0D67E8818B049019454057" Comment="Значение границы верхнего аварийного уровня" />
+        <Field Name="HL_en" Type="BOOL" UUID="ABC8ABD5475C66938C76AE8D0401E71E" Comment="Активность тревоги верхнего предупредительного уровня" />
+        <Field Name="HL" Type="REAL" UUID="0E62C9B64E3438F1423E2DA8965C5303" Comment="Значение границы верхнего предупредительного уровня" />
+        <Field Name="LH_en" Type="BOOL" UUID="ABCC07F34D60C6C67D86FCA6CDC22B49" Comment="Активность тревоги нижнего предупредительного уровня" />
+        <Field Name="LH" Type="REAL" UUID="696AF0DA4B6EB94F775AD99E58D02FB2" Comment="Значение границы нижнего предупредительного уровня" />
+        <Field Name="LL_en" Type="BOOL" UUID="C46E7035451FDB16C51CD8A94CB84E1B" Comment="Активность тревоги  нижнего аварийного уровня" />
+        <Field Name="LL" Type="REAL" UUID="3894CD72410547E86991D7AF62FE78B0" Comment="Значение границы нижнего аварийного уровня" />
+        <Field Name="Ktr" Type="UINT" UUID="D8C0092C49826C25521CBAA11C9C82AB" Comment="Коэффициент трансформации" />
+        <Field Name="in_status" Type="USINT" UUID="8C9F2EA445D710C240282F8A9A4EBE20" Comment="Состояние входного канала" />
+    </Fields>
+</Type>

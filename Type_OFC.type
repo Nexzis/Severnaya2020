@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="OFC" Kind="Struct" Comment="OutputFieldControl" UUID="F47324C24514014B6228D387F371FCC2">
+    <Fields>
+        <Field Name="VisibleColumn" Type="BOOL" UUID="E78D054C48636C0A93EB6B9AB0943C3C" ArraySize="48" Comment="Видимость ячеек" />
+        <Field Name="PosColumn" Type="LREAL" UUID="16E30B744C16E220B8AD6BAB21A6346D" Comment="Координата ячеек" />
+    </Fields>
+</Type>

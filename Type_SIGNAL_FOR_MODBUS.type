@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="Modbus_ST_UPDT" Kind="Struct" UUID="8DA7BED14AD8607ECAC951825659834C">
+    <Fields>
+        <Field Name="STATUS_DEVICE" Type="INT" UUID="45361DAE44E578D9FB36AC94830CC8F7" Comment="Статус устройства" />
+        <Field Name="STATUS_WRITE_HOLDING_REG" Type="INT" UUID="E3AE180F43AA3251334A19A0A0087282" Comment="Статус выполнения запросов на запись холдинг-регистров" />
+        <Field Name="STATUS_READ_HOLDING_REG" Type="INT" UUID="7362C7D14BE06BFFC599CEBDC1DC0273" Comment="Статус выполнения запросов на чтение холдинг-регистров" />
+        <Field Name="STATUS_READ_INPUTS_REG" Type="INT" UUID="4E29D0B04AE330D25906D397FE0F7E6D" Comment="Статус выполнения запросов на чтение инпут-регистров" />
+        <Field Name="STATUS_READ_COILS_STATUS" Type="INT" UUID="E3A7F216428178E0E1CC978A1F46E3DD" Comment="Статус выполнения команды на чтение дискретных регистров" />
+        <Field Name="UPDATE_READ_INPUTS_REG" Type="BOOL" UUID="9DCBAC09414DC596C5A410BD40CD625C" Comment="Обновить(послать ещё раз) команду на считывание инпут-регистров" />
+        <Field Name="UPDATE_WRITE_HOLDING_REG" Type="BOOL" UUID="DB76AB6644FCE2B9B61F02A846E78B0A" Comment="Обновить(послать ещё раз) команду на запись холдинг-регистров" />
+        <Field Name="UPDATE_WRITE_COILS" Type="BOOL" UUID="2479FBFA4E6479285289F9BD96576798" Comment="Обновить(послать ещё раз) команду на запись coil" />
+        <Field Name="UPDATE_READ_HOLDING_REG" Type="BOOL" UUID="8C4897074E89D8BFF8B182A5741D7F0D" Comment="Обновить(послать ещё раз) команду на чтение холдинг-регистров" />
+        <Field Name="UPDATE_READ_COILS_STATUS" Type="BOOL" UUID="5F71D21E49D6CE13884D1F8D24611D0C" Comment="Обновить команду на считывание дискретных регистров" />
+        <Field Name="UPDATE_WRITE_COIL" Type="BOOL" UUID="354D052049CEAAE9EBEAEEA3E7608995" Comment="Обновить команду на запись выходов контроллера" />
+    </Fields>
+</Type>

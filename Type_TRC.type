@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TRC" Kind="Struct" Comment="TimerRequestControl" UUID="6C49B9E047339F4F31A0A797E6FCED07">
+    <Fields>
+        <Field Name="StartRequest" Type="BOOL" UUID="ADE3B1124E38F68DEE1260892BB12661" Comment="Запустить драйвер запроса часового, суточного, месячного архивов" />
+        <Field Name="StartRequestHour" Type="BOOL" UUID="833BDF1A41E23CCF356CF9A009B0DBC8" Comment="Запустить драйвер запроса часового архива" />
+        <Field Name="StartRequestDate" Type="BOOL" UUID="B327CBF342D43F17FA96848E200C9649" Comment="Запустить драйвер запроса суточного архива" />
+        <Field Name="StartRequestMonth" Type="BOOL" UUID="0424BCFF48B5C1F49036EA8043645196" Comment="Запустить драйвер запроса месячного архива" />
+        <Field Name="StartSyncDB" Type="BOOL" UUID="A96C969A4FEF64930247F19091B25C77" Comment="Запустить синхронизацию БД клиентов" />
+        <Field Name="StartSyncDT" Type="BOOL" UUID="0364A9F346C2E7CB7616AFB8912C42D4" Comment="Запустить синхронизацию часов теплосчётчика" />
+    </Fields>
+</Type>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TComboBox" Kind="Struct" UUID="295830294E97C920FC5787AF082746F0">
+    <Fields>
+        <Field Name="I_VISIBLE" Type="BOOL" UUID="4882C4744BD076201CE13F92C36B2C6E" Comment="Управление видимостью списка" />
+        <Field Name="I_INDEX" Type="INT" UUID="1650AC084A80FBCFFAE42388DBC9493B" Comment="Индекс списка (вход)" />
+        <Field Name="O_CHANGED" Type="BOOL" UUID="7F46118A4055922B02EC789B233CE2BA" Comment="Выбран элемент из списка" />
+        <Field Name="O_INDEX" Type="INT" UUID="F75CA20C4852567F3AED6BBC33F18E48" Comment="Индекс списка (выход)" />
+        <Field Name="O_TEXT" Type="STRING" UUID="D8D16D8745C606B2BA44E98303CDDB63" Comment="Элемент списка" />
+    </Fields>
+</Type>

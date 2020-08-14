@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="PLC_Fault" Kind="Struct" Comment="Поля причин отказа ПЛК Сонет" UUID="3B04D14C4BE702B9E77577819F8373EF">
+    <Fields>
+        <Field Name="Connect" Type="BOOL" UUID="DD9A1BC74C93D86513FCE1A35713128F" Comment="Флаг наличия связи с ПЛК (false - связь отсутствует)" />
+        <Field Name="Disabled" Type="BOOL" UUID="D0A09A3F4993D4DB726208A1F2676C31" Comment="Флаг останова опроса ПЛК (true - опрос остановлен)" />
+        <Field Name="CPU" Type="UINT" UUID="4B738447470758002E235D973A7CEECE" Comment="Состояние ЦПУ ПЛК" />
+        <Field Name="Slot3" Type="UINT" UUID="6B79064D4E8062F8371CE4A1F576D6FA" Comment="Состояние модуля .3 ПЛК (крейт 1)" />
+        <Field Name="Slot4" Type="UINT" UUID="556C76AD4E6D0FD24E1F58AD13A8826B" Comment="Состояние модуля .4 ПЛК (крейт 2)" />
+        <Field Name="Slot5" Type="UINT" UUID="59435B6D48F56CEFF6D2DCA7810778B2" Comment="Состояние модуля .5 ПЛК (крейт 3)" />
+        <Field Name="Slot6" Type="UINT" UUID="75495AA54DE464AFB4DDFCAFD0B4F31C" Comment="Состояние модуля .6 ПЛК (крейт 4)" />
+        <Field Name="Slot7" Type="UINT" UUID="EB292C134DA931854B6F3B9C36CFD9A9" Comment="Состояние модуля .7 ПЛК (крейт 5)" />
+        <Field Name="Slot8" Type="UINT" UUID="4B32361C4AAF90C629883EBFDEC30646" Comment="Состояние модуля .8 ПЛК (крейт 6)" />
+        <Field Name="Slot9" Type="UINT" UUID="49185F264E25A1F9B440A8AC3180E6E5" Comment="Состояние модуля .9 ПЛК (крейт 7)" />
+        <Field Name="Slot10" Type="UINT" UUID="CF28B1AB405B3638039B4585B106BDAF" Comment="Состояние модуля .10 ПЛК (крейт 8)" />
+    </Fields>
+</Type>

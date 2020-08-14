@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TTable" Kind="Struct" UUID="87E563304F84CCE2840E8FB11879ACDB">
+    <Fields>
+        <Field Name="EI_ADD_ROW" Type="BOOL" UUID="E0ACBBBC49C53AAE90552C8A5C097C51" Comment="Добавление новой строки в нижнюю часть таблицы" />
+        <Field Name="EI_INSERT_ROW" Type="BOOL" UUID="17C5B1564DB8551F23DE2DBFA1B0091C" Comment="Вставка новой строки в таблицу" />
+        <Field Name="EI_REMOVE_ROW" Type="BOOL" UUID="C1AA767D486F8610895BF4B0C9A89F59" Comment="Удаление строки из таблицы" />
+        <Field Name="EI_REMOVE_ROWS" Type="BOOL" UUID="E0B73A34462B8D7B68AD4AADC9B751E5" Comment="Удаляет все строки таблицы" />
+        <Field Name="EI_SET" Type="BOOL" UUID="8B812690441B4CEA2B4F53B3D8CA67E1" Comment="Установка текста ячейки таблицы" />
+        <Field Name="EI_SELECT" Type="BOOL" UUID="2FF7161546D4E19454964BA0DED20267" Comment="Выделение ячейки таблицы" />
+        <Field Name="EI_GET_CONTENT" Type="BOOL" UUID="6AA250054B67C7935D2D4DA3AC48C6B0" Comment="Получение содержимого таблицы в формате CSV" />
+        <Field Name="EI_PRINT" Type="BOOL" UUID="EE9FD539481E5679B3AF6B94A0F457A3" />
+        <Field Name="I_TEXT" Type="STRING" UUID="70F8ADEE4F77FBCCAE5505A093B25B90" Comment="Текст элемента" />
+        <Field Name="I_ROW" Type="INT" UUID="6818C53E4531D4488A07CCACF8F1F73B" Comment="Номер строки" />
+        <Field Name="I_COLUMN" Type="INT" UUID="7CB155D94AB563BA4275208BD546F5FB" Comment="Номер колонки" />
+        <Field Name="I_FILE_PATH" Type="STRING" UUID="5D731DF446C1AE966A357E8B03D93FCD" />
+        <Field Name="I_FILE_MODE" Type="STRING" UUID="113769484B3BE1974504549979B4A765" />
+        <Field Name="O_ROW_COUNT" Type="INT" UUID="8E0392DD431EE8C3B66D418757B9F4A0" Comment="Количество строк таблицы" />
+        <Field Name="O_COLUMN_COUNT" Type="INT" UUID="415F1D1F4D7F46325950D3B1FE6758D6" Comment="Количество столбцов таблицы" />
+        <Field Name="O_CURRENT_TEXT" Type="STRING" UUID="734DE28D46E7FCA4282155A188DBFE86" Comment="Текст выделенной ячейки" />
+        <Field Name="O_CURRENT_ROW" Type="INT" UUID="296DC53E45930BD45EE9BD8F951D971B" Comment="Номер строки выделенной ячейки" />
+        <Field Name="O_CURRENT_COLUMN" Type="INT" UUID="1534D4FE480667884A2B1B8C528D52F9" Comment="Номер столбца выделенной ячейки" />
+        <Field Name="O_CONTENT" Type="STRING" UUID="3C7B56714EC0C2BFB98D53BBAC52EB23" Comment="Содержимое таблицы в формате CSV" />
+        <Field Name="O_ERROR_INFO" Type="STRING" UUID="698CE4C24808875DCDAFD5850CDE9C08" Comment="Информация об ошибке" />
+        <Field Name="O_FILE_NAME" Type="STRING" UUID="D5746A3F4A6C4B6DE6E120AF30D361E0" />
+        <Field Name="RESET_ROWS_REMOVED" Type="BOOL" UUID="EF104E334EB339AB79A418A85D8D3B4B" />
+        <Field Name="RESET_ROW_ADDED" Type="BOOL" UUID="6F651FA74479744B0648B4A3F4D16FE1" />
+        <Field Name="RESET_ROW_INSERTED" Type="BOOL" UUID="BBBD6BA048A4864D5AC58395D13216C0" />
+        <Field Name="RESET_ROW_REMOVED" Type="BOOL" UUID="CCB32B464009301ACDF2AB944B6BEA81" />
+        <Field Name="RESET_ERROR" Type="BOOL" UUID="2775F0794F304D1F1E9AE4A829913300" />
+        <Field Name="RESET_SET_DONE" Type="BOOL" UUID="1879766949C26093028A3DAC018D158C" />
+        <Field Name="RESET_GET_CONTENT" Type="BOOL" UUID="A1F9ACDB49F3CEF2358877BECB8FCCE3" />
+        <Field Name="RESET_CONTENT_READY" Type="BOOL" UUID="D18D31624A3E973FEBB4B2A5843BEDBB" />
+        <Field Name="EO_ROWS_REMOVED" Type="BOOL" UUID="D4AECC39432A78E59D7DA698BA07A64D" Comment="Удалены все строки из таблицы" />
+        <Field Name="EO_ROW_ADDED" Type="BOOL" UUID="D12B2AA94239A854B5ABE094684FA7AA" Comment="Строка добавлена" />
+        <Field Name="EO_ROW_INSERTED" Type="BOOL" UUID="A8697BA14D690C9529AFBE95D6A4EA94" Comment="Строка вставлена" />
+        <Field Name="EO_ROW_REMOVED" Type="BOOL" UUID="D693DBA3469B775E2D58148CF8D9BD9B" Comment="Строка удалена" />
+        <Field Name="EO_ERROR" Type="BOOL" UUID="C60E686447571507D63A9B8A719AD0B2" Comment="При выполнении операции возникла ошибка" />
+        <Field Name="EO_SET_DONE" Type="BOOL" UUID="E66DCF6D4ED07F55FA8B21A25B75AE6E" Comment="Установлен текст ячейки" />
+        <Field Name="EO_CONTENT_READY" Type="BOOL" UUID="522C24814EBD950A23B381AFBBBC86EE" Comment="Выбрана ячейка таблицы" />
+        <Field Name="EO_FILE_CLOSED" Type="BOOL" UUID="18AC130743B4ACA505FAF8B83BF9C834" Comment="Содержимое таблицы в формате CSV подготовлено" />
+        <Field Name="EO_FILE_ERROR" Type="BOOL" UUID="D34342AC42913D26939FAB899C7125FE" />
+        <Field Name="ComboBox" Type="295830294E97C920FC5787AF082746F0" UUID="A959FC2A4597550A77F18086D43FF9FA" ArraySize="2" />
+        <Field Name="DateEditor" Type="0225A75948945207DE76F692AB67B3F6" UUID="A93D5B9C4C01BCBE2C02A2BC4910DD6B" ArraySize="2" />
+        <Field Name="DateTimeEditor" Type="1611F74D4839E9386E43C098A9AC38AD" UUID="A6B7554D412B22355D3B2BAB55DCB7C9" ArraySize="2" />
+        <Field Name="Button" Type="EA4BA1274C1F31FC2499469C014BD636" UUID="C033E84444A0326042A8EEA83A12C58E" ArraySize="4" />
+        <Field Name="GasTemplateReports" Type="1EA703BE41357399401770BB902E61BE" UUID="A5BD31C344AC408B1AC41394512168F7" />
+        <Field Name="HeaderMessage" Type="STRING" UUID="1BF3AA634A72B61213DE08BFA4DE51B0" Comment="Строка в верхней части экрана (вывод типа архива и диапазона времени)" />
+        <Field Name="DeviceType" Type="STRING" UUID="A5D83E4D4D700C504E63D8B6D3875FCC" Comment="Строка в верхней части экрана (вывод типа прибоа учёта)" />
+        <Field Name="DriverMessage" Type="STRING" UUID="56AA33BE4A1EB6C8465C818BB60B0BD9" Comment="Сообщения драйвера" />
+        <Field Name="Message" Type="STRING" UUID="520A04B546714DFBA35E52AC6B14EDA4" Comment="Обычное сообщение" />
+        <Field Name="MessageVisible" Type="BOOL" UUID="6DB699724347D710BD59DA98F2A52BD0" Comment="Видимость всплывающего окна с обычным сообщением" />
+        <Field Name="WarningMessage" Type="STRING" UUID="CF54B1BD483230EB2A858B9908F8B2A2" Comment="Предупреждающее сообщение" />
+        <Field Name="WarningMessageVisible" Type="BOOL" UUID="8F23BFB94675143ABF26FF9EF313EFA9" Comment="Видимость всплывающего окна с предупреждающим сообщением" />
+    </Fields>
+</Type>

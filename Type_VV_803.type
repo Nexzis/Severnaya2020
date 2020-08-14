@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="SIGNALS_803" Kind="Struct" Comment="Сигналы от модуля LV2210" UUID="535E8E4B40E7B6AA3879768833A58A21">
+    <Fields>
+        <Field Name="RAW_SPAC_L2210_TS1_DP" Type="INT" UUID="A8C823474549EC317E52BD817A90C73B" Comment="Сигнал с измерительного модуля TS1(&quot;срабатывание пускового токового органа защиты шин&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_SS1_DP" Type="INT" UUID="39ED6EDF460E615C1D8945810AA8419B" Comment="Сигнал с измерительного модуля SS1(&quot;срабатывание МТЗ&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_SS2_DP" Type="INT" UUID="D211CF0F4B615A40FDAA1A99AD56D10A" Comment="Сигнал с измерительного модуля SS2(&quot;срабатывание ступени перегрузки ввода&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_SS3_DP" Type="INT" UUID="107A30CD49CA02D5BD1A01978D39250F" Comment="Сигнал с измерительного модуля SS3(&quot;срабатывание ступеней защит с действием на реле К2.4&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_TS2_DP" Type="INT" UUID="88DA86FA4B1809D857117C8D2296DF23" Comment="Сигнал с измерительного модуля TS2(&quot;отключение выключателя от защит&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_TS3_DP" Type="INT" UUID="2D7018204EAE822C291EB99312227F5C" Comment="Сигнал с измерительного модуля TS3(&quot;срабатывание ступеней защит с действием на сигнализацию&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_APV_DP" Type="INT" UUID="029C7D914A4DD162A123DB938A214B52" Comment="Ключ разрешения АПВ(&quot;Разрешение автоматического повторного пуска&quot;)(0-запрещено,1-разрешено)" />
+        <Field Name="RAW_SPAC_L2210_VIKL_DP" Type="INT" UUID="FFCBFC6246C38CA44FB9319018471925" Comment="Положение выключателя(0-неопределённое(00), 1-включён, 2-отключён, 3-неопределённое(11)" />
+        <Field Name="RAW_SPAC_L2210_RPV_DP" Type="INT" UUID="290C767844C588B6CE3B4C9DEA89E00E" Comment="Реле положения Включено(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_RPO_DP" Type="INT" UUID="B65A2ACC4A11FE719D79009C2C262858" Comment="Реле положения Отключено(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_SIG_BLOCK_VHOD1_DP" Type="INT" UUID="7FC4F5894DF9ECC2AFC5F8A263F2371C" ArraySize="8" Comment="Сигнал с блока входов 1(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_SIG_BLOCK_VHOD2_DP" Type="INT" UUID="642BCBA14660A3F7A5CB5F935C970787" ArraySize="8" Comment="Сигнал с блока входов 2(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_MU_DU_DP" Type="SINT" UUID="9847E6FB4742391DC4B2E48A0A14631D" Comment="Ключ местное/дистанционное управление(0-местное, 1-дистанционное)" />
+        <Field Name="RAW_SPAC_L2210_SIG_BLOCK_VIHOD1_DP" Type="INT" UUID="0631227B41B17DF9529640AD194630AD" ArraySize="6" Comment="Сигнал с блока выходов 1(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_SIG_BLOCK_VIHOD2_DP" Type="INT" UUID="78026B7B41C85C2F2CD7E9B42CCAEC0F" ArraySize="8" Comment="Сигнал с блока выходов 2(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_L2210_NEISPRAVNOST_DP" Type="INT" UUID="AC5D3E084F69C492A1B1CEB12EDC778D" Comment="Реле Неисправность(0-не сработано, 1-сработано)" />
+        <Field Name="RAW_SPAC_L2210_COMAND_DP" Type="INT" UUID="1825D35C47F67CBE1E63AEBF1CCE51E3" Comment="Реле фиксации команд(0-не сработано, 1-сработано)" />
+        <Field Name="RAW_SPAC_L2210_RFK_VV_DP" Type="INT" UUID="90E50D2D4949345D698FB8893EEDB657" Comment="Соответствие РФК положению выключателя(0-соответствует, 1-не соответствует, при записи 0-квитирование РФК)" />
+        <Field Name="RAW_SPAC_L2210_UPR_BLOCK_VIHOD1_DP" Type="INT" UUID="27B27FAC45DCB104529D229DA85E0EAA" Comment="Управление реле блока выходов 1(0-разрешено, 1-запрещено)" />
+        <Field Name="RAW_SPAC_L2210_UPR_BLOCK_VIHOD2_DP" Type="INT" UUID="D927C40A416884C230F41CBBD003CEAE" Comment="Управление реле блока выходов 2(0-разрешено, 1-запрещено)" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_E1_E8" Type="INT" UUID="2F87600445B625ECFA54CFA45D6C4FB2" Comment="E1 Изменение  положения Выключателя ХХ  -&gt; 10 ( отключено ) 1, E2 Изменение  положения Выключателя ХХ  -&gt; 01 ( включено ) 2, E3 Изменение  положения Выключателя ХХ  -&gt; 11 ( неопределено ) 4, E4 Изменение  положения Выключателя ХХ  -&gt; 00 ( неопределено ) 8, E5 Неисправность цепей управления  у становлена 16, E6 Неисправность цепей уп р авления сб р ошена 32, E7 Срабатывание Ускорения 64, E8 Возврат Ускорения 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_E11_E18" Type="INT" UUID="D840BB5F408D2EADF06F92B3DA7AE15E" Comment="E11 Активизация сигнала SS1 1, E12 Сброс сигнала SS1 2, E13 Активизация сигнала TS1 4, E14 Сброс сигнала TS1 8, E15 Активизация сигнала SS2 16, E16 Сброс сигнала SS2 32, E17 Срабатывание ЛЗШ 64, E18 Возврат ЛЗШ 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_E21_E26" Type="INT" UUID="52D6634F4106708FF1D6959A4968C449" Comment="E21 Активизация сигнала TS2 1, E22 Сброс сигнала TS2 2, E23 Активизация сигнала  SS3 4,E24 Сброс сигнала  SS3 8,E25 Активизация сигнала  TS3 16, E26 Сброс сигнала  TS3 32" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_E31_E38" Type="INT" UUID="7B496CA046C959B27CA7758F2B24E31A" Comment="E31 Изменение у ставок 1, E32 Конец изменения у ставок 2, E33 Пуск УРОВ 4, E34 Возврат пуска УРОВ 8, E35 Пуск Ускорения 16, E36 Возврат пуска Ускорения 32, E37 Пуcк ЛЗШ 64, E38 Возврат ЛЗШ 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_1E1_1E8" Type="INT" UUID="CD0EBE554C1BC820142E2EA4F5B9935D" Comment="E1 Изменение состояния входа 1I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 1I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 1I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 1I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 1О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 1О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 1О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 1О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_2E1_2E8" Type="INT" UUID="EDAED29D445E6FB67B78B380BA991C9D" Comment="E1 Изменение состояния входа 2I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 2I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 2I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 2I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 2О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 2О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 2О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 2О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_3E1_3E8" Type="INT" UUID="4ABF81084A177B6CAAEBFC8A7D67B60D" Comment="E1 Изменение состояния входа 3I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 3I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 3I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 3I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 3О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 3О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 3О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 3О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_4E1_4E8" Type="INT" UUID="D3F05A0D47BF608B3635C7B9BE0087C0" Comment="E1 Изменение состояния входа 4I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 4I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 4I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 4I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 4О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 4О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 4О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 4О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_5E1_5E8" Type="INT" UUID="B1D28BDC4D34D0AD6972638D2E30D3C7" Comment="E1 Изменение состояния входа 5I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 5I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 5I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 5I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 5О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 5О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 5О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 5О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_6E1_6E8" Type="INT" UUID="F018F21C4A44DD1D27E07AA253175A61" Comment="E1 Изменение состояния входа 6I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 6I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 6I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 6I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 6О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 6О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 6О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 6О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_7E1_7E8" Type="INT" UUID="AC8670A942A72D6EE7B43ABB04B0334E" Comment="E1 Изменение состояния входа 7I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 7I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 7I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 7I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 7О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 7О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 7О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 7О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_8E1_8E8" Type="INT" UUID="763179794457E3872B5F28BCA5167E0E" Comment="E1 Изменение состояния входа 8I1 из 0 -&gt; 1 1, E2 Изменение состояния входа 8I1 из 1 -&gt; 0 2, E3 Изменение состояния входа 8I2 из 0 -&gt; 1 4, E4 Изменение состояния входа 8I2 из 1 -&gt; 0 8, E5 Изменение состояния выхода 8О1 из 0 -&gt; 1 16, E6 Изменение состояния выхода 8О1 из 1 -&gt; 0 32, E7 Изменение состояния выхода 8О2 из 0 -&gt; 1 64, E8 Изменение состояния выхода 8О2 из 1 -&gt; 0 128" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENT_9E1_9E7" Type="INT" UUID="8885152B489F25FAFFF90E87F9A568E9" Comment="E1 Несоответтвие РФК, E2 Соответствие РФК" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_UROV" Type="REAL" UUID="81910520448DF24A4E1A2AA3E20907D0" Comment="Уставка выдержки по времени УРОВ на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_USKOR" Type="REAL" UUID="1498F0E340E01292CD5C75A744A111DB" Comment="Уставка выдержки по времени Ускорения на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_ZASHC_SHIN" Type="REAL" UUID="3F0E956843F12A27DE7234B0D34E9E04" Comment="Уставка выдержки по времени Защита шин на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_APV" Type="REAL" UUID="58A11E484F40954A600CCE919B1F2319" Comment="Уставка выдержки по времени APV на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_SUMM_SW_SG1" Type="INT" UUID="86A213934E7B786BD5BAEC8E7D27A777" Comment="Уставка Контрольная сумма группы переключателей SG1 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_SUMM_SW_SG2" Type="INT" UUID="BCE3DD4F4738857C1AF53E980CBB90BD" Comment=" Уставка Контрольная сумма группы переключателей SG2 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_SUMM_SW_SG3" Type="INT" UUID="336ED1C14907A2422894A09706702594" Comment="Уставка Контрольная сумма группы переключателей SG3 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_COUNT_APV_CYCLE" Type="INT" UUID="C4AF67E149FD7C0264582C8BBCEFA99E" Comment="Уставка Счётчик циклов АПВ на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_COUNT_IMPULSE" Type="INT" UUID="92C3129048870BB60293F79D31C180CA" Comment="Уставка Счётчик импульсов на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_SUMM_SW_SG4" Type="INT" UUID="5B0EB21D4DBCDBAF2F3569BF744F62ED" Comment="Уставка Контрольная сумма группы переключателей SG4 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_1REG_CONF_VIH_RELE" Type="INT" UUID="AE3AFFEC43DE72422528CEBAD1160E81" Comment="Уставка Первый регистр конфигурации выходных реле на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_2REG_CONF_VIH_RELE" Type="INT" UUID="CDC684E94E6ACAF6EEDB7792B66A6294" Comment="Уставка Второй регистр конфигурации выходных реле на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_E1" Type="REAL" UUID="506F7CB44F8D54C9EB0DEE901C48EDF8" Comment="Уставка Выдержка времени событий Е1 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_E2" Type="REAL" UUID="177A963C41233B913436678E3025F5AE" Comment="Уставка Выдержка времени событий Е2 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_E3" Type="REAL" UUID="72F37FF04744F90299F804AD5083B309" Comment="Уставка Выдержка времени событий Е3 на чтение" />
+        <Field Name="RAW_SPAC_READ_L2210_TIME_E4" Type="REAL" UUID="0538194B4DB6CB0FF4E374B16AE31B8D" Comment="Уставка Выдержка времени событий Е4 на чтение" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_UROV" Type="REAL" UUID="3A11C143460E31E4135AF5B7F6F28333" Comment="Уставка выдержки по времени УРОВ на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_USKOR" Type="REAL" UUID="7CC9F1E1478B90BD8C0936BD36553510" Comment="Уставка выдержки по времени Ускорения на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_ZASHC_SHIN" Type="REAL" UUID="19826B27401FA43F8967E995277842FC" Comment="Уставка выдержки по времени Защита шин на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_APV" Type="REAL" UUID="8A45256E448BB8195475DDA97D3C7059" Comment="Уставка выдержки по времени APV на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_SUMM_SW_SG1" Type="INT" UUID="2B6CA1F848D1D0A99D1C8C8E87E582A7" Comment="Уставка Контрольная сумма группы переключателей SG1 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_SUMM_SW_SG2" Type="INT" UUID="0F0431954D6BA8F003A03E94BD21DBE4" Comment=" Уставка Контрольная сумма группы переключателей SG2 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_SUMM_SW_SG3" Type="INT" UUID="310A6DA0471B7D4F30139C99EC3DBE00" Comment="Уставка Контрольная сумма группы переключателей SG3 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_COUNT_APV_CYCLE" Type="INT" UUID="FAF148EA4B5BA3B6B7657FB354DDD4C6" Comment="Уставка Счётчик циклов АПВ на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_COUNT_IMPULSE" Type="INT" UUID="28D6055F40530C9932C8D38A99C0D43A" Comment="Уставка Счётчик импульсов на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_SUMM_SW_SG4" Type="INT" UUID="FDBEC0904E8A83E1A9D6AFA2CAA330E3" Comment="Уставка Контрольная сумма группы переключателей SG4 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_1REG_CONF_VIH_RELE" Type="INT" UUID="B5EA64384DDE54CE5CE2689FDBC3A691" Comment="Уставка Первый регистр конфигурации выходных реле на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_2REG_CONF_VIH_RELE" Type="INT" UUID="B8D9B3C1461D31178D4352A787511190" Comment="Уставка Второй регистр конфигурации выходных реле на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_E1" Type="REAL" UUID="A25597294AFE7EEAC9044AAD7C0D2CEA" Comment="Уставка Выдержка времени событий Е1 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_E2" Type="REAL" UUID="5DE5BA26442484BEC0D5A092F0F34D67" Comment="Уставка Выдержка времени событий Е2 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_E3" Type="REAL" UUID="71DF5CD54F91CDA20031888BD08C16D5" Comment="Уставка Выдержка времени событий Е3 на запись" />
+        <Field Name="RAW_SPAC_WRITE_L2210_TIME_E4" Type="REAL" UUID="6EB98AA7459507C7602844A08AD354E8" Comment="Уставка Выдержка времени событий Е4 на запись" />
+        <Field Name="RAW_SPAC_SG1" Type="BOOL" UUID="FA021D5543C77906377886BEA369AE69" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SG2" Type="BOOL" UUID="BC40C88B42AD3CB6BD98CAB6248BEEA3" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SG3" Type="BOOL" UUID="A3740133473D9A28464C9AB4A451CEAA" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_L2210_STATUS_READ_REG_COMM" Type="INT" UUID="F213E6BC40D5287B70B033ACE2F71360" Comment="Статус выполнения запросов группы READ_REG_COMM Device1" />
+        <Field Name="RAW_SPAC_L2210_STATUS_COMMANDS" Type="INT" UUID="58F163B9475900B11B2B48970D5CA991" Comment="Статус выполнения запросов группы COMMAND Device1" />
+        <Field Name="RAW_SPAC_L2210_STATUS_READ_UST" Type="INT" UUID="F02E46E94E3C9B6FE27951B666A8E0FC" Comment="Статус выполнения запросов группы READ_UST Device1" />
+        <Field Name="RAW_SPAC_L2210_STATUS_WRITE_UST" Type="INT" UUID="FD5321C1446B1DCBD01AE097666840C1" Comment="Статус выполнения запросов группы WRITE_UST Device1" />
+        <Field Name="RAW_SPAC_L2210_STATUS_READ_ST_EVENT" Type="INT" UUID="A414D1194467B45CF9F246B47883301B" Comment="Статус выполнения запросов группы READ_ST_EVENT Device1" />
+        <Field Name="RAW_SPAC_L2210_READ_REG_COMM_UPDATE" Type="BOOL" UUID="8100846C49E4FEAAAB2ED79862E861E9" Comment="Переменная для выполнения запроса группы READ_REG_COMM" />
+        <Field Name="RAW_SPAC_L2210_READ_UST_UPDATE" Type="BOOL" UUID="AC21E16A4F97F217EB49C5BEDF832A50" Comment="Переменная для выполнения запроса группы сигналов READ_UST" />
+        <Field Name="RAW_SPAC_L2210_COMMANDS_UPDATE" Type="BOOL" UUID="61FCDB4944909624069E368A75DC403C" Comment="Переменная для выполнения запроса группы сигналов COMMANDS" />
+        <Field Name="RAW_SPAC_L2210_WRITE_UST_UPDATE" Type="BOOL" UUID="2C55CCFD4D9ECFB3E2ACEEBAE0FDDA09" Comment="Переменная для выполнения запроса группы сигналов WRITE_UST" />
+        <Field Name="RAW_SPAC_L2210_READ_ST_EVENT_UPDATE" Type="BOOL" UUID="278BBB5A4CDE63DC672768A10A360AB9" Comment="Переменная для выполнения запроса группы сигналов READ_ST_EVENT" />
+        <Field Name="READ_ALLOW_SCADA" Type="BOOL" UUID="1D7A543049D96BCFC05693BBA2E9A3AC" Comment="Чтение сигналов на разрешения" />
+        <Field Name="RAW_SPAC_L2210_STATUS_READ_INPUT_AND_OTPUT_ST" Type="INT" UUID="A5271D4C455913B013F1658DFB1DA963" Comment="Статус выполнения запросов для группы READ_INPUT_AND_OTPUT драйвера SPA_BUS Device1" />
+        <Field Name="RAW_SPAC_L2210_READ_INPUT_AND_OTPUT_UPDATE" Type="BOOL" UUID="0F1B1B1C4FD6D6BDCE0ADC8D0B1D572A" Comment="Переменная для выполнения запроса группе сигналов READ_INPUT_AND_OTPUT драйвера SPA_BUS" />
+        <Field Name="RAW_SPAC_L2210_DEVICE1_STATUS" Type="INT" UUID="1BB66B124D0F2D4628EC549193F35F8E" Comment="Статус устройства Device1  драйвера SPA_BUS " />
+        <Field Name="RAW_SPAC_L2210_WRITE_COMMANDS_OUTPUT" Type="BOOL" UUID="066E945B485B819F22CD5ABFBB346E02" Comment="Выполнение команды на управление " />
+        <Field Name="RAW_SPAC_L2210_REG_INDIC_ZASHC" Type="INT" UUID="8F4C700E46CEFF22E2CAFA832D823CCE" Comment="Регистр индикации сработавших защит" />
+        <Field Name="RAW_SPAC_L2210_REG_BUFFER" Type="INT" UUID="66F8F5234D0491E33F31469211853B75" Comment="Запоминаемый регистр сработавших защит" />
+        <Field Name="RAW_SPAC_L2210_VIBOR_OTKL" Type="INT" UUID="7E8A6AA344A5EAD6D69F039FA345BDEA" Comment="Выбор команды отключить(0-нет выбора,1-команда выбрана)" />
+        <Field Name="RAW_SPAC_L2210_VIBOR_VKL" Type="INT" UUID="686931B54DF3EA29012496859EB52D45" Comment="Выбор команды включить(0-нет выбора,1-команда выбрана)" />
+        <Field Name="RAW_SPAC_L2210_VIPOLNIT_COMANDU" Type="INT" UUID="621C2D414FC7F8F8AB7BCA9878A3C63C" Comment="1-выполнить выбранную команду" />
+        <Field Name="RAW_SPAC_L2210_OTMENIT_COMANDU" Type="INT" UUID="FDC7946244A11D9D51F047B71FD81C31" Comment="1-отменить выбранную команду" />
+        <Field Name="RAW_SPAC_L2210_VIPOLNIT_COMANDU_SHIROK" Type="INT" UUID="737A606E4D35CE339D21CE84D086AEBF" Comment="1-выполнить выбранную команд широковещательно" />
+        <Field Name="RAW_SPAC_L2210_OTMENIT_COMANDU_SHIROK" Type="INT" UUID="31191BB144EA4FFF2AA780B4A20C74F5" Comment="1-отменить выбранную команду широковещательно" />
+        <Field Name="RAW_SPAC_L2210_SBROS_VIH_RELE_IND" Type="INT" UUID="F2FC91F24A05BA999458EF838BD62918" Comment="1-сброс реле и индикации" />
+        <Field Name="RAW_SPAC_L2210_SBROS_VIH_RELE_IND_BUFFER" Type="INT" UUID="889D7D4C4A1B01920EBFF9B62AB19E34" Comment="1-сброс реле и индикации и запомненых данных" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT0_155" Type="INT" UUID="C5E0A0FB4B24ADBC374DFABB0FF4549D" Comment="Регистр маски событий 0" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT0_156" Type="INT" UUID="62EB9CB84CFDC0813A46699A9C66C3A1" Comment="Регистр маски событий 0" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT0_157" Type="INT" UUID="5A9625AC4496C32BA2A64B9EFA52D643" Comment="Регистр маски событий 0" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT0_158" Type="INT" UUID="DD45C95942259833DD88BEA790217675" Comment="Регистр маски событий 0" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT1" Type="INT" UUID="A767E551495EEAAB289C51ABB2393322" Comment="Регистр маски событий 1" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT2" Type="INT" UUID="687000744AD08A7B8E820FB8F272C7B7" Comment="Регистр маски событий 2" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT3" Type="INT" UUID="D935FB5B4C9D2746028298980B17DEE4" Comment="Регистр маски событий 3" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT4" Type="INT" UUID="BA76D6594E0F3B1B9A1B63AA1E504F3F" Comment="Регистр маски событий 4" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT5" Type="INT" UUID="8B6FA6CB4CA2042811A7FDB3F7CCADBB" Comment="Регистр маски событий 5" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT6" Type="INT" UUID="2E558560437085A5BF0368B1324F2CF6" Comment="Регистр маски событий 6" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT7" Type="INT" UUID="08638F804D81A76264DBEDAE2B53F537" Comment="Регистр маски событий 7" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT8" Type="INT" UUID="432C78044370CF7CEB26AC93E9C47A55" Comment="Регистр маски событий 8" />
+        <Field Name="RAW_SPAC_L2210_REG_MASK_EVENT9" Type="INT" UUID="E10527814EADA5D0DE242890C7C6AE85" Comment="Регистр маски событий 9" />
+        <Field Name="RAW_SPAC_L2210_OTKR_PAROL" Type="INT" UUID="DF01E00F423152B0A869E8B29B80ED3C" Comment="Открытие пароля для изменения уставок" />
+        <Field Name="RAW_SPAC_L2210_ZAKR_PAROL" Type="INT" UUID="B47C326F470FDD341901ABAF5CDD562C" Comment="Закрытие или изменение пароля" />
+        <Field Name="RAW_SPAC_L2210_TESTS" Type="INT" UUID="450F1263447189536068339BAF9CBA04" Comment="1-тест светодиодов, 2-форматирование EEPROM" />
+        <Field Name="RAW_SPAC_L2210_ERROR_NUM" Type="INT" UUID="02CE215945F6379218904A8C976FD344" Comment="Код ошибки" />
+        <Field Name="RAW_SPAC_L2210_ADDRESS" Type="INT" UUID="5FA9C3784E85199A0C5E47BF2F5AD5EB" Comment="Адрес модуля" />
+        <Field Name="RAW_SPAC_L2210_OBMEN_SPEED" Type="INT" UUID="A42501CB4ED849C6A3218A93BC5A4152" Comment="Cкорость обмена" />
+        <Field Name="RAW_SPAC_L2210_TIME_OTKL_VKL" Type="INT" UUID="99C346F64FE634290EE0C4BBBF04A27B" Comment="Скорость отключения выключателя" />
+        <Field Name="RAW_SPAC_L2210_TIME_VKL_VKL" Type="INT" UUID="2957E77E4399AF18984C9495B6AEF59C" Comment="Скорость включения выключателя" />
+        <Field Name="RAW_SPAC_L2210_PO_VERSION" Type="STRING" UUID="30BC8CC64E56EE2F896950B385117EB9" Comment="Версия ПО" />
+        <Field Name="RAW_SPAC_L2210_TYPE_MODULE" Type="STRING" UUID="B7293D8644756BBA88CD7BBA8ACBD9C0" Comment="Тип модуля" />
+        <Field Name="RAW_SPAC_L2210_TIMER" Type="REAL" UUID="B8DE67154B82156F6E1E2F936BD40E6F" Comment="Таймер" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENTS" Type="STRING" UUID="70ABCA11490BDC752D5944B3CFCD2CBD" Comment="Регистр событий(время,канал,номер и код события" />
+        <Field Name="RAW_SPAC_L2210_REG_EVENTS_REZ" Type="STRING" UUID="B687D9D14540DE64424AAAB62EAD51B7" Comment="РЕЗЕРВНЫЙ Регистр событий(время,канал,номер и код события" />
+        <Field Name="RAW_SPAC_L2210_MODULE_STATUS" Type="INT" UUID="5A3641B841ED7CAB9B891E9E14E0EE59" Comment="Регистр статуса модуля(0-нормальное состояние, 1-сброс модуля, 2-переполнение регистра событий, 3-1&amp;&amp;2" />
+        <Field Name="RAW_SPAC_L2210_MODULE_STATUS_SBROS" Type="INT" UUID="689183654A5CF09499D42D82510AF1C4" Comment="0-сброс регистра статуса модуля" />
+        <Field Name="VIKL_VIKL" Type="BOOL" UUID="1E37C50143FD62196D993CAF018BA040" Comment="Выключить выключатель из скады" />
+        <Field Name="VKL_VIKL" Type="BOOL" UUID="06F4C0C146B89551E0C55BB727E22E08" Comment="Включить выключатель из скады" />
+        <Field Name="ALLOW_GET" Type="BOOL" UUID="90E0D7464AD0D3A0823A46ACF5770067" Comment="Дать разрешение" />
+        <Field Name="ALLOW_PICK_UP" Type="BOOL" UUID="5F3DE95A45AC3D28AA564D8707ED1577" Comment="Забрать разрешение" />
+        <Field Name="RAW_SPAC_WRITE_SETTINGS" Type="BOOL" UUID="EDD4085C45214FA27E43AA8481C001C0" Comment="Запись уставки" />
+        <Field Name="RAW_SPAC_REWRITE_READ_SETTINGS_IN_WR_REG" Type="BOOL" UUID="671C26F0460E320215E2828ECA2C65FC" Comment="Перезапись считанных уставок в регистр записанных" />
+        <Field Name="UPDATE_WRITE_HOLDING_REG" Type="BOOL" UUID="E426B6B54E98FAFEEE81A7A06BDE2A58" Comment="Сигнал на запись уставки(в драйвер)." />
+        <Field Name="UPDATE_WRITE_COMMAND_VKL" Type="BOOL" UUID="E1A1DB6740252D5D6F726E9955588F3B" Comment="Сигнал на запись команды в регистр." />
+        <Field Name="UPDATE_WRITE_COMMAND_VIKL" Type="BOOL" UUID="F01EA9D345F06FB02B768EB048838416" Comment="Сигнал на запись команды в регистр." />
+        <Field Name="UPDATE_WRITE_ALLOWS_OUT" Type="BOOL" UUID="FB79012E4F1E9EF5618603A4475E63CA" Comment="Сигнал разрешения на запись разрешений" />
+        <Field Name="UPDATE_READ_OUTS_AND_ALLOWS" Type="BOOL" UUID="32546B5E4787709F594ADFAA54028ECC" Comment="Чтение сигнала команд и разрешения." />
+        <Field Name="RAW_SPAC_4D28_REG_EVENT_E1_12" Type="INT" UUID="D274C9354C70FE5E56429D8BB009BC93" Comment="E1 Пуск ступени I&gt; 1, E2 Возврат пуска ступениI&gt; 2, E3 Срабатывание ступениI&gt; 4, E4 Возврат срабатывания ступениI&gt; 8, E5 Пуск ступени I&gt;&gt; 16, E6 Возврат пуска ступени I&gt;&gt; 32, E7 Срабатывание ступени I&gt;&gt; 64, E8 Возврат срабатывания ступени I&gt;&gt; 128, Е9 Пуск ступени I&gt;&gt;&gt; 256, Е10 Возврат пуска ступени I&gt;&gt;&gt; 512, Е11 Срабатывание ступени I&gt;&gt;&gt; 1024, Е12 Возврат срабатывания ступени I&gt;&gt;&gt; 2048" />
+        <Field Name="RAW_SPAC_4D28_REG_EVENT_E13_E24" Type="INT" UUID="7052C2804C7BD94A3AA38FBF7CDA685F" Comment="E12 Пуск ступени I0&gt; 1, E14 Возврат пуска ступениI0&gt; 2, E15 Срабатывание ступениI0&gt; 4, E16 Возврат срабатывания ступениI0&gt; 8, E17 Пуск ступени I0&gt;&gt; 16, E18 Возврат пуска ступени I0&gt;&gt; 32, E19 Срабатывание ступени I0&gt;&gt; 64, E20 Возврат срабатывания ступени I0&gt;&gt; 128, Е21 Пуск ступени dI&gt; 256, Е22 Возврат пуска ступени dI&gt; 512, Е23 Срабатывание ступени dI&gt; 1024, Е24 Возврат срабатывания ступени dI&gt; 2048" />
+        <Field Name="RAW_SPAC_4D28_REG_EVENT_E25_E32" Type="INT" UUID="7A24331145800BF4DD6F0180A7581604" Comment="E25 Активизация сигнала SS1 1, E26 Сброс сигнала SS1 2, E27 Активизация сигнала  TS1 4,E28 Сброс сигнала TS1 8,E29 Активизация сигнала  SS2 16, E30 Сброс сигнала  SS2 32, E31 Активизация выходного сигнала ТS2, E32 Сброс выходного сигнала ТS2" />
+        <Field Name="RAW_SPAC_4D28_REG_EVENT_E33_E42" Type="INT" UUID="BCB83CE943A3DA67E44C629BF66A0A16" Comment="E33 Активизация сигнала SS3 1, E34 Сброс сигнала SS3 2, E35 Активизация сигнала  TS3 4,E36 Сброс сигнала TS3 8,E37 Активизация сигнала  SS4 16, E38 Сброс сигнала  SS4 32, E39 Активизация выходного сигнала ТS4 64, E40 Сброс выходного сигнала ТS4 128, Е41 Срабатывание УРОВ 256, Е42 Возврат УРОВ 512" />
+        <Field Name="RAW_SPAC_4D28_REG_EVENT_E50_E54" Type="INT" UUID="C6CBE46147F7A8A1E741DE97E10162A6" Comment="E50 Перезапуск микропроцессора, E51 Переполнение регистра событий, E52 Временное нарушение передачи данных,E53 Нет ответа модуля по шине данных, E54 Модуль снова отвечает по шине данных" />
+        <Field Name="RAW_SPAC_4D28_IL1_AI" Type="REAL" UUID="87DFE63246DCA5E1148FB491547FCE52" Comment="Ток измеряемый в фазе L1(0..63xIn)" />
+        <Field Name="RAW_SPAC_4D28_IL2_AI" Type="REAL" UUID="8BA7B1C641FB6DF4A11762A19C06A25D" Comment="Ток измеряемый в фазе L2(0..63xIn)" />
+        <Field Name="RAW_SPAC_4D28_IL3_AI" Type="REAL" UUID="822CEA9E4D08772C079A84B5CB1FB363" Comment="Ток измеряемый в фазе L3(0..63xIn)" />
+        <Field Name="RAW_SPAC_4D28_I0_AI" Type="REAL" UUID="CB39AE9845C205935AC901B599861117" Comment="Ток нулевой последовательности(0..21xIn)" />
+        <Field Name="RAW_SPAC_4D28_MAX_DIF_L123_AI" Type="INT" UUID="89D5665B4D31E1020C6409AE7CF26393" Comment="Максимальная разность фазных токов(0..100%)" />
+        <Field Name="RAW_SPAC_4D28_BS1_DP" Type="INT" UUID="3F75188E4475E41F730831942A9CA490" Comment="Сигнал управления BS1" />
+        <Field Name="RAW_SPAC_4D28_BS2_DP" Type="INT" UUID="A6F886F6407FBC410609AD9CDD10E19F" Comment="Сигнал управления BS2" />
+        <Field Name="RAW_SPAC_4D28_BS3_DP" Type="INT" UUID="31522ABA44CF57E08A9B5A81944B1893" Comment="Сигнал управления BS3" />
+        <Field Name="RAW_SPAC_4D28_STEP_I1_START_DP" Type="INT" UUID="9D4E51C4431D6AAAF9712A830539B629" Comment="Пуск ступени I&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I1_ACT_DP" Type="INT" UUID="7A136426457DE4CFA4E25EB65C68C2FE" Comment="Срабатывание ступени I&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I2_START_DP" Type="INT" UUID="3AE8CD844D1DD8F6F50D2FB26AB7984A" Comment="Срабатывание ступени I&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I2_ACT_DP" Type="INT" UUID="6A82D7B14F6A3DAF3AD7ACBA91F0A0F2" Comment="Срабатывание ступени I&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I3_START_DP" Type="INT" UUID="808580A04BA6E04FF47EC0848320A4F6" Comment="Срабатывание ступени I&gt;&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I3_ACT_DP" Type="INT" UUID="E52045DB48B114C521E8E4B117B7185E" Comment="Срабатывание ступени I&gt;&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I0_1_START_DP" Type="INT" UUID="7828741744CED180D7368FA25311B49A" Comment="Пуск ступени I0&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I0_1_ACT_DP" Type="INT" UUID="DA7460F3480271B5694FD89888E19DAE" Comment="Срабатывание ступени I0&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I0_2_START_DP" Type="INT" UUID="0FA659764DB4C3EB6044C79ECD27C17D" Comment="Срабатывание ступени I0&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_I0_2_ACT_DP" Type="INT" UUID="39C8593E401F1C3247FE1BA77171AA4B" Comment="Срабатывание ступени I0&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_STEP_DELTA_I_ACT_DP" Type="INT" UUID="A04071C74E33D3A9EA31169C8602E3F1" Comment="Срабатывание ступени dI&gt;" />
+        <Field Name="RAW_SPAC_4D28_TS1_DP" Type="INT" UUID="2A8B82CC4A9963AE55E216BB5A9C3957" Comment="Сигнал с измерительного модуля TS1(&quot;срабатывание пускового токового органа защиты шин&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_4D28_SS1_DP" Type="INT" UUID="AED529A64A24FD75B23B41B83676C762" Comment="Сигнал с измерительного модуля SS1(&quot;срабатывание МТЗ&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_4D28_SS2_DP" Type="INT" UUID="51990F1F4A39DAB1EDB98CB510AC5B21" Comment="Сигнал с измерительного модуля SS2(&quot;срабатывание ступени перегрузки ввода&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_4D28_SS3_DP" Type="INT" UUID="6974D8DA49C133BB017DBC9C83832DA5" Comment="Сигнал с измерительного модуля SS3(&quot;срабатывание ступеней защит с действием на реле К2.4&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_4D28_TS2_DP" Type="INT" UUID="B7F561E14EDAF903B179D5857855CFD9" Comment="Сигнал с измерительного модуля TS2(&quot;отключение выключателя от защит&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_4D28_TS3_DP" Type="INT" UUID="75E8038D48997849D5905A8034B9D035" Comment="Сигнал с измерительного модуля TS3(&quot;срабатывание ступеней защит с действием на сигнализацию&quot;)(0-неактивный,1-активный)" />
+        <Field Name="RAW_SPAC_4D28_TS4_DP" Type="INT" UUID="B999C31A4A45DCB5F5FEBD8066B853BE" Comment="Сигнал с измерительного модуля TS4" />
+        <Field Name="RAW_SPAC_4D28_SS4_DP" Type="INT" UUID="F83466CC4D2030E908FED48E72C7148C" Comment="Сигнал с измерительного модуля SS4" />
+        <Field Name="RAW_SPAC_4D28_RESOL_SS1_TS4" Type="INT" UUID="C503565F4119D940E5E2EC84A140DCB2" Comment="Разрешение для выходных SS1-TS4" />
+        <Field Name="RAW_SPAC_READ_4D28_S1" Type="REAL" UUID="EC030E0240BABC515CEFBF8AF658220C" Comment="Уставка Ток пуска ступении I&gt;(0.5..5.0) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S2" Type="REAL" UUID="E36C10914B5ABD4EEFE07CAD752A30C2" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S3" Type="REAL" UUID="4854B9AF414D0648B6578196868210EF" Comment="Уставка Ток пуска ступении I&gt;&gt;(0.5..4.0) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S4" Type="REAL" UUID="2D91A2A44F20F5FF6F10729E087EFAAC" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S5" Type="REAL" UUID="54DB85EE431338596538BD95DC73B9FF" Comment="Уставка Ток пуска ступении I&gt;&gt;&gt;(0.5..4.0) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S6" Type="REAL" UUID="EFFCDA2E4291AB4BC6C35A8019C71F58" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;&gt;&gt;(0.05..30) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S7" Type="REAL" UUID="FF93376945F5DADA5AF474961F5A5F1F" Comment="Уставка Ток пуска ступении I0&gt;(0.1..0.8) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S8" Type="REAL" UUID="DEF54C4D456E400EC877528DF566908C" Comment="Уставка время срабатывания или временной коэфицент ступени I0&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S9" Type="REAL" UUID="F719AB124D6A9DFC0D4A76BF0D110D0D" Comment="Уставка Ток пуска ступении I0&gt;&gt;(0.1..10) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S10" Type="REAL" UUID="B4886F1144BAD6D8295A3EAD2E6D79E1" Comment="Уставка время срабатывания или временной коэфицент ступени I0&gt;&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S11" Type="INT" UUID="9319B33A413A56214F4F7E866BFF2383" Comment="Уставка Ток пуска ступении dI&gt;(10..100) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S12" Type="INT" UUID="B4D9CC41453F37C92B3AC286645F077C" Comment="Уставка время срабатывания или временной коэфицент ступени dI&gt;(1..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S13" Type="INT" UUID="989607D14B6AD6DC20703D8A4C4BB915" Comment="Уставка контрольная сумма выключателей SGF1 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S14" Type="INT" UUID="F1D9A0754A687CCDC9F1559E2836D10D" Comment="Уставка контрольная сумма выключателей SGF2 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S15" Type="INT" UUID="92CCA0F34D53525CBBCA32A932388CC2" Comment="Уставка контрольная сумма выключателей SGF3 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S16" Type="INT" UUID="342164BB45C19E9948F4BF9F2B8720AE" Comment="Уставка контрольная сумма выключателей SGF4 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S17" Type="INT" UUID="8B42CA6E40CBA5E279785A91B9ED4804" Comment="Уставка контрольная сумма выключателей SGF5 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S18" Type="INT" UUID="5B6A3F564C401F882C3D0B8E5553447E" Comment="Уставка контрольная сумма выключателей SGF6 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S19" Type="INT" UUID="DA42816F41061EB77DC41F8B31BA9FBE" Comment="Уставка контрольная сумма выключателей SGF7 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S20" Type="INT" UUID="3A3ADB5B494C124468FF168795635EDF" Comment="Уставка контрольная сумма выключателей SGF8 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S21" Type="INT" UUID="8B13B73244CD56C057BF899D10745983" Comment="Уставка контрольная сумма выключателей SGB1 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S22" Type="INT" UUID="A8E987024210C83129B6BAB128A20AFD" Comment="Уставка контрольная сумма выключателей SGB2 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S23" Type="INT" UUID="327D920C4FA61A817AF8288FB04104F8" Comment="Уставка контрольная сумма выключателей SGB3 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S24" Type="INT" UUID="2D7823D5459CA51F24E029BBEE17C24D" Comment="Уставка контрольная сумма выключателей SGR1 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S25" Type="INT" UUID="83041F044D396F661A05188912D10FB2" Comment="Уставка контрольная сумма выключателей SGR2 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S26" Type="INT" UUID="1ADFF5624A79204E632EC69395E088DC" Comment="Уставка контрольная сумма выключателей SGR3 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S27" Type="INT" UUID="FE42FBFC494941982D2EC8A670C1B411" Comment="Уставка контрольная сумма выключателей SGR4 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S28" Type="INT" UUID="D1B155974C7EBF880F1D3E9F124E5FEC" Comment="Уставка контрольная сумма выключателей SGR5 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S29" Type="INT" UUID="F575598C4C6A12774990FAAD4299D5C2" Comment="Уставка контрольная сумма выключателей SGR6 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S30" Type="INT" UUID="B0F30332465D50F654CB41B7DD8B84C8" Comment="Уставка контрольная сумма выключателей SGR7 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S31" Type="INT" UUID="FD439E06414D342E0E3B1494E586C436" Comment="Уставка контрольная сумма выключателей SGR8 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S32" Type="INT" UUID="14975F824CF7F75BCFE12799052CE51D" Comment="Уставка контрольная сумма выключателей SGR9 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S33" Type="INT" UUID="F831B529497A978728DFF88F2098C304" Comment="Уставка контрольная сумма выключателей SGR10 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_S34" Type="INT" UUID="32CE916B4029967CC827C4A72061DCC9" Comment="Уставка контрольная сумма выключателей SGR11 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_I_START_I1" Type="REAL" UUID="5D170DA34A79371BE8A0B5AA42FB34C4" Comment="Уставка Ток пуска ступении I&gt;(0.5..5.0) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_I1" Type="REAL" UUID="358E873A4371D1EA94D7649FD9469DCE" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_I_START_I2" Type="REAL" UUID="FD5C469741FEC4F2C3FFCC8E7A55124D" Comment="Уставка Ток пуска ступении I&gt;&gt;(0.5..4.0) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_I2" Type="REAL" UUID="9ADFECFB47B722C63F1078BDEE16C65A" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_I_START_I3" Type="REAL" UUID="46D5CCB749BFB2ECCE2B51AA2E2098D7" Comment="Уставка Ток пуска ступении I&gt;&gt;&gt;(0.5..4.0) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_I3" Type="REAL" UUID="D081136E45ABD83BB61190A8C34A7594" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;&gt;&gt;(0.05..30) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_I_START_I0_1" Type="REAL" UUID="E787801F4B5C2ACB9903989D59A057F4" Comment="Уставка Ток пуска ступении I0&gt;(0.1..0.8) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_I0_1" Type="REAL" UUID="2D8E37494562FFFD254CD2A1234CC6A9" Comment="Уставка время срабатывания или временной коэфицент ступени I0&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_I_START_I0_2" Type="REAL" UUID="6AEF3D6C49C9A63689B0EDB97C27F5FC" Comment="Уставка Ток пуска ступении I0&gt;&gt;(0.1..10) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_I0_2" Type="REAL" UUID="BF4A405E449491B5E659D7A0DD335733" Comment="Уставка время срабатывания или временной коэфицент ступени I0&gt;&gt;(0.05..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_I_START_dI" Type="REAL" UUID="0F40E2584423AE15A1C3659A92F0B32A" Comment="Уставка Ток пуска ступении dI&gt;(10..100) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_dI" Type="REAL" UUID="0864D4A74DBE95E776A3B497E71253B0" Comment="Уставка время срабатывания или временной коэфицент ступени dI&gt;(1..300) чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF1" Type="INT" UUID="213C2F534300861027916399D0AA24FE" Comment="Уставка контрольная сумма выключателей SGF1 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF2" Type="INT" UUID="FBA0A4F34B145958F555CC9D844332C2" Comment="Уставка контрольная сумма выключателей SGF2 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF3" Type="INT" UUID="D4E028974BEE6BD12B596D849744B225" Comment="Уставка контрольная сумма выключателей SGF3 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF4" Type="INT" UUID="31532D764481E5D25F7DC9B481DD53BD" Comment="Уставка контрольная сумма выключателей SGF4 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF5" Type="INT" UUID="4B10E58A4B934F8ED56EC3AA645AE902" Comment="Уставка контрольная сумма выключателей SGF5 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF6" Type="INT" UUID="B1D647DF45D928261323DBB3B48B5E22" Comment="Уставка контрольная сумма выключателей SGF6 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF7" Type="INT" UUID="621BF63C401B750907A8C9B29BBA1B39" Comment="Уставка контрольная сумма выключателей SGF7 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGF8" Type="INT" UUID="4E701F3647DB0EE7012E4BB252EE874E" Comment="Уставка контрольная сумма выключателей SGF8 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGB1" Type="INT" UUID="2E70C8B74B56E6AC09F6CFA51722D729" Comment="Уставка контрольная сумма выключателей SGB1 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGB2" Type="INT" UUID="38E1FCD5427F5CDF83FE46A682AC68E0" Comment="Уставка контрольная сумма выключателей SGB2 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGB3" Type="INT" UUID="40D895014B0AF90BCAB701B27A83461D" Comment="Уставка контрольная сумма выключателей SGB3 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR1" Type="INT" UUID="40D060494551B68F158698B1640244A2" Comment="Уставка контрольная сумма выключателей SGR1 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR2" Type="INT" UUID="AB73C73841389D8FF7E90793D493FBBE" Comment="Уставка контрольная сумма выключателей SGR2 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR3" Type="INT" UUID="1FE8E8BB45619AF0CA6EEBA381D4E153" Comment="Уставка контрольная сумма выключателей SGR3 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR4" Type="INT" UUID="C819DD3D4D7C55AF74E9A9B6AEAC2060" Comment="Уставка контрольная сумма выключателей SGR4 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR5" Type="INT" UUID="E025B9A044752907B6E406BCB3C8DD50" Comment="Уставка контрольная сумма выключателей SGR5 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR6" Type="INT" UUID="0602165B4C0CB33E7FBC39BEC12B7243" Comment="Уставка контрольная сумма выключателей SGR6 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR7" Type="INT" UUID="194A61394C8C57E906FA03A3181CC641" Comment="Уставка контрольная сумма выключателей SGR7 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR8" Type="INT" UUID="CCA7584745521E8BAF4416A394B5A20F" Comment="Уставка контрольная сумма выключателей SGR8 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR9" Type="INT" UUID="731316F34DA9B6C85294139CF5B04E39" Comment="Уставка контрольная сумма выключателей SGR9 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR10" Type="INT" UUID="7EE5145B4E254A91B615DA9F907D76DE" Comment="Уставка контрольная сумма выключателей SGR10 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_SUMM_SGR11" Type="INT" UUID="1118E1054893EAFB7B28A3954346DF88" Comment="Уставка контрольная сумма выключателей SGR11 чтение" />
+        <Field Name="RAW_SPAC_READ_4D28_TIME_ACT_UROV" Type="REAL" UUID="578BCCCE4DB82688F53F7DBB5F0A8EEB" Comment="Уставка время срабатывания УРОВ(0,1..1с) чтение" />
+        <Field Name="RAW_SPAC_WRITE_4D28_I_START_I1" Type="REAL" UUID="7947D42A4BF9164917EF5685F618653F" Comment="Уставка Ток пуска ступении I&gt;(0.5..5.0) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_I1" Type="REAL" UUID="7A73B7874F97D6B406960DB66269530D" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;(0.05..300) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_I_START_I2" Type="REAL" UUID="CBB06E9A4C616B3BE7F25889A810E218" Comment="Уставка Ток пуска ступении I&gt;&gt;(0.5..4.0) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_I2" Type="REAL" UUID="34329DBD4F715C57DCDF09B1C75A38A0" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;&gt;(0.05..300) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_I_START_I3" Type="REAL" UUID="AF85434C41929BA120256D80311FA333" Comment="Уставка Ток пуска ступении I&gt;&gt;&gt;(0.5..4.0) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_I3" Type="REAL" UUID="90C842F84E4565AEA14A8A9795E4ED4B" Comment="Уставка время срабатывания или временной коэфицент ступени I&gt;&gt;&gt;(0.05..30) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_I_START_I0_1" Type="REAL" UUID="D76EC14B4737B6C30B52BBA2B68736D4" Comment="Уставка Ток пуска ступении I0&gt;(0.1..0.8) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_I0_1" Type="REAL" UUID="4524A06944D3402448893C897BF1671B" Comment="Уставка время срабатывания или временной коэфицент ступени I0&gt;(0.05..300) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_I_START_I0_2" Type="REAL" UUID="5B1072414ACF369222BA90979D20F654" Comment="Уставка Ток пуска ступении I0&gt;&gt;(0.1..10) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_I0_2" Type="REAL" UUID="9E6C931A4B1BBD69532D3F86A0544BB6" Comment="Уставка время срабатывания или временной коэфицент ступени I0&gt;&gt;(0.05..300) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_I_START_dI" Type="REAL" UUID="30849D5C4E2F703855CB23ABA71672FE" Comment="Уставка Ток пуска ступении dI&gt;(10..100) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_dI" Type="INT" UUID="AF3E152B4E1409C1B9C19180D584BD56" Comment="Уставка время срабатывания или временной коэфицент ступени dI&gt;(1..300) запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF1" Type="INT" UUID="F648DBA84076F11DD4F1D3B70F15F734" Comment="Уставка контрольная сумма выключателей SGF1 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF2" Type="INT" UUID="7B4BDC414B0BC58DF3B751A7BA729C70" Comment="Уставка контрольная сумма выключателей SGF2 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF3" Type="INT" UUID="5269C1CA46AB0F0F65BD768757AF1420" Comment="Уставка контрольная сумма выключателей SGF3 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF4" Type="INT" UUID="101BBB594CB38787D3DAD3ADFF5F1322" Comment="Уставка контрольная сумма выключателей SGF4 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF5" Type="INT" UUID="95046A8B4C8D1141942460A37C3B420F" Comment="Уставка контрольная сумма выключателей SGF5 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF6" Type="INT" UUID="FB238B774E4003088D555A993A25F34E" Comment="Уставка контрольная сумма выключателей SGF6 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF7" Type="INT" UUID="92E5D6724D9946F3EB5EE7A8B064DD7F" Comment="Уставка контрольная сумма выключателей SGF7 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGF8" Type="INT" UUID="9FCF0F1A40985DF7D6F3539C644D298A" Comment="Уставка контрольная сумма выключателей SGF8 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGB1" Type="INT" UUID="EA26EBD045294AC787AE39888193016D" Comment="Уставка контрольная сумма выключателей SGB1 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGB2" Type="INT" UUID="F7B0EBC44AEF013FE58CBC906B785401" Comment="Уставка контрольная сумма выключателей SGB2 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGB3" Type="INT" UUID="CD975D2C42FBB0C51897E0BE8811C357" Comment="Уставка контрольная сумма выключателей SGB3 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR1" Type="INT" UUID="1E6DE6E94F4090ED0B186A82C0091099" Comment="Уставка контрольная сумма выключателей SGR1 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR2" Type="INT" UUID="7D7BB0944F10B65FC9211FBEFA508A54" Comment="Уставка контрольная сумма выключателей SGR2 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR3" Type="INT" UUID="3A2267BD45C7AB2C59424C91F62DD807" Comment="Уставка контрольная сумма выключателей SGR3 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR4" Type="INT" UUID="F9FCC734492A283D656FDAA408E5B7D2" Comment="Уставка контрольная сумма выключателей SGR4 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR5" Type="INT" UUID="4A953C854246589639544F8352CE3EDE" Comment="Уставка контрольная сумма выключателей SGR5 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR6" Type="INT" UUID="5D44C1954CF020507574EAB7FBC7D6C1" Comment="Уставка контрольная сумма выключателей SGR6 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR7" Type="INT" UUID="EE6BDAC748CBC78E83AA6AB2F98AECB0" Comment="Уставка контрольная сумма выключателей SGR7 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR8" Type="INT" UUID="49D7BA8B4B07610AD099388158E479FD" Comment="Уставка контрольная сумма выключателей SGR8 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR9" Type="INT" UUID="3C49535F4192C68375D091AC619902D6" Comment="Уставка контрольная сумма выключателей SGR9 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR10" Type="INT" UUID="0F8EAC7D454138AAD4349487E27D7793" Comment="Уставка контрольная сумма выключателей SGR10 запись" />
+        <Field Name="RAW_SPAC_WRITE_4D28_SUMM_SGR11" Type="INT" UUID="7AF1AB51429628730D309EB132FCD7FF" Comment="Уставка контрольная сумма выключателей SGR11 запись" />
+        <Field Name="RAW_SPAC_SGF1" Type="BOOL" UUID="B8F94C34456CE81EAFE1F5A86360AD32" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF2" Type="BOOL" UUID="AD2D7C5043E8B1EF61DB6F93215639EB" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF3" Type="BOOL" UUID="C05CFC0C498BD878EC2AAAAF1E9C0040" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF4" Type="BOOL" UUID="D7C041BD4C93695DA0D602B8F2DD3047" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF5" Type="BOOL" UUID="960797044A3A50855C02DDAEF628CF39" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF6" Type="BOOL" UUID="07AFE3484DDC656BF23F94A4F2FC0193" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF7" Type="BOOL" UUID="F4F5D62A425B5DD649C9889F361C5F13" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGF8" Type="BOOL" UUID="AA6314F74751362F8A71D1B7AE8CA7F1" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGB1" Type="BOOL" UUID="1B573F2B4F88579FB2CB6797091061EE" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGB2" Type="BOOL" UUID="C976829B403BC194D9C875BEB609F6A3" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGB3" Type="BOOL" UUID="992A17E44F7115F1CBFADA8FD72070E2" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR1" Type="BOOL" UUID="71D61D674E4689F38E95ADAC5812AF03" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR2" Type="BOOL" UUID="F897B3794ACADB3E780D6CB413F240D0" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR3" Type="BOOL" UUID="C44777AE48950B23BDB705A5171718C3" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR4" Type="BOOL" UUID="41DD7897488F430748C80BB2016C5129" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR5" Type="BOOL" UUID="45B4671944E2C6ACC453BC9A0835AAF4" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR6" Type="BOOL" UUID="4AE563AC47CD9B510E0A468A805BDF1D" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR7" Type="BOOL" UUID="6A5C4D5745864B84B0E33AA344370C3A" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR8" Type="BOOL" UUID="C5A47CDE45795E0A786C0986A59588A0" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR9" Type="BOOL" UUID="8D5F8B514C2A0C089C8684814A327889" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR10" Type="BOOL" UUID="9DC6476E4579DCCA96106D893534464C" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_SGR11" Type="BOOL" UUID="E7F6C7CE49246113613282ADE9FA0EE4" ArraySize="8" Comment="Массив для конфигурации защит" />
+        <Field Name="RAW_SPAC_WRITE_4D28_TIME_ACT_UROV" Type="REAL" UUID="A8C6C0CA4C51E0727C9AAE97DCBD8CA3" Comment="Уставка время срабатывания УРОВ(0,1..1с) запись" />
+        <Field Name="RAW_SPAC_READ_MAIN_RES_UST" Type="INT" UUID="9A701C8C4A687CC62DD1B897B1C0610D" Comment="По каким регистрам работают уставки 0-основа,  1 - вспомогательные" />
+        <Field Name="RAW_SPAC_4D28_Imax_last_15min" Type="REAL" UUID="CA039F5F4122ECC23A42AEB7E626C6D0" Comment="Максимальный ток за последние 15 минут" />
+        <Field Name="RAW_SPAC_4D28_NUM_START_I1" Type="INT" UUID="B9CA761A4C31C60DF076289C94AB4042" Comment="Число пусков ступени I&gt;" />
+        <Field Name="RAW_SPAC_4D28_NUM_START_I2" Type="INT" UUID="F58F10894DF152C72335428B2EE9CCFA" Comment="Число пусков ступени I&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_NUM_START_I0_1" Type="INT" UUID="3A99E19E41305242F2449BBD1CDA18FD" Comment="Число пусков ступени I0&gt;" />
+        <Field Name="RAW_SPAC_4D28_NUM_START_I0_2" Type="INT" UUID="9A92198A4859F58EA0EA17AE9891C508" Comment="Число пусков ступени I0&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_NUM_START_dI" Type="INT" UUID="0D2FBB374BC6F9D689A5BF8E3728024E" Comment="Число пусков ступени dI&gt;" />
+        <Field Name="RAW_SPAC_4D28_ACT_STEP1" Type="INT" UUID="9DCB33EF44997D9DC77ABBB0328A968B" Comment="Ступень/фаза, вызвавшая срабатывание(1 = IL3&gt;, 2 = IL2&gt;, 4 = IL1&gt;, 8 = I0&gt;, 16 = IL3&gt;&gt;, 32 = Il2&gt;&gt; ,64 = IL1&gt;&gt;, 128 = I0&gt;&gt;)" />
+        <Field Name="RAW_SPAC_4D28_ACT_STEP2" Type="INT" UUID="2FD4AD564545355BBC5A77B33C9E26CA" Comment="Ступень/фаза, вызвавшая срабатывание(1 = IL3&gt;&gt;&gt;, 2 = IL2&gt;&gt;&gt;, 4 = IL1&gt;&gt;&gt;)" />
+        <Field Name="RAW_SPAC_4D28_CODE_IN_DISPLAY" Type="INT" UUID="769796C74ADAC151D5E7FE8F15DD0D30" Comment="Код индикации срабатывания на дисплее" />
+        <Field Name="RAW_SPAC_4D28_Imax_15m" Type="REAL" UUID="0691FB9247B358FF0DC900A8989D7732" Comment="Максимальный ток за 15 минут" />
+        <Field Name="RAW_SPAC_4D28_I_L1_last_5val" Type="REAL" UUID="A5BDBA8B415C041426BC3495DAB3B0A8" ArraySize="5" Comment="Последние записанные 5 значений ток фазы L1(0..63xIn)" />
+        <Field Name="RAW_SPAC_4D28_I_L2_last_5val" Type="REAL" UUID="E0B34B884A6D460F547B319E3CC61A96" ArraySize="5" Comment="Последние записанные 5 значений ток фазы L2(0..63xIn)" />
+        <Field Name="RAW_SPAC_4D28_I_L3_last_5val" Type="REAL" UUID="1F356022479D9E148AF9168C36AFA6E5" ArraySize="5" Comment="Последние записанные 5 значений ток фазы L3(0..63xIn)" />
+        <Field Name="RAW_SPAC_4D28_I_0_last_5val" Type="REAL" UUID="70D3465341E2C9ED062E0FAB76D9F2DA" ArraySize="5" Comment="Последние записанные 5 значений ток замыкания на землю(0..21xIn)" />
+        <Field Name="RAW_SPAC_4D28_dI_last_5val" Type="REAL" UUID="34EC98C44528D007BE08DAA2699FD300" ArraySize="5" Comment="Последние записанные 5 значений ток разности фаз(0..100%)" />
+        <Field Name="RAW_SPAC_4D28_DURABILITY_I1_last_5val" Type="REAL" UUID="6C107AA6412870A86B331EBFEF653E85" ArraySize="5" Comment="Длительность пуска, ступень I&gt;" />
+        <Field Name="RAW_SPAC_4D28_DURABILITY_I2_last_5val" Type="REAL" UUID="33DFF6BD4E5152202A4D51B278F068C0" ArraySize="5" Comment="Длительность пуска, ступень I&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_DURABILITY_I0_1_last_5val" Type="REAL" UUID="63C6062E4F8E1B922061A99913AA432A" ArraySize="5" Comment="Длительность пуска, ступень I0&gt;" />
+        <Field Name="RAW_SPAC_4D28_DURABILITY_I0_2_last_5val" Type="REAL" UUID="FA4D15104F2E678A9956DA9D8613542A" ArraySize="5" Comment="Длительность пуска, ступень I0&gt;&gt;" />
+        <Field Name="RAW_SPAC_4D28_RESET_INDICATION_AND_RELE" Type="INT" UUID="A3CFC1D14FA72D23CC4228BD2FF7125D" Comment="Сброс индикаторов срабатывания и выходных реле с самоудержанием(1-сброс выполнен)" />
+        <Field Name="RAW_SPAC_4D28_RESET_INDICATION_AND_RELE_CLEAN_REG" Type="INT" UUID="B38FD0D04127A768655C5EAB15B2AB38" Comment="Сброс индикаторов срабатывания и выходных реле с самоудержанием и очистка регистров(1-сброс выполнен)" />
+        <Field Name="RAW_SPAC_4D28_REMOTE_CONTROL_SETTING" Type="INT" UUID="72271DE042D48AD62DCC23A25BAA0C5A" Comment="Дистанционное управление уставками 0-активны основные, 1- активны дополнительные" />
+        <Field Name="RAW_SPAC_4D28_MASK_EVENT_MZ" Type="INT" UUID="7C2960EE4C81328B13446DB83138690B" Comment="Маска событий защиты от междуфазных замыканий" />
+        <Field Name="RAW_SPAC_4D28_MASK_EVENT_OZ" Type="INT" UUID="A93CA6C44964C61794FE1694DF0C432F" Comment="Маска событий защиты от обрыва фазы" />
+        <Field Name="RAW_SPAC_4D28_MASK_EVENT_OUTPUT1" Type="INT" UUID="738AE52F4C5CD97284E219A5780A6AAC" Comment="Маска событий выходных сигналов" />
+        <Field Name="RAW_SPAC_4D28_MASK_EVENT_OUTPUT2" Type="INT" UUID="8935A93C42CC46A070B02DA78CFEF78A" Comment="Маска событий выходных сигналов" />
+        <Field Name="RAW_SPAC_4D28_OTKR_PAROL" Type="INT" UUID="5DF5FD64456D7F89A593D1B0AABCBC1F" Comment="Открытие пароля для изменения уставок" />
+        <Field Name="RAW_SPAC_4D28_ZAKR_PAROL" Type="INT" UUID="37FAABBF469DF7A04705F9A97BB785CA" Comment="Закрытие или изменение пароля" />
+        <Field Name="RAW_SPAC_4D28_ACTIVE_SELFCONTROL" Type="INT" UUID="1B8224A14BCA1775D411B2972754E874" Comment="Активизация системы самоконтроля" />
+        <Field Name="RAW_SPAC_4D28_FORMAT_PZU" Type="INT" UUID="38E1D93243477CD1AD932D8EAC1A1CB6" Comment="Форматирование ЭСППЗ(2 форматирование)" />
+        <Field Name="RAW_SPAC_4D28_ERROR_NUM" Type="INT" UUID="2532C1C343F559EAC47E418FCA59ADBF" Comment="Код неисправности" />
+        <Field Name="RAW_SPAC_4D28_ADDRESS" Type="INT" UUID="D5082BE54DA124598BA34392F8622A90" Comment="Адрес модуля" />
+        <Field Name="RAW_SPAC_4D28_OBMEN_SPEED" Type="INT" UUID="30CAEDCD48277350AB11A4B37C96C579" Comment="Cкорость обмена" />
+        <Field Name="RAW_SPAC_4D28_PO_VERSION" Type="STRING" UUID="E563E99E40D40FC796770899E9013890" Comment="Версия ПО" />
+        <Field Name="RAW_SPAC_4D28_STATUS_READ_REG_COMM" Type="INT" UUID="8F2DC79548D2540ACBA9778CBD81BF5C" Comment="Статус выполнения запросов группы READ_REG_COMM Device2" />
+        <Field Name="RAW_SPAC_4D28_STATUS_COMMANDS" Type="INT" UUID="62D1C7C545ED23CE001A5485A489C871" Comment="Статус выполнения запросов группы COMMAND Device2" />
+        <Field Name="RAW_SPAC_4D28_STATUS_READ_UST" Type="INT" UUID="0DB04E854DEC7C1966A479BB098F2145" Comment="Статус выполнения запросов группы READ_UST Device2" />
+        <Field Name="RAW_SPAC_4D28_STATUS_WRITE_UST" Type="INT" UUID="58346AEB4549ADE3B3658A86F42E4589" Comment="Статус выполнения запросов группы WRITE_UST Device2" />
+        <Field Name="RAW_SPAC_4D28_STATUS_READ_ST_EVENT" Type="INT" UUID="DD700FC845DB6C6CD51B17B158CF33F2" Comment="Статус выполнения запросов группы READ_ST_EVENT Device2" />
+        <Field Name="RAW_SPAC_4D28_READ_REG_COMM_UPDATE" Type="BOOL" UUID="2D4A8BED42584365A3E5A99E1AF104E0" Comment="Переменная для выполнения запроса группы READ_REG_COMM" />
+        <Field Name="RAW_SPAC_4D28_READ_UST_UPDATE" Type="BOOL" UUID="BBF4E8EB466F7F7C59A0E5983549FBB5" Comment="Переменная для выполнения запроса группы сигналов READ_UST" />
+        <Field Name="RAW_SPAC_4D28_COMMANDS_UPDATE" Type="BOOL" UUID="2C296002454A46CD25A5749073403BAE" Comment="Переменная для выполнения запроса группы сигналов COMMANDS" />
+        <Field Name="RAW_SPAC_4D28_WRITE_UST_UPDATE" Type="BOOL" UUID="0BD955504D87C1D4D979FD89747E957D" Comment="Переменная для выполнения запроса группы сигналов WRITE_UST" />
+        <Field Name="RAW_SPAC_4D28_READ_ST_EVENT_UPDATE" Type="BOOL" UUID="3AB590214D8F0717EB053EB2FC20FAF8" Comment="Переменная для выполнения запроса группы сигналов READ_ST_EVENT" />
+        <Field Name="RAW_SPAC_4D28_STATUS_READ_INPUT_AND_OTPUT_ST" Type="INT" UUID="9717DF84400606F466C360A893E00869" Comment="Статус выполнения запросов для группы READ_INPUT_AND_OTPUT драйвера SPA_BUS Device2" />
+        <Field Name="RAW_SPAC_4D28_READ_INPUT_AND_OTPUT_UPDATE" Type="BOOL" UUID="D5DA674B4868E0D5B2A8DFBFDCB043B4" Comment="Переменная для выполнения запроса группе сигналов READ_INPUT_AND_OTPUT драйвера SPA_BUS" />
+        <Field Name="RAW_SPAC_4D28_DEVICE1_STATUS" Type="INT" UUID="BB83E8C746159FF6BF9EA9B8737C28CE" Comment="Статус устройства Device2  драйвера SPA_BUS " />
+        <Field Name="REQUEST_DISABLE" Type="BOOL" UUID="B69B87264A055D0C41736FA0FED857CF" Comment="Вывести ячейку из опроса" />
+        <Field Name="PLAKATS" Type="BOOL" UUID="7EDC8EEA417958C979BF54A8D3B84A6D" ArraySize="4" Comment="Плакаты" />
+        <Field Name="K_I" Type="REAL" UUID="7B691FE242A59B925FE87384F07185CB" Comment="Коэффицент трансформаторов тока" />
+    </Fields>
+</Type>

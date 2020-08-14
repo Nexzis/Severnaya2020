@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="Raw_DO8" Kind="Struct" Comment="Состояние каналов выходного 8-кан дискретного модуля " UUID="59D88956444C5D5AF60590A1528FE326">
+    <Fields>
+        <Field Name="o1" Type="BOOL" UUID="F27BA13A4DC8804C2BD0A3AAD4D124E7" Comment="Канал 1" />
+        <Field Name="o1_status" Type="UINT" UUID="5059ACB94CC6D304B3148E969F6601D5" Comment="Статус выходного канала 1" />
+        <Field Name="o2" Type="BOOL" UUID="D873897E4387CE4E42E047B94D36BFB7" Comment="Канал 2" />
+        <Field Name="o2_status" Type="UINT" UUID="476B7EF64EBA731C4FE230B23AE51DD4" Comment="Статус выходного канала 2" />
+        <Field Name="o3" Type="BOOL" UUID="6E514D6E46299890BC2E05920DA97770" Comment="Канал 3" />
+        <Field Name="o3_status" Type="UINT" UUID="41BFB55F45E166705998619BF520EBB6" Comment="Статус выходного канала 3" />
+        <Field Name="o4" Type="BOOL" UUID="C43C6AD54BCE92C9719FF2AC1C009304" Comment="Канал  4" />
+        <Field Name="o4_status" Type="UINT" UUID="FD073BE5407CA1D948BCB99F6B903E67" Comment="Статус выходного канала 4" />
+        <Field Name="o5" Type="BOOL" UUID="0C9F0BBF4CDED019C7370A87C10D0813" Comment="Канал 5" />
+        <Field Name="o5_status" Type="UINT" UUID="4AEF4AAE4E56B9FF927A93BBBA7AAE13" Comment="Статус выходного канала 5" />
+        <Field Name="o6" Type="BOOL" UUID="13ADFB744A95ADC100F9119EF5DE8CDE" Comment="Канал 6" />
+        <Field Name="o6_status" Type="UINT" UUID="DB72B900458E8D252BE05F972BE321E2" Comment="Статус выходного канала 6" />
+        <Field Name="o7" Type="BOOL" UUID="C28EA2DA4F494E25F974F087A7A408C2" Comment="Канал 7" />
+        <Field Name="o7_status" Type="UINT" UUID="2E68C89B4F53A23B68AC59B85528154F" Comment="Статус выходного канала 7" />
+        <Field Name="o8" Type="BOOL" UUID="330B74C8427E2027A148FFB5A2390253" Comment="Канал 8" />
+        <Field Name="o8_status" Type="UINT" UUID="AB0BC12C4201EB0500975B86FFBF7E26" Comment="Статус выходного канала 8" />
+    </Fields>
+</Type>

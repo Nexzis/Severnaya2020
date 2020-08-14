@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TyConnect" Kind="Struct" UUID="2C9DCA554964327AFA5C568CA41580FF">
+    <Fields>
+        <Field Name="PLC_A1" Type="BOOL" UUID="250DD3954B6A7264F98AFF8D9D763989" />
+        <Field Name="PLC_A2" Type="BOOL" UUID="96859C3B44FDFE0402445CA6490CCBD6" />
+        <Field Name="PLC_A3" Type="BOOL" UUID="106F0E544B697F5304540892324AD560" />
+        <Field Name="PLC_A4" Type="BOOL" UUID="C40E13614397699DDC9EE1B726982F4B" />
+    </Fields>
+</Type>

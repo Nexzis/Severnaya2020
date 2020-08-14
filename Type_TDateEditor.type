@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TDateEditor" Kind="Struct" UUID="0225A75948945207DE76F692AB67B3F6">
+    <Fields>
+        <Field Name="I_VISIBLE" Type="BOOL" UUID="022C0E724784779DA7EDFC84795AD5ED" Comment="Управление видимостью календаря" />
+        <Field Name="I_DATE" Type="DATE" UUID="8852FE33459C33401FAE259EF4973490" Comment="Дата для инициализации календаря" />
+        <Field Name="O_CHANGED" Type="BOOL" UUID="42CE617D4770F747DD562AB2D1EC3C66" Comment="Изменена дата календаря" />
+        <Field Name="O_DATE" Type="DATE" UUID="672EE4A14BD30E0F324708AAB9CF288D" Comment="Текущая дата календаря" />
+    </Fields>
+</Type>

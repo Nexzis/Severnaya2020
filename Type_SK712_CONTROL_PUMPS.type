@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="SK712_CONTROL_PUMPS" Kind="Struct" Comment="Структура для храниения обработанных сигналов с устройства WILO SK712" UUID="712BBA88476F4E326F61608116367F08">
+    <Fields>
+        <Field Name="PUMP1_READY" Type="BOOL" UUID="31128FD54F7B60B3AF19B48CD4511603" Comment="Готовность насоса 1" />
+        <Field Name="PUMP2_READY" Type="BOOL" UUID="A496592E4EDFD6DCFFB384A2E9ADFDBA" Comment="Готовность насоса 2" />
+        <Field Name="PUMP3_READY" Type="BOOL" UUID="D620E78949379559BC0436B7A473983F" Comment="Готовность насоса 3" />
+        <Field Name="FRQ_MAN_MODE" Type="INT" UUID="32153B954FE93555FAFF05A61E0167E8" Comment="Частота насоса в ручном режиме" />
+        <Field Name="PUMP1_FAULT" Type="BOOL" UUID="BDEC37CA4246CCA4D2C80CB6B1BF3F3B" Comment="Обобщённая неисправность 1" />
+        <Field Name="PUMP2_FAULT" Type="BOOL" UUID="D64E013A4CF816F791AB2F8077587164" Comment="Обобщённая неисправность 2" />
+        <Field Name="PUMP3_FAULT" Type="BOOL" UUID="6D4ADA5B4317AFFE62E6E4B6D645E7FA" Comment="Обобщённая неисправность 3" />
+        <Field Name="PUMP1_WORK" Type="BOOL" UUID="54D4EFAC4BFCA2E23D04A58369CA8E1E" Comment="В работе насос 1" />
+        <Field Name="PUMP2_WORK" Type="BOOL" UUID="8D118AFB43B85DDE3FC9BD8FB8330C1A" Comment="В работе насос 2" />
+        <Field Name="PUMP3_WORK" Type="BOOL" UUID="89479C1A420F0B676FE2BE9F1A34A696" Comment="В работе насос 3" />
+        <Field Name="PUMP1_ANSW_REQ" Type="BOOL" UUID="25EF312041A524A5D880D28B3327A28C" Comment="Контроллер 1 насоса отвечает на запросы" />
+        <Field Name="PUMP2_ANSW_REQ" Type="BOOL" UUID="DDC518994EBB11FA7FF638B315588D01" Comment="Контроллер 2 насоса отвечает на запросы" />
+        <Field Name="PUMP3_ANSW_REQ" Type="BOOL" UUID="0F1F6F284E5FC877A36887B69D6C30F8" Comment="Контроллер 3 насоса отвечает на запросы" />
+        <Field Name="PUMP1_READY_AUTO" Type="BOOL" UUID="ADC6FE6B4A25DECADAF78C96B8298E23" Comment="Готов к работе в режиме автомат, насос 1" />
+        <Field Name="PUMP2_READY_AUTO" Type="BOOL" UUID="E49B80A64B3B8C7BA06EDAB11EDAADFA" Comment="Готов к работе в режиме автомат, насос 2" />
+        <Field Name="PUMP3_READY_AUTO" Type="BOOL" UUID="9111C30149D91017053A33833BAFD457" Comment="Готов к работе в режиме автомат, насос 3" />
+        <Field Name="DI_IN0" Type="BOOL" UUID="7CBB5B074F4D7F892340FE9FCD89699F" Comment="Состояние дискретного входа 1" />
+        <Field Name="DI_IN1" Type="BOOL" UUID="3DF24EA24FD5420429D6538AF2999258" Comment="Состояние дискретного входа 2" />
+        <Field Name="DI_IN2" Type="BOOL" UUID="26025B1D475946DEDEA763A833F4255C" Comment="Состояние дискретного входа 3" />
+        <Field Name="DI_IN3" Type="BOOL" UUID="3F7C9F3F4C79EB0F492E61AA54D9220C" Comment="Состояние дискретного входа 4" />
+        <Field Name="DI_IN4" Type="BOOL" UUID="8961C2DF4DDA61153F0190BD9296A387" Comment="Состояние дискретного входа 5" />
+        <Field Name="DI_IN5" Type="BOOL" UUID="34260C0746D415DBD39768B723B12371" Comment="Состояние дискретного входа 6" />
+        <Field Name="SYSTEM_WORK" Type="BOOL" UUID="F3F36BDC42A8141BF02F30902C46CDA9" Comment="Система в работе" />
+        <Field Name="SYSTEM_FAULT" Type="BOOL" UUID="21A39037411992004DF28B81401C967C" Comment="Обобщённая авария" />
+        <Field Name="SYSTEM_READY_AUTO" Type="BOOL" UUID="2447673D402A5965205472B7C9F38B33" Comment="Готовность к автоматической работе" />
+        <Field Name="SYSTEM_IN_MANUAL" Type="BOOL" UUID="4A02FF3042D7590AB236A2830B94797E" Comment="Система в ручном режиме" />
+        <Field Name="PRESS" Type="REAL" UUID="3C8B5D9B4BB20A2B340E8A86479BCB6B" Comment="Давление(бар)" />
+        <Field Name="E_0_0" Type="BOOL" UUID="4D3069254104424BC89BA2AA52ACF5D5" Comment="Дистанционное отключение" />
+        <Field Name="E_0_1" Type="BOOL" UUID="31E5855844F0AAC8773AA1AC1D427E96" Comment="Обрыв датчика" />
+        <Field Name="E_0_2" Type="BOOL" UUID="ECBABEB04DB4A6C88C8824A26F45E30E" Comment="Защита от сухого хода" />
+        <Field Name="E_0_3" Type="BOOL" UUID="2CA3EC2A4FF99E0A643F82B6AAF26C35" Comment="Предупреждение о возможной неисправности вет систем" />
+        <Field Name="E_0_4" Type="BOOL" UUID="5733089249A783862F7C16824D8A0A41" Comment="Ошибка системы E_0_4" />
+        <Field Name="E_0_5" Type="BOOL" UUID="EB26AA104734AD23E2794BB3A02AA87F" Comment="Ошибка системы E_0_5" />
+        <Field Name="E_0_6" Type="BOOL" UUID="AE7CAE664DE524A20D550BBF90743065" Comment="Ошибка системы E_0_6" />
+        <Field Name="E_0_7" Type="BOOL" UUID="7E128D15402C58FF4BD5919F6624F275" Comment="Ошибка системы E_0_7" />
+        <Field Name="E_1_0" Type="BOOL" UUID="B574A03743F01462027800B212468E7F" Comment="ПЧ насоса 1 не доступен для управления контроллером системы" />
+        <Field Name="E_1_1" Type="BOOL" UUID="C19C1449453A8B90A5C5A0B099CCD55E" Comment="Защита насоса 1 по сигналу РТС(перегрев)" />
+        <Field Name="E_1_2" Type="BOOL" UUID="56E57E7B4CB21D175A4262AB5D165C32" Comment="Перегрев ПЧ насоса 1" />
+        <Field Name="E_1_3" Type="BOOL" UUID="68C2FCF04406D36094EF3EB72153AD97" Comment="Перегрузка ПЧ насоса 1" />
+        <Field Name="E_1_4" Type="BOOL" UUID="39697181454C9E92E360D2882A09BAE9" Comment="Прочие неисправности насоса 1" />
+        <Field Name="E_1_5" Type="BOOL" UUID="A459811A46FDF75E927E548F6E54862C" Comment="Неудовлетворительное качество питающей сети насоса 1" />
+        <Field Name="E_1_6" Type="BOOL" UUID="6C5B23904126A1B616698BA95789D0FA" Comment="Ошибка насоса 1 E_1_6" />
+        <Field Name="E_1_7" Type="BOOL" UUID="11D4BF884BD788847F6F0FAD83C2A117" Comment="Работа насоса 1 в аварийном режиме ручного пуска" />
+        <Field Name="E_2_0" Type="BOOL" UUID="EC5D2DC54ECE1DF68DAE1AB3A715E172" Comment="ПЧ насоса 2 не доступен для управления контроллером системы" />
+        <Field Name="E_2_1" Type="BOOL" UUID="EABA171C43B0CDD4AFE43B8FF71EE9D8" Comment="Защита насоса 2 по сигналу РТС(перегрев)" />
+        <Field Name="E_2_2" Type="BOOL" UUID="A963672B45CF339D59B9BA80A2E1603D" Comment="Перегрев ПЧ насоса 2" />
+        <Field Name="E_2_3" Type="BOOL" UUID="23F7A30A478A19874B943194CC281334" Comment="Перегрузка ПЧ насоса 2" />
+        <Field Name="E_2_4" Type="BOOL" UUID="E18AC48A40924F4C8E3D3EA1D2181021" Comment="Прочие неисправности насоса 2" />
+        <Field Name="E_2_5" Type="BOOL" UUID="3CFED56948C3893C477B458E70B764DF" Comment="Неудовлетворительное качество питающей сети насоса 2" />
+        <Field Name="E_2_6" Type="BOOL" UUID="560AD40A4ADA14546CA6838330FC3ABD" Comment="Ошибка насоса 1 E_2_6" />
+        <Field Name="E_2_7" Type="BOOL" UUID="492CA674407181DD794B4B95489F9D45" Comment="Работа насоса 2 в аварийном режиме ручного пуска" />
+        <Field Name="E_3_0" Type="BOOL" UUID="AA82781D4AA4770C96A392B12AF34DC2" Comment="ПЧ насоса 3 не доступен для управления контроллером системы" />
+        <Field Name="E_3_1" Type="BOOL" UUID="4DF74A1440510894151A3E978BE79824" Comment="Защита насоса 3 по сигналу РТС(перегрев)" />
+        <Field Name="E_3_2" Type="BOOL" UUID="196A1CB244640345E92A71A1F1E11998" Comment="Перегрев ПЧ насоса 3" />
+        <Field Name="E_3_3" Type="BOOL" UUID="EE247391427F9EF757BAB2AFF40BC703" Comment="Перегрузка ПЧ насоса 3" />
+        <Field Name="E_3_4" Type="BOOL" UUID="66F742DC4282B9EA003B3CACBCE870D2" Comment="Прочие неисправности насоса 3" />
+        <Field Name="E_3_5" Type="BOOL" UUID="081222074DF82E1F5645F281E51C07B3" Comment="Неудовлетворительное качество питающей сети насоса 3" />
+        <Field Name="E_3_6" Type="BOOL" UUID="1DF050854A77D7CF88A25482DC2D7DA6" Comment="Ошибка насоса 3 E_3_6" />
+        <Field Name="E_3_7" Type="BOOL" UUID="069A3F1449D96ED0D34D6CA7F23FFA97" Comment="Работа насоса 3 в аварийном режиме ручного пуска" />
+        <Field Name="E_7_0" Type="BOOL" UUID="A2493698426F8673D9AC49B72E3A40D2" Comment="Ошибка поплавков E_7_0" />
+        <Field Name="E_7_1" Type="BOOL" UUID="34993CD349FCD87F9475DDB50EB7FBFB" Comment="Ошибка поплавков E_7_1" />
+        <Field Name="E_7_2" Type="BOOL" UUID="A1CB48304EA0181FFB2D1387AACDDD63" Comment="Ошибка поплавков E_7_2" />
+        <Field Name="E_7_3" Type="BOOL" UUID="7668B68E45DB7D42E37DE4A8DF509812" Comment="Ошибка поплавков E_7_3" />
+        <Field Name="E_7_4" Type="BOOL" UUID="1E7329614397CAF5B39FE8A6D787B099" Comment="Ошибка поплавков E_7_4" />
+        <Field Name="E_7_5" Type="BOOL" UUID="00EDE8E342998F2F26187FB5FFD4C66B" Comment="Ошибка поплавков E_7_5" />
+        <Field Name="E_7_6" Type="BOOL" UUID="BEB865184DA735A67ED83088E4F02B28" Comment="Ошибка поплавков E_7_6" />
+        <Field Name="E_7_7" Type="BOOL" UUID="6F87D94E4C9097B1F5A0E28382FAE54D" Comment="Ошибка поплавков E_7_7" />
+        <Field Name="P1_MANUAL_MODE" Type="BOOL" UUID="55F97EAD45FDA02A6242FFBBED13B37D" Comment="Насос 1 в ручном режиме" />
+        <Field Name="P1_FREQ_CONTROL" Type="BOOL" UUID="D993D4914B0738782516C5A8695A5ECB" Comment="Насос 1 работает в режиме регулирования частоты" />
+        <Field Name="P1_WORK" Type="BOOL" UUID="BE89BF324D3959BB5DB60C8C3F8DE4C4" Comment="Работа насоса 1" />
+        <Field Name="P1_AUTO_MODE" Type="BOOL" UUID="46B107B841AC76655F0C08A0FB299C54" Comment="Насос 1 находится в режиме автоматического управления" />
+        <Field Name="P1_COMUNITY_FAULT" Type="BOOL" UUID="DC94E714476271F168C85DB41530F1D2" Comment="Обобщённая ошибка насоса 1 E_1_0-E_1_7" />
+        <Field Name="P1_READY_FOR_AUTO_CONTROL" Type="BOOL" UUID="43FA17BB41E1B19015EE65874F939647" Comment="Контроллер насоса 1 готов к автоматическому управлению" />
+        <Field Name="P1_POWERED_AND_MEETS" Type="BOOL" UUID="FB156EF948E80965DC6D94AD7A19DBB4" Comment="Контоллер насоса 1 запитан от сети и отвечает на запросы" />
+        <Field Name="P1_FREQ" Type="REAL" UUID="BAB7305A41A236F3108B788082110559" Comment="Частота насоса 1" />
+        <Field Name="P1_J1" Type="REAL" UUID="0AFF396545554B771E9E168FD4294F79" Comment="Ток в фазе L1 насоса 1" />
+        <Field Name="P1_J2" Type="REAL" UUID="E332506C49CC190575B18B8577E476B7" Comment="Ток в фазе L2 насоса 1" />
+        <Field Name="P1_J3" Type="REAL" UUID="F99230A34107F71D50A3389E8298A1AB" Comment="Ток в фазе L3 насоса 1" />
+        <Field Name="P1_JN" Type="REAL" UUID="22994F4E48681156EBF91B8FA13CD11D" Comment="Ток в фазе LN насоса 1" />
+        <Field Name="P1_Uab" Type="REAL" UUID="6D7FCFC14C414DE3C9772DA5619F7641" Comment="Напряжение между  L 1 - L 2 насоса No1 " />
+        <Field Name="P1_Ubc" Type="REAL" UUID="91655E9649B1EF49E660F7B02ABAA3BD" Comment="Напряжение между  L 2 - L 3 насоса No1 " />
+        <Field Name="P1_Uac" Type="REAL" UUID="CA1D8EEF45551596503F0AA801D9DDDD" Comment="Напряжение между  L 1 - L 3 насоса No1 " />
+        <Field Name="P1_Ucn" Type="REAL" UUID="93DBA02F42FFE75E5E5FD3B79F144AAE" Comment="Напряжение между  L 3 - L N насоса No1 " />
+        <Field Name="P1_DI" Type="INT" UUID="888B84A447966C7C0ABC8394B7F150B0" Comment="Состояние входа датчика протечки насоса No1 [0] = К.З. [~100] =  проводимость не зафиксирована насоса 1" />
+        <Field Name="P1_CNT" Type="INT" UUID="EEFC4D524BDF46D8D9567284388CA9E3" Comment="Счетчик пусков насоса No1 " />
+        <Field Name="P1_HRS" Type="INT" UUID="E3921DAF4D11A6208081878935950E6C" Comment="Счетчик моточасов насоса No1" />
+        <Field Name="P2_MANUAL_MODE" Type="BOOL" UUID="1785862447A6ED7581354884C29DC3A2" Comment="Насос 2 в ручном режиме" />
+        <Field Name="P2_FREQ_CONTROL" Type="BOOL" UUID="57EB763A4D917AF778FC26A66902FEA0" Comment="Насос 2 работает в режиме регулирования частоты" />
+        <Field Name="P2_WORK" Type="BOOL" UUID="9F3CC67E451568D44FED82914ED34B02" Comment="Работа насоса 2" />
+        <Field Name="P2_AUTO_MODE" Type="BOOL" UUID="FD4D12C94D945F63346091B5018DDE06" Comment="Насос 2 находится в режиме автоматического управления" />
+        <Field Name="P2_COMUNITY_FAULT" Type="BOOL" UUID="0CFC00984BFFBC367C66C28A4B124CD8" Comment="Обобщённая ошибка насоса 2 E_2_0-E_2_7" />
+        <Field Name="P2_READY_FOR_AUTO_CONTROL" Type="BOOL" UUID="A7DB63314FAFA0961EF229AF8A58F67F" Comment="Контроллер насоса 2 готов к автоматическому управлению" />
+        <Field Name="P2_POWERED_AND_MEETS" Type="BOOL" UUID="E132E9FB4E4E6236F8F22DBB9D1C4B01" Comment="Контоллер насоса 2 запитан от сети и отвечает на запросы" />
+        <Field Name="P2_FREQ" Type="REAL" UUID="48B19BFC4039FB764174E392781C0708" Comment="Частота насоса 2" />
+        <Field Name="P2_J1" Type="REAL" UUID="3AEEFE914FFD3850D70415881ABEFA20" Comment="Ток в фазе L1 насоса 2" />
+        <Field Name="P2_J2" Type="REAL" UUID="1A67F567496FF4D5647C3E93BEF457A1" Comment="Ток в фазе L2 насоса 2" />
+        <Field Name="P2_J3" Type="REAL" UUID="5A1E9C0149CA49C1E31B3691971D2447" Comment="Ток в фазе L3 насоса 2" />
+        <Field Name="P2_JN" Type="REAL" UUID="16FEA74E43E7A7C21111A599E6715377" Comment="Ток в фазе LN насоса 2" />
+        <Field Name="P2_Uab" Type="REAL" UUID="BFB402414446AC6591604E9A3DB1CA24" Comment="Напряжение между  L 1 - L 2 насоса No2 " />
+        <Field Name="P2_Ubc" Type="REAL" UUID="42A3DD944C203DF4BEC80FA7CF70B40D" Comment="Напряжение между  L 2 - L 3 насоса No2 " />
+        <Field Name="P2_Uac" Type="REAL" UUID="8876A93E474578482EE3FBA57DCE43D1" Comment="Напряжение между  L 1 - L 3 насоса No2 " />
+        <Field Name="P2_Ucn" Type="REAL" UUID="E6329C754BDE790334E905BE3F31C45D" Comment="Напряжение между  L 3 - L N насоса No2 " />
+        <Field Name="P2_DI" Type="INT" UUID="78DD763F41B44BD272DA73A35A6E4D62" Comment="Состояние входа датчика протечки насоса No2 [0] = К.З. [~100] =  проводимость не зафиксирована насоса 2" />
+        <Field Name="P2_CNT" Type="INT" UUID="CC4A12874705B7D72D978CA9792105F6" Comment="Счетчик пусков насоса No2 " />
+        <Field Name="P2_HRS" Type="INT" UUID="8F29069D4CB148BEF02505AF10C758B5" Comment="Счетчик моточасов насоса No2" />
+        <Field Name="P3_MANUAL_MODE" Type="BOOL" UUID="771B415242A007CBF2DBECB7B7A5CD62" Comment="Насос 3 в ручном режиме" />
+        <Field Name="P3_FREQ_CONTROL" Type="BOOL" UUID="154D891245B47ACBE989A1AC3DD3582A" Comment="Насос 3 работает в режиме регулирования частоты" />
+        <Field Name="P3_WORK" Type="BOOL" UUID="8FAF0BEC4A0763B522243EA2EBF98AC0" Comment="Работа насоса 3" />
+        <Field Name="P3_AUTO_MODE" Type="BOOL" UUID="780B4A2D43E3C25EE0ED21B596038855" Comment="Насос 3 находится в режиме автоматического управления" />
+        <Field Name="P3_COMUNITY_FAULT" Type="BOOL" UUID="6333AFF14B408338C844A1A9F9D5B1A1" Comment="Обобщённая ошибка насоса 3 E_3_0-E_3_7" />
+        <Field Name="P3_READY_FOR_AUTO_CONTROL" Type="BOOL" UUID="98213406420ECEDB30F5DCB9AF525305" Comment="Контроллер насоса 3 готов к автоматическому управлению" />
+        <Field Name="P3_POWERED_AND_MEETS" Type="BOOL" UUID="D02BF4D4446BE1796DAC978576ECC412" Comment="Контоллер насоса 3 запитан от сети и отвечает на запросы" />
+        <Field Name="P3_FREQ" Type="REAL" UUID="12F0FDC54C52364E1E9AAF96D644EE3E" Comment="Частота насоса 3" />
+        <Field Name="P3_J1" Type="REAL" UUID="7FF0EBCC45CE0AD681FFDD8513B3E02D" Comment="Ток в фазе L1 насоса 3" />
+        <Field Name="P3_J2" Type="REAL" UUID="FF83C1A241D0D96A0ECB0A82A7861543" Comment="Ток в фазе L2 насоса 3" />
+        <Field Name="P3_J3" Type="REAL" UUID="BAF17D9849FF0F7B29CA04B59266B8BC" Comment="Ток в фазе L3 насоса 3" />
+        <Field Name="P3_JN" Type="REAL" UUID="A6FBF4C0492D7BAEF7D07EAEA5A3C76A" Comment="Ток в фазе LN насоса 3" />
+        <Field Name="P3_Uab" Type="REAL" UUID="C92D2E83471B02FE8CAF8EACACE2E3E2" Comment="Напряжение между  L 1 - L 2 насоса No3 " />
+        <Field Name="P3_Ubc" Type="REAL" UUID="1CA1E4024413D36235A7F0BD122B96A8" Comment="Напряжение между  L 2 - L 3 насоса No3 " />
+        <Field Name="P3_Uac" Type="REAL" UUID="594A1C2D44A4F413013C9CA5F8FE139C" Comment="Напряжение между  L 1 - L 3 насоса No3 " />
+        <Field Name="P3_Ucn" Type="REAL" UUID="05E0128142B4E3C73911288926B3725D" Comment="Напряжение между  L 3 - L N насоса No3 " />
+        <Field Name="P3_DI" Type="INT" UUID="72FB12EE4B3EAA7E9B76B9877907AE03" Comment="Состояние входа датчика протечки насоса No3 [0] = К.З. [~100] =  проводимость не зафиксирована насоса 3" />
+        <Field Name="P3_CNT" Type="INT" UUID="1DF9E9B34DF176A52D86DEB5F49B19AB" Comment="Счетчик пусков насоса No3 " />
+        <Field Name="P3_HRS" Type="INT" UUID="77AFCCC441B3A6C4591D74A211B39A38" Comment="Счетчик моточасов насоса No3" />
+    </Fields>
+</Type>

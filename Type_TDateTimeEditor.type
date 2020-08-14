@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TDateTimeEditor" Kind="Struct" UUID="1611F74D4839E9386E43C098A9AC38AD">
+    <Fields>
+        <Field Name="I_DT" Type="DT" UUID="42642E1044B7804EF1003AB6059CD7FF" />
+        <Field Name="I_VISIBLE" Type="BOOL" UUID="38CE1FF54EA91C316A6454B5D8EB39C7" />
+        <Field Name="O_CHANGED" Type="BOOL" UUID="9F2F13224B17BF472C1BECBB07A466FE" />
+        <Field Name="O_DT" Type="DT" UUID="57D42EC343B07E7ACA5E02918A7E5708" />
+    </Fields>
+</Type>

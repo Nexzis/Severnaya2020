@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="Reports" Kind="Struct" UUID="1EA703BE41357399401770BB902E61BE">
+    <Fields>
+        <Field Name="GasTemplate" Type="BOOL" UUID="CB2569FF497B9095840D138208B4E1F5" ArraySize="8" Comment="Показать/скрыть отчёт по форме &quot;ГАЗ&quot; (report engine configuration)" />
+        <Field Name="GasTemplateIndex" Type="INT" UUID="CAD1E6084B7E37924647D7B999189350" Comment="Индекс выбранного отчёта в списке" />
+        <Field Name="GasTemplateChanged" Type="BOOL" UUID="9A9DE74D4B3C235626B16892BDA0A038" Comment="Изменён элемент списка отчётов по форме &quot;ГАЗ&quot; " />
+        <Field Name="GasTemplateDate" Type="STRING" UUID="CB1B9E9D4E45A50F8963ABA38CB99227" ArraySize="8" Comment="Объект отчёта - дата" />
+        <Field Name="GasTemplateValue" Type="STRING" UUID="1B2F04FE44C24D05C7166A950B30609B" ArraySize="32" Comment="Объект отчёта - значение" />
+    </Fields>
+</Type>

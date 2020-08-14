@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="TyUnit4AI" Kind="Struct" UUID="2CAB34714456D7AED718CB9B2712681B">
+    <Fields>
+        <Field Name="IN1" Type="DINT" UUID="B5E3CEA049EEDFEA80F446B8F938CA70" />
+        <Field Name="IN1_status" Type="UINT" UUID="AB52DD5040E51CD41C168B84C2312528" />
+        <Field Name="IN2" Type="DINT" UUID="FAA57D74445B2E874CB117A231C721C6" />
+        <Field Name="IN2_status" Type="UINT" UUID="524C17AB49E0A6FC119CEA943DBAAA38" />
+        <Field Name="IN3" Type="DINT" UUID="A1F031AC4FEF2EBDEADC648E3061C9F3" />
+        <Field Name="IN3_status" Type="UINT" UUID="D752AB1D4D266198F7D8C1BB662EBA1C" />
+        <Field Name="IN4" Type="DINT" UUID="93843CF746A75DA34BBA08B863A340D8" />
+        <Field Name="IN4_status" Type="UINT" UUID="EAA2D4044B4A326ECE5C70BFAE91AFC6" />
+    </Fields>
+</Type>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="DO_Sonet" Kind="Struct" Comment="Выходной дискретный сигнал в контроллер Сонет от оператора" UUID="B0EC194E441587DB3736B4B2E60AAD18">
+    <Fields>
+        <Field Name="Value" Type="BOOL" UUID="E9EB6CE249ADBFF8C2B2EDB15AECBA2F" Comment="Текущее значение обработанного сигнала" />
+        <Field Name="dt" Type="DT" UUID="4D10855249F826F31BFEB19E20576B3A" Comment="Время подачи последней команды" />
+        <Field Name="Comment" Type="STRING" UUID="2EA7CC42436AAC56401059A875F3FBE3" Comment="Текстовое описание сигнала " />
+        <Field Name="Txt_1" Type="STRING" UUID="426E27324A57CBAB1FB5B7B10EA2597D" Comment="Текстовое описание значения 1" />
+        <Field Name="Txt_0" Type="STRING" UUID="E3F094064E8BEE24FAC9DA8D11382E3B" Comment="Текстовое описание значения 0" />
+        <Field Name="Source" Type="STRING" UUID="110D24A84EC2D8E202B7F5BA178E2809" Comment="Источник события (описание оборудования)" />
+        <Field Name="repaireFlag" Type="BOOL" UUID="23116472417372CECDD9AC8D10C55394" Comment="Флаг вывода сигнала из обработки" />
+        <Field Name="reliabilityFlag" Type="BOOL" UUID="8D92B91D4CB9A89617ED76BF6A79FD91" Comment="Флаг достоверности сигнала" />
+        <Field Name="reliabilityField" Type="WORD" UUID="B4555CF14CA661FE778FF5AD469B7974" Comment="код признака недостоверности" />
+        <Field Name="AlarmClass" Type="UINT" UUID="B53AD03A411E17C459F9E2B31536CB61" Comment="Класс события (аварии)" />
+        <Field Name="AlarmMsg" Type="STRING" UUID="30E8D5B64944CFBC8D7114B4FBF04C4A" Comment="Текст сообщения" />
+        <Field Name="Fix_Con" Type="UINT" UUID="937C61A9481F07D749DA12A777E41EDE" Comment="Время фиксации выходного контакта в секундах. 0 - постоянная фиксация" />
+        <Field Name="cycle" Type="REAL" UUID="C02C13C6468CC4620EA1A9960ED1606B" Comment="Интервал обработки" />
+        <Field Name="ID" Type="ULINT" UUID="9E1D56364FB3C631D0C0E884B13E3E94" Comment="ID уникального механизма" />
+        <Field Name="QUAL_IN" Type="UINT" UUID="0B8797524E156AF66E15F683F8048DD3" Comment="Код качества для выхода дискретного сигнала" />
+        <Field Name="VSTATUS" Type="BYTE" UUID="48FC46DF4047D0467CDAE4B49D09B454" ArraySize="4" Comment="Групповой дисплей" />
+        <Field Name="VSTATUS_OLD" Type="BYTE" UUID="93A716744CACF5C0A3581FA8AF55A27C" ArraySize="4" />
+        <Field Name="QUALITY_CODE" Type="BYTE" UUID="CDD44423475A06A7927BE7A59557587E" />
+        <Field Name="ALM_CODE" Type="UINT" UUID="4F4ABC13441BDCDE69F020BD410B0499" Comment="Код неисправности" />
+        <Field Name="ALM_CODE_OLD" Type="UINT" UUID="F4C2C753427F25C07D5AE996E8152887" />
+        <Field Name="INPUT_FAULT" Type="BOOL" UUID="D7C336924E006726D66C949E99D4D992" Comment="Внешний признак неисправности" />
+        <Field Name="FAULT_ON" Type="BOOL" UUID="A16F79BF4742332AE3B06DBFB15D4F66" Comment="Контролировать неисправность" />
+        <Field Name="FAULT" Type="BOOL" UUID="30A11D0146DD3D0EC7C2CC9991EE0318" Comment="Неисправность" />
+        <Field Name="FAULT_RESET" Type="BOOL" UUID="73E3798B4A19F654D2C526BC3E6A9B8C" Comment="Сброс неисправности" />
+        <Field Name="FAULT_L_RESET" Type="BOOL" UUID="C14FBFB34D02752F25C152BA2B03BBED" Comment="Внешний сброс неисправности" />
+        <Field Name="MASK_MODE" Type="BOOL" UUID="21FE0283403D6201FECDA7ACB4C9E5F6" Comment="Режим подмены состояния" />
+        <Field Name="MASK" Type="BOOL" UUID="EE78A7AD40769A8067E1A1830E3EC49C" Comment="Значение подмены" />
+        <Field Name="LATCH" Type="BOOL" UUID="987C04A24C955AF65978099EE764FDD7" Comment="Защелкивать вход (до сброса)" />
+        <Field Name="AUTO_RESET" Type="BOOL" UUID="AD9A95A241093192EDB9E9916EC209F3" Comment="Автоуход неисправности (без сброса)" />
+        <Field Name="FAULT_ACK" Type="BOOL" UUID="B78E24054D3DA20A0D44D78C88BECFD0" Comment="Неисправность квитирована" />
+        <Field Name="IN" Type="BOOL" UUID="8C2B1B964E89EA5EAA92FDBA67DBB5E6" Comment="Вход" />
+        <Field Name="INV_FLAG" Type="BOOL" UUID="92B2FCEE47532F1B86352A820A6AF0AF" Comment="Инверсия" />
+        <Field Name="Value_OLD" Type="BOOL" UUID="B74FAF3F4FA15ED618F0288E9A94CAD5" Comment="Запоминаем состояние выхода" />
+        <Field Name="TIME_SHIFT" Type="TIME" UUID="D49018FC4A03DA3FAA221493ECA927CE" Comment="Часовой пояс" />
+        <Field Name="BLOCK_ALARM" Type="BOOL" UUID="52B52C3E440520F113ED4498F49B69EC" Comment="Блокировка тревоги" />
+        <Field Name="IDE" Type="STRING" UUID="19AFE832479EFFE16663F4A9A6A75971" Comment="Идентификатор тревожного сообщения" />
+        <Field Name="MNEMO" Type="STRING" UUID="D0171578416098D2326E97A8BE502E42" Comment="Мнемокадр" />
+    </Fields>
+</Type>

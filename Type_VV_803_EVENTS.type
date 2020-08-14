@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="VV_803_EVENTS" Kind="Struct" UUID="9D89E9B54463322AB3F80B92797F6F2E">
+    <Fields>
+        <Field Name="D28_START_STAGE_I1" Type="TIME" UUID="E5B87B464A913DB9910FF3B7C205C5B3" Comment="Запуск ступени I&gt;" />
+        <Field Name="D28_RETURN_START_STAGE_I1" Type="TIME" UUID="BBD25A5C40D59C8A3EC3DA943EC1E6B2" Comment="Возврат запуска ступени I&gt;" />
+        <Field Name="D28_TRIGG_STAGE_I1" Type="TIME" UUID="0339470C4D285DD469A29493A970AF73" Comment="Срабатывание ступени I&gt; (МТЗ 2 ст.)" />
+        <Field Name="D28_RETURN_STAGE_I1" Type="TIME" UUID="06DD41E24AB0E7EC90AB319B2B10C552" Comment="Возврат ступени I&gt;" />
+        <Field Name="D28_START_STAGE_I2" Type="TIME" UUID="BDED9A9941CA9BF45CF764B22AA2B762" Comment="Запуск ступени I&gt;&gt;" />
+        <Field Name="D28_RETURN_START_STAGE_I2" Type="TIME" UUID="43D51D5B41C4D19C32E067BDA11F1564" Comment="Возврат запуска ступени I&gt;&gt;" />
+        <Field Name="D28_TRIGG_STAGE_I2" Type="TIME" UUID="E570B08140EC207A5A0F13B630E20AA5" Comment="Срабатывание ступени I&gt;&gt;(МТЗ 1 ст.)" />
+        <Field Name="D28_RETURN_STAGE_I2" Type="TIME" UUID="0C4FBBE94ACA229501473D9304971D23" Comment="Возврат ступени I&gt;&gt;" />
+        <Field Name="D28_START_STAGE_I3" Type="TIME" UUID="51AE00924301AE8A1AF55B8477A2A67F" Comment="Запуск ступени I&gt;&gt;&gt;" />
+        <Field Name="D28_RETURN_START_STAGE_I3" Type="TIME" UUID="6E2283B346B9139AC9ACE5AC282F61A3" Comment="Возврат запуска ступени I&gt;&gt;&gt;" />
+        <Field Name="D28_TRIGG_STAGE_I3" Type="TIME" UUID="A554AE5C4C6429182783DB86CF65348E" Comment="Срабатывание ступени I&gt;&gt;&gt; (токовая отсечка)" />
+        <Field Name="D28_RETURN_STAGE_I3" Type="TIME" UUID="2F47AEAC4F5A0D9F15D5D1988BBDBDE4" Comment="Возврат ступени I&gt;&gt;&gt;" />
+        <Field Name="D28_START_STAGE_Io1" Type="TIME" UUID="B49EC0584C657B23EAF7E99D7D8243E8" Comment="Запуск ступени Iо&gt;" />
+        <Field Name="D28_RETURN_START_STAGE_Io1" Type="TIME" UUID="5EB94A4D4267B069004F2B99BBA1BCF9" Comment="Возврат запуска ступени Iо&gt;" />
+        <Field Name="D28_TRIGG_STAGE_Io1" Type="TIME" UUID="C7FEDF9C49D1A05F02DFC8A98838FD27" Comment="Срабатывание ступени Iо&gt;" />
+        <Field Name="D28_RETURN_STAGE_Io1" Type="TIME" UUID="CDCBCAB2479D37713669C688642890F9" Comment="Возврат ступени Iо&gt;" />
+        <Field Name="D28_START_STAGE_Io2" Type="TIME" UUID="5288CE904429476BF7559CB5514565E3" Comment="Запуск ступени Iо&gt;&gt;" />
+        <Field Name="D28_RETURN_START_STAGE_Io2" Type="TIME" UUID="34E2AD384821B5B4F2D365804BCDA578" Comment="Возврат запуска ступени Iо&gt;&gt;" />
+        <Field Name="D28_TRIGG_STAGE_Io2" Type="TIME" UUID="D0D8512F409409AF5AE1A394A01A8B0A" Comment="Срабатывание ступени Iо&gt;&gt;" />
+        <Field Name="D28_RETURN_STAGE_Io2" Type="TIME" UUID="A4E959BF4C88274FC6EBA49007736370" Comment="Возврат ступени Iо&gt;&gt;" />
+        <Field Name="D28_START_STAGE_Io3" Type="TIME" UUID="45CEA957400D9FBF35245DB6A17107F1" Comment="Запуск ступени DI&gt;" />
+        <Field Name="D28_RETURN_START_STAGE_Io3" Type="TIME" UUID="A20D2F43494C3C8D62C4E1A5F992B7C2" Comment="Возврат запуска ступени DI&gt;" />
+        <Field Name="D28_TRIGG_STAGE_Io3" Type="TIME" UUID="F556F468489CC5842BD92B957779DE6E" Comment="Срабатывание ступени DI&gt;" />
+        <Field Name="D28_RETURN_STAGE_Io3" Type="TIME" UUID="C128E37643540B31F0AA6B9BF7F98088" Comment="Возврат ступени DI&gt;" />
+        <Field Name="D28_SS1_ACT" Type="TIME" UUID="F1D746D54DED373119B77EA41F8E07D0" Comment="Выходной сигнал SS1 активизирован" />
+        <Field Name="D28_SS1_RST" Type="TIME" UUID="0775C27A47A75C7687F173A07E6C0366" Comment="Сброс выходного сигнала SS1" />
+        <Field Name="D28_TS1_ACT" Type="TIME" UUID="1DDD6FFA45BAC224D423E494BEECC66D" Comment="Выходной сигнал TS1 активизирован" />
+        <Field Name="D28_TS1_RST" Type="TIME" UUID="B2B9DF4F4AEADCFCDF687887406B1125" Comment="Сброс выходного сигнала TS1" />
+        <Field Name="D28_SS2_ACT" Type="TIME" UUID="5D3BF5194C5C525D6C61FAB78C39B158" Comment="Выходной сигнал SS2 активизирован" />
+        <Field Name="D28_SS2_RST" Type="TIME" UUID="DB0E1D7B46DEB274E06B909788FDDBC6" Comment="Сброс выходного сигнала SS2" />
+        <Field Name="D28_TS2_ACT" Type="TIME" UUID="84B843574BD8EE00EF2E9E820FA0C7C5" Comment="Выходной сигнал TS2 активизирован" />
+        <Field Name="D28_TS2_RST" Type="TIME" UUID="455BF1F042561E4176BC20B5BFB8B76A" Comment="Сброс выходного сигнала TS2" />
+        <Field Name="D28_SS3_ACT" Type="TIME" UUID="3F9B0D954949CCED9897C3ACB0C568F3" Comment="Выходной сигнал SS3 активизирован" />
+        <Field Name="D28_SS3_RST" Type="TIME" UUID="5127223C42AF4CFDEAB520AD21E68355" Comment="Сброс выходного сигнала SS3" />
+        <Field Name="D28_TS3_ACT" Type="TIME" UUID="533E4FDC4252EAF0ACF148BC1DA5B973" Comment="Выходной сигнал TS3 активизирован" />
+        <Field Name="D28_TS3_RST" Type="TIME" UUID="2B67A56E443FCAAABFE811BE6DB3E985" Comment="Сброс выходного сигнала TS3" />
+        <Field Name="D28_SS4_ACT" Type="TIME" UUID="D0CB1CE24D302733778852AAB20CDD8D" Comment="Выходной сигнал SS4 активизирован" />
+        <Field Name="D28_SS4_RST" Type="TIME" UUID="7942364A4442085E3D8142909EA4529F" Comment="Сброс выходного сигнала SS4" />
+        <Field Name="D28_TS4_ACT" Type="TIME" UUID="93E699E343189021CA6C60A88F9BCB1E" Comment="Выходной сигнал TS4 активизирован" />
+        <Field Name="D28_TS4_RST" Type="TIME" UUID="AB60797E47526403F4283FA6796DC535" Comment="Сброс выходного сигнала TS4" />
+        <Field Name="D28_UROV_WORK" Type="TIME" UUID="771D65CE4625249A3B51939EA75ACBDD" Comment="УРОВ в работе" />
+        <Field Name="D28_UROV_RTRN" Type="TIME" UUID="02B6BF48459BA7B20A10928CC80059F6" Comment="Возврат УРОВ" />
+        <Field Name="D28_PEREZAGRUZKA" Type="TIME" UUID="1E5FC7234BF74208FC143F8426B75CDD" />
+        <Field Name="L2210_CHNG_SWXX_OFF" Type="TIME" UUID="FAC950CF4CEDE00E58DC4EB98A188258" Comment="Изменение положения выключателя ХХ®10(отключено)" />
+        <Field Name="L2210_CHNG_SWXX_ON" Type="TIME" UUID="BAD18C894A0AF89FEC79558DE400A197" Comment="Изменение положения выключателя ХХ®01(включено)" />
+        <Field Name="L2210_CHNG_SWXX_UNDEF1" Type="TIME" UUID="C9AE30204FA047B0090D84A187F2E1E4" Comment="Изменение положения выключателя ХХ®11(неопределено)" />
+        <Field Name="L2210_CHNG_SWXX_UNDEF2" Type="TIME" UUID="6DFE7DFB45CFBA4DB94C67AFC0388B22" Comment="Изменение положения выключателя ХХ®00(неопределено)" />
+        <Field Name="L2210_RELAY_ON_WRK" Type="TIME" UUID="1BDB93134B6ED65900F0099D243A95D8" Comment="Реле отключить сработано" />
+        <Field Name="L2210_RELAY_ON_RST" Type="TIME" UUID="CA329B28484EFDE1B74AC68ED0676DDE" Comment="Реле отключить сброшено" />
+        <Field Name="L2210_RELAY_OFF_WRK" Type="TIME" UUID="D075627D4CD69B6178538AB5767CD85B" Comment="Реле включить сработано" />
+        <Field Name="L2210_RELAY_OFF_RST" Type="TIME" UUID="B972D3AC49D353AAEDFCB2B25A0A2A3E" Comment="Реле включить сброшено" />
+        <Field Name="L2210_MANUAL_CONTROL" Type="TIME" UUID="F346B8834E4D75EFE5DB6AA9A526F23C" Comment="Ключ “местный/дистан.” в положении “местный”" />
+        <Field Name="L2210_REMOTE_CONTROL" Type="TIME" UUID="D003E9E742781D06FA825CBC2E54C986" Comment="Ключ “местный/дистан.” в положении “дистанционный”" />
+        <Field Name="L2210_COMM_INPUT_RELAY_ON_ACT" Type="TIME" UUID="B955382D408FEFBE0262EA9CDC9A7E79" Comment="Вход реле команды “включить” активен" />
+        <Field Name="L2210_COMM_OUTPUT_RELAY_ON_ACT" Type="TIME" UUID="A4BA9D8D491DE6C64C32FA9188636601" Comment="Вход реле команды “отключить” активен" />
+        <Field Name="L2210_APV_ALLOW" Type="TIME" UUID="4B06F4BD46101C9D6226DA9188181263" Comment="АПВ разрешено" />
+        <Field Name="L2210_APV_FORBD" Type="TIME" UUID="F4CD1D994728CA2189EB1F86B8D60E12" Comment="АПВ запрещено" />
+        <Field Name="L2210_MES_MODULE_WORK" Type="TIME" UUID="D5387DEE4F5538A7AEAB6ABE22238C3B" Comment="Срабатывание измеритнльного модуля (TS2)" />
+        <Field Name="L2210_MTZ_WORK" Type="TIME" UUID="6A9CCE3C4DAC462413F05A99BC9F669B" Comment="Срабатывание ускорения МТЗ" />
+        <Field Name="L2210_ZCH_WORK" Type="TIME" UUID="C805A2D84D6211E2490E6BA51460E85F" Comment="Срабатывание защиты шин" />
+        <Field Name="L2210_UROV_WORK" Type="TIME" UUID="8C7EE6B0419B43A5307A9A8800657B2A" Comment="Срабатывание УРОВ" />
+        <Field Name="L2210_DGZ_WORK" Type="TIME" UUID="568495DF4541E43BAFF1628DA7744BAF" Comment="Срабатывание клапана дуговой защиты (ДГЗ)" />
+        <Field Name="L2210_OFF_FROM_DGZ_UROV" Type="TIME" UUID="E82E4CAC4899BD5E39647AB2C236D17B" Comment="Отключение от ДГЗ,УРОВ" />
+        <Field Name="L2210_OFF_FROM_APV" Type="TIME" UUID="4A741DFF4E18CB31873449BD69ADA44F" Comment="Отключение с АПВ" />
+        <Field Name="L2210_ERROR_CONTROL_LINES" Type="TIME" UUID="BC10DD644175BEE090623892D6CFF2D0" Comment="Неисправность цепей управления" />
+        <Field Name="L2210_OFF_FROM_AVR" Type="TIME" UUID="0D6CD8A94F64A2A9CAC3ABB556CC8DC6" Comment="Отключение с АВР" />
+        <Field Name="L2210_AVT_CURR_LIN_OFF" Type="TIME" UUID="6A3275244FA541EB5ACE7AA5ADD820E4" Comment="Автомат шинки питания отключён" />
+        <Field Name="L2210_FUNCTION_CONTROL" Type="TIME" UUID="7899E4B3416B021F7ECE8694933B896D" Comment="Функциональный контроль" />
+        <Field Name="L2210_AVR_RELAY_WORK" Type="TIME" UUID="A3972DCE484A728F7B39D3ABCBFC7715" Comment="Реле “запрет АВР” сработано" />
+        <Field Name="L2210_UROV_WORK2" Type="TIME" UUID="83ACF36849132133EB3EB5A794713AFB" Comment="Срабатывание УРОВ" />
+        <Field Name="L2210_ALARM_OFF" Type="TIME" UUID="C16166464BA692F19AFC0B8B9B0D9AAC" Comment="Аварийное отключение" />
+        <Field Name="L2210_STORAGE_ALARM" Type="TIME" UUID="570AD7664BD90F737EB82CBB24C5374A" Comment="Предупредительная сигнализация" />
+        <Field Name="L2210_VIZOV_V_ZRU" Type="TIME" UUID="5732E6FD4ABEA462A08C7AB07133C587" Comment="Обобщённый сигнал “вызов”" />
+        <Field Name="L2210_PEREZAGRUZKA" Type="TIME" UUID="F8675D4E4128E11AD8FD838F2CAE8FF2" Comment="Перезагрузка процессора" />
+    </Fields>
+</Type>

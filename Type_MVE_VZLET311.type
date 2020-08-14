@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="VZLET311" Kind="Struct" UUID="56A446394CDA3C2386089CA491E38D9C">
+    <Fields>
+        <Field Name="PIPE_DIAM" Type="REAL" UUID="CE524C68427FD48FC43BA1B6B9DB93B7" Comment="Внутренний диаметр трубы мм." />
+        <Field Name="RAW_ALARMS" Type="BYTE" UUID="D331CA764B58F2D78CFAFC915236A748" Comment="Бит 0 – аппаратная неисправность прибора,Бит 1 – напряжение батареи ниже заданного порога супервизора питания, , Бит 2 – нет УЗС, Бит 3 – расход больше максимального , Бит 4 – расход выше установленного верхнего порога для универсального выхода No1, Бит 5 – расход ниже установленного нижнего порога для универсального выхода No 1 " />
+        <Field Name="SERIAL_NUM" Type="DWORD" UUID="2E59E11E47F6374B23B1E4B14B875C33" Comment="Серийный номер прибора" />
+        <Field Name="RAW_WORK_TIME" Type="DWORD" UUID="4EB4E2B54424D5C4E92B4993EFF3465D" Comment="Время наработки с." />
+        <Field Name="RAW_V_INTEGER" Type="DWORD" UUID="B27282CC487479E456075FBF1ED37D9C" Comment="Суммарный накопленный объем - целая часть, м3" />
+        <Field Name="RAW_V_FRACTION" Type="DWORD" UUID="E326495D49127C6BBB5212B391656F8B" Comment="Суммарный накопленный объем - дробная часть, м3" />
+        <Field Name="RAW_POS_V_INTEGER" Type="DWORD" UUID="FCE2FC3E43CDF421A3FE55A56CC75346" Comment="Суммарный положительный накопленный объем - целая часть, м3" />
+        <Field Name="RAW_POS_V_FRACTION" Type="DWORD" UUID="F708ACA44A819A304DB061A484354BF5" Comment="Суммарный положительный накопленный объем - дробная часть, м3" />
+        <Field Name="RAW_NEG_V_INTEGER" Type="DWORD" UUID="D4F7BDBC46F2BD64629B9386A37E6AA6" Comment="Суммарный отрицательный накопленный объем - целая часть, м3" />
+        <Field Name="RAW_NEG_V_FRACTION" Type="DWORD" UUID="A17941F44B813DF73B098FBBCA96B0B5" Comment="Суммарный отрицательный накопленный объем - дробная часть часть, м3" />
+        <Field Name="MAX_CONS" Type="REAL" UUID="55D1BD2F48531DE0037654876DCF2F83" Comment="Максимальный расход м3/ч" />
+        <Field Name="TR_FLOW_RATE" Type="REAL" UUID="D44634F941789B9A4F0AD8B801C34089" Comment="Переходная скорость потока м/с" />
+        <Field Name="TR_FLOW" Type="REAL" UUID="E2D574A64ECCADC05DB28299458086AE" Comment="Переходный расход м3/ч" />
+        <Field Name="CUR_CONS" Type="REAL" UUID="A488D00D476A002030A0BB8CF106DA3C" Comment="Расход м3/ч" />
+        <Field Name="HMI_WORK_TIME" Type="REAL" UUID="31402C914D583E3CF6A2AEAC2F42FC4A" Comment="Время наработки ч." />
+        <Field Name="HMI_V" Type="REAL" UUID="A6A1D17E4CCF389BAEF36D98343F9979" Comment="Суммарный накопленый объём м3" />
+        <Field Name="HMI_POS_V" Type="REAL" UUID="92B75D1A49408E790726939B87DF55B9" Comment="Суммарный накопленый положительный объём м3" />
+        <Field Name="HMI_NEG_V" Type="REAL" UUID="530DC89A4B9D4B9D7F87C3957B1F546E" Comment="Суммарный накопленый отрицательный объём м3" />
+        <Field Name="DEVICE_ERROR" Type="BOOL" UUID="13E31E8E42341CD63D5B82920DE92974" Comment="Аппаратная неисправность прибора" />
+        <Field Name="LOW_U_BATT" Type="BOOL" UUID="74504B474BD0CD9707937FA7B91DF13E" Comment="Низкий заряд батарейки" />
+        <Field Name="NOT_UZS" Type="BOOL" UUID="FD8D0FE64AE348CC16B6429838577283" Comment="Нет УЗС" />
+        <Field Name="CONS_MAX" Type="BOOL" UUID="6DFB23554EE146B8271DE8882A26B14D" Comment="Расход больше максимального" />
+        <Field Name="INTERUPT_CYCLE_REQ" Type="BOOL" UUID="6A21702144308B38B9DF9C8E309719D4" Comment="Прерывание циклического опроса" />
+        <Field Name="FINISHED_MONTH" Type="BOOL" UUID="5212F7FA45510F421F0FD2A4EA1702B6" Comment="Чтение месячного архива окончено" />
+        <Field Name="Modbus_UP_ST" Type="8DA7BED14AD8607ECAC951825659834C" UUID="1868D52749B882E7137CA196F55652F6" Comment="статус устройства" />
+    </Fields>
+</Type>
