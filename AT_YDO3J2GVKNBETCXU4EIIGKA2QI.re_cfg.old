@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ReportEngine >
+<Configuration>
+    <ReportList>
+        <Report Equation="START_REPORT_ARM_2=TRUE" Printer="" Template="OTCHET.htm" Print="FALSE" ShowPreview="TRUE" Archive="" FileNameTemplate="Report_%Y%m%d_%H%M%S.htm" Comment="OTCHET" Landscape="FALSE" MarginTop="10" MarginLeft="10" MarginRight="10" MarginBottom="10" PageSize="A4" FullPage="FALSE" />
+    </ReportList>
+</Configuration>

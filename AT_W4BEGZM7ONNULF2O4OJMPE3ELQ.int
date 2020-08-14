@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="USOP_ST_Proc" Kind="APPLICATION.ST.CONSOLE" Args="" Comment="" UUID="4683BBD44F14E266BEA22D8E499BE1E1">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="B604D1A849DB8D37FAE43BA7D8A1D9E8" Type="STRING" Usage="output" />
+        <Signal Name="@NODE_RUN" UUID="11CFC95F39784D0797BFCEAB0F98BF6A" Type="BOOL" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1" UUID="DE58B672476B0477BE66F09C0B0253AB" Type="2F0731BB4D8F473AD2DDE3BDE131FAF4" Usage="" Global="TRUE" Comment="Давление воды в пожарном трубопроводе 1" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2" UUID="2172556941975F0D08F15C8D84D68C08" Type="2F0731BB4D8F473AD2DDE3BDE131FAF4" Usage="" Global="TRUE" Comment="Давление воды в пожарном трубопроводе 2" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3" UUID="A17236674425C730A5C66494C0760A88" Type="2F0731BB4D8F473AD2DDE3BDE131FAF4" Usage="" Global="TRUE" Comment="Давление воды в пожарном трубопроводе 3" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4" UUID="EB63E8CA4A40597DBD1BC9BD16B6911D" Type="2F0731BB4D8F473AD2DDE3BDE131FAF4" Usage="" Global="TRUE" Comment="Давление воды в пожарном трубопроводе 4" />
+        <Signal Name="USOP_A1_6" UUID="57DFFEC044EE7793F1A13DBABB07235C" Type="5EBDC20841E83733E17D2F88853302E3" Usage="" Global="TRUE" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1" UUID="9F9B61EA44C8196037C104A88D5EBFAD" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Контроль основного питания ~220В" />
+        <Signal Name="cycleTime" UUID="B79F8DFE489ACF17812348905D050E89" Type="REAL" Usage="" />
+        <Signal Name="TMO_BLK_ON" UUID="D73A097445CA21A27AF7ED90CA1B7F60" Type="BOOL" Usage="" />
+        <Signal Name="ShiftTime" UUID="7AC12AEA4B1F5D1AEA03A3946DF854B5" Type="TIME" InitialValue="T#3h" Usage="" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2" UUID="FEA7BCC24CA1E4469FE77A9ECAA75142" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Контроль резервного питания ~220В" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3" UUID="76119C1344D000C9D63D72B5510B96D3" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Автоматы включены" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4" UUID="E9C081584FEB8C3A54E304B103A7C716" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Двери Усо П открыты" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5" UUID="469C272D436A038ED9CAA792948259C4" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Исправность разрядников" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6" UUID="1C9493E74932B9B3CCD5A1908E9A8A1B" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. БП G1 исправен" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7" UUID="986D8F2946EE599CB06E6B8FE1F6E5FD" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Авария ИБП" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1" UUID="2366030D4F8AA4E6BF549EAF44E3938F" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №1»" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2" UUID="50254AAC41230336751793A0320E47F9" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №2»" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT" UUID="AEEF779347F676C3293804AD3E3D6D63" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №1 в положении автоматического управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT" UUID="C472771948C215DAF96D3BB21E8FB324" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №1 в положении ручного управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON" UUID="EFC601DB4FE42112D259149A3EA82483" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №1 включен/отключен" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT" UUID="335755AC48A8762672431E82171574EF" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №2 в положении автоматического управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT" UUID="AAC4C1F94A02759168B6D4BC5C31FB92" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №2 в положении ручного управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON" UUID="C70B2EEF4B3E13E28B0A09A6F1EDFA6E" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №2 включен/отключен" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3" UUID="92C9213C46420F493E91C286AFE5C135" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №3»" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4" UUID="3F4E027C4C21C8EDCBF3A99E65909CE1" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №4»" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON" UUID="3EF3198A48B66361777727AD550127C6" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №1 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON" UUID="F51B362E444A989781F14B907BCB3659" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №2 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON" UUID="E1E0E4A546BB35BFCCD66C8D3F46A87F" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №3 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON" UUID="F2D068D34FE277CEB889BDBA1B87232B" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №4 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08" UUID="7AF033F14A1950804E6CFE875CFE774B" Type="B0EC194E441587DB3736B4B2E60AAD18" InitialValue="(FCDAB6974A5A46DE5257C29758738BB2:=30)" Usage="" Global="TRUE" Storage="(FCDAB6974A5A46DE5257C29758738BB2:=persistent)" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09" UUID="CEA8038A4D066EC48FD9929338E4558D" Type="B0EC194E441587DB3736B4B2E60AAD18" InitialValue="(FCDAB6974A5A46DE5257C29758738BB2:=30)" Usage="" Global="TRUE" Storage="(FCDAB6974A5A46DE5257C29758738BB2:=persistent)" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10" UUID="2DA915B646486C8A2825FB8A4800658A" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11" UUID="32CE66C44F4B3548803CF597887ABC07" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12" UUID="A102F9BD4BBFEAEEF919C7A4861C21C3" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13" UUID="3406C2754082971EFAD32FBB4892D096" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14" UUID="93726F87487EE55609D02A9767BCC884" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15" UUID="35FEC6C1415FF0A5D33ACFBF2413B205" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16" UUID="B743DDBE47A5426BCC6EC487567F870A" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17" UUID="2770F8B946416147F41EA0B244901851" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18" UUID="CBEE20744A6FF5B9265904822469F17D" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19" UUID="AA6C05FE4A6A1C098E04289F0D854666" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT" UUID="3F7FF87B47DB14CE6315718C3FF7E67E" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №3 в положении автоматического управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT" UUID="A91F085D444957E797B8A89C40A4F26C" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №3 в положении ручного управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON" UUID="627063D5455522A310EB639A7E8D7050" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №3 включен/отключен" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT" UUID="3FE3800B4AFB58D2587612BD4F012EB0" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №4 в положении автоматического управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT" UUID="EB185A084B60516A5E7467A100C7F391" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №4 в положении ручного управления" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON" UUID="5DFA1191437C084EFD73838F626EFA72" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №4 включен/отключен" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START" UUID="238BADE84392EB260B818297AF452DDA" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пуск дежурного повышающего насоса " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP" UUID="BB5EE2EE40367217EE532586F2B8B56B" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Стоп дежурного повышающего насоса" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01" UUID="D840C5244579087BCB054AA0544B95F5" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02" UUID="8D2F22EB48952610B5D39F995937E138" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03" UUID="54A515454BCDDF0049FF7CBA927B6397" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04" UUID="A88964BA4768384732773C9CAD675EAF" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05" UUID="37C154FB4F4B690310B0B6B598D1949C" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06" UUID="4CF9B2AF4412283A87CA54B469FF96EF" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07" UUID="1F944895467E2C5643267BAA6581928E" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START" UUID="6706579641AAAE7DEF52A08BB7C203E7" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пуск дежурного повышающего насоса " />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP" UUID="006608CD4E7A46C5E3263685C57A67FD" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Стоп дежурного повышающего насоса" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1" UUID="C0803AE247BF15CB656D8A938B7CF8B7" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Контроль основного питания ~220В" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2" UUID="69EEC5F544E58F66B40E2B95FCE8E48D" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Контроль резервного питания ~220В" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3" UUID="A631B55D4C2CD93035A365AC1443119F" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Автоматы включены" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4" UUID="088F978B402BC2B7A654A7B9FFA1DD09" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Двери Усо П открыты" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5" UUID="DE4EB3A54AB0A69855C8C3A7FD2A7473" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Исправность разрядников" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6" UUID="833A7E0743ADF1AA7410BF87F3B4F514" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. БП G1 исправен" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7" UUID="03F89FC64139A5E1A7EA4886CC96CFD7" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="УСО П. Авария ИБП" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_H1_ON" UUID="BCAA8FBC4A2A4D72EA8FFDBE4EF5B1D8" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №1 включен/отключен" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_H2_ON" UUID="2C5E9132433BD57927D7EAAF844A8C09" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №2 включен/отключен" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_H3_ON" UUID="0BD5DF3445E89AFC2B4E0A88F647BFA6" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №3 включен/отключен" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_H4_ON" UUID="96FEE3BE4CFED5F4BE3C5289424340FB" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №4 включен/отключен" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H1" UUID="52E8964B49743C900EF63FA3016FC417" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №1»" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT" UUID="E2F0943140B95AD3949E54AAD015ACE0" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №1 в положении автоматического управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT" UUID="C81AB1E04540D1FF1EF32EB83384BC7D" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №1 в положении ручного управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H2" UUID="B79BE60D452AA280CD9AAD8AA1C0DAF5" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №2»" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT" UUID="9C1C132744CF96DB4BA2E192481F39F1" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №2 в положении автоматического управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT" UUID="9C8C23FE47CFA03BC46C9A9364BF21ED" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №2 в положении ручного управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H3" UUID="4B21B71A4B84C8DC9CE29C980A5D94ED" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №3»" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT" UUID="E3D61D264CFA148F69B43DA5F0BF9868" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №3 в положении автоматического управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT" UUID="E831F02E496B3F23D9D6D89231B0E9D0" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №3 в положении ручного управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H4" UUID="8A29744B46002DE56473D38A419AF9A7" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Ключ выбора насоса в положении «Насос №4»" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT" UUID="E303BC4D494489DD3CD3CCA9B7FBA847" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №4 в положении автоматического управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT" UUID="CA46178A42D4D4611996B3AA75AED4E6" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Переключатель  насоса №4 в положении ручного управления" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES01" UUID="3A2293C64808469C80A2B7A27B0E4A2F" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES02" UUID="36AF945A41ED7FE45C577CAF3E48553D" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES03" UUID="15E349354DF1F6BF7DBD2F9DE4259953" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES04" UUID="4659C9C74A404B1907CE78861C735F3B" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES05" UUID="F5F2D8684A32F196EE6B539184E3B085" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES06" UUID="44518BA445522D314078929B3C7230C9" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DI_X_RES07" UUID="DFE757324C2335A5FFFC799729A9EBCE" Type="F934805349B6CB0BACBF59A331394F4B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_H1_ON" UUID="3F87CF0D4895EF7E04F250B01653EAAB" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №1 " />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_H2_ON" UUID="90752C0447F386F24A04FCBA14504D94" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №2 " />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_H3_ON" UUID="8D83D36740D641475DE03D9B7389AE4D" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №3 " />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_H4_ON" UUID="85FA476D4D683DA5F83D48A1CD614A4E" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №4 " />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES08" UUID="DC90A3DE47915972E8DFF58BF6C04286" Type="B0EC194E441587DB3736B4B2E60AAD18" InitialValue="(FCDAB6974A5A46DE5257C29758738BB2:=30)" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(FCDAB6974A5A46DE5257C29758738BB2:=persistent)" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES09" UUID="C2F0BF3845775830651392AE5BC72223" Type="B0EC194E441587DB3736B4B2E60AAD18" InitialValue="(FCDAB6974A5A46DE5257C29758738BB2:=30)" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(FCDAB6974A5A46DE5257C29758738BB2:=persistent)" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES10" UUID="1C355CA84C2AFC2A153C1091CAEF0BBF" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES11" UUID="567BFE244CC499039A2E22823E950FB1" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES12" UUID="F7C5B0814C1E937F2A6B3EBC6C62C152" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES13" UUID="818A5A344098807A1039FCBE465C16F3" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES14" UUID="B495736F43B0D415C82445879136A4EE" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES15" UUID="B1E37C14496AB38E9ACD3C915CC5CBC8" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES16" UUID="2120F38B4A96545C0A0078B9CFD1DA28" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES17" UUID="4AA28C494334376ABFEE91B31E9A223E" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES18" UUID="0899BBA9479A83607BBE3E96C790D0C3" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="GSP_SEV_KSSEV_E_USOP_DO_X_RES19" UUID="8EE4680A49EDD4B764CEAEB942F0E1EE" Type="B0EC194E441587DB3736B4B2E60AAD18" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. Резерв" />
+        <Signal Name="USOP_A1_3" UUID="D85386B447E53EB6B8832CB9B61A1CDB" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. ПЛК А1. Модуль А1.3. Дискретные входы" />
+        <Signal Name="USOP_A1_4" UUID="8143DC3B4BAEBDC5454C85AB6148A281" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. ПЛК А1. Модуль А1.4. Дискретные входы" />
+        <Signal Name="USOP_A1_5" UUID="5364DC71480E0DDCA359C4B5ED05818D" Type="EED38E334E44497046972EB6B571421C" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="УСО П. ПЛК А1. Модуль А1.5. Дискретные выходы" />
+        <Signal Name="USOP_A1_FAULT" UUID="9752E1124BAE840E07F5EB90626E7740" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО П. ПЛК А1. Состояние модулей" />
+        <Signal Name="COUNTER" UUID="606B368C4AEF7D34D9CEA49D2B4809F1" Type="5011D6B34E052C8A8F6165BBB242B5F6" Usage="" Global="TRUE" Comment="Счетчик по узлам для диагностики работы ПО" />
+        <Signal Name="USOP_A1_EVENT_FAULT" UUID="528CB13C4ED44F7A091B8B867ADB973E" Type="07CFD56E4AC6931553E8CEB6D6288837" Usage="" Global="TRUE" />
+        <Signal Name="PLC_USOP_A1_FAULT" UUID="10854F5C4A5594714635C3BD7181C92C" Type="3B04D14C4BE702B9E77577819F8373EF" Usage="" Global="TRUE" />
+    </InterfaceList>
+</SubAppType>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="RGB_PLC_CONNECT_COUNTER" Kind="APPLICATION.LUA" Args="" Comment="Приложение для обработки счетчика " UUID="7445C00A422B51D2EA9C16A1E54CE49A">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="B604D1A849DB8D37FAE43BA7D8A1D9E8" Type="STRING" Usage="output" />
+        <Signal Name="@NODE_RUN" UUID="11CFC95F39784D0797BFCEAB0F98BF6A" Type="BOOL" />
+        <Signal Name="@WINDOW" UUID="974D25E94081ED721A34C0B2668773AE" Type="TWINDOW" ArraySize="32" InitialValue="[(VISIBLE:=TRUE, WIDTH:=640, HEIGHT:=480)]" />
+        <Signal Name="@NODE_ROLE" UUID="AF3673874BEB31C67BF0BBA4209C845D" Type="INT" />
+        <Signal Name="@NODE_ERROR" UUID="1ED9E9CE4C9C76A5D8D570808740AAF2" Type="BOOL" />
+        <Signal Name="@NODE_PEER_ERROR" UUID="DD7C35EB419805A35E9AB2BDEA300170" Type="BOOL" />
+        <Signal Name="@FAILOVER_PRESENCE" UUID="AEF213024DEE71464BF30FAB57907CBB" Type="BOOL" />
+        <Signal Name="@FAILOVER_ERROR" UUID="A48A01FF4E10E6B41BBA15A6CDBB4FBE" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVE" UUID="B75FD76242CDF0D062EAFF9BA6690051" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVED" UUID="B6CC63C94798BACB7F2B6A89F8E1B9BD" Type="BOOL" />
+        <Signal Name="SAUVOS_A1_FAULT" UUID="745E90B14A56AA84512371A97C481CAE" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Comment="САУ ВОС. ПЛК А1. Состояние модулей" />
+        <Signal Name="COUNTER" UUID="606B368C4AEF7D34D9CEA49D2B4809F1" Type="5011D6B34E052C8A8F6165BBB242B5F6" Usage="" Global="TRUE" Comment="Счетчик по узлам для диагностики работы ПО" />
+        <Signal Name="USOKTP1_A1_FAULT" UUID="5D80BE56419AD82D72984E9FAD6844B4" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП1. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOE_A1_FAULT" UUID="7704D794476F58FF8314F0B5C759E2F2" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО Э. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOGSU_A1_FAULT" UUID="D3E7BA624CEC48671EF3B4ABF9E8684F" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО ГЩУ. ПЛК А1. Состояние модулей" />
+        <Signal Name="PLC_USOGSU_A1_FAULT" UUID="02D2802940557BE44540FCA73AF13365" Type="3B04D14C4BE702B9E77577819F8373EF" Usage="" Global="TRUE" Comment="УСО ГЩУ. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOKTP1_A2_FAULT" UUID="435B083B493F3DA96FC8CF92DC57B688" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП1. ПЛК А2. Состояние модулей" />
+        <Signal Name="USOKTP2_A1_FAULT" UUID="E94636844BD52B3E1C407E90BBE95C24" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП2 ПЛК А1. Состояние модулей" />
+        <Signal Name="USOKTP2_A2_FAULT" UUID="6DC14BD04B24150EA01E9DA99429EA9A" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП2. ПЛК А2. Состояние модулей" />
+        <Signal Name="USOK_A1_FAULT" UUID="A742785F4C568A5C15CF7AA724C6EA5F" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО К. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOP_A1_FAULT" UUID="9752E1124BAE840E07F5EB90626E7740" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Usage="" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО П. ПЛК А1. Состояние модулей" />
+    </InterfaceList>
+</SubAppType>

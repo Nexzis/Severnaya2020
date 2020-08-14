@@ -1,0 +1,2309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Program >
+<Program UUID="4683BBD44F14E266BEA22D8E499BE1E1" Name="USOP_ST_Proc" Period="100" PutDataAtEndOfCycle="true">
+    <Variables>
+        <Variable UUID="266100E84FB35980D820B78D31D7E08F" Name="COUNT" Type="COUNTER" TypeUUID="2F9F9BDB4D95979AD5D718A8CC483687" Usage="internal" />
+        <Variable UUID="F078E924409E76094768429B3A803DEA" Name="ALG_DI" Type="ALG_DI_PLC" TypeUUID="475498764AD68DA85A7BE2B9D14B1DFF" Usage="internal" />
+        <Variable UUID="7F1D074143A4743AC7953E9A9886FE67" Name="ALG_DO" Type="ALG_DO_PLC" TypeUUID="F35ACAAD4E20300D052853A6B6D85A39" Usage="internal" />
+        <Variable UUID="D80F54D440DC0A69802698A4677C627A" Name="SLOT" Type="SLOT_FAULT" TypeUUID="80D89F9A4C4D7759E384CEB727C5FC1F" Usage="internal" />
+        <Variable UUID="8AFA7EFC42FC319A0FAB97849D052D37" Name="InputAnPar" Type="ALG_Input_AnPar" TypeUUID="F24C6D6C4E9A16B4F94923B6B62D550F" Usage="internal" />
+    </Variables>
+    <ST><![CDATA[ALG_DI();
+ALG_DO();
+COUNT();
+SLOT();
+InputAnPar();]]></ST>
+    <DataTypes>
+        <Struct UUID="F934805349B6CB0BACBF59A331394F4B" Name="DI_Sonet" Comment="Входной дискретный сигнал от контроллера Сонет">
+            <Field UUID="E8E475344BD28315F43B6ABB03F6F22B" Name="Value" Comment="Текущее значение обработанного сигнала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="DF4D30A04E3F9D397AF1B890AB292CA9" Name="reliabilityFlag" Comment="Флаг достоверности сигнала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="705A2B7C4EAC79AB86B66D9094CD52AC" Name="reliabilityFlag_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="61B9DBCC49463F645E66199F69B9A302" Name="dt" Comment="Время фиксации сигнала" Type="DT" TypeUUID="8B0E0F77490C3D2B06233087F94C7C43" />
+            <Field UUID="E82B8DD14122BEDD497765A78569188D" Name="Comment" Comment="Текстовое описание сигнала (общее)" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="20206EDC4AA3932C36DA798D4CC5901E" Name="Txt_1" Comment="Текстовое описание значения 1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="27E5DC5440F80D2C2F5642B82B23EC41" Name="Txt_0" Comment="Текстовое описание значения 0" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="3F460D794A605D72DB0256958155C87D" Name="Source" Comment="Источник события (описание оборудования)" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="0A7B22694E82D3A56B1539881D7813A9" Name="InvFlag" Comment="Флаг инверсии " Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="4DB19FC3416F5BCAE447AFA478A613E8" Name="InvFlag_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="F3BB97B84631D4D7E2E820B7E99EB945" Name="repaireFlag" Comment="Флаг вывода сигнала из опроса" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="AAB70E394299DDDE3964B592C01127A5" Name="repaireFlag_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="CA8576DB4B9FE35535B366971A5DC92C" Name="AlarmClass" Comment="Класс события (аварии)" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" />
+            <Field UUID="8C8BBB1D45456B23FBB76A945BE7321B" Name="AlarmMsg" Comment="Текст аварийного сообщения" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="561AFA024ED40D6298ACA3B1364F6BC6" Name="reliabilityField" Comment="Код признака недостоверности" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" />
+            <Field UUID="D39780EA431EE406BA8F92925894514B" Name="Name" Comment="Название сигнала" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="826BF20442D0A69F4AF33D86CDDEAF24" Name="CTmr" Comment="Время срабатывания (для 2х-битных сигналов, сек)" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="45825FEA47FB096EB3A5E39B375E3ADC" Name="FAULT_ON" Comment="Контролировать неисправность" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="1FB7893D40FD293D4D3637A3FE011258" Name="MaskMode" Comment="Режим подмены состояния" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="7845FF444D336021E214818C7E19166D" Name="MaskMode_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="1C9BA54244A8CFCB63806ABF78D44DF4" Name="Mask" Comment="Значение подмены" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="9DBE1B8D4741ACAA974BF9B4AF549B45" Name="Mask_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="518D9CA34D56168FB8E7A9BE3B2CB301" Name="ALM_CODE" Comment="Код неисправности" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="4D59F2B54125767688D9AA9450BE860C" Name="FAULT" Comment="Лампочка &quot;Неисправность&quot;" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="937566D34BE4F00EE020F0A24490E46A" Name="FAULT_ACK" Comment="Неисправность квитирована" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="23D5BFAB49CD26D185948EADC9A1A297" Name="VSTATUS" Comment="Групповой дисплей" Type="DWORD" TypeUUID="53CAB7E947643F098D755BB9A02688FA" />
+            <Field UUID="84D530D74883504F22C6AE90573E6F41" Name="FAULT_RESET" Comment="Сброс неисправности" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="77362DC04D9B9B9F7E9B2789575BE60D" Name="FAULT_RESET_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="D4FCC2CE4FEE56187C218C93C7F4DA6C" Name="LATCH" Comment="Защелкивать вход (до сброса)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="6F2B5E7046C45054D2D5C9ACF4CAE6F8" Name="LATCH_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="7C01FF9C48741381EAFA56A3CBB2F601" Name="AUTO_RESET" Comment="Автоуход неисправности (без сброса)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="97AFBC904DED8181E79E9A8AEFC715F2" Name="FAULT_L_RESET" Comment="Внешний сброс неисправности" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="389D8D774762D663297508AF59315F1E" Name="QUAL_IN" Comment="Код качества для входа дискретного сигнала" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="EDCF8BD84594319DDC5C149EAAE0E5E8" Name="INPUT_FAULT" Comment="Внешний признак неисправности" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="5AC6A878406D6CF59C0211B314FEA44B" Name="I_IN" Comment="Сырое значение входного сигнала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="3D6C845F4FA88A68EB8469B20CF3AEC8" Name="Q_IN_OLD" Comment="Запоминаем входное значение сигнала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="0DBAEF01489495B84221B8BE2C32B80F" Name="ShiftTime" Comment="Сдвиг времени" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" />
+            <Field UUID="709905984A7A43D8D8AF56BC7A6824DD" Name="error" Comment="Ошибка" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="48DB93F54E0BADCDF62E42935D84F0AB" Name="QUALITY_CODE" Comment="Код качества" Type="BYTE" TypeUUID="C3C10A82401AD741FA0AB89DDE8B5F30" />
+            <Field UUID="28E4CE054E2A2DB5DB665A8C406251E2" Name="BLOCK_ALARM" Comment="Блокировка генерации АЛАРМов" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="43BE184F46DF40D6F12E7F86169F9EBF" Name="IDE" Comment="Индентификатор события" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="2A2032A34F9C22E9EBFD1884C2F288F4" Name="MNEMO" Comment="Мнемокадр" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="8F4221A846EA2FF3A16289830816C836" Name="ID" Comment="Уникальный идентификатор" Type="ULINT" TypeUUID="6C25F4AE48F2EE0928ED26A7E5C0D7ED" />
+        </Struct>
+        <Struct UUID="B0EC194E441587DB3736B4B2E60AAD18" Name="DO_Sonet" Comment="Выходной дискретный сигнал в контроллер Сонет от оператора">
+            <Field UUID="E9EB6CE249ADBFF8C2B2EDB15AECBA2F" Name="Value" Comment="Текущее значение обработанного сигнала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="4D10855249F826F31BFEB19E20576B3A" Name="dt" Comment="Время подачи последней команды" Type="DT" TypeUUID="8B0E0F77490C3D2B06233087F94C7C43" />
+            <Field UUID="2EA7CC42436AAC56401059A875F3FBE3" Name="Comment" Comment="Текстовое описание сигнала " Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="426E27324A57CBAB1FB5B7B10EA2597D" Name="Txt_1" Comment="Текстовое описание значения 1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="E3F094064E8BEE24FAC9DA8D11382E3B" Name="Txt_0" Comment="Текстовое описание значения 0" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="110D24A84EC2D8E202B7F5BA178E2809" Name="Source" Comment="Источник события (описание оборудования)" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="23116472417372CECDD9AC8D10C55394" Name="repaireFlag" Comment="Флаг вывода сигнала из обработки" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="8D92B91D4CB9A89617ED76BF6A79FD91" Name="reliabilityFlag" Comment="Флаг достоверности сигнала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="B4555CF14CA661FE778FF5AD469B7974" Name="reliabilityField" Comment="код признака недостоверности" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" />
+            <Field UUID="B53AD03A411E17C459F9E2B31536CB61" Name="AlarmClass" Comment="Класс события (аварии)" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="30E8D5B64944CFBC8D7114B4FBF04C4A" Name="AlarmMsg" Comment="Текст сообщения" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="937C61A9481F07D749DA12A777E41EDE" Name="Fix_Con" Comment="Время фиксации выходного контакта в секундах. 0 - постоянная фиксация" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="C02C13C6468CC4620EA1A9960ED1606B" Name="cycle" Comment="Интервал обработки" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="9E1D56364FB3C631D0C0E884B13E3E94" Name="ID" Comment="ID уникального механизма" Type="ULINT" TypeUUID="6C25F4AE48F2EE0928ED26A7E5C0D7ED" />
+            <Field UUID="0B8797524E156AF66E15F683F8048DD3" Name="QUAL_IN" Comment="Код качества для выхода дискретного сигнала" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="48FC46DF4047D0467CDAE4B49D09B454" Name="VSTATUS" Comment="Групповой дисплей" Type="BYTE" TypeUUID="C3C10A82401AD741FA0AB89DDE8B5F30" Size="4" Array="TRUE" />
+            <Field UUID="93A716744CACF5C0A3581FA8AF55A27C" Name="VSTATUS_OLD" Type="BYTE" TypeUUID="C3C10A82401AD741FA0AB89DDE8B5F30" Size="4" Array="TRUE" />
+            <Field UUID="CDD44423475A06A7927BE7A59557587E" Name="QUALITY_CODE" Type="BYTE" TypeUUID="C3C10A82401AD741FA0AB89DDE8B5F30" />
+            <Field UUID="4F4ABC13441BDCDE69F020BD410B0499" Name="ALM_CODE" Comment="Код неисправности" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="F4C2C753427F25C07D5AE996E8152887" Name="ALM_CODE_OLD" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="D7C336924E006726D66C949E99D4D992" Name="INPUT_FAULT" Comment="Внешний признак неисправности" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="A16F79BF4742332AE3B06DBFB15D4F66" Name="FAULT_ON" Comment="Контролировать неисправность" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="30A11D0146DD3D0EC7C2CC9991EE0318" Name="FAULT" Comment="Неисправность" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="73E3798B4A19F654D2C526BC3E6A9B8C" Name="FAULT_RESET" Comment="Сброс неисправности" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="C14FBFB34D02752F25C152BA2B03BBED" Name="FAULT_L_RESET" Comment="Внешний сброс неисправности" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="21FE0283403D6201FECDA7ACB4C9E5F6" Name="MASK_MODE" Comment="Режим подмены состояния" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="EE78A7AD40769A8067E1A1830E3EC49C" Name="MASK" Comment="Значение подмены" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="987C04A24C955AF65978099EE764FDD7" Name="LATCH" Comment="Защелкивать вход (до сброса)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="AD9A95A241093192EDB9E9916EC209F3" Name="AUTO_RESET" Comment="Автоуход неисправности (без сброса)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="B78E24054D3DA20A0D44D78C88BECFD0" Name="FAULT_ACK" Comment="Неисправность квитирована" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="8C2B1B964E89EA5EAA92FDBA67DBB5E6" Name="IN" Comment="Вход" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="92B2FCEE47532F1B86352A820A6AF0AF" Name="INV_FLAG" Comment="Инверсия" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="B74FAF3F4FA15ED618F0288E9A94CAD5" Name="Value_OLD" Comment="Запоминаем состояние выхода" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="D49018FC4A03DA3FAA221493ECA927CE" Name="TIME_SHIFT" Comment="Часовой пояс" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" />
+            <Field UUID="52B52C3E440520F113ED4498F49B69EC" Name="BLOCK_ALARM" Comment="Блокировка тревоги" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="19AFE832479EFFE16663F4A9A6A75971" Name="IDE" Comment="Идентификатор тревожного сообщения" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="D0171578416098D2326E97A8BE502E42" Name="MNEMO" Comment="Мнемокадр" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+        </Struct>
+        <Struct UUID="7DADE51642BF2830A2BC7B864D06C75F" Name="EVENT_FAULT">
+            <Field UUID="C23B9E404B2834908C5642863BC04F5B" Name="status" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" />
+            <Field UUID="8A44E2394D219B9920E756B932548BE6" Name="FAULT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="A15610CA4FDBF3369FD4DEAD81109752" Name="SOURCE" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="419F25F8417C6DA1D70B60BF92E6FEB8" Name="NAME" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" />
+            <Field UUID="E9A90FE84CDDD33AE7F5259F398C1835" Name="FAULT_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+        </Struct>
+        <Struct UUID="F7A4975D4B70B458CE78278D99BC23B2" Name="Ty_AnInput" Comment="Переменные состояния аналогового канала">
+            <Field UUID="C01296574DB5909E8FF23CA2070BCAC5" Name="in" Comment="Текущее значение фильтруемой величины" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="DC628B0B472D2DA815885B9BB9011E3A" Name="out" Comment="Отфильтрованное значение" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="2BB78B974E1D71C790A03ABDDF6E3D95" Name="ti" Comment="Таймер задержки на восстановление канала после обрыва" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="B29492724607E98B2CA560A1DA936F0C" Name="inBrk" Comment="Признак недостоверности сигнала (входной)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="89F818BF4E140DC69A84648A3FAC13F7" Name="outBrk" Comment="Признак недостоверности сигнала (выходной)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="6C591D4644E5FEE195B79698E4D00596" Name="wasOk" Comment="Признак достоверности сигнала (внутренний)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="F2E88FDE483136F12770DEBD2CB68382" Name="init" Comment="Признак инициализации (TRUE, если обработано хотя бы одно значение)" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+        </Struct>
+    </DataTypes>
+    <FBLibrary>
+        <Folder Name="Библиотека" Comment="" Data="" UUID="3D5D74C747518B9DD71FAA987FD0E059">
+            <Function UUID="CD8310D84EAE78A4C5FE6389EF20E619" Name="CALC_1_CHAN" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="C99104BB4C58F6BCA52EAFA9B475461C" Name="cycleTime" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="3DBD62144EDBB4B178CDA2914777C9C6" Name="tau" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="6DA5847A4411DF676A1525943E62E291" Name="tiBrk" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="F6E54F7F436675D734D5339AD0AE6D13" Name="nan" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="internal" />
+                    <Variable UUID="6F3E7289404C8828DDBB1BA5A2DFE7AD" Name="OK" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="85852D7E4F4AD9E05FA0F4886FC98D99" Name="chan" Type="Ty_AnInput" TypeUUID="F7A4975D4B70B458CE78278D99BC23B2" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[// ===============================================================================
+// Функция обработки одного аналогового канала
+// ===============================================================================
+	chan.outBrk := true;
+// проверка на недостоверное значение
+	OK:= true;
+	nan:= REAL_TO_DINT(CHAN.in);
+	chan.inBrk:= chan.inBrk OR NOT OK;
+// обработка входного признака недостоверности 
+// реализация задержки на восстановление канала после обрыва
+	if chan.inBrk then
+		chan.ti:= 0.0;
+	elsif chan.ti < tiBrk then
+		chan.ti := chan.ti + cycleTime;
+	elsif chan.ti < tiBrk + cycleTime then
+		chan.ti := chan.ti + cycleTime;
+		chan.out := chan.in;
+	else
+		chan.outBrk := false;
+	end_if;
+
+// фильтрация сигнала
+	IF NOT chan.outBrk THEN
+		IF NOT chan.init THEN
+			chan.init := TRUE;
+			chan.out  := chan.in;
+		END_IF;
+		chan.out := chan.out + (chan.in - chan.out) / tau * cycleTime;
+	END_IF;
+
+//CALC_1_CHAN := chan.out;]]></ST>
+            </Function>
+            <Function UUID="DFFD7C944A17FC05DDC51AAAA4A159B5" Name="DELAY_ON" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="6F6BC5E84F7308F6E45E0E83A411FB8B" Name="CONDITION" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="A5D38BFC47129550B488AEBD329A4FA4" Name="RESET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="C58D72AC4D289439CD8CD7BDCF40DDE4" Name="cycle" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="024C345E4C2408A7A22E68AC47248F71" Name="DELAY_TIME" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="74FCBB1A41C7A8AC0FA5429F94B712F1" Name="ACT_TIME" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[IF NOT CONDITION OR RESET THEN
+	ACT_TIME := DELAY_TIME;				//Инициализация таймера
+ELSE
+	IF ACT_TIME > 0.0 THEN				//Если время ожидания не истекло
+		ACT_TIME := ACT_TIME - cycle;	//Уменьшаем время
+	ELSE
+     ACT_TIME := 0.0;
+   END_IF;
+END_IF;
+IF CONDITION AND ACT_TIME = 0.0 THEN 
+	DELAY_ON := TRUE; 
+ELSE 
+	DELAY_ON := FALSE; 
+END_IF; //Выход
+]]></ST>
+            </Function>
+            <Function UUID="B2CBAC8641F6EB0A7396728B00405AB8" Name="FC_Ai_Check" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="200BAA4F42398616BF0D1B963AD5AD25" Name="VSTATUS" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="input" />
+                    <Variable UUID="48238FA64A3BE9B084D817AA4BBF2277" Name="UST_STATE" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="input" />
+                    <Variable UUID="1F91676948BDB69F04507DAD3EE985AC" Name="TEXT" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="52BCA9EE4291B626232CAB937131C3DB" Name="TEXT2" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="7C42BEE2480CE96CF8859BB91EDC0B68" Name="ShiftTime" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="E490A5784356C805D25A218924CE4479" Name="VSTATUS_OLD" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="inout" />
+                    <Variable UUID="9E8F30104683EC3F3188D39CB81E88CE" Name="UST_STATE_OLD" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="inout" />
+                    <Variable UUID="E58699C8419FB69004F95DA13C5B9957" Name="TEXT1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="internal" />
+                    <Variable UUID="E543AF9F4B8333FACD44F6BD4770AC88" Name="i" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="AD903FA04E2C19A4BAC4D5B0F5203403" Name="channel" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                </Variables>
+                <ST><![CDATA[//v20190730_1908_THINKPAD_Karia
+IF NOT (VSTATUS = VSTATUS_OLD AND UST_STATE = UST_STATE_OLD)then
+//i:= BOOL_TO_INT(EXTRACT(BYTE_TO_DWORD(AI.SNDRCV[0]),1));
+
+	TEXT1:= channel + '  неисправен ';
+	i:=BOOL_TO_INT(VSTATUS[0].6);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+
+	TEXT1:= TEXT + '  НЕДОСТОВЕРНОСТЬ ';
+	i:=BOOL_TO_INT(VSTATUS[0].3);
+	CREATE_EVENT(TEXT1,  DINT#29000,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//01
+	TEXT1:= TEXT + ' Обрыв ан.датчика';
+	i:=BOOL_TO_INT(VSTATUS[1].0);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//02
+	TEXT1:= TEXT + ' КЗ ан.датчика';
+	i:=BOOL_TO_INT(VSTATUS[0].7);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//03
+	(*TEXT1:= TEXT + ' Зашкал вниз ан.датчика';
+	i:=BOOL_TO_INT(VSTATUS[1].2);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//04
+	TEXT1:= TEXT + ' Зашкал вверх ан.датчика';
+	i:=BOOL_TO_INT(VSTATUS[1].3);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP') *)
+	//05
+	TEXT1:= TEXT + ' Ремонт ан.датчика';
+	i:=BOOL_TO_INT(VSTATUS[1].1);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//06
+	TEXT1:= TEXT + ' Подмена ан.датчика';
+	i:=BOOL_TO_INT(VSTATUS[0].4);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//07
+	TEXT1:= TEXT + ' ВАУ';
+	i:=BOOL_TO_INT(UST_STATE[1].4);
+	CREATE_EVENT(TEXT1,  DINT#10000,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//08
+	TEXT1:= TEXT + ' ВПУ';
+	i:=BOOL_TO_INT(UST_STATE[1].0);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//09
+	TEXT1:= TEXT + ' НПУ';
+	i:=BOOL_TO_INT(UST_STATE[0].4);
+	CREATE_EVENT(TEXT1,  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//10
+	TEXT1:= TEXT + ' НАУ';
+	i:=BOOL_TO_INT(UST_STATE[0].0);
+	CREATE_EVENT(TEXT1,  DINT#10000,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+
+
+//AI.CHNG:=false;
+	VSTATUS_OLD := VSTATUS;
+	UST_STATE_OLD := UST_STATE;
+END_IF;]]></ST>
+            </Function>
+            <Function UUID="B126675B4466B10EF138BBB70DDAFB92" Name="FC_CHANNEL_FAULT" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="B3046D334E1D5B70E33FC98AC9760E6F" Name="CAT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="8FD1029A410FBFB76AA2B8989A438C4B" Name="RF" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="9A9DD0E24F953C5587F90CAFE553592B" Name="TEXT" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="830D1E2443B4365175C9AEA1C5DECC09" Name="TEXT2" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="696F8494412F5D03416A0A8003E1B7DF" Name="ShiftTime" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="E29719984E09632E2EAA9A8912C0256B" Name="TEXT1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="internal" />
+                    <Variable UUID="10BAD4924D3BAE1724409483EADF0713" Name="i" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="75E82BA14242B3C93CAEE68F8B0EE474" Name="RF_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[IF  RF_OLD <> RF  THEN
+	TEXT1:=  TEXT + DINT_TO_STRING(CAT);
+	i:=BOOL_TO_INT(RF);
+	CREATE_EVENT(TEXT + '   неисправен',  CAT,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	//CREATE_EVENT(channel + '  НЕИСПРАВЕН',  DINT#10100,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'KTP8516')
+	//RF_OLD:= RF;
+END_IF;]]></ST>
+            </Function>
+            <Function UUID="ED4A5A6F42F0C16FE41400AADBA19130" Name="FC_DI_FAULT" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="9312539D4EF685CF25CB47919167F3E1" Name="CAT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="C9030EBF47AB0EA8FB394E83104AD116" Name="RF" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="4DA3ADC149C0593A9CB62EAD1FE462CF" Name="TEXT" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="6893A65C47736FDB037752981381D87A" Name="TEXT2" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="31B23944455AFD29E6CD9792601AF926" Name="ShiftTime" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="816C527244355A7733A4EB853349E8B1" Name="TEXT1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="internal" />
+                    <Variable UUID="12A599B9443E7D4396D6B1B09F488235" Name="i" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="DF03AE684D72F4C8CD8BFD8C111584C5" Name="IDE" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="387E045B43477EA53ED6CCAE7015750D" Name="RF_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[//v20190523_0946_THINKPAD_SM
+
+IF  RF_OLD <> RF  THEN
+	TEXT1:=  TEXT2 + TEXT + DINT_TO_STRING(CAT);
+	i:=BOOL_TO_INT(RF);
+	CREATE_EVENT(TEXT + '   НЕДОСТОВЕРНОСТЬ',  CAT,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'TAG')
+	//RF_OLD:= RF;
+END_IF;]]></ST>
+            </Function>
+            <Function UUID="FBCA42154EE850184551F9B1082C138D" Name="FC_Dio_Check" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="50404F244EE97B67F061E09EEF96FC21" Name="CAT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="ED0A5D52497001F665305DBCC0AEDF4B" Name="DIO" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="37ABFEA443B26B2810D75AADE916EE8F" Name="TEXT" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" InitialValue="&apos;TEST&apos;" Usage="input" />
+                    <Variable UUID="FF9DAE464F8DE7014581B58069812CDC" Name="TEXT2" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="4BD8382243FF416A4BFC72B3EA8EC26D" Name="ShiftTime" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="BFF43A5E4A60CE6DB7B94D970B2DCB70" Name="DCFGIO" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="inout" />
+                    <Variable UUID="FD23F74643CEA0ADC8CC1EA32A23B538" Name="TEXT1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" InitialValue="&apos;FALSE&apos;" Usage="internal" />
+                    <Variable UUID="A311447D4AFE689C7D51278CA33523E2" Name="i" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="11F48528451C2CF177A0468C989E9C0B" Name="IDE" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                </Variables>
+                <ST><![CDATA[//v20190523_0946_THINKPAD_SM
+IF DCFGIO <> DIO THEN
+	TEXT1:=  TEXT2 + TEXT + DINT_TO_STRING(CAT);
+	i:=BOOL_TO_INT(DIO);
+	CREATE_EVENT(TEXT,  CAT,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'USOP')
+	DCFGIO:=DIO;
+END_IF;]]></ST>
+            </Function>
+            <Function UUID="46C486CE448687E16D9FCBBF5BCD7F73" Name="FC_FAULT_CHECK" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="1FDCB60D4591CD064EAF7F9C94FE9121" Name="FAULT" Type="EVENT_FAULT" TypeUUID="7DADE51642BF2830A2BC7B864D06C75F" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[IF FAULT.status <> UINT#0 THEN
+   FAULT.FAULT := TRUE;
+ELSE 
+   FAULT.FAULT := FALSE;
+END_IF;
+
+
+
+FC_SLOT_FAULT(CAT := DINT#10100,
+			  STATUS := FAULT.FAULT
+			  STATUS_OLD := FAULT.FAULT_OLD,
+			  TEXT := FAULT.NAME,
+			  TEXT2 := FAULT.SOURCE,
+			  ShiftTime := ShiftTime)
+
+
+FAULT.FAULT_OLD := FAULT.FAULT;
+]]></ST>
+            </Function>
+            <Function UUID="35588B8B4C50622D6C01648659B3C392" Name="FC_SLOT_FAULT" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="1CCDBB724656CC8D9E8E1FB976A0A3E5" Name="CAT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="E7D3AF5041EF840837B1D280DA528225" Name="STATUS" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="B290B4A04427F92B77DC47B4B02167B2" Name="TEXT" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="1056D82A4ACD05C93C402D981737E3D4" Name="TEXT2" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                    <Variable UUID="76FE0D9F42B061EFC103CC91878E3C44" Name="i" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="65136F0E42D6E9D6E156C29E855D339A" Name="TEXT1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="internal" />
+                    <Variable UUID="6D7925A64C772F4540614DA6D0EF4CB0" Name="STATUS_OLD" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="2E3483D247E88625ADD80EB8EE0AA094" Name="ShiftTime" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                </Variables>
+                <ST><![CDATA[IF STATUS_OLD <> STATUS  THEN
+	TEXT1:=  TEXT2 + TEXT + DINT_TO_STRING(CAT);
+	i:= BOOL_TO_INT(STATUS);
+	CREATE_EVENT(TEXT,  CAT,  i, TEXT2, TEXT1, CURRENT_DATE_TIME() - ShiftTime, 'DIAGN')
+	STATUS_OLD := STATUS;
+END_IF;]]></ST>
+            </Function>
+            <Function UUID="A0D359BB4DFEFCD731852BB5DC6D4C7F" Name="FC_V_DGI" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="6F3556B940A354AF36D19180E8A531CD" Name="CHANNEL" Type="DI_Sonet" TypeUUID="F934805349B6CB0BACBF59A331394F4B" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[//Сброс неисправности
+	IF CHANNEL.FAULT_RESET OR CHANNEL.FAULT_L_RESET THEN 
+		CHANNEL.ALM_CODE := UINT#0;
+		CHANNEL.FAULT_RESET := FALSE;
+		CHANNEL.FAULT_L_RESET := FALSE;
+		CHANNEL.Value := FALSE; //Сброс защелки
+	END_IF;
+  
+	IF CHANNEL.AUTO_RESET THEN CHANNEL.ALM_CODE := UINT#0; CHANNEL.FAULT_RESET := FALSE; CHANNEL.FAULT_L_RESET := FALSE; END_IF;
+  
+	IF CHANNEL.QUAL_IN <> UINT#0 OR CHANNEL.INPUT_FAULT THEN CHANNEL.ALM_CODE := UINT#1;
+	ELSE CHANNEL.ALM_CODE := UINT#0;
+    END_IF; //Ошибка по коду качества
+  
+  //Определение неисправности выключено
+	IF NOT CHANNEL.FAULT_ON THEN CHANNEL.ALM_CODE := UINT#0; END_IF;
+  
+ 	IF CHANNEL.MaskMode THEN 
+  //если в режиме маскирования
+		CHANNEL.ALM_CODE := UINT#0;
+		CHANNEL.I_IN := CHANNEL.Mask;
+	END_IF;
+  
+  //Выставляем бит неисправности
+	CHANNEL.FAULT := CHANNEL.ALM_CODE <> UINT#0;
+	CHANNEL.reliabilityFlag := NOT CHANNEL.FAULT;
+//Инвертирование
+	IF CHANNEL.InvFlag THEN
+		CHANNEL.I_IN := NOT CHANNEL.I_IN;
+	END_IF;
+  
+  //Выход
+	IF CHANNEL.LATCH THEN CHANNEL.Value := CHANNEL.Value OR CHANNEL.I_IN; ELSE CHANNEL.Value := CHANNEL.I_IN; END_IF;
+//--------------------< Формирование VSTATUS >----------------------
+CHANNEL.VSTATUS := DWORD#0;
+IF CHANNEL.Value THEN CHANNEL.VSTATUS.0 := TRUE; END_IF;
+IF CHANNEL.FAULT AND CHANNEL.FAULT_ACK THEN 
+	CHANNEL.VSTATUS.4 := TRUE;
+ELSIF CHANNEL.FAULT AND NOT CHANNEL.FAULT_ACK THEN 
+	CHANNEL.VSTATUS.5 := TRUE;
+END_IF;
+IF CHANNEL.MaskMode THEN CHANNEL.VSTATUS.12 := TRUE; END_IF;
+
+FC_Dio_Check(CAT := CHANNEL.AlarmClass
+			,DIO := CHANNEL.Value
+			,DCFGIO := CHANNEL.Q_IN_OLD
+			,TEXT := CHANNEL.Name
+			,TEXT2 := CHANNEL.Source
+			,ShiftTime := CHANNEL.ShiftTime);
+
+FC_DI_FAULT(CAT := DINT#29000,
+			RF := CHANNEL.FAULT,
+			RF_OLD := CHANNEL.reliabilityFlag_OLD,
+			TEXT := CHANNEL.Name,
+			TEXT2 := CHANNEL.Source,
+			ShiftTime := CHANNEL.ShiftTime);
+FC_CHANNEL_FAULT(CAT := DINT#10100,
+				 RF := CHANNEL.FAULT,
+				 RF_OLD := CHANNEL.reliabilityFlag_OLD,
+				 TEXT2 := 'УСО КТП',
+				 ShiftTime := CHANNEL.ShiftTime
+				 TEXT := CHANNEL.Comment); 
+//Звонок при возникновении неисправности
+//IF (error=0)AND(ALM_CODE<>0)AND(RING_F_EN)AND NOT BELL_BLOCK THEN M[RING_ADDRESS,RING_F_1STBIT]:=1; END_IF;
+CHANNEL.error := CHANNEL.ALM_CODE;
+//Звонок при срабатывании дискретного сигнала
+//IF ((INV_ON XOR Q_IN_OLD)=0)AND(INV_ON XOR Q_IN)AND(RING_S_EN)AND NOT BELL_BLOCK THEN M[RING_ADDRESS,RING_S_1STBIT]:=1; END_IF;
+CHANNEL.Q_IN_OLD := CHANNEL.Value;
+
+CHANNEL.reliabilityFlag_OLD := CHANNEL.FAULT;
+]]></ST>
+            </Function>
+            <Function UUID="0D324BC345F3436E683C7B8B85369655" Name="FC_V_DGO" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+                <Variables>
+                    <Variable UUID="975A530D45B7063FD4F7EC885C726EA7" Name="CHANNEL" Type="DO_Sonet" TypeUUID="B0EC194E441587DB3736B4B2E60AAD18" Usage="inout" />
+                </Variables>
+                <ST><![CDATA[//---------------------------< Кодовая часть >----------------------
+//Сброс неисправности
+	IF CHANNEL.FAULT_RESET OR CHANNEL.FAULT_L_RESET THEN 
+		CHANNEL.ALM_CODE := UINT#0;
+		CHANNEL.FAULT_RESET := FALSE;
+		CHANNEL.FAULT_L_RESET := FALSE;
+		CHANNEL.Value := FALSE; //Сброс защелки
+	END_IF; 
+
+//Определение неисправности
+	IF CHANNEL.QUAL_IN <> UINT#0 OR CHANNEL.INPUT_FAULT THEN CHANNEL.ALM_CODE := UINT#1;
+	ELSE CHANNEL.ALM_CODE := UINT#0;
+    END_IF; //Ошибка по коду качества
+//Определение неисправности выключено
+	IF NOT CHANNEL.FAULT_ON THEN CHANNEL.ALM_CODE := UINT#0; END_IF;
+//Автосброс неисправности
+	IF CHANNEL.AUTO_RESET THEN CHANNEL.ALM_CODE := UINT#0; CHANNEL.FAULT_RESET := FALSE; CHANNEL.FAULT_L_RESET := FALSE; END_IF;
+  
+ 	IF CHANNEL.MASK_MODE THEN 
+  //если в режиме маскирования
+		CHANNEL.ALM_CODE := UINT#0;
+		CHANNEL.Value := CHANNEL.MASK;
+	END_IF;
+
+
+  //Выставляем бит неисправности
+	CHANNEL.FAULT := CHANNEL.ALM_CODE <> UINT#0;
+	CHANNEL.reliabilityFlag := NOT CHANNEL.FAULT;
+  
+  //Выход
+//	IF CHANNEL.LATCH THEN CHANNEL.Value := CHANNEL.Value OR CHANNEL.IN; ELSE CHANNEL.Value := CHANNEL.IN; END_IF;
+//Инвертирование
+	IF CHANNEL.INV_FLAG THEN
+		CHANNEL.Value := NOT CHANNEL.Value;
+	END_IF;
+
+
+//--------------------< Формирование VSTATUS >----------------------
+CHANNEL.VSTATUS[0] := BYTE#0;
+CHANNEL.VSTATUS[1] := BYTE#0;
+CHANNEL.VSTATUS[2] := BYTE#0;
+CHANNEL.VSTATUS[3] := BYTE#0;
+IF CHANNEL.Value THEN CHANNEL.VSTATUS[0].0 := TRUE; END_IF;
+IF CHANNEL.FAULT AND CHANNEL.FAULT_ACK THEN 
+	CHANNEL.VSTATUS[0].4 := TRUE;
+ELSIF CHANNEL.FAULT AND NOT CHANNEL.FAULT_ACK THEN 
+	CHANNEL.VSTATUS[0].5 := TRUE;
+END_IF;
+IF CHANNEL.MASK_MODE THEN CHANNEL.VSTATUS[1].4 := TRUE; END_IF;
+
+//--------------------< Формирование ALARM >----------------------
+//Сообщение по дискретному сигналу
+IF CHANNEL.Value <> CHANNEL.Value_OLD AND NOT CHANNEL.BLOCK_ALARM THEN
+	CREATE_EVENT(CHANNEL.Comment
+				,DINT#101
+				,BOOL_TO_INT(CHANNEL.Value)
+				,CHANNEL.Source
+				,CHANNEL.IDE
+				,CURRENT_DATE_TIME() - CHANNEL.TIME_SHIFT
+				,'USOP')
+	CHANNEL.Value_OLD := CHANNEL.Value;
+END_IF;
+//
+
+//Сигнализация "Неисправность дискретного выхода"
+IF CHANNEL.ALM_CODE <> CHANNEL.ALM_CODE_OLD AND NOT CHANNEL.BLOCK_ALARM THEN
+	CREATE_EVENT(CHANNEL.Txt_0 + '. неисправность'
+				,DINT#10100
+				,BOOL_TO_INT(CHANNEL.ALM_CODE <> UINT#0)
+				,CHANNEL.Source
+				,CHANNEL.IDE
+				,CURRENT_DATE_TIME() - CHANNEL.TIME_SHIFT
+				,'DIAGN')
+	CHANNEL.ALM_CODE_OLD := CHANNEL.ALM_CODE;
+END_IF;
+
+
+FC_V_DGO := CHANNEL.Value;]]></ST>
+            </Function>
+            <FunctionBlock UUID="BBE962254DE674C1FCCE359FDC1B897B" Name="FILTR_1_CHAN">
+                <Variables>
+                    <Variable UUID="3B994DF64BB8A2BE36E9CCA6416B4757" Name="cycleTime" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="22F2831A4FD53E9E9CE834A51EF7070B" Name="tau" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="380F7BA347B9B635B03C12A5A5C62A66" Name="tiBrk" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="63659CCB4B691D1B743F3E887A70A28B" Name="chan" Type="Ty_AnInput" TypeUUID="F7A4975D4B70B458CE78278D99BC23B2" Usage="inout" />
+                    <Variable UUID="C1DEDE3A422EC7697DB91B85E0C72D70" Name="nan" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="internal" />
+                    <Variable UUID="94CAD3824D4B08C96B0F1C9FC0EE88C6" Name="OK" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                </Variables>
+                <ST><![CDATA[// ===============================================================================
+// Функция обработки одного аналогового канала
+// ===============================================================================
+	chan.outBrk := true;
+// проверка на недостоверное значение
+	OK := true;
+	nan := REAL_TO_DINT(chan.in);
+	chan.inBrk := chan.inBrk OR NOT OK;
+// обработка входного признака недостоверности 
+// реализация задержки на восстановление канала после обрыва
+	IF chan.inBrk THEN
+		chan.ti := 0.0;
+	ELSIF chan.ti < tiBrk THEN
+		chan.ti := chan.ti + cycleTime;
+	ELSIF chan.ti < tiBrk + cycleTime THEN
+		chan.ti  := chan.ti + cycleTime;
+		chan.out := chan.in;
+	ELSE
+		chan.outBrk := FALSE;
+	END_IF;
+// фильтрация сигнала
+	IF NOT chan.outBrk THEN
+		IF NOT chan.init THEN
+			chan.init := TRUE;
+			chan.out  := chan.in;
+		END_IF;
+		chan.out := chan.out + (chan.in - chan.out) / tau * cycleTime;
+	END_IF;
+
+]]></ST>
+            </FunctionBlock>
+            <Function UUID="E4A81898408C9E0E0D70BC97F7706643" Name="REAL_TO_REAL" ResultTypeUUID="42E054C8453789BBDD3594B53BDC7DE5">
+                <Variables>
+                    <Variable UUID="87FCC84C439A5B9F5C5580A0DE509A2D" Name="IN" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="F7AE40CD4ADF83CE92D4BDB57B6B9BB3" Name="X1" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="B2E4FDA14A9E55A58BC2DD9B56384774" Name="Y1" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="D3B50AA443DED3BAFECF7EA9BC3885B5" Name="X2" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="31FBFFB04AD8BFDC4C1BB89585DB29C3" Name="Y2" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="DD68145249FB0B9A639A45865076E271" Name="A" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="4B8A540740FE6337B9A69D88B38A8436" Name="B" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                </Variables>
+                <ST><![CDATA[  A  := (Y2 - Y1)/(X2 - X1);
+  B  := (X2 * Y1 - X1 * Y2) / (X2 - X1);
+  // расчет выходного сигнала
+  REAL_TO_REAL := A * IN + B;
+]]></ST>
+            </Function>
+            <FunctionBlock UUID="247860654AE611058B7B56A711486D86" Name="SENSOR_FB">
+                <Variables>
+                    <Variable UUID="48ACEADB43413D8A3C754AA84496093E" Name="cycleTime" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="4E4FB571416D74DCAC43F6A613A7831D" Name="ID" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="input" />
+                    <Variable UUID="15323B2D4A5B11B2A12EE3B29DD4A6F4" Name="INPUT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="B4A1BC3E44FC0C8695E45EBC9A2E15C2" Name="QUALITY" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" Usage="input" />
+                    <Variable UUID="89A0D47C493214A7AF661CAC3BC8E0DD" Name="QUALITY_BLOCK" Type="UINT" TypeUUID="C50B45D04CDCD1FA8859FAB8CB6FC7EE" Usage="input" />
+                    <Variable UUID="B5EA0DC54A98DFA85EB65C8B65EFD8B9" Name="F_INPUT" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="D98C367840A36EFFA44218BFBC798A74" Name="INPUT_FAULT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="3FE02B554F02230A9D127791CCEA542B" Name="FAULT_LAG" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="CFE2854B408F7CA71E9C65AEAF067FCC" Name="S_TYPE" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Usage="input" />
+                    <Variable UUID="B1C074224A17836CB6ACC0A0216B3E15" Name="CL_SD_TEMP" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="6F7AA8B149045A6B7A866094137D2AF0" Name="SQR_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="94D0797C4E5B3B1681AC36AA56C63178" Name="REVERSE_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="2BFA10694FB49F156EF51B97BB61EFF4" Name="EXCEPT_EN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="BED982714D8B130C2C44B7B67FBD11A7" Name="EXCEPT_FAULT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="FC8CC9404114218A31D4468E328A57B8" Name="TESTING_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="85D395DC497D69F6FD0BC09A5296D927" Name="SUBST_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="06380D0F4E40F017CB4541B14B59B4EC" Name="SUBST_EN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="A921641B4FDD605A3AB5ACABAE4293CA" Name="LL_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="74E7C3E343469547C9ECB28DA51DC63F" Name="L_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="F344573840B23947F2728EA6D5F2FB66" Name="H_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="B145506948D053FE4F3CFD858BA228B0" Name="HH_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="F4E4267F4292B61ACAC1AD8BFCB5F340" Name="LL_LAG" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="6D7D57104093217F4A160BB2CD3401FC" Name="L_LAG" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="22688B264E93A5B1103D628C4B805C7D" Name="H_LAG" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="30B6CFAA4342DAE2A963F7B05B8CA1AA" Name="HH_LAG" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="input" />
+                    <Variable UUID="EF5FF3AE48B980F525F625B96EB9AD45" Name="LL_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="29CE472C42D3527EF6D5B98AC20F84AD" Name="L_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="B15ABCE34033CAE7EB3EFCBC73CF4B35" Name="H_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="5D69740C42992E2965C750BD980A022E" Name="HH_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="88EE42E1412020259125A5B532ED90CE" Name="INV_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="7ABE79E24FAE1C2A60758895F3CECAFE" Name="FAULT_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="EA36B4CD4FB73FF40B6B96AB7CB0C700" Name="LL_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="3CAE811B4DDFF32C40C344808FD84979" Name="L_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="CB74855B4A903778363E30B5DFE5B23C" Name="H_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="601AB42544F02197E8BF80A66D532D51" Name="HH_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="DFF738874F6021B2B0A473AE1C0BA08A" Name="FAULT_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="D11510464CED3D0D79286BBB0306797C" Name="FAULT_L_RESET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="EF8D3A824F1A3514E35936B9705D7402" Name="Filtr_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="E87857E94AEC7DF2782EDBAF9B78D922" Name="T_Filtr" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="89AA6D8E42DD79FE396C56B7620E4D11" Name="SUBSTIT" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="14437AC047C31DCD5A23419EC839619C" Name="LO_LIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="31E8EEA249D3D7E4CB4132A7445EC46D" Name="HI_LIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="26CFE91B4219F26A39C213BA23BC218B" Name="sensorInpMin" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="5E3C03F0438B592145C5C6AF55224723" Name="sensorInpMax" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                    <Variable UUID="50F033DD4563DDDFFE3298B0DE7E2064" Name="HYST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="988AE46E46937C2CC2E60B8A649457E0" Name="INV_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="435B933045E90878B84C61B86E6D3B97" Name="COMPENSATOR" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                    <Variable UUID="3F827CE84E49E702DC7C83BDD90D2E2A" Name="EXCEPT_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="FA4927064BA5D1101ACA6CAD15C868E6" Name="BELL_BLOCK" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="84CBEFEF49CDD45DB82BC9A5E549F993" Name="RSP" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="B66254814B945464F013B2A22818F8B0" Name="AUTO_RESET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                    <Variable UUID="630154A14395D5DC65E3AF9D43CCEE25" Name="OUTPUT" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="749F6A104E2DB0835BB23386168370CE" Name="OUTPUT_FREE" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="271EF4FC46AA1A36461235A65370A223" Name="OUTPUT_P" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="E5A1E89A49E7416C9B65C6B6773622ED" Name="Q_SUBST_ON" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="882DAB2945EFB8DE6EAA6F9981673A64" Name="EXCEPTED" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="4D9396AB4ECC7B5232D121A11503A1C7" Name="FAULT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="FDCAB3934788CBB2ABC9A387C797C15F" Name="ALM_CODE" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="6C3E63B34CA87F7DBB10D58E039FAFCE" Name="FAULT_ACK" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="2BDE145E4BC8489DFC0BC5A1A6022262" Name="FAULT_CUR" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="9C1AD3334A8A5F06FE284D958E713550" Name="VSTATUS" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="output" />
+                    <Variable UUID="40CDD7B648AA95F663ABDA9AC6119D13" Name="Q_LL" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="ED06F08544516A32B1ABDEAF950997F2" Name="Q_L" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="3358502346647A5A48F4DE994DDC9B62" Name="Q_H" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="371F9AEF4D784EE521EE0A9671FA564B" Name="Q_HH" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="455F20004F611620055A089EFEC6F71F" Name="Q_OVL" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="C0D4FF404C202115159F94955773545F" Name="Q_OVH" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="0BDCE39441C73857B97C6C96B08D6D30" Name="Q_LO_LIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="CE4E9893442FBE3C7FC93195A6F3004E" Name="Q_HI_LIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="2753F3164DC8BBB65D5EEA948C40BFD5" Name="Q_LL_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="8050EF0B4C20096C1A7803ADC3411034" Name="Q_L_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="24FCCE6045B289D7DA8E78946933B16E" Name="Q_H_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="11976FD3468C46479DE65BA161A5DDCD" Name="Q_HH_SETP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                    <Variable UUID="55E0788042E0AF0E925ECFA9C821D742" Name="ALARM_STATE" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="output" />
+                    <Variable UUID="2DA40F044E3757BE2B6699844DD26A51" Name="QLL_EV" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="9661A4B449495485BA4D5B832009C72B" Name="QL_EV" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="C8DA54FC404EE089E49DA3A51B8AB4A6" Name="QH_EV" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="AED0DAA34CDF69CB231B14AD0BE87923" Name="QHH_EV" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="C4A81F974D6986B9817D8081831122B3" Name="QFAIL_EV" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="2421B5234E53BA745AFEC4A98CBF6B7C" Name="QALERT_EV" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="output" />
+                    <Variable UUID="ABFD843E4FBAC93F03FA53AFA4FF143D" Name="UST_STATE" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="output" />
+                    <Variable UUID="07BE8A2C4DD92B7640DBB7AB1EB4BD11" Name="UST_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                    <Variable UUID="4C0EA63C4160E271C2EB30B39BFF0E48" Name="FAULT_RESET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="inout" />
+                    <Variable UUID="62B0D33444AB2DE23FC2F783D722B4BA" Name="ACKN_STATE" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Usage="inout" />
+                    <Variable UUID="C33348CB479963A7AF52699DFE7D688A" Name="CMD_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="inout" />
+                    <Variable UUID="4F028CD2423C9FCBB2BE89856428C27F" Name="H_TIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="F888168D45BC1C55689D2FB7C13C876D" Name="HH_TIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="5E9A8ED14B191F4631C0809768C4CCA7" Name="L_TIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="35EDFB414308D7C2C92F199015A2D9A9" Name="LL_TIM" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="3F9C0B544EDD44CABC0D22B073733CEB" Name="S_OUTPUT" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="3C1147014BC2C912494A23B1DD0C363D" Name="cur_max" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="5ECDA27D4A44545F55B1FA89336C18EF" Name="cur_min" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                    <Variable UUID="BE356433444183BC6DFB9CBD67838E22" Name="act_err" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Size="2" Array="TRUE" Usage="internal" />
+                    <Variable UUID="8AFD24C541F47F17B9499887F59927B5" Name="FILTR" Type="FILTR_1_CHAN" TypeUUID="BBE962254DE674C1FCCE359FDC1B897B" Usage="internal" />
+                    <Variable UUID="CE31388B486C0AEBCAB1389D5CEB98D1" Name="error" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="36D09CAE41974E2C0B48099F291B74F9" Name="Filtr_ON_old" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="7A9EF2904DD9864A0AF291BB818A09A1" Name="pr_L_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="DFF31E784090E8369EA8BFABAE1195DC" Name="pr_LL_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="4C9103C54831DEEC89EFB2ACCD60E77B" Name="pr_H_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="128297C94C858DF4ABB6079B08E19E9D" Name="pr_HH_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="744EDD4F4C45364B794857AB2F9AAD3F" Name="pr_FAIL_ACKN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="B5B16A2144F821AA3B85228D16DC02E6" Name="pr_FAULT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="606C4E48432C3F55368B61BD062B5146" Name="pr_H_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="603DBBD04715BB8B0D1DC3917C93A378" Name="pr_HH_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="9AAF85D148B4DBA1EF707CB4532A3664" Name="pr_Q_LL" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="57FE9DCA439D9316DDA14B9EDB94BAE8" Name="pr_Q_L" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="9F73620D4F0613C7F9F858BA7DF90108" Name="pr_Q_H" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="584F0D8D442B1964F31EFEBE32D61698" Name="pr_Q_HH" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="C5B31A9E40403743D9E8989F5993AB92" Name="pr_EXCEPTED" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="D05B1AD046FE718CBA845EAADA7288DA" Name="pr_L_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="6F78BD464A58ECDAA23F40917B1A92D7" Name="pr_LL_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="061C527242441DE05E2B228E1FCA3AC8" Name="pr_FAULT_ACT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="04E903164290C830B96F8E892F27D2AD" Name="CODE_BOUND" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Usage="internal" />
+                    <Variable UUID="9C55066D4235ABF642972DA55F544A30" Name="CODE_STATE" Type="WORD" TypeUUID="05CD1AAB4891B30C004C2799CA460884" Usage="internal" />
+                    <Variable UUID="BFC6750440FADD60CC5E01AFA42C25FA" Name="temp_int" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+                    <Variable UUID="6BF3334848222B63217F8A918C5E5F72" Name="S_Q_H" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="5BD3193247A661458CE527B3F8F2451E" Name="S_Q_HH" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="8B95CAFB4C7693D28F032990A88C990A" Name="S_Q_L" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="4532DFA34D51F7C3BB1B2BBE519D63AD" Name="S_Q_LL" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="31881842448D3A7CFB11E3B1CCCE3DD2" Name="NotOkValue" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                    <Variable UUID="D53102A745851D6720371C903D9486BD" Name="TP1" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="internal" />
+                    <Variable UUID="21F0FBB946D1B16ACD6ACDA84AD600C3" Name="TP2" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="internal" />
+                    <Variable UUID="60B269564C32D7D3F585B2995D443723" Name="INPUT_DINT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="internal" />
+                    <Variable UUID="278B1CC644A9BFB6047F83972EAA3220" Name="DELAY_FAULT" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                    <Variable UUID="9BCAE9DE4662296D0A78719511256FB5" Name="evPar" Type="Ty_AnInput" TypeUUID="F7A4975D4B70B458CE78278D99BC23B2" Usage="internal" />
+                    <Variable UUID="B9F4172C47A0100F3F1451AD138B23B0" Name="DELAY_LL" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                    <Variable UUID="42EABFBF42748F546C44C4A128137DEB" Name="DELAY_L" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                    <Variable UUID="F0F2CDFA432185ABA8A63989C2D4D9F2" Name="DELAY_H" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                    <Variable UUID="C16998884987FBD1016DEEA2B97929DA" Name="DELAY_HH" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                </Variables>
+                <ST><![CDATA[//Выход пределов измерения и уставок
+	Q_LO_LIM	:= LO_LIM;
+	Q_HI_LIM	:= HI_LIM;
+	Q_LL_SETP	:= LL_SETP;
+	Q_L_SETP	:= L_SETP;
+	Q_H_SETP	:= H_SETP;
+	Q_HH_SETP	:= HH_SETP;
+	IF RSP THEN
+		//IF GLOBAL.TOTAL_ACKN THEN 
+		//	ACKN_STATE := WORD#16#1F;
+		//END_IF;  
+	//Сброс неисправности
+  		IF CMD_ACKN OR ACKN_STATE.4 OR FAULT_RESET OR FAULT_L_RESET THEN 
+	//IF FAULT_ACK THEN
+			act_err[0] := WORD#16#0;
+			act_err[1] := WORD#16#0;
+		END_IF;
+	ELSE 
+	//Сброс неисправности
+		IF FAULT_RESET OR FAULT_L_RESET OR AUTO_RESET(* OR GLOBAL.TOTAL_ACKN*) THEN 
+			act_err[0] := WORD#16#0;
+			act_err[1] := WORD#16#0;
+			ALM_CODE := 0; 
+		END_IF;
+	END_IF; 
+	ALM_CODE := 0;
+  
+  //Если канал подключен к модулям ввода-вывода
+  //IF (CANAL_TYPE = W#16#0010)OR(CANAL_TYPE=W#16#0011)OR(CANAL_TYPE=W#16#0012) THEN
+	IF QUALITY_BLOCK <> UINT#0 THEN ALM_CODE := 2; END_IF; //Неисправность блока
+	IF QUALITY <> UINT#0 THEN ALM_CODE := 1; END_IF; //Неисправность датчика/канала
+	TP1 := DINT#0;
+	TP2 := DINT#27648;
+	//IF QUALITY = UINT#2 THEN ALM_CODE := 8; END_IF;
+	IF QUALITY = UINT#8 OR INPUT > DINT#62000 THEN ALM_CODE := 3;(* OUTPUT := HI_LIM;*) END_IF; //КЗ
+	IF QUALITY = UINT#4 OR (INPUT < DINT#11915 AND QUALITY <> UINT#2) THEN ALM_CODE := 4;(* OUTPUT := LO_LIM;*) END_IF; //Обрыв
+//---------------------------------------Масштабирование--------------------------------------------
+	IF (sensorInpMin = DINT#0) AND (sensorInpMax = DINT#0) THEN 
+		S_OUTPUT := DINT_TO_REAL(INPUT);
+	ELSIF (sensorInpMin = DINT#1) AND (sensorInpMax = DINT#0) THEN 
+		S_OUTPUT := DINT_TO_REAL(INPUT)/10.0;
+	ELSIF (sensorInpMin = DINT#2) AND (sensorInpMax = DINT#0) THEN 
+		S_OUTPUT := DINT_TO_REAL(INPUT)/100.0;
+	ELSE 
+		S_OUTPUT := LO_LIM + (HI_LIM - LO_LIM) * (DINT_TO_REAL(INPUT) - DINT_TO_REAL(sensorInpMin))/DINT_TO_REAL(sensorInpMax - sensorInpMin);
+	END_IF;
+//Анализ кодов неисправностей
+	IF (QUALITY <> UINT#0) OR (ALM_CODE <> 0) OR INPUT_FAULT THEN
+		IF ALM_CODE = 1 OR ALM_CODE = 3 OR ALM_CODE = 4 THEN act_err[0].0 := TRUE; END_IF; //Неисправность датчика
+		IF ALM_CODE = 1 THEN act_err[0].7 := TRUE; END_IF; //НЕДОСТОВЕРНОСТЬ
+		IF ALM_CODE = 2 THEN act_err[0].1 := TRUE; END_IF; //Неисправность блока
+		IF ALM_CODE = 3 THEN act_err[0].2 := TRUE; END_IF; //Короткое замыкание
+		IF ALM_CODE = 4 THEN act_err[0].3 := TRUE; END_IF; //Обрыв
+		IF ALM_CODE = 5 THEN act_err[0].4 := TRUE; END_IF; //Недостоверный замер
+		IF ALM_CODE = 6 THEN act_err[0].5 := TRUE; END_IF; //Несоответствие градуировки
+		IF ALM_CODE = 7 THEN act_err[0].6 := TRUE; END_IF; //Нет обновления данных
+		IF ALM_CODE = 8 THEN act_err[0].7 := TRUE; END_IF; //
+	END_IF;
+//Внешний признак неисправности датчика
+	IF INPUT_FAULT THEN 
+		ALM_CODE := 1; 
+		act_err[0].1 := TRUE; 
+	END_IF;
+  
+  // Числовое значение
+	IF S_TYPE =WORD#16#C000  THEN
+		S_OUTPUT := F_INPUT;
+		IF QUALITY <> UINT#0 THEN ALM_CODE := 7; act_err[0].6 := TRUE; END_IF;
+	END_IF;        
+ 
+	NotOkValue:=False; 
+	IF ALM_CODE <> 0 THEN NotOkValue := TRUE; END_IF;
+	FAULT_CUR := NotOkValue;
+  
+  //Востанавливаем код ошибки
+	IF act_err[0].0 THEN ALM_CODE := 1; END_IF;
+	IF act_err[0].1 THEN ALM_CODE := 2; END_IF;
+	IF act_err[0].2 THEN ALM_CODE := 3; END_IF;
+	IF act_err[0].3 THEN ALM_CODE := 4; END_IF;
+	IF act_err[0].4 THEN ALM_CODE := 5; END_IF;
+	IF act_err[0].5 THEN ALM_CODE := 6; END_IF;
+	IF act_err[0].7 THEN ALM_CODE := 8; END_IF;
+  
+	IF NOT FAULT_ON OR EXCEPT_ON OR NOT FAULT_ACT THEN  //неисправность не разрешена
+		act_err[0] := WORD#16#0;
+		act_err[1] := WORD#16#0;
+		ALM_CODE := 0;
+	END_IF;
+   
+  //Выставляем бит неисправности
+	DELAY_FAULT(IN := ALM_CODE <> 0
+			   ,PT := FAULT_LAG);
+	FAULT := DELAY_FAULT.Q;
+ //блокируем ошибку до отработки таймера
+	IF NOT FAULT THEN 
+		ALM_CODE := 0; 
+		act_err[0] := WORD#16#0;
+		act_err[1] := WORD#16#0;
+	END_IF;
+  
+  //Обработка значения
+  //обратная шкала
+	IF REVERSE_ON THEN S_OUTPUT := HI_LIM - S_OUTPUT + LO_LIM; END_IF;
+  //квадратичная обработка
+	IF SQR_ON THEN 
+		IF ((S_OUTPUT - LO_LIM) * (HI_LIM - LO_LIM)) > 0.0 THEN  
+			S_OUTPUT := LO_LIM + SQRT((S_OUTPUT - LO_LIM) * (HI_LIM - LO_LIM));
+		ELSE
+			S_OUTPUT := LO_LIM - SQRT(ABS((S_OUTPUT - LO_LIM) * (HI_LIM - LO_LIM)));
+       END_IF;
+	END_IF;
+  //компенсация
+	S_OUTPUT := S_OUTPUT + COMPENSATOR;
+  
+  //выходное значение без учета подмены, фильтров и неисправностей
+	OUTPUT_FREE := S_OUTPUT;
+  
+  //Фильтрация 
+	IF Filtr_ON THEN 
+		IF Filtr_ON_old THEN
+			evPar.in := S_OUTPUT;
+			evPar.inBrk := FAULT;
+			CALC_1_CHAN(cycleTime 	:= cycleTime // IN: REAL
+					   ,tau			:= T_Filtr  // IN: REAL
+					   ,tiBrk		:= 0.5 // IN: REAL
+            		   ,chan 		:= evPar // IN: REAL
+					   );
+			S_OUTPUT := evPar.out;
+		ELSE
+			evPar.in := S_OUTPUT;
+			evPar.inBrk := FAULT;
+			CALC_1_CHAN(cycleTime 	:= cycleTime // IN: REAL
+					   ,tau			:= T_Filtr  // IN: REAL
+					   ,tiBrk		:= 0.5 // IN: REAL
+            		   ,chan 		:= evPar // IN: REAL
+					   );
+			S_OUTPUT := evPar.out;
+		END_IF;
+	END_IF;
+	Filtr_ON_old := Filtr_ON;
+  
+  //Обнуляем значение при неисправности по пределам.
+	IF S_TYPE <> WORD#16#C000  THEN
+		IF ALM_CODE<>1 THEN
+			IF NotOkValue OR FAULT THEN S_OUTPUT := OUTPUT; END_IF;
+		END_IF;
+	END_IF;
+  //Подмена
+	IF NOT SUBST_EN THEN SUBST_ON := FALSE; END_IF;
+	IF SUBST_ON THEN
+		IF SUBST_ON AND NOT Q_SUBST_ON THEN
+			SUBSTIT := S_OUTPUT;
+			act_err[0] := WORD#16#0;
+			act_err[1] := WORD#16#0;
+			ALM_CODE := 0;
+			FAULT := FALSE;
+		ELSE
+			S_OUTPUT := SUBSTIT; 
+			act_err[0] := WORD#16#0;
+			act_err[1] := WORD#16#0;
+			ALM_CODE := 0;
+			FAULT := FALSE;
+		END_IF;
+	ELSE
+		SUBSTIT := S_OUTPUT;
+	END_IF;
+	Q_SUBST_ON := SUBST_ON;
+  
+    // Обработка уставок
+    //Запоминаем уставки для формирования сигнализации
+	S_Q_H := Q_H; S_Q_HH := Q_HH; S_Q_L := Q_L; S_Q_LL := Q_LL;
+    //Уход уставок
+    //Уход уставок с гестерезисом
+	IF (S_OUTPUT < (HH_SETP - HYST)) THEN Q_HH := FALSE; END_IF;
+	IF (S_OUTPUT < (H_SETP - HYST)) THEN Q_H := FALSE; END_IF;
+	IF (S_OUTPUT > (L_SETP + HYST)) THEN Q_L := FALSE; END_IF;
+	IF (S_OUTPUT > (LL_SETP + HYST)) THEN Q_LL := FALSE; END_IF;
+    //Срабатывание уставок
+	IF NOT EXCEPT_ON AND ALM_CODE = 0 THEN
+     //H
+		DELAY_H(IN := S_OUTPUT > H_SETP, PT := H_LAG);
+		IF H_ON AND H_ACT AND DELAY_H.Q THEN Q_H := TRUE; END_IF;
+     //HH
+		DELAY_HH(IN := S_OUTPUT > HH_SETP, PT := HH_LAG);
+		IF HH_ON AND HH_ACT AND DELAY_HH.Q THEN Q_HH := TRUE; END_IF;
+     //L
+		DELAY_L(IN := S_OUTPUT < L_SETP, PT := L_LAG);
+		IF L_ON AND L_ACT AND DELAY_L.Q THEN Q_L := TRUE; END_IF;
+     //LL
+		DELAY_LL(IN := S_OUTPUT < LL_SETP, PT := LL_LAG);
+		IF LL_ON AND LL_ACT AND DELAY_LL.Q THEN Q_LL := TRUE; END_IF;
+    END_IF;
+    
+    //Исключение
+	IF NOT EXCEPT_EN THEN EXCEPT_ON := FALSE; END_IF;
+	IF ALM_CODE <> 0 AND EXCEPT_EN AND EXCEPT_FAULT THEN EXCEPT_ON := TRUE; END_IF;
+    
+    //Сброс флагов уставок, если точка исключена или неисправна
+	IF EXCEPT_ON OR ALM_CODE <> 0 THEN
+		Q_LL := FALSE;
+		Q_L  := FALSE;
+		Q_H  := FALSE;
+		Q_HH := FALSE;
+	END_IF;
+    //Сброс флагов уставок, если они выключены/не введены
+    IF NOT LL_ON OR NOT LL_ACT THEN Q_LL := FALSE; END_IF;
+    IF NOT L_ON OR NOT L_ACT THEN Q_L := FALSE; END_IF;
+    IF NOT H_ON OR NOT H_ACT THEN Q_H := FALSE; END_IF;
+    IF NOT HH_ON OR NOT HH_ACT THEN Q_HH := FALSE; END_IF;
+  
+    //Максимальное/минимальное значение при выходе за уставку (для RSP)
+    IF (Q_HH OR Q_H) AND (S_OUTPUT > cur_max) THEN cur_max := S_OUTPUT; END_IF; 
+    IF (Q_LL OR Q_L) AND (S_OUTPUT < cur_min) THEN cur_min := S_OUTPUT; END_IF;
+    
+    //для сигнализации
+    //IF Q_L OR Q_H    THEN SENSOR_PRED_UST := 1; END_IF;
+    //IF Q_LL OR Q_HH  THEN SENSOR_AVAR_UST := 1; END_IF;
+//**************************************************************************************
+//Секция сообщений
+//**************************************************************************************
+    //*****************************************************************************
+    // Запись событий сигнализации
+    //*****************************************************************************
+	IF (Q_HH AND NOT pr_Q_HH OR Q_H AND NOT pr_Q_H OR Q_L AND NOT pr_Q_L OR Q_LL AND NOT pr_Q_LL) AND UST_ACKN OR
+		NOT (Q_HH OR Q_H OR Q_L OR Q_LL) AND UST_ACKN THEN 
+		UST_ACKN := FALSE;
+	END_IF;
+(*
+	IF (NOT Q_HH AND pr_Q_HH OR NOT Q_H AND NOT Q_H OR NOT Q_L AND pr_Q_L OR NOT Q_LL AND pr_Q_LL) AND UST_ACKN THEN 
+		UST_ACKN := FALSE;
+	END_IF;
+*)
+	IF CMD_ACKN AND (Q_HH OR Q_H OR Q_L OR Q_LL) AND NOT UST_ACKN THEN 
+		UST_ACKN := TRUE;
+	END_IF;
+    // Квитирование событий по датчику с ВУ (faceplate)
+    IF CMD_ACKN OR FAULT_RESET THEN
+        ACKN_STATE := WORD#16#1F;
+//        CMD_ACKN := FALSE;
+    END_IF;
+
+    // Общее квитировани сигнализации
+//    IF GLOBAL.SIGNAL_SBROS THEN
+//        ACKN_STATE := W#16#0F;
+//    END_IF;
+    // Обнуление слова команд квитирования системы алармов
+	ACKN_STATE := WORD#16#0;
+
+Q_OVL := OUTPUT_FREE < LO_LIM - (HI_LIM - LO_LIM) * 0.02 AND NOT Q_SUBST_ON;
+Q_OVH := OUTPUT_FREE > HI_LIM + (HI_LIM - LO_LIM) * 0.02 AND NOT Q_SUBST_ON;
+    //*****************************************************************************
+    // Формирование слова состояния ввода уставок
+    //*****************************************************************************
+	UST_STATE[0] := WORD#16#0;
+	UST_STATE[1] := WORD#16#0;
+	IF Q_LL 			THEN UST_STATE[0].0 	:= TRUE; END_IF;
+	IF Q_L 				THEN UST_STATE[0].4 	:= TRUE; END_IF;
+	IF Q_H 				THEN UST_STATE[1].0 	:= TRUE; END_IF;
+	IF Q_HH 			THEN UST_STATE[1].4 	:= TRUE; END_IF;
+	IF LL_ON AND LL_ACT THEN UST_STATE[0].1		:= TRUE; END_IF;
+	IF L_ON  AND L_ACT  THEN UST_STATE[0].5 	:= TRUE; END_IF;
+	IF H_ON  AND H_ACT  THEN UST_STATE[1].1 	:= TRUE; END_IF;
+	IF HH_ON AND HH_ACT THEN UST_STATE[1].5 	:= TRUE; END_IF;
+
+
+    // Обобщённая сигнализация
+//    IF (Q_H AND NOT pr_Q_H) OR (Q_L AND NOT pr_Q_L) THEN g_WarnSoundOnCmd := 1; END_IF;
+//    IF (Q_HH AND NOT pr_Q_HH) OR (Q_LL AND NOT pr_Q_LL) THEN g_AlarmSoundOnCmd := 1; END_IF;
+
+//    IF Q_H OR Q_L THEN g_CurrentWarning := 1; END_IF;
+//    IF Q_HH OR Q_LL THEN g_CurrentAlarm := 1; END_IF;
+
+//    IF L_EV.NOT_ACKN OR H_EV.NOT_ACKN THEN g_NotAcknoledgedWarning := 1; END_IF;
+//    IF LL_EV.NOT_ACKN OR HH_EV.NOT_ACKN THEN g_NotAcknoledgedAlarm := 1; END_IF;
+
+
+
+    // Инициализация максимального и минимального значения
+    IF NOT Q_HH AND NOT Q_H THEN cur_max := -999999.0; END_IF;
+    IF NOT Q_LL AND NOT Q_L THEN cur_min :=  999999.0; END_IF;
+
+    // Неисправность с признаком квитирования
+    VSTATUS[0] := WORD#16#0;
+	VSTATUS[1] := WORD#16#0;
+	IF FAULT THEN VSTATUS[0].0 := TRUE; END_IF; 
+//	FAULT_ACK := FAIL_EV.ACKNOLEDGED;
+    IF FAULT AND FAULT_ACK THEN 
+        VSTATUS[0].1 := TRUE;
+    ELSIF FAULT AND NOT FAULT_ACK THEN 
+        VSTATUS[0].2 := TRUE;
+    END_IF;
+	
+	IF act_err[0].0 THEN VSTATUS[0].3	:= TRUE; END_IF; //Отрыв модуля 
+	IF Q_SUBST_ON 	THEN VSTATUS[0].4	:= TRUE; END_IF; //Подмена
+	IF FAULT        THEN VSTATUS[0].5	:= TRUE; END_IF; //Отказ датчика
+	IF act_err[0].7	THEN VSTATUS[0].6	:= TRUE; END_IF; //Отказ канала
+	IF ALM_CODE = 3	THEN VSTATUS[0].7	:= TRUE; END_IF; //Короткое замыкание
+	IF ALM_CODE = 4	THEN VSTATUS[1].0	:= TRUE; END_IF; //Обрыв
+	IF EXCEPTED     THEN VSTATUS[1].1	:= TRUE; END_IF; //Исключен/ремонт
+	IF Q_OVL		THEN VSTATUS[1].2	:= TRUE; END_IF; //Зашкал вниз
+	IF Q_OVH		THEN VSTATUS[1].3	:= TRUE; END_IF; //Зашкал вверх
+   
+    //Сохранение предыдущих состояний
+    pr_FAULT     := FAULT;
+    pr_H_ACT     := H_ACT;
+    pr_HH_ACT    := HH_ACT;
+    pr_Q_LL      := Q_LL;
+    pr_Q_L       := Q_L;
+    pr_Q_H       := Q_H;
+    pr_Q_HH      := Q_HH;
+    EXCEPTED	 := EXCEPT_ON;
+    pr_EXCEPTED  := EXCEPTED;
+    pr_L_ACT     := L_ACT;
+    pr_LL_ACT    := LL_ACT;
+    pr_FAULT_ACT := FAULT_ACT;
+ //   pr_LL_ACKN   := LL_EV.acknoledged;
+//    pr_L_ACKN    := L_EV.acknoledged;
+//    pr_HH_ACKN   := HH_EV.acknoledged;
+//    pr_H_ACKN    := H_EV.acknoledged;
+//    pr_FAULT_ACT := FAIL_EV.acknoledged;
+    //*****************************************************************************
+
+
+FAULT_RESET := FALSE; FAULT_L_RESET := FALSE;
+
+//Выход
+OUTPUT := S_OUTPUT;
+//выходное значение в процентах
+OUTPUT_P := 100.0 * ABS((OUTPUT - LO_LIM)/(HI_LIM - LO_LIM));
+error := ALM_CODE;
+(*
+//Звонок при возникновении неисправности
+IF (error=0)AND(ALM_CODE<>0) AND NOT BELL_BLOCK THEN M[RING_ADDRESS,RING_1STBIT+2]:=1; END_IF;
+error:=ALM_CODE;      
+
+// Установка признаков новой аварии и предупреждения в маркерной области.
+IF ((NOT S_Q_H AND Q_H) OR (NOT S_Q_L AND Q_L)) AND NOT BELL_BLOCK THEN M[RING_ADDRESS,RING_1STBIT]:=true;
+END_IF;
+IF ((NOT S_Q_HH AND Q_HH) OR (NOT S_Q_LL AND Q_LL)) AND NOT BELL_BLOCK THEN M[RING_ADDRESS,RING_1STBIT+1]:=true;
+END_IF;
+*)
+
+CODE_STATE := WORD#16#0;
+IF Q_SUBST_ON   THEN CODE_STATE.1 := TRUE; END_IF; //Подмена
+IF FAULT        THEN CODE_STATE.2 := TRUE; END_IF; //Отказ датчика
+IF EXCEPTED     THEN CODE_STATE.0 := TRUE; END_IF; //Исключен/ремонт
+
+CODE_BOUND := WORD#16#0;
+IF Q_L      THEN CODE_BOUND.0 := TRUE; END_IF;
+IF Q_LL     THEN CODE_BOUND.1 := TRUE; END_IF;
+IF Q_OVL    THEN CODE_BOUND.2 := TRUE; END_IF;
+IF Q_H      THEN CODE_BOUND.3 := TRUE; END_IF;
+IF Q_HH     THEN CODE_BOUND.4 := TRUE; END_IF;
+IF Q_OVH    THEN CODE_BOUND.5 := TRUE; END_IF;]]></ST>
+            </FunctionBlock>
+        </Folder>
+        <Folder Name="Обработка" Comment="" Data="" UUID="60451C7C43320916FE47D1816A212765">
+            <FunctionBlock UUID="475498764AD68DA85A7BE2B9D14B1DFF" Name="ALG_DI_PLC">
+                <Variables>
+                    <Variable UUID="DAAF26B94CF90CDB01090ABC1F4D214A" Name="CurTime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+                    <Variable UUID="DE63E1E7435338467E3272B954547E63" Name="oldCurTime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+                    <Variable UUID="FDBB6AD34BCB4404F3986B97ABF92A69" Name="TMR_BLK_ON" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                </Variables>
+                <ST><![CDATA[//Измеряем длительность цикла
+CurTime := CURRENT_TIMESTAMP();
+cycleTime := LREAL_TO_REAL(ABS(CurTime - oldCurTime))/1000.0;
+oldCurTime := CurTime;
+
+TMR_BLK_ON(IN := TRUE
+		  ,PT := T#5s);
+TMO_BLK_ON := TMR_BLK_ON.Q;
+IF NOT TMO_BLK_ON THEN ; END_IF;
+
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.I_IN := USOP_A1_3.i1;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.QUAL_IN := USOP_A1_3.i1_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.Name := 'УСО П. Контроль основного питания ~220В. В норме';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.ID := ULINT#71001;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1.Comment := 'Модуль А1.3 канал 1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_1);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.I_IN := USOP_A1_3.i2;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.QUAL_IN := USOP_A1_3.i2_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.Name := 'УСО П. Контроль резервного питания ~220В включен. В норме';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.ID := ULINT#71002;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2.Comment := 'Модуль А1.3 канал 2';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_2);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.I_IN := USOP_A1_3.i3;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.QUAL_IN := USOP_A1_3.i3_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.Name := 'УСО П. Автоматы питания УСО П. ПЛК А1 включены';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.ID := ULINT#71003;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3.Comment := 'Модуль А1.3 канал 3';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_3);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.I_IN := USOP_A1_3.i4;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.QUAL_IN := USOP_A1_3.i4_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.Name := 'УСО П. Двери шкафа открыты';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.ID := ULINT#71004;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.AlarmClass := DINT#10100;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4.Comment := 'Модуль А1.3 канал 4';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_4);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.I_IN := USOP_A1_3.i5;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.QUAL_IN := USOP_A1_3.i5_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.Name := 'УСО П. Исправность разрядников (исправно)';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.ID := ULINT#71005;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5.Comment := 'Модуль А1.3 канал 5';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_5);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.I_IN := USOP_A1_3.i6;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.QUAL_IN := USOP_A1_3.i6_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.Name := 'УСО П. БП G1 исправен';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.ID := ULINT#71006;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6.Comment := 'Модуль А1.3 канал 6';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_6);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.I_IN := USOP_A1_3.i7;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.QUAL_IN := USOP_A1_3.i7_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.Name := 'УСО П. Авария ИБП';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.ID := ULINT#71007;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.AlarmClass := DINT#10000;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7.Comment := 'Модуль А1.3 канал 7';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_DIAGN_7);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.I_IN := USOP_A1_3.i8;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.QUAL_IN := USOP_A1_3.i8_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.Name := 'Пожарная насосная. Ключ выбора насоса в положении «Насос №1»';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.ID := ULINT#71008;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1.Comment := 'Модуль А1.3 канал 8';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.I_IN := USOP_A1_3.i9;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.QUAL_IN := USOP_A1_3.i9_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.Name := 'Пожарная насосная. Ключ выбора насоса в положении «Насос №2»';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.ID := ULINT#71009;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2.Comment := 'Модуль А1.3 канал 9';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.I_IN := USOP_A1_3.i10;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.QUAL_IN := USOP_A1_3.i10_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.Name := 'Пожарная насосная. Переключатель насоса №1 в положении автоматического управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.ID := ULINT#71010;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT.Comment := 'Модуль А1.3 канал 10';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_ACONT);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.I_IN := USOP_A1_3.i11;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.QUAL_IN := USOP_A1_3.i11_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.Name := 'Пожарная насосная. Переключатель насоса №1 в положении ручного управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.ID := ULINT#71011;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT.Comment := 'Модуль А1.3 канал 11';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H1_MCONT);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.I_IN := USOP_A1_3.i12;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.QUAL_IN := USOP_A1_3.i12_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.Name := 'Пожарная насосная. Пожарный насос №1 включен';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.ID := ULINT#71011;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON.Comment := 'Модуль А1.3 канал 12';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_H1_ON);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.I_IN := USOP_A1_3.i13;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.QUAL_IN := USOP_A1_3.i13_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.Name := 'Пожарная насосная. Переключатель насоса №2 в положении автоматического управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.ID := ULINT#71012;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT.Comment := 'Модуль А1.3 канал 13';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_ACONT);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.I_IN := USOP_A1_3.i14;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.QUAL_IN := USOP_A1_3.i14_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.Name := 'Пожарная насосная. Переключатель насоса №2 в положении ручного управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.ID := ULINT#71013;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT.Comment := 'Модуль А1.3 канал 14';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H2_MCONT);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.I_IN := USOP_A1_3.i15;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.QUAL_IN := USOP_A1_3.i15_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.Name := 'Пожарная насосная. Пожарный насос №2';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.ID := ULINT#71014;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON.Comment := 'Модуль А1.3 канал 15';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_H2_ON);
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.I_IN := USOP_A1_3.i16;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.QUAL_IN := USOP_A1_3.i16_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.Name := 'Пожарная насосная. Ключ выбора насоса в положении «Насос №3»';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.ID := ULINT#71015;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3.Comment := 'Модуль А1.3 канал 16';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.I_IN := USOP_A1_4.i1;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.QUAL_IN := USOP_A1_4.i1_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.Name := 'Пожарная насосная. Ключ выбора насоса в положении «Насос №4»';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.ID := ULINT#71016;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4.Comment := 'Модуль А1.4 канал 1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.I_IN := USOP_A1_4.i2;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.QUAL_IN := USOP_A1_4.i2_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.Name := 'Пожарная насосная. Переключатель насоса №3 в положении автоматического управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.ID := ULINT#71017;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT.Comment := 'Модуль А1.4 канал 2';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_ACONT);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.I_IN := USOP_A1_4.i3;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.QUAL_IN := USOP_A1_4.i3_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.Name := 'Пожарная насосная. Переключатель насоса №3 в положении ручного управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.ID := ULINT#71018;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT.Comment := 'Модуль А1.4 канал 3';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H3_MCONT);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.I_IN := USOP_A1_4.i4;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.QUAL_IN := USOP_A1_4.i4_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.Name := 'Пожарная насосная. Пожарный насос №3 включен';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.ID := ULINT#71019;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.Comment := 'Модуль А1.4 канал 4';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.I_IN := USOP_A1_4.i5;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.QUAL_IN := USOP_A1_4.i5_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.Name := 'Пожарная насосная. Переключатель насоса №4 в положении автоматического управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.ID := ULINT#71020;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT.Comment := 'Модуль А1.4 канал 5';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_ACONT);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.I_IN := USOP_A1_4.i6;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.QUAL_IN := USOP_A1_4.i6_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.Name := 'Пожарная насосная. Переключатель насоса №4 в положении ручного управления';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.ID := ULINT#71021;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT.Comment := 'Модуль А1.4 канал 6';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_KEY_H4_MCONT);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.I_IN := USOP_A1_4.i7;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.QUAL_IN := USOP_A1_4.i7_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.Name := 'Пожарная насосная. Пожарный насос №4 включен';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.ID := ULINT#71022;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.Comment := 'Модуль А1.4 канал 7';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.I_IN := USOP_A1_4.i8;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.QUAL_IN := USOP_A1_4.i8_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.Name := 'Пожарная насосная. Пуск дежурного повышающего насоса';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.ID := ULINT#71023;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START.Comment := 'Модуль А1.4 канал 8';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_START);
+
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.I_IN := USOP_A1_4.i9;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.QUAL_IN := USOP_A1_4.i9_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.Name := 'Пожарная насосная. Стоп дежурного повышающего насоса';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.Source := 'УСО П. ПЛК А1';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.ID := ULINT#71024;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.AlarmClass := DINT#101;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP.Comment := 'Модуль А1.4 канал 9';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_BOOST_H_STOP);
+
+(*//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01.I_IN := USOP_A1_4.i10;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01.QUAL_IN := USOP_A1_4.i10_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES01);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02.I_IN := USOP_A1_4.i11;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02.QUAL_IN := USOP_A1_4.i11_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES02);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03.I_IN := USOP_A1_4.i12;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03.QUAL_IN := USOP_A1_4.i12_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES03);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04.I_IN := USOP_A1_4.i13;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04.QUAL_IN := USOP_A1_4.i13_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES04);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05.I_IN := USOP_A1_4.i14;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05.QUAL_IN := USOP_A1_4.i14_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES05);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06.I_IN := USOP_A1_4.i15;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06.QUAL_IN := USOP_A1_4.i15_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES06);
+
+//УСОП Резерв
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07.I_IN := USOP_A1_4.i16;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07.QUAL_IN := USOP_A1_4.i16_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07.ShiftTime := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07.Name := 'УСОП Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07.Source := 'УСО П. ПЛК А1';
+FC_V_DGI(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DI_X_RES07);
+]]></ST>
+            </FunctionBlock>
+            <FunctionBlock UUID="F35ACAAD4E20300D052853A6B6D85A39" Name="ALG_DO_PLC">
+                <Variables />
+                <ST><![CDATA[//КТП №8516 (пан.01). Отключить выключатель 1Q
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.QUAL_IN := USOP_A1_5.o1_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.Comment := 'Пожарная насосная. Включить Пожарный насос №1';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.ID := ULINT#220001;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON.Txt_0 := 'Модуль А1.5 канал 1';
+USOP_A1_5.o1 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON);
+
+//КТП №8516 (пан.01). Включить выключатель 1Q
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.QUAL_IN := USOP_A1_5.o2_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.Comment := 'Пожарная насосная. Включить Пожарный насос №2';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.ID := ULINT#220002;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON.Txt_0 := 'Модуль А1.5 канал 2';
+USOP_A1_5.o2 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON);
+//АДЭС КТП №8516.   стоп АС
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.QUAL_IN := USOP_A1_5.o3_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.Comment := 'Пожарная насосная. Включить Пожарный насос №3';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.ID := ULINT#220003;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.Txt_0 := 'Модуль А1.5 канал 3';
+USOP_A1_5.o3 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON);
+//АДЭС КТП №8516.   пуск АС
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.QUAL_IN := USOP_A1_5.o4_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.Comment := 'Пожарная насосная. Включить Пожарный насос №4';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.ID := ULINT#220004;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.Txt_0 := 'Модуль А1.5 канал 4';
+USOP_A1_5.o4 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON);
+//КТП №8516 (пан.07). Отключить выключатель 2Q
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.QUAL_IN := USOP_A1_5.o5_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.Comment := 'Пожарная насосная. Включить пожарные насосы';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.ID := ULINT#220005;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08.Txt_0 := 'Модуль А1.5 канал 5';
+USOP_A1_5.o5 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES08);
+//КТП №8516 (пан.07). Включить выключатель 2Q
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.QUAL_IN := USOP_A1_5.o6_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.Comment := 'Пожарная насосная. Отключить пожарные насосы';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.ID := ULINT#220006;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.FAULT_ON := TRUE;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09.Txt_0 := 'Модуль А1.5 канал 6';
+USOP_A1_5.o6 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES09);
+//КТП №8516 (пан.09). Отключить выключатель 3Q
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10.QUAL_IN := USOP_A1_5.o7_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10.ID := ULINT#220007;
+USOP_A1_5.o7 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES10);
+//КТП №8516 (пан.09). Включить выключатель 3Q
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11.QUAL_IN := USOP_A1_5.o8_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11.IDE := 'PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11.ID := ULINT#220008;
+USOP_A1_5.o8 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES11);
+//КТП №8516 (пан.08). Включить АВР СВ
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12.QUAL_IN := USOP_A1_5.o9_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12.IDE := 'КТП №8516 (пан.08)';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12.ID := ULINT#220009;
+USOP_A1_5.o9 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES12);
+//КТП №8516 (пан.08). Отключить АВР СВ
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13.QUAL_IN := USOP_A1_5.o10_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13.IDE := 'КТП №8516 (пан.08)';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13.ID := ULINT#220010;
+USOP_A1_5.o10 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES13);
+//КТП №8516 (пан.02). Включить АВР АС
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14.QUAL_IN := USOP_A1_5.o11_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14.IDE := 'КТП №8516 (пан.02)';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14.ID := ULINT#220011;
+USOP_A1_5.o11 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES14);
+//КТП №8516 (пан.02). Отключить АВР AC
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15.QUAL_IN := USOP_A1_5.o12_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15.IDE := 'КТП №8516 (пан.02)';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15.ID := ULINT#220012;
+USOP_A1_5.o12 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES15);
+//АДЭС КТП №8516.   Включить АВГ
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16.QUAL_IN := USOP_A1_5.o13_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16.IDE := 'АДЭС КТП №8516';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16.ID := ULINT#220013;
+USOP_A1_5.o13 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES16);
+//АДЭС КТП №8516.   Отключить АВГ
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17.QUAL_IN := USOP_A1_5.o14_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17.IDE := 'АДЭС КТП №8516';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17.ID := ULINT#220014;
+USOP_A1_5.o14 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES17);
+//АДЭС КТП №8516.   Пуск АДЭС
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18.QUAL_IN := USOP_A1_5.o15_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18.IDE := 'АДЭС КТП №8516';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18.ID := ULINT#220015;
+USOP_A1_5.o15 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES18);
+//АДЭС КТП №8516.   Стоп АДЭС
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19.QUAL_IN := USOP_A1_5.o16_status;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19.TIME_SHIFT := ShiftTime;
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19.Comment := 'Резерв';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19.Source := 'УСО П';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19.IDE := 'АДЭС КТП №8516';
+PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19.ID := ULINT#220016;
+USOP_A1_5.o16 := FC_V_DGO(CHANNEL := PLC_GSP_SEV_KSSEV_E_USOP_DO_X_RES19);]]></ST>
+            </FunctionBlock>
+            <FunctionBlock UUID="582069B54F09B98AD156C59B2E8F4C29" Name="ALG_INIT_AnPar">
+                <Variables />
+                <ST><![CDATA[PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_RESET	:= FALSE;				//	BOOL		Сброс неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.ACKN_STATE		:=WORD#16#0;			//	WORD		Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность 
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.CMD_ACKN		:= FALSE;				//	BOOL		Квитирование событий с ВУ (с фейсплейта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.ID				:= 0;					//	INT		ID уникального датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.INPUT			:= 0.0;					//	REAL		Сырое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QUALITY		:= UINT_TO_BYTE(USOP_A1_6.i1_status);		//	BYTE		Код качества
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.F_INPUT		:= 0.0;					//	REAL		Числовое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.INPUT_FAULT	:= FALSE;				//	BOOL		Внешний признак неисправности датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_LAG		:= 0.0;					//	REAL		Задержка определения неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.S_TYPE			:= WORD#16#0;			//	WORD		Тип, прошивка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.CL_SD_TEMP		:= FALSE;				//	BOOL		Climatic - 1, Standart-0 диапазон температуры
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SQR_ON			:= FALSE;				//	BOOL		Квадратичная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.REVERSE_ON		:= FALSE;				//	BOOL		Обратная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.EXCEPT_EN		:= TRUE;				//	BOOL		Возможность исключения (ремонта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.EXCEPT_FAULT	:= FALSE;				//	BOOL		Исключать (выводить в ремонт) при неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.TESTING_ON		:= FALSE;				//	BOOL		Поверка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SUBST_ON		:= FALSE;				//	BOOL		Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SUBST_EN		:= FALSE;				//	BOOL		Возможность подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_SETP		:= 0.0;					//	REAL		Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_SETP			:= 0.0;					//	REAL		Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_SETP			:= 0.0;					//	REAL		Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_SETP		:= 0.0;					//	REAL		Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_LAG			:= 0.0;					//	REAL		Задержка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_LAG			:= 0.0;					//	REAL		Задержка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_LAG			:= 0.0;					//	REAL		Задержка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_LAG			:= 0.0;					//	REAL		Задержка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_ON			:= FALSE;				//	BOOL		Включено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_ON			:= FALSE;				//	BOOL		Включено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_ON			:= FALSE;				//	BOOL		Включено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_ON			:= FALSE;				//	BOOL		Включено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.INV_ON			:= FALSE;				//	BOOL		Разрешено определение НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_ON		:= TRUE;				//	BOOL		Разрешено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_ACT			:= FALSE;				//	BOOL		Введено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_ACT			:= FALSE;				//	BOOL		Введено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_ACT			:= FALSE;				//	BOOL		Введено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_ACT			:= FALSE;				//	BOOL		Введено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_ACT		:= TRUE;				//	BOOL		Введено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_L_RESET	:= FALSE;				//	BOOL		Сброс неисправности подключаемый
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Filtr_ON		:= FALSE;				//	BOOL		Разрешение фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.T_Filtr		:= 0.0;					//	REAL		Постоянная времени фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SUBSTIT		:= 0.0;					//	REAL		Значение подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LO_LIM			:= 0.0;					//	REAL		Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HI_LIM			:= 5.0;				//	REAL		Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HYST			:= 0.0;					//	REAL		Гистерезис
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.INV_SETP		:= 0.0;					//	REAL		Уставка НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.COMPENSATOR	:= 0.0;					//	REAL		Коэфф. Компенсации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.EXCEPT_ON		:= FALSE;				//	BOOL		Исключен (Ремонт)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.BELL_BLOCK		:= TRUE;				//	BOOL		Блокировка звуковой и световой сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.RSP			:= FALSE;				//	BOOL		СКАДА: 1 - RSP, 0 - WINCC
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.NAME			:= 'Уровень воды в пожарной ёмкости 750 м3';				//	STRING		Короткое имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.NAME_LONG		:= 'Пожарная насосная. Уровень воды в пожарной ёмкости 750 м3';		//	STRING		Длинное имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.UNIT			:= 'м в.ст.';					//	STRING		Единица измерения
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SOURCE			:= 'УСО П. ПЛК А1';	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.PRECISION			:= 1;	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.NAME_SHORT			:= 'L1';
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.NAME_SHKAF	:= 'Модуль А1.6 канал 1'; //наименование канала
+
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_RESET	:= FALSE;				//	BOOL		Сброс неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.ACKN_STATE		:=WORD#16#0;			//	WORD		Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность 
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.CMD_ACKN		:= FALSE;				//	BOOL		Квитирование событий с ВУ (с фейсплейта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.ID				:= 0;					//	INT		ID уникального датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.INPUT			:= 0.0;					//	REAL		Сырое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QUALITY		:= UINT_TO_BYTE(USOP_A1_6.i2_status);		//	BYTE		Код качества
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.F_INPUT		:= 0.0;					//	REAL		Числовое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.INPUT_FAULT	:= FALSE;				//	BOOL		Внешний признак неисправности датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_LAG		:= 0.0;					//	REAL		Задержка определения неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.S_TYPE			:= WORD#16#0;			//	WORD		Тип, прошивка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.CL_SD_TEMP		:= FALSE;				//	BOOL		Climatic - 1, Standart-0 диапазон температуры
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SQR_ON			:= FALSE;				//	BOOL		Квадратичная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.REVERSE_ON		:= FALSE;				//	BOOL		Обратная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.EXCEPT_EN		:= TRUE;				//	BOOL		Возможность исключения (ремонта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.EXCEPT_FAULT	:= FALSE;				//	BOOL		Исключать (выводить в ремонт) при неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.TESTING_ON		:= FALSE;				//	BOOL		Поверка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SUBST_ON		:= FALSE;				//	BOOL		Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SUBST_EN		:= FALSE;				//	BOOL		Возможность подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_SETP		:= 0.0;					//	REAL		Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_SETP			:= 0.0;					//	REAL		Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_SETP			:= 0.0;					//	REAL		Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_SETP		:= 0.0;					//	REAL		Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_LAG			:= 0.0;					//	REAL		Задержка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_LAG			:= 0.0;					//	REAL		Задержка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_LAG			:= 0.0;					//	REAL		Задержка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_LAG			:= 0.0;					//	REAL		Задержка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_ON			:= FALSE;				//	BOOL		Включено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_ON			:= FALSE;				//	BOOL		Включено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_ON			:= FALSE;				//	BOOL		Включено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_ON			:= FALSE;				//	BOOL		Включено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.INV_ON			:= FALSE;				//	BOOL		Разрешено определение НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_ON		:= TRUE;				//	BOOL		Разрешено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_ACT			:= FALSE;				//	BOOL		Введено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_ACT			:= FALSE;				//	BOOL		Введено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_ACT			:= FALSE;				//	BOOL		Введено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_ACT			:= FALSE;				//	BOOL		Введено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_ACT		:= TRUE;				//	BOOL		Введено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_L_RESET	:= FALSE;				//	BOOL		Сброс неисправности подключаемый
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Filtr_ON		:= FALSE;				//	BOOL		Разрешение фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.T_Filtr		:= 0.0;					//	REAL		Постоянная времени фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SUBSTIT		:= 0.0;					//	REAL		Значение подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LO_LIM			:= 0.0;					//	REAL		Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HI_LIM			:= 5.0;				//	REAL		Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HYST			:= 0.0;					//	REAL		Гистерезис
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.INV_SETP		:= 0.0;					//	REAL		Уставка НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.COMPENSATOR	:= 0.0;					//	REAL		Коэфф. Компенсации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.EXCEPT_ON		:= FALSE;				//	BOOL		Исключен (Ремонт)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.BELL_BLOCK		:= TRUE;				//	BOOL		Блокировка звуковой и световой сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.RSP			:= FALSE;				//	BOOL		СКАДА: 1 - RSP, 0 - WINCC
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.NAME			:= 'Уровень воды в пожарной ёмкости 150 м3';				//	STRING		Короткое имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.NAME_LONG		:= 'Пожарная насосная. Уровень воды в пожарной ёмкости 150 м3';		//	STRING		Длинное имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.UNIT			:= 'м в.ст.';					//	STRING		Единица измерения
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SOURCE			:= 'УСО П. ПЛК А1';	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.PRECISION			:= 1;	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.NAME_SHORT			:= 'L2';
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.NAME_SHKAF	:= 'Модуль А1.6 канал 2'; //наименование канала
+
+
+
+
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_RESET	:= FALSE;				//	BOOL		Сброс неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.ACKN_STATE		:=WORD#16#0;			//	WORD		Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность 
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.CMD_ACKN		:= FALSE;				//	BOOL		Квитирование событий с ВУ (с фейсплейта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.ID				:= 0;					//	INT		ID уникального датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.INPUT			:= 0.0;					//	REAL		Сырое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QUALITY		:= UINT_TO_BYTE(USOP_A1_6.i3_status);		//	BYTE		Код качества
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.F_INPUT		:= 0.0;					//	REAL		Числовое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.INPUT_FAULT	:= FALSE;				//	BOOL		Внешний признак неисправности датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_LAG		:= 0.0;					//	REAL		Задержка определения неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.S_TYPE			:= WORD#16#0;			//	WORD		Тип, прошивка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.CL_SD_TEMP		:= FALSE;				//	BOOL		Climatic - 1, Standart-0 диапазон температуры
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SQR_ON			:= FALSE;				//	BOOL		Квадратичная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.REVERSE_ON		:= FALSE;				//	BOOL		Обратная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.EXCEPT_EN		:= TRUE;				//	BOOL		Возможность исключения (ремонта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.EXCEPT_FAULT	:= FALSE;				//	BOOL		Исключать (выводить в ремонт) при неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.TESTING_ON		:= FALSE;				//	BOOL		Поверка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SUBST_ON		:= FALSE;				//	BOOL		Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SUBST_EN		:= FALSE;				//	BOOL		Возможность подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_SETP		:= 0.0;					//	REAL		Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_SETP			:= 0.0;					//	REAL		Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_SETP			:= 0.0;					//	REAL		Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_SETP		:= 0.0;					//	REAL		Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_LAG			:= 0.0;					//	REAL		Задержка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_LAG			:= 0.0;					//	REAL		Задержка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_LAG			:= 0.0;					//	REAL		Задержка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_LAG			:= 0.0;					//	REAL		Задержка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_ON			:= FALSE;				//	BOOL		Включено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_ON			:= FALSE;				//	BOOL		Включено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_ON			:= FALSE;				//	BOOL		Включено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_ON			:= FALSE;				//	BOOL		Включено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.INV_ON			:= FALSE;				//	BOOL		Разрешено определение НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_ON		:= TRUE;				//	BOOL		Разрешено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_ACT			:= FALSE;				//	BOOL		Введено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_ACT			:= FALSE;				//	BOOL		Введено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_ACT			:= TRUE;				//	BOOL		Введено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_ACT			:= TRUE;				//	BOOL		Введено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_ACT		:= TRUE;				//	BOOL		Введено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_L_RESET	:= FALSE;				//	BOOL		Сброс неисправности подключаемый
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Filtr_ON		:= FALSE;				//	BOOL		Разрешение фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.T_Filtr		:= 0.0;					//	REAL		Постоянная времени фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SUBSTIT		:= 0.0;					//	REAL		Значение подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LO_LIM			:= 0.0;					//	REAL		Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HI_LIM			:= 5.0;				//	REAL		Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HYST			:= 0.0;					//	REAL		Гистерезис
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.INV_SETP		:= 0.0;					//	REAL		Уставка НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.COMPENSATOR	:= 0.0;					//	REAL		Коэфф. Компенсации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.EXCEPT_ON		:= FALSE;				//	BOOL		Исключен (Ремонт)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.BELL_BLOCK		:= TRUE;				//	BOOL		Блокировка звуковой и световой сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.RSP			:= FALSE;				//	BOOL		СКАДА: 1 - RSP, 0 - WINCC
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.NAME			:= 'Давление воды в пожарном трубопроводе';				//	STRING		Короткое имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.NAME_LONG		:= 'Пожарная насосная. Давление воды в пожарном трубопроводе';		//	STRING		Длинное имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.UNIT			:= 'кПа';					//	STRING		Единица измерения
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SOURCE			:= 'УСО П. ПЛК А1';	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.PRECISION			:= 1;	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.NAME_SHORT			:= 'P1';
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.NAME_SHKAF	:= 'Модуль А1.6 канал 3'; //наименование канала
+
+
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_RESET	:= FALSE;				//	BOOL		Сброс неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.ACKN_STATE		:=WORD#16#0;			//	WORD		Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность 
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.CMD_ACKN		:= FALSE;				//	BOOL		Квитирование событий с ВУ (с фейсплейта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.ID				:= 0;					//	INT		ID уникального датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.INPUT			:= 0.0;					//	REAL		Сырое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QUALITY		:= UINT_TO_BYTE(USOP_A1_6.i4_status);		//	BYTE		Код качества
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.F_INPUT		:= 0.0;					//	REAL		Числовое значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.INPUT_FAULT	:= FALSE;				//	BOOL		Внешний признак неисправности датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_LAG		:= 0.0;					//	REAL		Задержка определения неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.S_TYPE			:= WORD#16#0;			//	WORD		Тип, прошивка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.CL_SD_TEMP		:= FALSE;				//	BOOL		Climatic - 1, Standart-0 диапазон температуры
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SQR_ON			:= FALSE;				//	BOOL		Квадратичная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.REVERSE_ON		:= FALSE;				//	BOOL		Обратная шкала
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.EXCEPT_EN		:= TRUE;				//	BOOL		Возможность исключения (ремонта)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.EXCEPT_FAULT	:= FALSE;				//	BOOL		Исключать (выводить в ремонт) при неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.TESTING_ON		:= FALSE;				//	BOOL		Поверка
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SUBST_ON		:= FALSE;				//	BOOL		Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SUBST_EN		:= FALSE;				//	BOOL		Возможность подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_SETP		:= 0.0;					//	REAL		Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_SETP			:= 0.0;					//	REAL		Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_SETP			:= 0.0;					//	REAL		Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_SETP		:= 0.0;					//	REAL		Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_LAG			:= 0.0;					//	REAL		Задержка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_LAG			:= 0.0;					//	REAL		Задержка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_LAG			:= 0.0;					//	REAL		Задержка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_LAG			:= 0.0;					//	REAL		Задержка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_ON			:= FALSE;				//	BOOL		Включено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_ON			:= FALSE;				//	BOOL		Включено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_ON			:= FALSE;				//	BOOL		Включено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_ON			:= FALSE;				//	BOOL		Включено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.INV_ON			:= FALSE;				//	BOOL		Разрешено определение НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_ON		:= TRUE;				//	BOOL		Разрешено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_ACT			:= FALSE;				//	BOOL		Введено НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_ACT			:= FALSE;				//	BOOL		Введено НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_ACT			:= TRUE;				//	BOOL		Введено ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_ACT			:= TRUE;				//	BOOL		Введено ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_ACT		:= TRUE;				//	BOOL		Введено определение неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_L_RESET	:= FALSE;				//	BOOL		Сброс неисправности подключаемый
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Filtr_ON		:= FALSE;				//	BOOL		Разрешение фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.T_Filtr		:= 0.0;					//	REAL		Постоянная времени фильтра
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SUBSTIT		:= 0.0;					//	REAL		Значение подмены
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LO_LIM			:= 0.0;					//	REAL		Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HI_LIM			:= 5.0;				//	REAL		Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HYST			:= 0.0;					//	REAL		Гистерезис
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.INV_SETP		:= 0.0;					//	REAL		Уставка НЗ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.COMPENSATOR	:= 0.0;					//	REAL		Коэфф. Компенсации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.EXCEPT_ON		:= FALSE;				//	BOOL		Исключен (Ремонт)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.BELL_BLOCK		:= TRUE;				//	BOOL		Блокировка звуковой и световой сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.RSP			:= FALSE;				//	BOOL		СКАДА: 1 - RSP, 0 - WINCC
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.NAME			:= 'Давление воды в пожарном трубопроводе АБК';				//	STRING		Короткое имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.NAME_LONG		:= 'Пожарная насосная. Давление воды в пожарном трубопроводе АБК';		//	STRING		Длинное имя датчика
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.UNIT			:= 'кПа';					//	STRING		Единица измерения
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SOURCE			:= 'УСО П. ПЛК А1';	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.PRECISION			:= 1;	
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.NAME_SHORT			:= 'P2';
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.NAME_SHKAF	:= 'Модуль А1.6 канал 4'; //наименование канала]]></ST>
+            </FunctionBlock>
+            <FunctionBlock UUID="F24C6D6C4E9A16B4F94923B6B62D550F" Name="ALG_Input_AnPar">
+                <Variables>
+                    <Variable UUID="040A06C145DDB0AF1DA43BA321BBC477" Name="CurTime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+                    <Variable UUID="F2C80A9D4CB292881A0EBDBEFC0B276E" Name="oldCurTime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+                    <Variable UUID="FA0692D44E57C1581C3EF4966C1612F1" Name="TMR_BLK_ON" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                    <Variable UUID="844F8C1F4FE2C67FBB92BFAEB1DEE701" Name="INIT_TUNE_AnPar" Type="ALG_INIT_AnPar" TypeUUID="582069B54F09B98AD156C59B2E8F4C29" Usage="internal" />
+                    <Variable UUID="A271684D4E54AC2DE8FEA3AD4B5EB439" Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z" Type="SENSOR_FB" TypeUUID="247860654AE611058B7B56A711486D86" Usage="internal" />
+                    <Variable UUID="BD93506B45AE78034A827A9CA7FE4D0F" Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z" Type="SENSOR_FB" TypeUUID="247860654AE611058B7B56A711486D86" Usage="internal" />
+                    <Variable UUID="37F0B68848D969B3B73204A60BB9E38E" Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z" Type="SENSOR_FB" TypeUUID="247860654AE611058B7B56A711486D86" Usage="internal" />
+                    <Variable UUID="57946A4543D5E8B320ACAA8D811CF1A7" Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z" Type="SENSOR_FB" TypeUUID="247860654AE611058B7B56A711486D86" Usage="internal" />
+                </Variables>
+                <ST><![CDATA[//Измеряем длительность цикла
+CurTime := CURRENT_TIMESTAMP();
+cycleTime := LREAL_TO_REAL(ABS(CurTime - oldCurTime))/1000.0;
+oldCurTime := CurTime;
+
+TMR_BLK_ON(IN :=TRUE
+			,PT :=T#5s);
+TMO_BLK_ON :=TMR_BLK_ON.Q;
+
+if NOT TMO_BLK_ON then INIT_TUNE_AnPar();
+end_if;
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z(ID    := 0 //INT. ID уникального датчика
+                                       ,INPUT   := REAL_TO_DINT(11937.0 + (59550.0 - 11937.0)*(USOP_A1_6.i1 - 4.0)/16.0)                   //DINT. Сырое значение
+                                       ,QUALITY   := USOP_A1_6.i1_status           //WORD. Код качества
+                                       ,QUALITY_BLOCK := UINT#0 //SAUT_A1_FIXTURE.Slot3 //WORD. Статус модуля
+                                       ,F_INPUT   := 0.0 //REAL. Числовое значение
+                                       ,INPUT_FAULT  := FALSE //BOOL. Внешний признак неисправности датчика
+                                       ,FAULT_LAG  := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_LAG))) //TIME 0  Задержка определения неисправности
+                                       ,S_TYPE   := WORD#16#0 //WORD 0  Тип, прошивка
+                                       ,CL_SD_TEMP  := FALSE //BOOL 0  Climatic - 1, Standart-0 диапазон температуры
+                                       ,SQR_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SQR_ON //BOOL 0  Квадратичная шкала
+                                       ,REVERSE_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.REVERSE_ON //BOOL 0  Обратная шкала
+                                       ,EXCEPT_EN  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.EXCEPT_EN //BOOL 0  Возможность исключения (ремонта)
+                                       ,EXCEPT_FAULT := FALSE //BOOL 0  Исключать (выводить в ремонт) при неисправности
+                                       ,TESTING_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.TESTING_ON //BOOL 0  Поверка
+                                       ,SUBST_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SUBST_ON //BOOL 0  Подмена
+                                       ,SUBST_EN  := TRUE //BOOL 0  Возможность подмены
+                                       ,LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_SETP //REAL 0  Уставка НАУ
+                                       ,L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_SETP //REAL 0  Уставка НПУ
+                                       ,H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_SETP //REAL 0  Уставка ВПУ
+                                       ,HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_SETP //REAL 0  Уставка ВАУ
+                                       ,LL_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_LAG))) //REAL 0  Задержка НАУ
+                                       ,L_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_LAG))) //REAL 0  Задержка НПУ
+                                       ,H_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_LAG))) //REAL 0  Задержка НПУ
+                                       ,HH_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_LAG))) //REAL 0  Задержка ВАУ
+                                       ,LL_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_ON //BOOL 0  Включено НАУ
+                                       ,L_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_ON //BOOL 0  Включено НПУ
+                                       ,H_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_ON //BOOL 0  Включено ВПУ
+                                       ,HH_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_ON //BOOL 0  Включено ВАУ
+                                       ,INV_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.INV_ON //BOOL 0  Разрешено определение НЗ
+                                       ,FAULT_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_ON //BOOL 0  Разрешено определение неисправности
+                                       ,LL_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LL_ACT //BOOL 0  Введено НАУ
+                                       ,L_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.L_ACT //BOOL 0  Введено НПУ
+                                       ,H_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.H_ACT //BOOL 0  Введено ВПУ
+                                       ,HH_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HH_ACT //BOOL 0  Введено ВАУ
+                                       ,FAULT_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_ACT //BOOL 0  Введено определение неисправности
+                                       ,FAULT_L_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_L_RESET //BOOL 0  Сброс неисправности подключаемый
+                                       ,Filtr_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Filtr_ON //BOOL 0  Разрешение фильтра
+                                       ,T_Filtr   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.T_Filtr //REAL 0  Постоянная времени фильтра
+                                       ,SUBSTIT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SUBSTIT //REAL 0  Значение подмены
+                                       ,LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.LO_LIM //REAL 0  Нижний предел
+                                       ,HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HI_LIM //REAL 0  Верхний предел
+                                       ,sensorInpMin := DINT#11937
+                                       ,sensorInpMax := DINT#59550
+                                       ,HYST   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.HYST //REAL 0  Гистерезис
+                                       ,INV_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.INV_SETP //REAL 0  Уставка НЗ
+                                       ,COMPENSATOR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.COMPENSATOR //REAL 0  Коэфф. Компенсации
+                                       ,EXCEPT_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.EXCEPT_ON //BOOL 0  Исключен (Ремонт)
+                                       ,BELL_BLOCK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.BELL_BLOCK //BOOL 0  Блокировка звуковой и световой сигнализации
+                                       ,RSP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.RSP //BOOL 0  СКАДА: 1 - RSP, 0 - WINCC
+									   ,AUTO_RESET := TRUE
+                                       //INPUT_OUTPUT
+                                       ,FAULT_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_RESET //BOOL 0  Сброс неисправности
+                                       ,ACKN_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.ACKN_STATE //WORD 0  Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность
+                                       ,CMD_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.CMD_ACKN //BOOL 0  Квитирование событий с ВУ (с фейсплейта)
+                                       );
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.OUTPUT_FREE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.OUTPUT_FREE; // REAL  Значение без учета подмен, фильтров и неисправностей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.OUTPUT_P   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.OUTPUT_P; // REAL  Значение в процентах
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_SUBST_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_SUBST_ON; // BOOL  Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.EXCEPTED   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.EXCEPTED; // BOOL  Исключен (в ремонте)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.FAULT;  // BOOL  Неисправность
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.ALM_CODE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.ALM_CODE; // INT  Код неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_ACK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.FAULT_ACK; // BOOL  Неисправность квитирована
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.FAULT_CUR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.FAULT_CUR; // BOOL  Неисправность текущая
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.VSTATUS   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.VSTATUS;  // DWORD  Групповой дисплей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_LL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_LL;  // BOOL  Срабатывание НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_L   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_L;  // BOOL  Срабатывание НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_H   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_H;  // BOOL  Срабатывание ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_HH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_HH;  // BOOL  Срабатывание ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_OVL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_OVL; // BOOL  Зашкал вниз
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_OVH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_OVH; // BOOL  Зашкал вверх
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_LO_LIM; // REAL  Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_HI_LIM; // REAL  Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_LL_SETP; // REAL  Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_L_SETP; // REAL  Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_H_SETP; // REAL  Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.Q_HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.Q_HH_SETP; // REAL  Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.ALARM_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.ALARM_STATE; // DWORD  Состояние сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QLL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.QLL_EV; // INT  Код события НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.QL_EV; // INT  Код события НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.QH_EV; // INT  Код события ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QHH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.QHH_EV; // INT  Код события ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QFAIL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.QFAIL_EV; // INT  Код события неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.QALERT_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.QALERT_EV; // INT  Код суммарного события
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.UST_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.UST_STATE; // DWORD  Слово ввода уставок
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.UST_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1z.UST_ACKN; // BOOL  Уставка квитирована
+
+
+FC_Ai_Check(VSTATUS := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.VSTATUS, 
+			UST_STATE := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.UST_STATE, 
+			VSTATUS_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.VSTATUS_OLD, 
+			UST_STATE_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.UST_STATE_OLD,
+			ShiftTime := ShiftTime, 
+			TEXT := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.NAME_LONG, 
+			TEXT2 := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.SOURCE,
+			channel := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE1.NAME_SHKAF);
+
+
+
+
+
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z(ID    := 0 //INT. ID уникального датчика
+                                       ,INPUT   := REAL_TO_DINT(11937.0 + (59550.0 - 11937.0)*(USOP_A1_6.i2 - 4.0)/16.0)                   //DINT. Сырое значение
+                                       ,QUALITY   := USOP_A1_6.i2_status           //WORD. Код качества
+                                       ,QUALITY_BLOCK := UINT#0 //SAUT_A1_FIXTURE.Slot3 //WORD. Статус модуля
+                                       ,F_INPUT   := 0.0 //REAL. Числовое значение
+                                       ,INPUT_FAULT  := FALSE //BOOL. Внешний признак неисправности датчика
+                                       ,FAULT_LAG  := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_LAG))) //TIME 0  Задержка определения неисправности
+                                       ,S_TYPE   := WORD#16#0 //WORD 0  Тип, прошивка
+                                       ,CL_SD_TEMP  := FALSE //BOOL 0  Climatic - 1, Standart-0 диапазон температуры
+                                       ,SQR_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SQR_ON //BOOL 0  Квадратичная шкала
+                                       ,REVERSE_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.REVERSE_ON //BOOL 0  Обратная шкала
+                                       ,EXCEPT_EN  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.EXCEPT_EN //BOOL 0  Возможность исключения (ремонта)
+                                       ,EXCEPT_FAULT := FALSE //BOOL 0  Исключать (выводить в ремонт) при неисправности
+                                       ,TESTING_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.TESTING_ON //BOOL 0  Поверка
+                                       ,SUBST_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SUBST_ON //BOOL 0  Подмена
+                                       ,SUBST_EN  := TRUE //BOOL 0  Возможность подмены
+                                       ,LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_SETP //REAL 0  Уставка НАУ
+                                       ,L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_SETP //REAL 0  Уставка НПУ
+                                       ,H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_SETP //REAL 0  Уставка ВПУ
+                                       ,HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_SETP //REAL 0  Уставка ВАУ
+                                       ,LL_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_LAG))) //REAL 0  Задержка НАУ
+                                       ,L_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_LAG))) //REAL 0  Задержка НПУ
+                                       ,H_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_LAG))) //REAL 0  Задержка НПУ
+                                       ,HH_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_LAG))) //REAL 0  Задержка ВАУ
+                                       ,LL_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_ON //BOOL 0  Включено НАУ
+                                       ,L_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_ON //BOOL 0  Включено НПУ
+                                       ,H_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_ON //BOOL 0  Включено ВПУ
+                                       ,HH_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_ON //BOOL 0  Включено ВАУ
+                                       ,INV_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.INV_ON //BOOL 0  Разрешено определение НЗ
+                                       ,FAULT_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_ON //BOOL 0  Разрешено определение неисправности
+                                       ,LL_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LL_ACT //BOOL 0  Введено НАУ
+                                       ,L_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.L_ACT //BOOL 0  Введено НПУ
+                                       ,H_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.H_ACT //BOOL 0  Введено ВПУ
+                                       ,HH_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HH_ACT //BOOL 0  Введено ВАУ
+                                       ,FAULT_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_ACT //BOOL 0  Введено определение неисправности
+                                       ,FAULT_L_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_L_RESET //BOOL 0  Сброс неисправности подключаемый
+                                       ,Filtr_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Filtr_ON //BOOL 0  Разрешение фильтра
+                                       ,T_Filtr   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.T_Filtr //REAL 0  Постоянная времени фильтра
+                                       ,SUBSTIT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SUBSTIT //REAL 0  Значение подмены
+                                       ,LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.LO_LIM //REAL 0  Нижний предел
+                                       ,HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HI_LIM //REAL 0  Верхний предел
+                                       ,sensorInpMin := DINT#11937
+                                       ,sensorInpMax := DINT#59550
+                                       ,HYST   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.HYST //REAL 0  Гистерезис
+                                       ,INV_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.INV_SETP //REAL 0  Уставка НЗ
+                                       ,COMPENSATOR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.COMPENSATOR //REAL 0  Коэфф. Компенсации
+                                       ,EXCEPT_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.EXCEPT_ON //BOOL 0  Исключен (Ремонт)
+                                       ,BELL_BLOCK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.BELL_BLOCK //BOOL 0  Блокировка звуковой и световой сигнализации
+                                       ,RSP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.RSP //BOOL 0  СКАДА: 1 - RSP, 0 - WINCC
+									   ,AUTO_RESET := TRUE
+                                       //INPUT_OUTPUT
+                                       ,FAULT_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_RESET //BOOL 0  Сброс неисправности
+                                       ,ACKN_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.ACKN_STATE //WORD 0  Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность
+                                       ,CMD_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.CMD_ACKN //BOOL 0  Квитирование событий с ВУ (с фейсплейта)
+                                       );
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.OUTPUT_FREE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.OUTPUT_FREE; // REAL  Значение без учета подмен, фильтров и неисправностей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.OUTPUT_P   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.OUTPUT_P; // REAL  Значение в процентах
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_SUBST_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_SUBST_ON; // BOOL  Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.EXCEPTED   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.EXCEPTED; // BOOL  Исключен (в ремонте)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.FAULT;  // BOOL  Неисправность
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.ALM_CODE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.ALM_CODE; // INT  Код неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_ACK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.FAULT_ACK; // BOOL  Неисправность квитирована
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.FAULT_CUR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.FAULT_CUR; // BOOL  Неисправность текущая
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.VSTATUS   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.VSTATUS;  // DWORD  Групповой дисплей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_LL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_LL;  // BOOL  Срабатывание НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_L   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_L;  // BOOL  Срабатывание НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_H   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_H;  // BOOL  Срабатывание ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_HH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_HH;  // BOOL  Срабатывание ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_OVL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_OVL; // BOOL  Зашкал вниз
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_OVH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_OVH; // BOOL  Зашкал вверх
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_LO_LIM; // REAL  Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_HI_LIM; // REAL  Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_LL_SETP; // REAL  Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_L_SETP; // REAL  Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_H_SETP; // REAL  Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.Q_HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.Q_HH_SETP; // REAL  Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.ALARM_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.ALARM_STATE; // DWORD  Состояние сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QLL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.QLL_EV; // INT  Код события НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.QL_EV; // INT  Код события НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.QH_EV; // INT  Код события ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QHH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.QHH_EV; // INT  Код события ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QFAIL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.QFAIL_EV; // INT  Код события неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.QALERT_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.QALERT_EV; // INT  Код суммарного события
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.UST_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.UST_STATE; // DWORD  Слово ввода уставок
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.UST_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2z.UST_ACKN; // BOOL  Уставка квитирована
+
+
+FC_Ai_Check(VSTATUS := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.VSTATUS, 
+			UST_STATE := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.UST_STATE, 
+			VSTATUS_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.VSTATUS_OLD, 
+			UST_STATE_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.UST_STATE_OLD,
+			ShiftTime := ShiftTime, 
+			TEXT := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.NAME_LONG, 
+			TEXT2 := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.SOURCE,
+			channel := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE2.NAME_SHKAF);
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z(ID    := 0 //INT. ID уникального датчика
+                                       ,INPUT   := REAL_TO_DINT(11937.0 + (59550.0 - 11937.0)*(USOP_A1_6.i3 - 4.0)/16.0)                   //DINT. Сырое значение
+                                       ,QUALITY   := USOP_A1_6.i3_status           //WORD. Код качества
+                                       ,QUALITY_BLOCK := UINT#0 //SAUT_A1_FIXTURE.Slot3 //WORD. Статус модуля
+                                       ,F_INPUT   := 0.0 //REAL. Числовое значение
+                                       ,INPUT_FAULT  := FALSE //BOOL. Внешний признак неисправности датчика
+                                       ,FAULT_LAG  := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_LAG))) //TIME 0  Задержка определения неисправности
+                                       ,S_TYPE   := WORD#16#0 //WORD 0  Тип, прошивка
+                                       ,CL_SD_TEMP  := FALSE //BOOL 0  Climatic - 1, Standart-0 диапазон температуры
+                                       ,SQR_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SQR_ON //BOOL 0  Квадратичная шкала
+                                       ,REVERSE_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.REVERSE_ON //BOOL 0  Обратная шкала
+                                       ,EXCEPT_EN  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.EXCEPT_EN //BOOL 0  Возможность исключения (ремонта)
+                                       ,EXCEPT_FAULT := FALSE //BOOL 0  Исключать (выводить в ремонт) при неисправности
+                                       ,TESTING_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.TESTING_ON //BOOL 0  Поверка
+                                       ,SUBST_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SUBST_ON //BOOL 0  Подмена
+                                       ,SUBST_EN  := TRUE //BOOL 0  Возможность подмены
+                                       ,LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_SETP //REAL 0  Уставка НАУ
+                                       ,L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_SETP //REAL 0  Уставка НПУ
+                                       ,H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_SETP //REAL 0  Уставка ВПУ
+                                       ,HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_SETP //REAL 0  Уставка ВАУ
+                                       ,LL_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_LAG))) //REAL 0  Задержка НАУ
+                                       ,L_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_LAG))) //REAL 0  Задержка НПУ
+                                       ,H_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_LAG))) //REAL 0  Задержка НПУ
+                                       ,HH_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_LAG))) //REAL 0  Задержка ВАУ
+                                       ,LL_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_ON //BOOL 0  Включено НАУ
+                                       ,L_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_ON //BOOL 0  Включено НПУ
+                                       ,H_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_ON //BOOL 0  Включено ВПУ
+                                       ,HH_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_ON //BOOL 0  Включено ВАУ
+                                       ,INV_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.INV_ON //BOOL 0  Разрешено определение НЗ
+                                       ,FAULT_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_ON //BOOL 0  Разрешено определение неисправности
+                                       ,LL_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LL_ACT //BOOL 0  Введено НАУ
+                                       ,L_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.L_ACT //BOOL 0  Введено НПУ
+                                       ,H_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.H_ACT //BOOL 0  Введено ВПУ
+                                       ,HH_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HH_ACT //BOOL 0  Введено ВАУ
+                                       ,FAULT_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_ACT //BOOL 0  Введено определение неисправности
+                                       ,FAULT_L_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_L_RESET //BOOL 0  Сброс неисправности подключаемый
+                                       ,Filtr_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Filtr_ON //BOOL 0  Разрешение фильтра
+                                       ,T_Filtr   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.T_Filtr //REAL 0  Постоянная времени фильтра
+                                       ,SUBSTIT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SUBSTIT //REAL 0  Значение подмены
+                                       ,LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.LO_LIM //REAL 0  Нижний предел
+                                       ,HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HI_LIM //REAL 0  Верхний предел
+                                       ,sensorInpMin := DINT#11937
+                                       ,sensorInpMax := DINT#59550
+                                       ,HYST   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.HYST //REAL 0  Гистерезис
+                                       ,INV_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.INV_SETP //REAL 0  Уставка НЗ
+                                       ,COMPENSATOR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.COMPENSATOR //REAL 0  Коэфф. Компенсации
+                                       ,EXCEPT_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.EXCEPT_ON //BOOL 0  Исключен (Ремонт)
+                                       ,BELL_BLOCK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.BELL_BLOCK //BOOL 0  Блокировка звуковой и световой сигнализации
+                                       ,RSP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.RSP //BOOL 0  СКАДА: 1 - RSP, 0 - WINCC
+									   ,AUTO_RESET := TRUE
+                                       //INPUT_OUTPUT
+                                       ,FAULT_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_RESET //BOOL 0  Сброс неисправности
+                                       ,ACKN_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.ACKN_STATE //WORD 0  Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность
+                                       ,CMD_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.CMD_ACKN //BOOL 0  Квитирование событий с ВУ (с фейсплейта)
+                                       );
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.OUTPUT_FREE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.OUTPUT_FREE; // REAL  Значение без учета подмен, фильтров и неисправностей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.OUTPUT_P   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.OUTPUT_P; // REAL  Значение в процентах
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_SUBST_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_SUBST_ON; // BOOL  Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.EXCEPTED   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.EXCEPTED; // BOOL  Исключен (в ремонте)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.FAULT;  // BOOL  Неисправность
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.ALM_CODE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.ALM_CODE; // INT  Код неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_ACK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.FAULT_ACK; // BOOL  Неисправность квитирована
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.FAULT_CUR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.FAULT_CUR; // BOOL  Неисправность текущая
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.VSTATUS   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.VSTATUS;  // DWORD  Групповой дисплей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_LL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_LL;  // BOOL  Срабатывание НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_L   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_L;  // BOOL  Срабатывание НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_H   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_H;  // BOOL  Срабатывание ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_HH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_HH;  // BOOL  Срабатывание ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_OVL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_OVL; // BOOL  Зашкал вниз
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_OVH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_OVH; // BOOL  Зашкал вверх
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_LO_LIM; // REAL  Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_HI_LIM; // REAL  Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_LL_SETP; // REAL  Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_L_SETP; // REAL  Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_H_SETP; // REAL  Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.Q_HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.Q_HH_SETP; // REAL  Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.ALARM_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.ALARM_STATE; // DWORD  Состояние сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QLL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.QLL_EV; // INT  Код события НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.QL_EV; // INT  Код события НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.QH_EV; // INT  Код события ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QHH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.QHH_EV; // INT  Код события ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QFAIL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.QFAIL_EV; // INT  Код события неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.QALERT_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.QALERT_EV; // INT  Код суммарного события
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.UST_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.UST_STATE; // DWORD  Слово ввода уставок
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.UST_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3z.UST_ACKN; // BOOL  Уставка квитирована
+
+
+FC_Ai_Check(VSTATUS := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.VSTATUS, 
+			UST_STATE := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.UST_STATE, 
+			VSTATUS_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.VSTATUS_OLD, 
+			UST_STATE_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.UST_STATE_OLD,
+			ShiftTime := ShiftTime, 
+			TEXT := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.NAME_LONG, 
+			TEXT2 := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.SOURCE,
+			channel := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE3.NAME_SHKAF);
+
+
+
+
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z(ID    := 0 //INT. ID уникального датчика
+                                       ,INPUT   := REAL_TO_DINT(11937.0 + (59550.0 - 11937.0)*(USOP_A1_6.i4 - 4.0)/16.0)                   //DINT. Сырое значение
+                                       ,QUALITY   := USOP_A1_6.i4_status           //WORD. Код качества
+                                       ,QUALITY_BLOCK := UINT#0 //SAUT_A1_FIXTURE.Slot3 //WORD. Статус модуля
+                                       ,F_INPUT   := 0.0 //REAL. Числовое значение
+                                       ,INPUT_FAULT  := FALSE //BOOL. Внешний признак неисправности датчика
+                                       ,FAULT_LAG  := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_LAG))) //TIME 0  Задержка определения неисправности
+                                       ,S_TYPE   := WORD#16#0 //WORD 0  Тип, прошивка
+                                       ,CL_SD_TEMP  := FALSE //BOOL 0  Climatic - 1, Standart-0 диапазон температуры
+                                       ,SQR_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SQR_ON //BOOL 0  Квадратичная шкала
+                                       ,REVERSE_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.REVERSE_ON //BOOL 0  Обратная шкала
+                                       ,EXCEPT_EN  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.EXCEPT_EN //BOOL 0  Возможность исключения (ремонта)
+                                       ,EXCEPT_FAULT := FALSE //BOOL 0  Исключать (выводить в ремонт) при неисправности
+                                       ,TESTING_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.TESTING_ON //BOOL 0  Поверка
+                                       ,SUBST_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SUBST_ON //BOOL 0  Подмена
+                                       ,SUBST_EN  := TRUE //BOOL 0  Возможность подмены
+                                       ,LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_SETP //REAL 0  Уставка НАУ
+                                       ,L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_SETP //REAL 0  Уставка НПУ
+                                       ,H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_SETP //REAL 0  Уставка ВПУ
+                                       ,HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_SETP //REAL 0  Уставка ВАУ
+                                       ,LL_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_LAG))) //REAL 0  Задержка НАУ
+                                       ,L_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_LAG))) //REAL 0  Задержка НПУ
+                                       ,H_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_LAG))) //REAL 0  Задержка НПУ
+                                       ,HH_LAG   := STRING_TO_TIME(INT_TO_STRING(REAL_TO_INT(PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_LAG))) //REAL 0  Задержка ВАУ
+                                       ,LL_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_ON //BOOL 0  Включено НАУ
+                                       ,L_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_ON //BOOL 0  Включено НПУ
+                                       ,H_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_ON //BOOL 0  Включено ВПУ
+                                       ,HH_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_ON //BOOL 0  Включено ВАУ
+                                       ,INV_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.INV_ON //BOOL 0  Разрешено определение НЗ
+                                       ,FAULT_ON  := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_ON //BOOL 0  Разрешено определение неисправности
+                                       ,LL_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LL_ACT //BOOL 0  Введено НАУ
+                                       ,L_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.L_ACT //BOOL 0  Введено НПУ
+                                       ,H_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.H_ACT //BOOL 0  Введено ВПУ
+                                       ,HH_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HH_ACT //BOOL 0  Введено ВАУ
+                                       ,FAULT_ACT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_ACT //BOOL 0  Введено определение неисправности
+                                       ,FAULT_L_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_L_RESET //BOOL 0  Сброс неисправности подключаемый
+                                       ,Filtr_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Filtr_ON //BOOL 0  Разрешение фильтра
+                                       ,T_Filtr   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.T_Filtr //REAL 0  Постоянная времени фильтра
+                                       ,SUBSTIT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SUBSTIT //REAL 0  Значение подмены
+                                       ,LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.LO_LIM //REAL 0  Нижний предел
+                                       ,HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HI_LIM //REAL 0  Верхний предел
+                                       ,sensorInpMin := DINT#11937
+                                       ,sensorInpMax := DINT#59550
+                                       ,HYST   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.HYST //REAL 0  Гистерезис
+                                       ,INV_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.INV_SETP //REAL 0  Уставка НЗ
+                                       ,COMPENSATOR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.COMPENSATOR //REAL 0  Коэфф. Компенсации
+                                       ,EXCEPT_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.EXCEPT_ON //BOOL 0  Исключен (Ремонт)
+                                       ,BELL_BLOCK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.BELL_BLOCK //BOOL 0  Блокировка звуковой и световой сигнализации
+                                       ,RSP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.RSP //BOOL 0  СКАДА: 1 - RSP, 0 - WINCC
+									   ,AUTO_RESET := TRUE
+                                       //INPUT_OUTPUT
+                                       ,FAULT_RESET   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_RESET //BOOL 0  Сброс неисправности
+                                       ,ACKN_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.ACKN_STATE //WORD 0  Команда на квитирование. 0 - ВПУ; 1 - НПУ; 2 - ВАУ; 3 - НАУ; 4 - неисправность
+                                       ,CMD_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.CMD_ACKN //BOOL 0  Квитирование событий с ВУ (с фейсплейта)
+                                       );
+
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.OUTPUT_FREE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.OUTPUT_FREE; // REAL  Значение без учета подмен, фильтров и неисправностей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.OUTPUT_P   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.OUTPUT_P; // REAL  Значение в процентах
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_SUBST_ON   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_SUBST_ON; // BOOL  Подмена
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.EXCEPTED   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.EXCEPTED; // BOOL  Исключен (в ремонте)
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.FAULT;  // BOOL  Неисправность
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.ALM_CODE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.ALM_CODE; // INT  Код неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_ACK   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.FAULT_ACK; // BOOL  Неисправность квитирована
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.OUTPUT   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.OUTPUT;  // REAL  Значение
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.FAULT_CUR   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.FAULT_CUR; // BOOL  Неисправность текущая
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.VSTATUS   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.VSTATUS;  // DWORD  Групповой дисплей
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_LL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_LL;  // BOOL  Срабатывание НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_L   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_L;  // BOOL  Срабатывание НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_H   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_H;  // BOOL  Срабатывание ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_HH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_HH;  // BOOL  Срабатывание ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_OVL   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_OVL; // BOOL  Зашкал вниз
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_OVH   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_OVH; // BOOL  Зашкал вверх
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_LO_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_LO_LIM; // REAL  Нижний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_HI_LIM   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_HI_LIM; // REAL  Верхний предел
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_LL_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_LL_SETP; // REAL  Уставка НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_L_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_L_SETP; // REAL  Уставка НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_H_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_H_SETP; // REAL  Уставка ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.Q_HH_SETP   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.Q_HH_SETP; // REAL  Уставка ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.ALARM_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.ALARM_STATE; // DWORD  Состояние сигнализации
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QLL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.QLL_EV; // INT  Код события НАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.QL_EV; // INT  Код события НПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.QH_EV; // INT  Код события ВПУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QHH_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.QHH_EV; // INT  Код события ВАУ
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QFAIL_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.QFAIL_EV; // INT  Код события неисправности
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.QALERT_EV   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.QALERT_EV; // INT  Код суммарного события
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.UST_STATE   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.UST_STATE; // DWORD  Слово ввода уставок
+PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.UST_ACKN   := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4z.UST_ACKN; // BOOL  Уставка квитирована
+
+
+FC_Ai_Check(VSTATUS := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.VSTATUS, 
+			UST_STATE := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.UST_STATE, 
+			VSTATUS_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.VSTATUS_OLD, 
+			UST_STATE_OLD := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.UST_STATE_OLD,
+			ShiftTime := ShiftTime, 
+			TEXT := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.NAME_LONG, 
+			TEXT2 := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.SOURCE,
+			channel := PLC_GSP_SEV_KSSEV_E_USOP_AI_W_PIPE4.NAME_SHKAF);]]></ST>
+            </FunctionBlock>
+            <FunctionBlock UUID="2F9F9BDB4D95979AD5D718A8CC483687" Name="COUNTER">
+                <Variables />
+                <ST><![CDATA[//Счетчик 
+IF COUNTER.COUNT_USOP <= 20000 THEN
+		COUNTER.COUNT_USOP := COUNTER.COUNT_USOP + 1;
+		ELSE COUNTER.COUNT_USOP := 0;
+END_IF;]]></ST>
+            </FunctionBlock>
+            <FunctionBlock UUID="80D89F9A4C4D7759E384CEB727C5FC1F" Name="SLOT_FAULT">
+                <Variables />
+                <ST><![CDATA[USOP_A1_EVENT_FAULT.CPU.status := PLC_USOP_A1_FAULT.CPU;
+USOP_A1_EVENT_FAULT.CPU.SOURCE := 'УСО П. ПЛК А1';
+USOP_A1_EVENT_FAULT.CPU.NAME :=  'Частичная неисправность в корзине ПЛК';
+FC_FAULT_CHECK(FAULT := USOP_A1_EVENT_FAULT.CPU);
+
+USOP_A1_EVENT_FAULT.SLOT3.status := PLC_USOP_A1_FAULT.Slot3;
+USOP_A1_EVENT_FAULT.SLOT3.SOURCE := 'УСО П. ПЛК А1';
+USOP_A1_EVENT_FAULT.SLOT3.NAME :=  'ПЛК. Неисправность модуля А1.3';
+FC_FAULT_CHECK(FAULT := USOP_A1_EVENT_FAULT.SLOT3);
+
+
+USOP_A1_EVENT_FAULT.SLOT4.status := PLC_USOP_A1_FAULT.Slot4;
+USOP_A1_EVENT_FAULT.SLOT4.SOURCE := 'УСО П. ПЛК А1';
+USOP_A1_EVENT_FAULT.SLOT4.NAME :=  'ПЛК. Неисправность модуля А1.4';
+FC_FAULT_CHECK(FAULT := USOP_A1_EVENT_FAULT.SLOT4);
+
+
+USOP_A1_EVENT_FAULT.SLOT5.status := PLC_USOP_A1_FAULT.Slot5;
+USOP_A1_EVENT_FAULT.SLOT5.SOURCE := 'УСО П. ПЛК А1';
+USOP_A1_EVENT_FAULT.SLOT5.NAME :=  'ПЛК. Неисправность модуля А1.5';
+FC_FAULT_CHECK(FAULT := USOP_A1_EVENT_FAULT.SLOT5);
+
+USOP_A1_EVENT_FAULT.SLOT5.status := PLC_USOP_A1_FAULT.Slot6;
+USOP_A1_EVENT_FAULT.SLOT5.SOURCE := 'УСО П. ПЛК А1';
+USOP_A1_EVENT_FAULT.SLOT5.NAME :=  'ПЛК. Неисправность модуля А1.6';
+FC_FAULT_CHECK(FAULT := USOP_A1_EVENT_FAULT.SLOT6);
+
+
+]]></ST>
+            </FunctionBlock>
+        </Folder>
+    </FBLibrary>
+</Program>
