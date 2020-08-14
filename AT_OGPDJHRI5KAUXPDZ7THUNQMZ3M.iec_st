@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Program >
+<Program UUID="61ED6BF749A3AD23FA8E2E9DFC7E02FD" Name="NARABOTKA" Period="100" PutDataAtEndOfCycle="true">
+    <Variables>
+        <Variable UUID="45E6477E46D0BDCAF72426839D32CB53" Name="TimeCur" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+        <Variable UUID="925A65DF42B2CF199D28DBA199484870" Name="TimePrev" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+        <Variable UUID="691AD994459071DE6FBD9A95C59DC4CF" Name="H_3" Type="H3" TypeUUID="7F11D8E64E17C88CC8AAF69159F4E8AE" Usage="internal" />
+        <Variable UUID="59E91C744DFFB76F7F48C19F4504DF2A" Name="H_4" Type="H4" TypeUUID="6378315F4B39CBF9DE418BB145F46A66" Usage="internal" />
+    </Variables>
+    <ST><![CDATA[
+//Вычисление длительности цикла
+
+TimeCur := CLOCK();
+delT := LREAL_TO_REAL( TimeCur - TimePrev);
+TimePrev := TimeCur;
+
+
+
+if PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.Value then
+   PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME.OUTPUT := PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME.OUTPUT + delT/3600.0;
+end_if;
+
+
+if PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.Value then
+   PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME.OUTPUT := PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME.OUTPUT + delT/3600.0;
+end_if;
+
+
+FC_ALG_ON(CAT := DINT#101
+			,DIO := PLC_GSP_SEV_KSSEV_E_USOP_NARAB.ALG_ON
+			,DCFGIO := PLC_GSP_SEV_KSSEV_E_USOP_NARAB.ALG_ON_OLD
+			,TEXT := 'Автоматическое переключение насосов по наработке включено'
+			,TEXT2 := 'УСОП. ПЛК А1'
+			);
+
+	
+
+
+if PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON.Value AND PLC_GSP_SEV_KSSEV_E_USOP_NARAB.ALG_ON then
+H_3();
+end_if;
+
+if PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON.Value AND PLC_GSP_SEV_KSSEV_E_USOP_NARAB.ALG_ON then
+H_4();
+end_if;
+
+ PLC_GSP_SEV_KSSEV_E_USOP_NARAB.ALG_ON_OLD := PLC_GSP_SEV_KSSEV_E_USOP_NARAB.ALG_ON;]]></ST>
+    <DataTypes />
+    <FBLibrary>
+        <Function UUID="7190BFAC432DD47D8B8614A0A01C3DBD" Name="FC_ALG_ON" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+            <Variables>
+                <Variable UUID="37B080A8404B6452A6631CAF07073E03" Name="CAT" Type="DINT" TypeUUID="AF9665534C6D5BDEF9AE77B026938B65" Usage="input" />
+                <Variable UUID="5FDCF8794D1DA42DA674D9AC98909F96" Name="DIO" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="8FCBD07249626734E479739937CA8A67" Name="TEXT" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                <Variable UUID="9DC2942F454E60FE87EED09D42FF398C" Name="TEXT2" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                <Variable UUID="27ED2BD744185ABF3AB167A027EB8D9B" Name="DCFGIO" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="32F70F854511B04F411EE08118C3E4BC" Name="TEXT1" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+                <Variable UUID="89DB7AC941D376D1A69B929144A67BC6" Name="i" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="input" />
+                <Variable UUID="01536E914DA7CC87A8D47A812C5C0C82" Name="IDE" Type="STRING" TypeUUID="38FDDE3B442D86554C56C884065F87B7" Usage="input" />
+            </Variables>
+            <ST><![CDATA[IF DCFGIO <> DIO THEN
+	TEXT1:=  TEXT2 + TEXT + DINT_TO_STRING(CAT);
+	i:=BOOL_TO_INT(DIO);
+	CREATE_EVENT(TEXT,  CAT,  i, TEXT2, TEXT1, CURRENT_DATE_TIME(), 'USOP')
+	DCFGIO:=DIO;
+END_IF;]]></ST>
+        </Function>
+        <FunctionBlock UUID="7F11D8E64E17C88CC8AAF69159F4E8AE" Name="H3">
+            <Variables />
+            <ST><![CDATA[//Считаем текущую наработку насоса по сумме циклов ПЛК за время работы насоса
+//QQ1 := QQ1 + delT/60.0;
+
+   //PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME.OUTPUT := PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME.OUTPUT + delT/60.0;
+//Если текущая наработка одного насоса превышает наработку другого, то выключааем один, включаем второй
+if PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME.OUTPUT - PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME.OUTPUT > PLC_GSP_SEV_KSSEV_E_USOP_NARAB.HOURS then
+
+   PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.Value := false;
+
+   PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.Value := true;
+
+end_if;
+   ]]></ST>
+        </FunctionBlock>
+        <FunctionBlock UUID="6378315F4B39CBF9DE418BB145F46A66" Name="H4">
+            <Variables />
+            <ST><![CDATA[//Считаем текущую наработку насоса по сумме циклов ПЛК за время работы насоса
+//QQ1 := QQ1 + delT/60.0;
+
+  // PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME.OUTPUT := PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME.OUTPUT + delT/60.0;
+//Если текущая наработка одного насоса превышает наработку другого, то выключааем один, включаем второй
+if PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME.OUTPUT - PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME.OUTPUT > PLC_GSP_SEV_KSSEV_E_USOP_NARAB.HOURS then
+
+   PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON.Value := false;
+
+   PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON.Value := true;
+
+end_if;
+   ]]></ST>
+        </FunctionBlock>
+    </FBLibrary>
+</Program>

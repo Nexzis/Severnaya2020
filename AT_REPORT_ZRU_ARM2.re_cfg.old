@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ReportEngine >
+<Configuration>
+    <ReportList>
+        <Report Equation="START_REPORT=TRUE" Printer="Microsoft Print to PDF" Template="OTCHET.htm" Print="TRUE" ShowPreview="TRUE" Archive="" FileNameTemplate="D:\Reports\Report_%Y%m%d_%H%M%S.htm" Comment="OTCHET" Landscape="TRUE" MarginTop="10" MarginLeft="10" MarginRight="10" MarginBottom="10" PageSize="A4" FullPage="TRUE" RestrictSaveDlg="TRUE" RestrictPrintDlg="TRUE" EventCategory="3" />
+    </ReportList>
+</Configuration>

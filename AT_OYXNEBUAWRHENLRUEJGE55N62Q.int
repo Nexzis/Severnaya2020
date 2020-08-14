@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="Collect_USOE_A1_YGG" Kind="DRIVER.SONET.LOCALBUS" Args="" Comment="" UUID="8D1FD62C443F4A5498947D8543CF2455">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="B604D1A849DB8D37FAE43BA7D8A1D9E8" Type="STRING" Usage="output" />
+        <Signal Name="@NODE_RUN" UUID="11CFC95F39784D0797BFCEAB0F98BF6A" Type="BOOL" />
+        <Signal Name="USOE_A1_FAULT" UUID="7704D794476F58FF8314F0B5C759E2F2" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО Э. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOE_A1_3" UUID="CDC1E86046226BD9B2FCB18E146582E4" Type="5EBDC20841E83733E17D2F88853302E3" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.3. Аналоговые входы" />
+        <Signal Name="USOE_A1_4" UUID="7F5CF1E347CF4C21709E09AF8C2AF418" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.4. Дискретные входы" />
+        <Signal Name="USOE_A1_5" UUID="908BB4AB49C8D948B82617A94AF56365" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.5. Дискретные входы" />
+        <Signal Name="USOE_A1_6" UUID="76CD865F4327B2F8872C16908F80C98A" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.6. Дискретные входы" />
+        <Signal Name="USOE_A1_7" UUID="81157E6F42DFB3239C80AB8A0131F699" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.7. Дискретные входы" />
+        <Signal Name="USOE_A1_8" UUID="9FE6CBFA4C7370AC11A17498F53ED9AC" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.8. Дискретные входы" />
+        <Signal Name="USOE_A1_9" UUID="68037A1E4D58D2EF9833A0A6BF6880D5" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. ПЛК А1. Модуль А1.9. Дискретные входы" />
+        <Signal Name="USOE_A1_10" UUID="A0772DB145DE111EB6034FA85416FC5B" Type="4BB6461D4BB59042B467B1B428458B8B" OptionallyConnected="TRUE" Global="TRUE" Comment="УСО Э. КРУ-10 кВ. Резерв" />
+        <Signal Name="PLC_USOE_A1_FAULT" UUID="F5FB264544482924AAAE5EB5921DCC98" Type="3B04D14C4BE702B9E77577819F8373EF" Usage="" Global="TRUE" />
+    </InterfaceList>
+</SubAppType>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="DIAGN_Lines_Animation" Kind="APPLICATION.LUA" Args="" Comment="" UUID="547D173F49D227EE56352D96A10C0390">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="44235B7C4AE84A34F70FAB902CA33B29" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="1BBDC88B4E0A96C63ECB3FA209D010D5" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="53E386DF4A940BBBB61C46931A60EE6F" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="3237C139442E43ED9794AC8037BF6209" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="B26F6F284DAC3ACD260725B59F4DF3C8" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="C06389364DD06CD2F93CA787B871717D" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="E0F0E6024630C452398FD59EAE31DC46" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="C3AF26804B6083EE3C68AC99CFF36FE4" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="F9C89E4749DA73B5013A4E93AD16ADD3" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="5D1BB0594278CEDFF96B3388963EEE9A" Type="STRING" Usage="output" />
+        <Signal Name="@WINDOW" UUID="9F765B594D8D52B5951F009C253385F1" Type="TWINDOW" ArraySize="32" InitialValue="[(VISIBLE:=TRUE, WIDTH:=640, HEIGHT:=480)]" />
+        <Signal Name="@NODE_ROLE" UUID="0F6289CA48C7393FFDBF91A04BC06ED8" Type="INT" />
+        <Signal Name="@NODE_ERROR" UUID="68847A8D4239492BF960D0BC88F8D088" Type="BOOL" />
+        <Signal Name="@NODE_PEER_ERROR" UUID="1735F8664463695DE5D2FDBBA3F67CBF" Type="BOOL" />
+        <Signal Name="@FAILOVER_PRESENCE" UUID="92378FEC4F907420D87531AD384D8A26" Type="BOOL" />
+        <Signal Name="@FAILOVER_ERROR" UUID="0CADD3934A5F28E48A32D8B2B5C720B1" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVE" UUID="645AE4F742DA9DD7BABFCEA45A2E65A7" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVED" UUID="0A5E4E9B401D4BCDFB24E4A014FFD6CE" Type="BOOL" />
+        <Signal Name="HMI_DIAGN_Lines_Animation" UUID="06334A084D0D2A762CCA6AA9991D6236" Type="BOOL" ArraySize="32" InitialValue="[TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE]" Global="TRUE" Comment="Массив сигналов анимации линий связи" />
+        <Signal Name="ARM_2_FAULT" UUID="816DEDBF4527BC54071A60AAD5510773" Type="BOOL" OptionallyConnected="TRUE" Global="TRUE" Comment="Наличие связи основного сервера с АРМ 2" />
+        <Signal Name="ASUE_Server_N1_FAULT" UUID="4B923F6149B12944D33781A2E3D9C260" Type="BOOL" OptionallyConnected="TRUE" Global="TRUE" Comment="наличие связи с сервером 1" />
+        <Signal Name="ASUE_Server_N2_FAULT" UUID="0F87110C48CFE827080B6F929F99A0C4" Type="BOOL" OptionallyConnected="TRUE" Global="TRUE" Comment="наличие связи с сервером 2" />
+        <Signal Name="USO1_A1_FAULT" UUID="CFD6E50D49742B063775C784F39DBF1D" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Comment="Состояние модулей ПЛК 1 УСО 1" />
+        <Signal Name="USOE_A1_FAULT" UUID="7704D794476F58FF8314F0B5C759E2F2" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО Э. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOKTP1_A1_FAULT" UUID="5D80BE56419AD82D72984E9FAD6844B4" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП1. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOKTP1_A2_FAULT" UUID="435B083B493F3DA96FC8CF92DC57B688" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП1. ПЛК А2. Состояние модулей" />
+        <Signal Name="USOKTP2_A1_FAULT" UUID="E94636844BD52B3E1C407E90BBE95C24" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП2 ПЛК А1. Состояние модулей" />
+        <Signal Name="USOKTP2_A2_FAULT" UUID="6DC14BD04B24150EA01E9DA99429EA9A" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО КТП2. ПЛК А2. Состояние модулей" />
+        <Signal Name="USOGSU_A1_FAULT" UUID="D3E7BA624CEC48671EF3B4ABF9E8684F" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО ГЩУ. ПЛК А1. Состояние модулей" />
+        <Signal Name="SAUVOS_A1_FAULT" UUID="745E90B14A56AA84512371A97C481CAE" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Comment="САУ ВОС. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOP_A1_FAULT" UUID="9752E1124BAE840E07F5EB90626E7740" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО П. ПЛК А1. Состояние модулей" />
+        <Signal Name="USOK_A1_FAULT" UUID="A742785F4C568A5C15CF7AA724C6EA5F" Type="3B04D14C4BE702B9E77577819F8373EF" OptionallyConnected="TRUE" Global="TRUE" Storage="(D0A09A3F4993D4DB726208A1F2676C31:=persistent)" Comment="УСО К. ПЛК А1. Состояние модулей" />
+        <Signal Name="Local_TIME500ms" UUID="77EF6FF544E788B7EFE67094FE7F01BD" Type="BOOL" OptionallyConnected="TRUE" Global="TRUE" />
+        <Signal Name="GSP_SEV_KSSEV_DIAGN_LANTAN_CONNECTION" UUID="A4C07CF6431D8425DB046DA19C570E5E" Type="UINT" ArraySize="28" InitialValue="[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]" Global="TRUE" Comment="ЛАНТАН. Проверка связи с устройством" />
+        <Signal Name="HMI_DIAGN_Lines_Style" UUID="A18E291047BB73B12475B496EC125F64" Type="INT" ArraySize="32" InitialValue="[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]" Global="TRUE" Comment="Массив сигналов стиля линий связи" />
+        <Signal Name="GSP_SEV_KSSEV_DIAGN_UPS1_CONNECTION" UUID="43B69FFB4ABA41A6C3011782C6EEE8B5" Type="UINT" InitialValue="1" Global="TRUE" Comment="ИБП№1. Проверка связи с устройством." />
+        <Signal Name="GSP_SEV_KSSEV_DIAGN_UPS2_CONNECTION" UUID="70C1C85F4CF5E5BD7DDC93BDC15AB7C2" Type="UINT" Global="TRUE" Comment="ИБП№2. Проверка связи с устройством." />
+        <Signal Name="HMI_DIAGN_Lantan_Frame" UUID="F38049784D0923B40A0D50A935ABAAF3" Type="BOOL" ArraySize="28" Global="TRUE" Comment="Массив сигналов для рамок Лантана" />
+        <Signal Name="HOBBIT1_DS_DP" UUID="F924A543459E5728E65D1CB21B0280AE" Type="INT" Global="TRUE" Comment="Статус обмена с Хоббитом 1" />
+        <Signal Name="HOBBIT2_DS_DP" UUID="447D014145BDE1A5109EE8BEFB05EFB9" Type="INT" Global="TRUE" Comment="Статус обмена с Хоббитом 2" />
+    </InterfaceList>
+</SubAppType>

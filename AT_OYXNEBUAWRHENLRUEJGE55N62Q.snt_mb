@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Driver.Sonet.MODBUS v. 1.0 >
+<Configuration>
+    <Wire Port="" ReservePort="" InverseRTS="TRUE" HardwareRTS="TRUE" RTSReleaseOffset="0" BaudRate="115200" CyclePeriod="100000" ConfigUpdatePeriod="5000000" FailoverTimeout="3000000" ResponseTimeout="40000" SymbolTimeout="5000" MinResponseTimeout="700" RetryDelay="5000" RetryCount="5" OperabilityDelay="10000000" />
+    <Crossconnect />
+</Configuration>

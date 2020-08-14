@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="NARABOTKA" Kind="APPLICATION.ST.CONSOLE" Args="" Comment="" UUID="61ED6BF749A3AD23FA8E2E9DFC7E02FD">
+    <InterfaceList>
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@LICENSE" UUID="B604D1A849DB8D37FAE43BA7D8A1D9E8" Type="STRING" Usage="output" />
+        <Signal Name="@NODE_RUN" UUID="11CFC95F39784D0797BFCEAB0F98BF6A" Type="BOOL" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_NARAB" UUID="E14570B14224AA7C7DFE89ABDA120737" Type="DAC29C76450A40ADF36DE4AC7C25C4E7" Usage="" Global="TRUE" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H1_ON" UUID="3EF3198A48B66361777727AD550127C6" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №1 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H2_ON" UUID="F51B362E444A989781F14B907BCB3659" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №2 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H3_ON" UUID="E1E0E4A546BB35BFCCD66C8D3F46A87F" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №3 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DO_H4_ON" UUID="F2D068D34FE277CEB889BDBA1B87232B" Type="B0EC194E441587DB3736B4B2E60AAD18" Usage="" Global="TRUE" Comment="Пожарная насосная. Включить/Отключить Пожарный насос №4 " />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_H3_ON" UUID="627063D5455522A310EB639A7E8D7050" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №3 включен/отключен" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_DI_H4_ON" UUID="5DFA1191437C084EFD73838F626EFA72" Type="F934805349B6CB0BACBF59A331394F4B" Usage="" Global="TRUE" Comment="Пожарная насосная. Пожарный насос №4 включен/отключен" />
+        <Signal Name="delT" UUID="2C8B725444D44141CCBBD5AFC4E21D97" Type="REAL" Usage="" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_H4_TIME" UUID="40BA58C04DADEF57CFB45EAA9F83FDED" Type="2F0731BB4D8F473AD2DDE3BDE131FAF4" Usage="" Global="TRUE" Storage="(99B1C4D6400A71E884C7D5B174D0EABE:=persistent)" Comment="Наработка насоса Н4" />
+        <Signal Name="PLC_GSP_SEV_KSSEV_E_USOP_AI_H3_TIME" UUID="95F0699D432190DD62FE0AACCBE63142" Type="2F0731BB4D8F473AD2DDE3BDE131FAF4" Usage="" Global="TRUE" Storage="(99B1C4D6400A71E884C7D5B174D0EABE:=persistent)" Comment="Наработка насоса Н3" />
+    </InterfaceList>
+</SubAppType>
