@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Узлы">
+    <Items>
+        <Item Name="FLDR_2MX3CRB734SUVMJXDCLQQYZW5I.folder" />
+        <Item Name="FLDR_4QLHXRVL5UNUXH5HFBFGG2J5NM.folder" />
+        <Item Name="FLDR_5QQX45TBRAMUZC2GEVOCXOF6EY.folder" />
+        <Item Name="FLDR_DBSJHOXGEILETDVYPY4CK2HA5U.folder" />
+        <Item Name="FLDR_ERUKYEWMF5FUZEWB5QMDHEZNHU.folder" />
+        <Item Name="FLDR_Q7XEKYTNXF5EHA7MVA7WYY4K5M.folder" />
+        <Item Name="FLDR_S6HO4XRJDSMUNJ4NF7D7VDGLKQ.folder" />
+        <Item Name="FLDR_UQ3MCBGFVNUELJ546FFCCSMC5M.folder" />
+        <Item Name="FLDR_Z7EVGCUBT2UU3OZDQLSS34FJOI.folder" />
+        <Item Name="Node_7RPIPWOT6Y3ENMV2WH73XDZOVE.nod" />
+        <Item Name="Node_A7K5PHOKGR2EZLVFQ4MOTBOQ2E.nod" />
+        <Item Name="Node_EQP5VTYNY6ZENEBJTJCJEGH4BY.nod" />
+        <Item Name="Node_FNEVJ4LG5HGU3L2CXSEOUCVSVM.nod" />
+        <Item Name="Node_HL3B5YBMZALU5C35MCRHD4YMFM.nod" />
+        <Item Name="Node_KWXH5F4GI6VE3DVUBKAVQNZJ24.nod" />
+        <Item Name="Node_NRWZNOCIAE7EFNAF75347HE26I.nod" />
+        <Item Name="Node_S3WPC3WTDJIUBKU6PWKFMJ4TRI.nod" />
+        <Item Name="Node_SZOXGQHWQUAULBUSWI7ERSBFGE.nod" />
+        <Item Name="Node_YWSMIXFF3PBUTEIY3HANUZCWXI.nod" />
+    </Items>
+</Folder>

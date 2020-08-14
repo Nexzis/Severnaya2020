@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Типы данных">
+    <Items>
+        <Item Name="" />
+        <Item Name="FLDR_4WIPJM2WELFURFQQLMFC7Y4T5A.folder" />
+        <Item Name="FLDR_5EJ6GQM6G6VU3DRC2HDS5TV44Y.folder" />
+        <Item Name="FLDR_NO63SRK25UUUNBCMJYUUOZQAPY.folder" />
+        <Item Name="FLDR_RVUV5M4NVVKE7DAKCZJK3JENPI.folder" />
+        <Item Name="Type_AHUKMA4ZHBIELFAPNDKR4OVALU.type" />
+        <Item Name="Type_Date_Field_E.type" />
+        <Item Name="Type_ECAAUD2D4QQEXKE2VOGDXDPKFM.type" />
+        <Item Name="Type_EZPR7HS6VADUZEGMTOYMHKXJFY.type" />
+        <Item Name="Type_Hour_Archive_T.type" />
+        <Item Name="Type_I3NIG37C2SCETIOSEN3SFELUDY.type" />
+        <Item Name="Type_IJLOD264BIVEFI7BOVGOW5EBJA.type" />
+        <Item Name="Type_J2BPF6WQZ6MUBFEXIGUJRZPK4Q.type" />
+        <Item Name="Type_JLCJYBKAMLWU3NU3BRRNURPNKA.type" />
+        <Item Name="Type_QDOXFHFAXGQERCDNMTV2Y75V6Q.type" />
+        <Item Name="Type_STPQQZXNYENU7PQAA2Y5W6FFYM.type" />
+        <Item Name="Type_T5YNZXJSCPZEDATG2ARAIT56PE.type" />
+        <Item Name="Type_T6JH2SGWXDOEFDOV4YA7HEWC5Y.type" />
+        <Item Name="Type_TABLYNKX2X6UZCY6ZUOCS4EZCY.type" />
+        <Item Name="Type_V7M7D5VOSVUEXAG56BDNLRBDJA.type" />
+    </Items>
+</Folder>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="САУ ВОС">
+    <Items>
+        <Item Path="Node_DSY3YW6OJ4UUNLR33OFGB5GGEQ.nod" />
+    </Items>
+</Folder>

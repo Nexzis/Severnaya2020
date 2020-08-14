@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Обработка">
+    <Items>
+        <Item Name="AT_BXNF737GOX3U5CCOO7LVQBJJKI.int" />
+        <Item Name="AT_RT_USOKTP1_A1_PROCESS.int" />
+        <Item Name="AT_RT_USOKTP1_A2_PROCESS.int" />
+        <Item Name="AT_YGG_USOKTP1_A1_PROCESS.int" />
+        <Item Name="FLDR_A6Z5GTTMBETUNDTVONSNY5SG44.folder" />
+        <Item Name="FLDR_FHUWXPHHRN7EPAN7L7AQZSZV7I.folder" />
+    </Items>
+</Folder>

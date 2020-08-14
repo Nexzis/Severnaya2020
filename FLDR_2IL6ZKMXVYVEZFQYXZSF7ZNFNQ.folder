@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="712SK">
+    <Items>
+        <Item Name="AT_MVE_COLLECT_SK712.int" />
+        <Item Name="AT_MVE_DRIVER_MODBUS_712SK.int" />
+        <Item Name="AT_MVE_PROCESSING_712SK.int" />
+        <Item Name="AT_MVE_SK712_EVENTS.int" />
+    </Items>
+</Folder>

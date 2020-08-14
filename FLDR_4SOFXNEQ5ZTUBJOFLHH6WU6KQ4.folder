@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="ДИЗЕЛЬ">
+    <Items>
+        <Item Name="AT_4PB5OSHJXUEUZJE6CPVSFJNYMU.int" />
+        <Item Name="AT_DISEL_GEN_PROCESSING.int" />
+        <Item Name="AT_O7GTF6ICIYSUPPUVVSAO3WZ2OI.int" />
+        <Item Name="AT_RDG_COLLECT.int" />
+    </Items>
+</Folder>

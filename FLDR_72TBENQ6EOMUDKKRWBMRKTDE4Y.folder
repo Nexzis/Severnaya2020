@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Диагностика">
+    <Items>
+        <Item Name="AT_RT_SERVER_NODES_CONNECT.int" />
+        <Item Name="AT_RT_USO_CPU_CONNECT.int" />
+        <Item Name="TServArbitrator.int" />
+    </Items>
+</Folder>

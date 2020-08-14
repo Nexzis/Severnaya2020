@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="SPT943">
+    <Items>
+        <Item Name="AT_4GGI5HBXWTFEJDSWYB5E45A6Q4.int" />
+        <Item Name="AT_7KZF6ER5FCZU3IJOA3BY2MDFAY.int" />
+        <Item Name="AT_TGE_SPT943_ARCHIVE.int" />
+        <Item Name="AT_TGE_SPT943_ARCHIVE_CLIENT_1.int" />
+        <Item Name="AT_TGE_SPT943_ARCHIVE_CLIENT_2.int" />
+        <Item Name="AT_TGE_SPT943_DRIVER.int" />
+        <Item Name="AT_TGE_SPT943_DRIVER_DATE.int" />
+        <Item Name="AT_TGE_SPT943_DRIVER_HOUR.int" />
+        <Item Name="AT_TGE_SPT943_DRIVER_MONTH.int" />
+        <Item Name="AT_TGE_SPT943_REPORTS.int" />
+        <Item Name="AT_TGE_SPT943_REPORTS_CLIENT_1.int" />
+        <Item Name="AT_TGE_SPT943_REPORTS_CLIENT_2.int" />
+        <Item Name="AT_TGE_SPT943_SYNC_DB_CLIENT_1.int" />
+        <Item Name="AT_TGE_SPT943_SYNC_DB_CLIENT_2.int" />
+        <Item Name="AT_TGE_SPT943_SYNC_DB_SERVER.int" />
+        <Item Name="AT_TGE_SPT943_SYNC_DB_TIMER.int" />
+        <Item Name="AT_TGE_SPT943_TIMER.int" />
+        <Item Name="AT_TGE_SPT943_TIMER_DATE.int" />
+        <Item Name="AT_TGE_SPT943_TIMER_HOUR.int" />
+        <Item Name="AT_TGE_SPT943_TIMER_MONTH.int" />
+    </Items>
+</Folder>

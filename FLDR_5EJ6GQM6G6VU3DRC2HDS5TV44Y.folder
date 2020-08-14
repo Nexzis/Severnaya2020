@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Signal Raw">
+    <Items>
+        <Item Name="Type_3B6BDEWZATFEDMM3MU7VFZMY64.type" />
+        <Item Name="Type_74WXCPSG524U7IYG2FBTLXPZSQ.type" />
+        <Item Name="Type_BX4S3RTUITZELJXAZWILZF2NJQ.type" />
+        <Item Name="Type_O7ODS7NBR65UJL4FOK76U4BN2U.type" />
+        <Item Name="Type_RT_DI_Sonet.type" />
+        <Item Name="Type_RT_DO_Sonet.type" />
+        <Item Name="Type_SK32VOCUY45EFHFANBYPB2WVI4.type" />
+    </Items>
+</Folder>

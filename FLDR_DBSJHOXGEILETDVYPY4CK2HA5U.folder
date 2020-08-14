@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="УСО ГЩУ">
+    <Items>
+        <Item Name="Node_3ZZNN36RH22ENE7H2YIH2KMHCU.nod" />
+        <Item Name="Node_44D5BIFFFDOEHP3PR5YSLIHSOQ.nod" />
+        <Item Name="Node_V4BNHMRXAM5EHHF7XFEFUTYF3I.nod" />
+        <Item Name="Node_ZULSIZGLSBOURFQTGI3B5Y7BIE.nod" />
+    </Items>
+</Folder>

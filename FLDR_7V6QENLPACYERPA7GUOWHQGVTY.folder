@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Котельная">
+    <Items>
+        <Item Name="AT_MVE_BOILER_EVENTS.int" />
+        <Item Name="AT_MVE_COLLECT_BOILER.int" />
+        <Item Name="AT_MVE_COLLECT_BOILER_LUA.int" />
+    </Items>
+</Folder>
